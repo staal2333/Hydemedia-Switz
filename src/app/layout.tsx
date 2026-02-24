@@ -9,6 +9,25 @@ export const metadata: Metadata = {
     "Hyde Media expandiert in die Schweiz. Spezialist für Gerüstwerbung und Fassadenwerbung – bewährt in Dänemark mit Kampagnen für TV2, Lidl, Saxo Bank u.v.m. Jetzt auch für Marken und Immobilieneigentümer in der Schweiz.",
   keywords:
     "Gerüstwerbung, Fassadenwerbung, Outdoor Werbung Schweiz, Grossflächenwerbung, OOH Kampagnen, Baustellenwerbung, Gerüstbanner, Fassadenwraps, Hyde Media",
+  metadataBase: new URL("https://www.hydemedia.ch"),
+  openGraph: {
+    title: "Hyde Media – Gerüstwerbung & Fassadenwerbung in der Schweiz",
+    description:
+      "Spezialist für Gerüstwerbung und Fassadenwerbung – bewährt in Dänemark, jetzt in der Schweiz.",
+    url: "https://www.hydemedia.ch",
+    siteName: "Hyde Media Schweiz",
+    locale: "de_CH",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hyde Media – Gerüstwerbung & Fassadenwerbung in der Schweiz",
+    description:
+      "Spezialist für Gerüstwerbung und Fassadenwerbung – bewährt in Dänemark, jetzt in der Schweiz.",
+  },
+  alternates: {
+    canonical: "https://www.hydemedia.ch",
+  },
 };
 
 export default function RootLayout({
