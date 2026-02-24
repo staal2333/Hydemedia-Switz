@@ -16,7 +16,7 @@ interface BuildingModelProps {
 }
 
 function BuildingModel({ isHovered }: BuildingModelProps) {
-  const { scene } = useGLTF("/dangle.glb") as BuildingGLTF;
+  const { scene } = useGLTF("/dangle.glb") as unknown as BuildingGLTF;
   const meshRef = useRef<THREE.Group>(null);
   const lightRef = useRef<THREE.DirectionalLight>(null);
   const idleTimeRef = useRef(0);
