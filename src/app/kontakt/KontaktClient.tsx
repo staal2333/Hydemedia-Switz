@@ -43,8 +43,8 @@ export function KontaktClient() {
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">E-Mail</p>
-                    <a href="mailto:theodor.staal@hydemedia.ch" className="text-slate-600 hover:text-slate-900 transition-colors">
-                      theodor.staal@hydemedia.ch
+                    <a href="mailto:theodor.staal@hydemedia.dk" className="text-slate-600 hover:text-slate-900 transition-colors">
+                      theodor.staal@hydemedia.dk
                     </a>
                   </div>
                 </div>
@@ -55,8 +55,8 @@ export function KontaktClient() {
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">Telefon</p>
-                    <a href="tel:+4552761185" className="text-slate-600 hover:text-slate-900 transition-colors">
-                      +45 52 76 11 85
+                    <a href="tel:+41772338121" className="text-slate-600 hover:text-slate-900 transition-colors">
+                      +41 77 233 81 21
                     </a>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ export function KontaktClient() {
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">Standort</p>
-                    <p className="text-slate-600">Basel, Schweiz</p>
+                    <p className="text-slate-600">Hauptstrasse 30, 4127 Birsfelden, Switzerland</p>
                   </div>
                 </div>
 

@@ -42,7 +42,7 @@ export default function FinalCTA() {
               Kontakt aufnehmen <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <a
-              href="tel:+4552761185"
+              href="tel:+41772338121"
               className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-white/40 text-white rounded-full font-bold text-lg hover:bg-white/10 hover:border-white/60 transition-all"
             >
               <Phone className="mr-2 w-5 h-5" /> Jetzt anrufen
@@ -50,7 +50,7 @@ export default function FinalCTA() {
           </div>
 
           <p className="text-white mt-8 text-sm">
-            theodor.staal@hydemedia.ch · +45 52 76 11 85 · Basel, Schweiz
+            theodor.staal@hydemedia.dk · +41 77 233 81 21 · Hauptstrasse 30, 4127 Birsfelden
           </p>
         </motion.div>
       </div>

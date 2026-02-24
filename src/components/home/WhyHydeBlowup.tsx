@@ -7,8 +7,8 @@ import { Check } from "lucide-react";
 
 const teamMembers = [
   { name: "Mads Rønn Olesen", role: "Direktor" },
-  { name: "Sebastian Staal", role: "Partner" },
   { name: "Louis Lerche", role: "Sales & Relations" },
+  { name: "Sebastian Staal", role: "Partner" },
   { name: "Theodor Staal", role: "Country Manager Schweiz" },
 ];
 
@@ -93,8 +93,8 @@ export default function WhyHydeBlowup() {
                 <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Ihr Ansprechpartner in der Schweiz</p>
                 <p className="text-xl font-bold text-slate-900">Theodor Staal</p>
                 <p className="text-sm text-slate-600 mb-2">Country Manager Schweiz</p>
-                <a href="mailto:theodor.staal@hydemedia.ch" className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium underline underline-offset-2">
-                  theodor.staal@hydemedia.ch
+                <a href="mailto:theodor.staal@hydemedia.dk" className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium underline underline-offset-2">
+                  theodor.staal@hydemedia.dk
                 </a>
               </div>
             </motion.div>
