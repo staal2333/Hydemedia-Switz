@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { HydeLogo } from "../HydeLogo";
@@ -95,33 +96,58 @@ export default function HeroLuxury() {
         </div>
       </div>
 
-      {/* 3D Building Scene */}
-      <div className="absolute inset-0 z-[3]">
+      {/* 3D Building Scene - desktop only (saves 36MB on mobile) */}
+      {!isMobile && (
+        <div className="absolute inset-0 z-[3]">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="w-full h-full"
+          >
+            <HeroBuildingScene />
+          </motion.div>
+        </div>
+      )}
+
+      {/* Mobile/tablet hero image fallback */}
+      {isMobile && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full h-full"
+          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute inset-0 z-[3] flex items-center justify-center"
         >
-          <HeroBuildingScene />
+          <div className="relative w-[75%] max-w-[400px] aspect-[4/3] mt-[-5vh]">
+            <Image
+              src="/Scaffolding-banner.jpg"
+              alt="Gerüstwerbung – Hyde Media"
+              fill
+              priority
+              className="object-cover rounded-2xl shadow-2xl"
+              sizes="(max-width: 768px) 75vw, 400px"
+            />
+          </div>
         </motion.div>
-      </div>
+      )}
 
       {/* Content */}
       <div className="relative z-10 min-h-screen pointer-events-none">
-        <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }} className="absolute top-20 sm:top-16 left-4 sm:left-8 lg:left-16 w-[75%] sm:w-[65%] md:w-[52%] lg:w-[48%] xl:w-[45%] max-w-4xl pointer-events-auto" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.04))", willChange: "transform" }}>
+        {/* Logo */}
+        <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }} className="absolute top-4 sm:top-16 left-4 sm:left-8 lg:left-16 w-[60%] sm:w-[65%] md:w-[52%] lg:w-[48%] xl:w-[45%] max-w-4xl pointer-events-auto" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.04))", willChange: "transform" }}>
           <Link href="/" className="block text-black hover:opacity-90 transition-opacity duration-500" aria-label="Home">
-            <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
+            <motion.div animate={isMobile ? {} : { y: [0, -3, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
               <HydeLogo />
             </motion.div>
           </Link>
         </motion.div>
 
-        <motion.div initial={{ opacity: 1, y: 0 }} animate={{ opacity: 1, y: 0 }} className="absolute top-[24vh] sm:top-[26vh] md:top-[28vh] left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-auto sm:right-8 md:right-12 lg:right-24 max-w-[85%] sm:max-w-[500px]">
+        {/* H1 heading */}
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="absolute top-[58vh] sm:top-[26vh] md:top-[28vh] left-4 right-4 sm:left-auto sm:right-8 md:right-12 lg:right-24 sm:max-w-[500px]">
           <h1
-            className="leading-none whitespace-pre-line text-slate-900"
+            className="leading-none whitespace-pre-line text-slate-900 text-center sm:text-left"
             style={{
-              fontSize: "44px",
+              fontSize: "clamp(28px, 6vw, 44px)",
               fontWeight: 600,
               letterSpacing: "0em",
               lineHeight: "1.1",
@@ -132,16 +158,17 @@ export default function HeroLuxury() {
           </h1>
         </motion.div>
 
+        {/* Subtitle */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute bottom-32 sm:bottom-36 md:bottom-40 left-4 sm:left-8 md:left-12 lg:left-20 max-w-[85%] sm:max-w-md pointer-events-auto"
+          className="absolute bottom-32 sm:bottom-36 md:bottom-40 left-4 sm:left-8 md:left-12 lg:left-20 right-4 sm:right-auto sm:max-w-md pointer-events-auto"
         >
           <p
-            className="text-slate-700"
+            className="text-slate-700 text-center sm:text-left"
             style={{
-              fontSize: "clamp(16px, 2.5vw, 23px)",
+              fontSize: "clamp(14px, 2.5vw, 23px)",
               fontWeight: 600,
               letterSpacing: "0",
               lineHeight: "1.5",
@@ -151,17 +178,18 @@ export default function HeroLuxury() {
           </p>
         </motion.div>
 
+        {/* CTA buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute bottom-12 sm:bottom-14 md:bottom-16 right-4 sm:right-8 md:right-12 lg:right-24 flex flex-col sm:flex-row gap-3 sm:gap-4 w-auto pointer-events-auto"
+          className="absolute bottom-10 sm:bottom-14 md:bottom-16 left-4 right-4 sm:left-auto sm:right-8 md:right-12 lg:right-24 flex flex-row justify-center sm:justify-end gap-3 sm:gap-4 pointer-events-auto"
         >
-          <Link href="/fuer-marken" className="inline-flex items-center justify-center bg-black text-white px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-medium shadow-lg transition-all hover:bg-gray-900 hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap touch-manipulation min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
+          <Link href="/fuer-marken" className="inline-flex items-center justify-center bg-black text-white px-5 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium shadow-lg transition-all hover:bg-gray-900 hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap touch-manipulation min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
             Für Marken
           </Link>
-          <Link href="/fuer-immobilien" className="inline-flex items-center justify-center bg-black text-white px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-medium shadow-lg transition-all hover:bg-gray-900 hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap touch-manipulation min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
-            Für Immobilieneigentümer
+          <Link href="/fuer-immobilien" className="inline-flex items-center justify-center bg-black text-white px-5 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium shadow-lg transition-all hover:bg-gray-900 hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap touch-manipulation min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
+            Für Eigentümer
           </Link>
         </motion.div>
       </div>
