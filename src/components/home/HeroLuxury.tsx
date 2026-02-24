@@ -110,89 +110,150 @@ export default function HeroLuxury() {
         </div>
       )}
 
-      {/* Mobile/tablet hero image fallback */}
-      {isMobile && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 z-[3] flex items-center justify-center"
-        >
-          <div className="relative w-[75%] max-w-[400px] aspect-[4/3] mt-[-5vh]">
-            <Image
-              src="/Scaffolding-banner.jpg"
-              alt="Gerüstwerbung – Hyde Media"
-              fill
-              priority
-              className="object-cover rounded-2xl shadow-2xl"
-              sizes="(max-width: 768px) 75vw, 400px"
-            />
-          </div>
-        </motion.div>
-      )}
-
-      {/* Content */}
-      <div className="relative z-10 min-h-screen pointer-events-none">
-        {/* Logo */}
-        <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }} className="absolute top-4 sm:top-16 left-4 sm:left-8 lg:left-16 w-[60%] sm:w-[65%] md:w-[52%] lg:w-[48%] xl:w-[45%] max-w-4xl pointer-events-auto" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.04))", willChange: "transform" }}>
-          <Link href="/" className="block text-black hover:opacity-90 transition-opacity duration-500" aria-label="Home">
-            <motion.div animate={isMobile ? {} : { y: [0, -3, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
+      {/* Content - Mobile: flow layout / Desktop: absolute positioning */}
+      {isMobile ? (
+        <div className="relative z-10 min-h-screen flex flex-col px-5 pt-5 pb-10">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="w-[55%] max-w-[280px]"
+            style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.04))" }}
+          >
+            <Link href="/" className="block text-black" aria-label="Home">
               <HydeLogo />
+            </Link>
+          </motion.div>
+
+          <div className="flex-1 flex flex-col items-center justify-center gap-6 py-4">
+            {/* Hero image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative w-[65%] max-w-[260px] aspect-[4/3]"
+            >
+              <Image
+                src="/Scaffolding-banner.jpg"
+                alt="Gerüstwerbung – Hyde Media"
+                fill
+                priority
+                className="object-cover rounded-2xl shadow-2xl"
+                sizes="65vw"
+              />
             </motion.div>
-          </Link>
-        </motion.div>
 
-        {/* H1 heading */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="absolute top-[58vh] sm:top-[26vh] md:top-[28vh] left-4 right-4 sm:left-auto sm:right-8 md:right-12 lg:right-24 sm:max-w-[500px]">
-          <h1
-            className="leading-none whitespace-pre-line text-slate-900 text-center sm:text-left"
-            style={{
-              fontSize: "clamp(28px, 6vw, 44px)",
-              fontWeight: 600,
-              letterSpacing: "0em",
-              lineHeight: "1.1",
-              maxWidth: "488px",
-            }}
+            {/* H1 heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-center text-slate-900 whitespace-pre-line"
+              style={{
+                fontSize: "clamp(24px, 6vw, 36px)",
+                fontWeight: 600,
+                lineHeight: "1.15",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              {`Gerüstwerbung &\nFassadenwerbung\n– jetzt in der Schweiz`}
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.45 }}
+              className="text-center text-slate-600 max-w-[340px]"
+              style={{
+                fontSize: "clamp(13px, 3.5vw, 17px)",
+                fontWeight: 500,
+                lineHeight: "1.55",
+              }}
+            >
+              Aus Dänemark bewährt, für die Schweiz bereit. Grossflächenwerbung auf Gerüsten und Fassaden – Vollservice aus einer Hand.
+            </motion.p>
+          </div>
+
+          {/* CTA buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.55 }}
+            className="flex flex-row justify-center gap-3"
           >
-            {`Gerüstwerbung &\nFassadenwerbung\n– jetzt in der Schweiz`}
-          </h1>
-        </motion.div>
+            <Link href="/fuer-marken" className="inline-flex items-center justify-center bg-black text-white px-5 py-3 text-sm font-medium shadow-lg whitespace-nowrap touch-manipulation min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
+              Für Marken
+            </Link>
+            <Link href="/fuer-immobilien" className="inline-flex items-center justify-center bg-black text-white px-5 py-3 text-sm font-medium shadow-lg whitespace-nowrap touch-manipulation min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
+              Für Eigentümer
+            </Link>
+          </motion.div>
+        </div>
+      ) : (
+        <div className="relative z-10 min-h-screen pointer-events-none">
+          {/* Logo */}
+          <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }} className="absolute top-16 left-8 lg:left-16 w-[65%] md:w-[52%] lg:w-[48%] xl:w-[45%] max-w-4xl pointer-events-auto" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.04))", willChange: "transform" }}>
+            <Link href="/" className="block text-black hover:opacity-90 transition-opacity duration-500" aria-label="Home">
+              <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
+                <HydeLogo />
+              </motion.div>
+            </Link>
+          </motion.div>
 
-        {/* Subtitle */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute bottom-32 sm:bottom-36 md:bottom-40 left-4 sm:left-8 md:left-12 lg:left-20 right-4 sm:right-auto sm:max-w-md pointer-events-auto"
-        >
-          <p
-            className="text-slate-700 text-center sm:text-left"
-            style={{
-              fontSize: "clamp(14px, 2.5vw, 23px)",
-              fontWeight: 600,
-              letterSpacing: "0",
-              lineHeight: "1.5",
-            }}
+          {/* H1 heading */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="absolute top-[28vh] right-8 md:right-12 lg:right-24 max-w-[500px]">
+            <h1
+              className="leading-none whitespace-pre-line text-slate-900"
+              style={{
+                fontSize: "44px",
+                fontWeight: 600,
+                letterSpacing: "0em",
+                lineHeight: "1.1",
+                maxWidth: "488px",
+              }}
+            >
+              {`Gerüstwerbung &\nFassadenwerbung\n– jetzt in der Schweiz`}
+            </h1>
+          </motion.div>
+
+          {/* Subtitle */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute bottom-40 left-8 md:left-12 lg:left-20 max-w-md pointer-events-auto"
           >
-            Aus Dänemark bewährt, für die Schweiz bereit. Grossflächenwerbung auf Gerüsten und Fassaden – Vollservice aus einer Hand.
-          </p>
-        </motion.div>
+            <p
+              className="text-slate-700"
+              style={{
+                fontSize: "clamp(16px, 2.5vw, 23px)",
+                fontWeight: 600,
+                letterSpacing: "0",
+                lineHeight: "1.5",
+              }}
+            >
+              Aus Dänemark bewährt, für die Schweiz bereit. Grossflächenwerbung auf Gerüsten und Fassaden – Vollservice aus einer Hand.
+            </p>
+          </motion.div>
 
-        {/* CTA buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute bottom-10 sm:bottom-14 md:bottom-16 left-4 right-4 sm:left-auto sm:right-8 md:right-12 lg:right-24 flex flex-row justify-center sm:justify-end gap-3 sm:gap-4 pointer-events-auto"
-        >
-          <Link href="/fuer-marken" className="inline-flex items-center justify-center bg-black text-white px-5 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium shadow-lg transition-all hover:bg-gray-900 hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap touch-manipulation min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
-            Für Marken
-          </Link>
-          <Link href="/fuer-immobilien" className="inline-flex items-center justify-center bg-black text-white px-5 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium shadow-lg transition-all hover:bg-gray-900 hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap touch-manipulation min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
-            Für Eigentümer
-          </Link>
-        </motion.div>
-      </div>
+          {/* CTA buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute bottom-16 right-8 md:right-12 lg:right-24 flex flex-row gap-4 pointer-events-auto"
+          >
+            <Link href="/fuer-marken" className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-base font-medium shadow-lg transition-all hover:bg-gray-900 hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
+              Für Marken
+            </Link>
+            <Link href="/fuer-immobilien" className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-base font-medium shadow-lg transition-all hover:bg-gray-900 hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap min-h-[48px]" style={{ borderRadius: "50px", fontWeight: 500 }}>
+              Für Immobilieneigentümer
+            </Link>
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 }
