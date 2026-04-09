@@ -50,7 +50,7 @@ export default function FinalCTA() {
           </div>
 
           <p className="text-white mt-8 text-sm">
-            theodor.staal@hydemedia.dk · +41 77 233 81 21 · Hauptstrasse 30, 4127 Birsfelden
+            theodor.staal@hydemedia.ch · +41 77 233 81 21 · Hauptstrasse 30, 4127 Birsfelden
           </p>
         </motion.div>
       </div>

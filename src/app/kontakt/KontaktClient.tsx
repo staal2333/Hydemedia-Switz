@@ -43,8 +43,8 @@ export function KontaktClient() {
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">E-Mail</p>
-                    <a href="mailto:theodor.staal@hydemedia.dk" className="text-slate-600 hover:text-slate-900 transition-colors">
-                      theodor.staal@hydemedia.dk
+                    <a href="mailto:theodor.staal@hydemedia.ch" className="text-slate-600 hover:text-slate-900 transition-colors">
+                      theodor.staal@hydemedia.ch
                     </a>
                   </div>
                 </div>

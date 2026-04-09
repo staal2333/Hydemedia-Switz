@@ -36,24 +36,6 @@ export default function WhyHydeBlowup() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-3 space-y-8"
           >
-            {/* Group photo */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-slate-200/40 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/50">
-                <div className="aspect-[4/3] relative">
-                  <Image
-                    src="/images/about/team-full.png"
-                    alt="Das Hyde Media Team – Mads, Sebastian, Louis und Theodor"
-                    fill
-                    loading="lazy"
-                    quality={90}
-                    className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
-                    sizes="(max-width: 1024px) 100vw, 60vw"
-                  />
-                </div>
-              </div>
-            </div>
-
             {/* Team names row */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {teamMembers.map((member, index) => (
@@ -93,8 +75,8 @@ export default function WhyHydeBlowup() {
                 <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Ihr Ansprechpartner in der Schweiz</p>
                 <p className="text-xl font-bold text-slate-900">Theodor Staal</p>
                 <p className="text-sm text-slate-600 mb-2">Country Manager Schweiz</p>
-                <a href="mailto:theodor.staal@hydemedia.dk" className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium underline underline-offset-2">
-                  theodor.staal@hydemedia.dk
+                <a href="mailto:theodor.staal@hydemedia.ch" className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium underline underline-offset-2">
+                  theodor.staal@hydemedia.ch
                 </a>
               </div>
             </motion.div>
