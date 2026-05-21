@@ -7,7 +7,7 @@ import { useLocale } from 'next-intl';
 const items = [
   {
     num: '01 / 02',
-    img: '/images/placements/lidl hc.jpg',
+    img: '/images/placements/burgfelderstrasse-30.jpg',
     h: ['Gerüst', 'werbung'],
     p: 'Grossformat-Banner auf aktiven Gerüsten. Von 40 bis 380 m², zertifizierte Montage, professionelle Demontage.',
     meta: '40 — 380 m²',
@@ -15,7 +15,7 @@ const items = [
   },
   {
     num: '02 / 02',
-    img: '/images/placements/facade-1.jpg',
+    img: '/images/placements/Blumenrain 23-25.jpg',
     h: ['Fassaden', 'werbung'],
     p: 'Langfristige Markenmomente direkt an der Fassade. Bewilligungen geregelt, witterungsbeständiger Druck, farbgenaue Produktion.',
     meta: '6 — 36 Mt.',
