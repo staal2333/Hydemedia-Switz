@@ -1,0 +1,1571 @@
+{
+  "nav": {
+    "solutions": "Lösungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "pricing": "Preise",
+    "caseStudies": "Referenzen",
+    "partners": "Partner"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "getStarted": "Jetzt starten",
+    "viewAll": "Alle anzeigen",
+    "backTo": "Zurück zu",
+    "backToTop": "Nach oben",
+    "contactUs": "Kontaktieren Sie uns",
+    "forBrands": "Für Marken",
+    "forPropertyOwners": "Für Immobilienbesitzer",
+    "submitInquiry": "Partnerschaftsanfrage senden",
+    "chat": {
+      "whatsapp": {
+        "tooltip": "Fragen? Schreiben Sie uns!",
+        "defaultMessage": "Hallo! Ich interessiere mich für Ihre Aussenwerbungslösungen."
+      },
+      "tawk": {
+        "greeting": "Hallo! Wie können wir Ihnen helfen?"
+      }
+    }
+  },
+  "caseStudies": {
+    "hero": {
+      "title": "Referenzen",
+      "subtitle": "Echte Kampagnen, echte Ergebnisse. Sehen Sie, wie führende Marken mit Hyde Media Wirkung erzielen."
+    },
+    "readCaseStudy": "Referenz ansehen",
+    "cta": {
+      "title": "Bereit für Ihre Erfolgsgeschichte?",
+      "subtitle": "Lassen Sie uns besprechen, wie wir Ergebnisse für Ihre Marke erzielen können",
+      "button": "Jetzt starten"
+    }
+  },
+  "Home": {
+    "hero": {
+      "title": "Fassadenwerbung\nin der Schweiz",
+      "subtitle": "Wir suchen Gebäudebesitzer in Basel und Zürich. Monetarisieren Sie Ihre Fassade mit professioneller Aussenwerbung.",
+      "primaryCta": "Partner werden",
+      "secondaryCta": "Mehr erfahren"
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "Fassadenwerbung & Aussenwerbung",
+      "subheading": "Wir suchen Fassaden und Gebäude an stark frequentierten Standorten in der Schweiz. Werden Sie Partner.",
+      "cta1": "Partner werden",
+      "cta2": "So funktioniert's"
+    },
+    "valueProposition": {
+      "headline": "Aufgebaut auf Vertrauen, Expertise und dem Engagement für Exzellenz.",
+      "features": {
+        "flexible": {
+          "title": "Bewährte Expertise",
+          "description": "Gegründet von Branchenexperten mit fundiertem Wissen über Genehmigungen, Sicherheit und strukturelle Anforderungen für Grossformat-Aussenwerbung."
+        },
+        "smart": {
+          "title": "Transparente Partnerschaft",
+          "description": "Klare Kommunikation, ehrliche Preise und engagierte Unterstützung bei jeder Kampagne. Keine Überraschungen, nur Ergebnisse."
+        },
+        "customizable": {
+          "title": "Qualität zuerst",
+          "description": "Wir machen keine Kompromisse bei Materialien, Installationsstandards oder Sicherheit. Ihre Marke verdient nichts weniger als Exzellenz."
+        },
+        "personalization": {
+          "title": "Langfristige Vision",
+          "description": "Aufbau dauerhafter Beziehungen mit Immobilienbesitzern und Marken in der Schweiz. Ihr Erfolg ist unser Fundament."
+        }
+      }
+    },
+    "specialistsAudience": {
+      "sectionTitle": "Wen wir bedienen",
+      "sectionSubtitle": "Massgeschneiderte Lösungen für Marken und Immobilienbesitzer",
+      "specialists": {
+        "title": "Spezialisten für Grossformate an Gebäuden",
+        "description": "Wir konzentrieren uns ausschliesslich auf Grossformat-Fassadenwerbung. Das macht uns zu Spezialisten in allem, von der strukturellen Sicherheit und Genehmigungen bis hin zu kreativem und lesbarem Design – damit Ihre Kampagne sowohl stark aussieht als auch in der Praxis funktioniert.",
+        "benefits": {
+          "consulting": "Beratung zu Grossformat-Design und Sichtbarkeit.",
+          "experience": "Erfahrung in der Zusammenarbeit mit Bauunternehmen und Immobilienbesitzern.",
+          "fullSolution": "Komplettlösung: Druck, Installation, Wartung und Abbau."
+        }
+      },
+      "brands": {
+        "title": "Für Marken",
+        "benefits": {
+          "reach": "Hohe tägliche Reichweite in stark frequentierten Stadtgebieten.",
+          "exposure": "Längere Expositionszeit im Vergleich zu traditionellen OOH-Formaten.",
+          "creative": "Möglichkeit für kreative Kampagnen mit starker visueller Wirkung."
+        }
+      },
+      "owners": {
+        "title": "Für Immobilienbesitzer",
+        "benefits": {
+          "income": "Zusätzliche Einnahmen aus ungenutzten Fassadenflächen.",
+          "permits": "Wir kümmern uns um Genehmigungen, Produktion und Installation.",
+          "professional": "Professioneller, sicherer Auf- und Abbau."
+        }
+      }
+    },
+    "companyValues": {
+      "headline": "Premium Out-of-Home Werbepartner, dem Immobilienbesitzer in der Schweiz vertrauen",
+      "storyTitle": "Gegründet im Februar 2025 mit der Vision, wirkungsvolle OOH-Kampagnen zu revolutionieren.",
+      "paragraph1": "Hyde Media wurde gegründet, um einen frischen, professionellen Ansatz für Aussenwerbung zu bieten. Wir spezialisieren uns auf wirkungsvolle Bannerkampagnen mit Gebäudeverkleidungen und Fassadenwerbung in Basel, Zürich und weiteren Schweizer Städten.",
+      "paragraph2": "Wir sind bestrebt, ein vertrauenswürdiger Partner für Immobilienbesitzer zu sein. Wir erstellen schöne, professionell installierte Kampagnen, die erhebliche Einnahmen generieren und gleichzeitig die ästhetische Integrität der Gebäude bewahren.",
+      "aboutCta": "Über uns",
+      "imageAlt": "Hyde Media Gebäudekampagne"
+    },
+    "solutions": {
+      "sectionTitle": "Unsere Lösungen",
+      "sectionDescription": "Wählen Sie die perfekte Werbelösung für Ihre Kampagne",
+      "scaffolding": {
+        "title": "Gebäudeverkleidungen",
+        "subtitle": "Grossformat, maximale Wirkung",
+        "cta": "Gebäudeverkleidungen entdecken"
+      },
+      "facade": {
+        "title": "Fassade & Giebel",
+        "subtitle": "Premium, langfristig",
+        "cta": "Fassadenbanner entdecken"
+      }
+    },
+    "newPlacements": {
+      "badge": "Neuer Standort",
+      "cta": "Standort ansehen",
+      "bredgade": {
+        "title": "Bredgade 71 – 140m² Gerüstwerbung",
+        "description": "Premium-Standort im Herzen von Basel – umgeben von Shopping, Tourismus, Fussgängern und konstantem Stadtleben.",
+        "traffic": "29.000 täglich",
+        "weeks": "Woche 15-28"
+      },
+      "norrebrogade": {
+        "title": "Nørrebrogade 195 – 160m² Gerüstwerbung",
+        "description": "Zentral an einer der belebtesten Strassen Nørrebros. 2-seitiges Format. CPH Marathon Route Woche 19.",
+        "traffic": "55.000 täglich",
+        "weeks": "Woche 14-22"
+      }
+    },
+    "campaigns": {
+      "title": "Marken, mit denen wir gearbeitet haben",
+      "viewAll": "Alle Referenzen",
+      "modal": {
+        "campaignImages": "Kampagnenbilder",
+        "interestedText": "Interesse an einer ähnlichen Kampagne für Ihre Marke?",
+        "contactButton": "Kontakt aufnehmen"
+      },
+      "cases": {
+        "tv2": {
+          "name": "TV2",
+          "title": "TV2 - Neue Serieneinführung",
+          "description": "Eine wirkungsvolle Kampagne zur Promotion einer TV2-Flaggschiffserie. Massive Gebäudebanner an Schlüsselkreuzungen fingen die Aufmerksamkeit tausender täglicher Pendler ein.",
+          "location": "Skandinavien",
+          "duration": "2 Wochen",
+          "type": "Gebäudebanner"
+        },
+        "lidl": {
+          "name": "Lidl",
+          "title": "Lidl - Grosse Jubiläumskampagne",
+          "description": "Vollständige Fassadenverkleidung für Lidls Jubiläumskampagne. Das auffällige Design schuf massive Aufmerksamkeit in den Wochen vor dem Festtag.",
+          "location": "Stadtzentrum",
+          "duration": "2 Wochen",
+          "type": "Vollständige Fassadenverkleidung"
+        },
+        "gomore": {
+          "name": "GoMore",
+          "title": "GoMore - Urbane Mobilitätskampagne",
+          "description": "Strategische Fassadenkampagne für junge urbane Fachkräfte. Positioniert in der Nähe von ÖV-Knotenpunkten und belebten Strassen.",
+          "location": "Stadtzentrum",
+          "duration": "2 Wochen",
+          "type": "Fassadenbanner"
+        },
+        "moderaterne": {
+          "name": "Moderaterne",
+          "title": "Moderaterne - Politische Kampagne",
+          "description": "Kampagne während Kommunalwahlen. Erstklassige Eckgebäude und stark frequentierte Standorte sorgten für maximale Sichtbarkeit.",
+          "location": "Skandinavien",
+          "duration": "2 Wochen",
+          "type": "Fassadenbanner"
+        },
+        "fernetBranca": {
+          "name": "Fernet-Branca",
+          "title": "Fernet-Branca - Sommer-Festival-Kampagne",
+          "description": "Mutige und kreative Kampagne für das urbane Nachtleben. Fassadenstandorte kombiniert mit Premium-Gebäudeverkleidungen schufen starke Markenpräsenz.",
+          "location": "Skandinavien",
+          "duration": "2 Wochen",
+          "type": "Fassade & Gebäudeverkleidung"
+        },
+        "saxo": {
+          "name": "Saxo Bank",
+          "title": "Saxo Bank - Anlage-Plattform-Launch",
+          "description": "Anspruchsvolle Fassadenkampagne im Finanzviertel. Das elegante Design und die strategische Platzierung sprachen Geschäftsleute und Investoren an.",
+          "location": "Finanzviertel",
+          "duration": "2 Wochen",
+          "type": "Fassade & Giebel"
+        },
+        "olc": {
+          "name": "OLC",
+          "title": "OLC - Markenbekanntheitskampagne",
+          "description": "Fassadenkampagne mit professionellen Fassadeninstallationen. Der koordinierte Ansatz schuf konsistente Markensichtbarkeit und steigerte die Markenbekanntheit erheblich.",
+          "location": "Stadtzentrum",
+          "duration": "4 Wochen",
+          "type": "Fassadenbanner"
+        },
+        "lederne": {
+          "name": "Culture Works",
+          "title": "Culture Works - Full Takeover Giebel-Netzwerk",
+          "description": "Full Takeover des Giebel-Netzwerks in Zürich mit grossformatigen Bannern an den Hauptverkehrsstrassen. Massive Sichtbarkeit und dominante Präsenz in der ganzen Stadt.",
+          "location": "Zürich, Hauptverkehrsstrassen",
+          "duration": "2 Wochen",
+          "type": "Giebelbanner - Full Takeover"
+        },
+        "vios": {
+          "name": "Orchestra",
+          "title": "Orchestra - Grossformat-Kampagne Zürich",
+          "description": "Grossformat-Giebelkampagne an zwei der meistbefahrenen Einfallsstrassen von Zürich. Doppelplatzierung mit maximaler Reichweite.",
+          "location": "Zürich, Hauptverkehrsachsen",
+          "duration": "2 Wochen",
+          "type": "Giebelbanner"
+        }
+      }
+    },
+    "whyHyde": {
+      "title": "Warum Hyde Media?",
+      "description": "Gegründet im Februar 2025 – für Bannerkampagnen höchster Qualität.",
+      "benefits": {
+        "strategicPlacement": "Strategische Platzierung",
+        "professionalInstall": "Professionelle Installation",
+        "transparentPricing": "Transparente Preise",
+        "dedicatedSupport": "Persönlicher Support",
+        "denmarkCoverage": "Basel & Zürich"
+      },
+      "cta": "Mehr über uns erfahren"
+    },
+    "partnerCTA": {
+      "title": "Ihre Fassade, Ihre Einnahmen",
+      "description": "Haben Sie ein Gebäude an einer stark frequentierten Strasse in Basel oder Zürich? Wir suchen Fassaden für professionelle Aussenwerbung.",
+      "primaryCTA": "Jetzt Fassade anbieten",
+      "secondaryCTA": "So funktioniert's"
+    },
+    "finalCTA": {
+      "title": "Haben Sie eine Fassade?",
+      "description": "Kontaktieren Sie uns für eine unverbindliche Bewertung Ihrer Immobilie.",
+      "contactCTA": "Kontakt aufnehmen",
+      "solutionsCTA": "Partner werden",
+      "partnerCTA": "Mehr erfahren"
+    },
+    "valueProps": {
+      "highImpact": {
+        "title": "Attraktive Einnahmen",
+        "description": "Generieren Sie zuverlässige monatliche Einnahmen aus ungenutzten Fassadenflächen an Ihrem Gebäude."
+      },
+      "quickSetup": {
+        "title": "Einfacher Prozess",
+        "description": "Wir übernehmen alles: Genehmigungen, Installation, Wartung und Abbau. Null Aufwand für Sie."
+      },
+      "personalService": {
+        "title": "Persönlicher Support",
+        "description": "Ihr persönlicher Ansprechpartner kümmert sich um alles, von Genehmigungen bis zur Installation."
+      },
+      "transparent": {
+        "title": "Transparente Konditionen",
+        "description": "Keine versteckten Gebühren. Klare Partnerschaftsbedingungen und faire Umsatzbeteiligung."
+      }
+    },
+    "usps": {
+      "title": "Wir glauben, dass in einer Welt, in der Werbung zu Zahlen geworden ist, ein persönlicher Ansatz der Schlüssel ist, um das Beste aus Ihrer Kampagne herauszuholen.",
+      "flexible": {
+        "title": "Flexible Lösungen",
+        "description": "Werden Sie unabhängig von traditionellen Medien. Werben Sie zu Ihren eigenen Bedingungen mit unseren exklusiven High-Impact-Standorten."
+      },
+      "smart": {
+        "title": "Faire Angebote",
+        "description": "Wissen Sie, wofür Sie bezahlen. Keine versteckten Gebühren. Keine überzogenen Versprechen. Kampagnen passend zu Ihren Bedürfnissen."
+      },
+      "customizable": {
+        "title": "Vollständig anpassbar",
+        "description": "Kontrollieren Sie alle Aspekte Ihrer Kampagne. Einfache Erweiterung mit unseren Zusatzleistungen."
+      },
+      "personalization": {
+        "title": "Persönliche Betreuung",
+        "description": "Erhalten Sie volle Unterstützung unseres Kampagnenmanagement-Service. Wir sind für Sie da, überall."
+      }
+    },
+    "why": {
+      "title": "Warum Hyde Media",
+      "placeringer": {
+        "title": "Hochfrequenz-Standorte",
+        "description": "Strategisch ausgewählte Strassen und Verkehrsknotenpunkte in Basel und weiteren Schweizer Städten. Wir wählen Standorte basierend auf Verkehrsdaten, Sichtbarkeit und Zielgruppenreichweite."
+      },
+      "ekspertise": {
+        "title": "Kreative Grossformat-Expertise",
+        "description": "Fokus auf schöne Mockups, professionelle Produktion, Druck und Installation. Wir stellen sicher, dass Ihre Kampagne in absoluter Top-Qualität geliefert wird."
+      },
+      "indtaegter": {
+        "title": "Einnahmen für Immobilienbesitzer",
+        "description": "Wir helfen Immobilienbesitzern, Fassadenflächen zu monetarisieren. Wir übernehmen alle praktischen Angelegenheiten, behördlichen Anforderungen und Mieterinformationen."
+      },
+      "service": {
+        "title": "Premium-Service",
+        "description": "Persönliche Beratung, schnelle Angebote und professionelles Kampagnenmanagement. Transparente Preise, keine versteckten Gebühren und Fotodokumentation bei Installation und Abbau."
+      }
+    },
+    "locations": {
+      "title": "Standorte",
+      "location": "Standort",
+      "traffic": "Verkehr",
+      "audience": "Zielgruppe",
+      "format": {
+        "scaffolding": "Gebäudeverkleidung",
+        "facade": "Fassade"
+      },
+      "viewDetails": "Details ansehen"
+    },
+    "howWeWork": {
+      "title": "Wie wir arbeiten",
+      "step": "Schritt",
+      "brief": {
+        "title": "Briefing & Ziele",
+        "description": "Wir beginnen damit, Ihre Ziele und Kampagnenanforderungen zu verstehen."
+      },
+      "placeringer": {
+        "title": "Standortwahl",
+        "description": "Wir empfehlen die besten Standorte basierend auf Ihrer Zielgruppe und Ihrem Budget."
+      },
+      "design": {
+        "title": "Design & Druck",
+        "description": "Wir helfen bei Design, Produktion und Druck Ihrer Banner."
+      },
+      "opsaetning": {
+        "title": "Installation & Dokumentation",
+        "description": "Professionelle Installation mit Fotodokumentation bei Auf- und Abbau."
+      },
+      "rapportering": {
+        "title": "Berichterstattung",
+        "description": "Sie erhalten Berichte über die Kampagnenleistung und Reichweite."
+      }
+    },
+    "landlords": {
+      "title": "Für Immobilienbesitzer",
+      "description": "Hyde Media hilft Ihnen, Fassadenflächen für Werbung zu vermieten. Wir übernehmen behördliche Anforderungen, Mieterinformationen, Designrichtlinien und alle praktischen Angelegenheiten.",
+      "benefits": "Ob Sie eine Fassade an einem stark frequentierten Standort oder ein Gebäude mit hoher Sichtbarkeit haben – wir helfen Ihnen, Einnahmen zu generieren und stellen sicher, dass alles professionell und vorschriftsgemäss abgewickelt wird.",
+      "cta": "Fassade vermieten"
+    },
+    "cases": {
+      "title": "Referenzen & Marken"
+    },
+    "blog": {
+      "title": "Neueste Nachrichten & Einblicke",
+      "description": "Bleiben Sie auf dem Laufenden mit Trends, Tipps und Branchenneuigkeiten von Hyde Media",
+      "readMore": "Weiterlesen",
+      "viewAll": "Alle Artikel ansehen"
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Wirkungsvolle Bannerkampagnen seit Februar 2025",
+    "mission": {
+      "title": "Ein frischer Start in der Aussenwerbung",
+      "description": "Gegründet im Februar 2025, spezialisieren wir uns auf strategisch platzierte Werbebanner. Unsere Lösungen gewährleisten maximale Sichtbarkeit für Marken und Unternehmen. Wir arbeiten eng mit Immobilienbesitzern und Unternehmen zusammen, um effektive und umsatzgenerierende Bannerlösungen zu schaffen – sowohl für kurzfristige Kampagnen als auch für langfristige Werbung."
+    },
+    "vision": {
+      "title": "Wir setzen auf Qualität und zuverlässigen Service",
+      "description": "Banner sind das Herzstück unseres Geschäfts. Seit unserer Gründung im Februar 2025 verfolgen wir eine Mission – Aussenwerbungslösungen in absoluter Top-Qualität zu liefern. Wir bauen unseren Ruf durch strategische Platzierung, innovative Lösungen und kompromisslose Qualität auf."
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "quality": {
+        "title": "Höchste Qualität",
+        "description": "Wir liefern Aussenwerbungslösungen in absoluter Top-Qualität mit kompromissloser visueller Qualität."
+      },
+      "reliability": {
+        "title": "Zuverlässigkeit",
+        "description": "Wir übernehmen alle praktischen Angelegenheiten, behördlichen Anforderungen und Mieterinformationen, damit Sie sich auf Ihr Geschäft konzentrieren können."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Wir kombinieren strategische Platzierung mit innovativen Lösungen für maximale Sichtbarkeit."
+      }
+    },
+    "team": {
+      "title": "Unser Team",
+      "subtitle": "Erfahrene Aussenwerbungsspezialisten, die professionelle Fassadenwerbungslösungen liefern",
+      "mads": {
+        "name": "Mads Rønn Olesen",
+        "role": "Direktor",
+        "description": "Mit 5 Jahren Erfahrung in der Aussenwerbung bringt Mads fundiertes Wissen über OOH-Strategie und Kampagnenplanung zu Hyde Media.",
+        "email": "ma@hydemedia.ch"
+      },
+      "sebastian": {
+        "name": "Sebastian Staal",
+        "role": "Partner",
+        "description": "Sebastian kombiniert Vertriebserfahrung mit starken IT-Kompetenzen, um effektive digitale Lösungen und Kundenbetreuung zu liefern.",
+        "email": "sebastian.staal@hydemedia.ch"
+      },
+      "louis": {
+        "name": "Louis Lerche",
+        "role": "Sales and Relations Manager",
+        "description": "Louis treibt den Vertrieb voran und baut starke Beziehungen zu Kunden und Partnern durch professionellen und kundenorientierten Service auf.",
+        "email": "louis.lerche@hydemedia.ch"
+      }
+    },
+    "certifications": {
+      "title": "Zertifizierungen & Sicherheit",
+      "subtitle": "Wir erfüllen alle Standards für Sicherheit, Qualität und Professionalität in der Aussenwerbung",
+      "safety": {
+        "title": "Arbeitsumfeld & Sicherheit",
+        "description": "Wir arbeiten mit professionellen Partnern für sichere Installation und Wartung",
+        "point1": "Zusammenarbeit mit zugelassenen Installateuren",
+        "point2": "Risikobewertung vor jeder Installation",
+        "point3": "Fokus auf Sicherheit und Qualität",
+        "point4": "Laufende Kontrollen während der Kampagnenzeit"
+      },
+      "permits": {
+        "title": "Genehmigungen & Behördliche Freigaben",
+        "description": "Wir unterstützen bei der Beschaffung der nötigen Genehmigungen von Gemeinde und Behörden"
+      },
+      "quality": {
+        "title": "Qualitätsfokus",
+        "description": "Professionelles Projektmanagement und Qualitätskontrolle bei allen Kampagnen"
+      },
+      "compliance": {
+        "title": "Rechtliche Konformität",
+        "description": "DSGVO-konform und eingetragenes Unternehmen"
+      },
+      "standards": {
+        "title": "Unsere Schwerpunkte",
+        "footer": "Dokumentation kann auf Anfrage bereitgestellt werden. Kontaktieren Sie uns für weitere Informationen."
+      }
+    }
+  },
+  "services": {
+    "title": "Fassadenwerbung",
+    "subtitle": "So sieht professionelle Aussenwerbung auf Gebäudefassaden aus. Hochwertige Materialien, sichere Installation und maximale Wirkung.",
+    "scaffolding": {
+      "title": "Gebäudeverkleidungen",
+      "shortDescription": "Grossformat-Werbung auf Gebäudeflächen",
+      "description": "Grossformatige Werbebanner und Verkleidungen an erstklassigen Gebäudestandorten. Perfekt für Produktlancierungen, saisonale Kampagnen und maximale Markenpräsenz.",
+      "cta": "Gebäudeverkleidungen entdecken"
+    },
+    "facade": {
+      "title": "Fassadenwerbung",
+      "shortDescription": "Langfristige, maximale Wirkung auf Gebäudefassaden",
+      "description": "Permanente Grossformat-Werbung auf Gebäudefassaden. Schaffen Sie nachhaltige Markenpräsenz mit unseren Fassadenverkleidungen in stark frequentierten Gebieten.",
+      "cta": "Fassadenoptionen entdecken"
+    },
+    "comparison": {
+      "title": "Was ist der Unterschied?",
+      "description": "Beide Lösungen bieten hohe Sichtbarkeit und Wirkung, unterscheiden sich aber in Dauer, Flexibilität und Installationsansatz.",
+      "feature": "Merkmal",
+      "features": {
+        "visibility": {
+          "name": "Hohe Sichtbarkeit",
+          "scaffolding": "Grossformat - Maximale Gebäudeabdeckung",
+          "facade": "Maximum - Grosse Fassadenabdeckung"
+        },
+        "duration": {
+          "name": "Kampagnendauer",
+          "scaffolding": "Wochen bis Monate",
+          "facade": "Monate bis Jahre"
+        },
+        "installation": {
+          "name": "Installationszeit",
+          "scaffolding": "Schneller Aufbau (1-3 Tage)",
+          "facade": "Professionelle Installation (3-5 Tage)"
+        },
+        "costEffective": {
+          "name": "Kosteneffizienz",
+          "scaffolding": "Flexibler Einstieg",
+          "facade": "Bester Langzeitwert"
+        },
+        "flexibility": {
+          "name": "Flexibilität",
+          "scaffolding": "Hoch - Einfach zu ändern",
+          "facade": "Geplant - Langfristige Präsenz"
+        }
+      }
+    },
+    "cta": {
+      "title": "Haben Sie eine Fassade?",
+      "description": "Kontaktieren Sie uns für eine unverbindliche Bewertung Ihrer Immobilie. Wir zeigen Ihnen, wie Sie Ihre Fassade monetarisieren können.",
+      "button": "Partner werden"
+    },
+    "planning": {
+      "title": "Kampagnenplanung",
+      "description": "Wir helfen bei der strategischen Platzierung basierend auf Ihrer Zielgruppe und Ihrem Budget. Persönliche Beratung und schnelle Angebote."
+    },
+    "design": {
+      "title": "Design & Produktion",
+      "description": "Fokus auf schöne Mockups, professionelle Produktion, Druck und Installation. Wir stellen sicher, dass Ihre Kampagne in absoluter Top-Qualität geliefert wird."
+    }
+  },
+  "solutions": {
+    "scaffolding": {
+      "headline": "Gebäudeverkleidungen",
+      "body": "Grossformatige Werbelösungen auf Gebäudeflächen an erstklassigen Standorten. Perfekt für Produktlancierungen, saisonale Kampagnen und maximale Markenpräsenz."
+    },
+    "facade": {
+      "headline": "Gebäudefassaden-Banner",
+      "body": "Langfristige Werbung mit maximaler Wirkung auf Gebäudefassaden. Schaffen Sie nachhaltige Markenpräsenz mit unseren Grossformat-Fassadenverkleidungen in stark frequentierten Gebieten."
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Lassen Sie uns über Ihre Kampagne sprechen",
+      "description": "Jede Kampagne ist einzigartig. Erhalten Sie ein massgeschneidertes Angebot, das auf Ihre spezifischen Bedürfnisse, Ziele und Ihr Budget zugeschnitten ist.",
+      "cta": "Angebot anfordern"
+    },
+    "factors": {
+      "title": "Was Ihre Investition beeinflusst",
+      "description": "Wir erstellen individuelle Angebote basierend auf mehreren Schlüsselfaktoren, um den besten Wert zu gewährleisten",
+      "location": {
+        "title": "Standort & Sichtbarkeit",
+        "description": "Erstklassige Standorte mit hohem Verkehrsaufkommen und Sichtbarkeit erfordern Premium-Positionierung"
+      },
+      "format": {
+        "title": "Grösse & Format",
+        "description": "Von Fassadenbannern bis zu vollständigen Gebäudeverkleidungen – Grösse und Komplexität beeinflussen die Preise"
+      },
+      "duration": {
+        "title": "Kampagnendauer",
+        "description": "Längere Kampagnen erhalten oft bessere Konditionen und erhöhte Wirkung"
+      },
+      "traffic": {
+        "title": "Zielgruppenreichweite",
+        "description": "Standorte mit hohem Verkehrsaufkommen und grösseren täglichen Impressionen werden entsprechend bepreist"
+      },
+      "support": {
+        "title": "Enthaltene Dienstleistungen",
+        "description": "Installation, Genehmigungen, Designunterstützung und Überwachung fliessen in Ihre Investition ein"
+      }
+    },
+    "custom": {
+      "title": "Warum wir individuelle Angebote erstellen",
+      "description": "Im Gegensatz zu Einheitspreisen bewerten wir Ihre spezifischen Kampagnenbedürfnisse, Ziele, Zielgruppe und Budget, um eine Lösung zu erstellen, die Ihren ROI maximiert.",
+      "benefit": "Dieser Ansatz stellt sicher, dass Sie nie zu viel für Funktionen bezahlen, die Sie nicht brauchen, und immer die besten Standorte für Ihre Ziele erhalten.",
+      "cta": "Individuelles Angebot erhalten"
+    },
+    "included": {
+      "title": "Was immer enthalten ist",
+      "description": "Jede Kampagne beinhaltet professionellen Full-Service-Support",
+      "items": {
+        "installation": {
+          "title": "Professionelle Installation",
+          "description": "Fachgerechte Installation durch zertifizierte Profis"
+        },
+        "permits": {
+          "title": "Genehmigungen & Freigaben",
+          "description": "Wir kümmern uns um alle behördlichen Anforderungen und Formalitäten"
+        },
+        "design": {
+          "title": "Designunterstützung",
+          "description": "Kreative Beratung und technische Spezifikationen"
+        },
+        "monitoring": {
+          "title": "Kampagnenüberwachung",
+          "description": "24/7-Überwachung und Wartung während Ihrer gesamten Kampagne"
+        },
+        "documentation": {
+          "title": "Fotodokumentation",
+          "description": "Professionelle Fotos bei Installation und Abbau"
+        },
+        "support": {
+          "title": "Persönlicher Support",
+          "description": "Persönlicher Ansprechpartner für alle Ihre Bedürfnisse"
+        }
+      }
+    },
+    "final": {
+      "title": "Bereit loszulegen?",
+      "description": "Kontaktieren Sie uns noch heute für ein unverbindliches Angebot. Wir besprechen Ihre Ziele und erstellen eine massgeschneiderte Lösung.",
+      "cta": "Angebot anfordern"
+    }
+  },
+  "blogListing": {
+    "title": "Blog & Neuigkeiten",
+    "description": "Brancheneinblicke, Trends und Neuigkeiten aus der Welt der Aussenwerbung",
+    "searchPlaceholder": "Artikel suchen...",
+    "readMore": "Artikel lesen",
+    "noResults": "Keine Artikel zu Ihrer Suche gefunden",
+    "latestInsights": "Neueste Einblicke",
+    "featuredPosts": "Ausgewählte Beiträge",
+    "featuredDescription": "Lesenswerte Artikel, ausgewählt von unserem Team",
+    "allCategories": "Alle",
+    "searchResults": "Suchergebnisse",
+    "allPosts": "Alle Beiträge",
+    "article": "Artikel",
+    "articles": "Artikel",
+    "noResultsDescription": "Versuchen Sie, Ihre Suche oder den Filter anzupassen",
+    "clearFilters": "Filter löschen",
+    "newsletterTitle": "Bleiben Sie auf dem Laufenden",
+    "newsletterDescription": "Erhalten Sie die neuesten OOH-Werbetrends und Tipps direkt in Ihren Posteingang"
+  },
+  "partners": {
+    "hero": {
+      "badge": "Partnerprogramm",
+      "title": "Verwandeln Sie Ihre Immobilie in",
+      "titleHighlight": "Passives Einkommen",
+      "description": "Verdienen Sie mit der Fassade Ihres Gebäudes. Wir kümmern uns um Genehmigungen, Installation, Wartung und alles dazwischen. 100% sorgenfrei.",
+      "primaryCta": "Als Partner bewerben",
+      "secondaryCta": "Mehr erfahren"
+    },
+    "why": {
+      "title": "Warum Partner von Hyde Media werden?",
+      "subtitle": "Werden Sie Teil unseres Aussenwerbungsnetzwerks"
+    },
+    "howItWorks": {
+      "title": "So funktioniert's",
+      "subtitle": "Einfacher Prozess von der Bewerbung bis zum Verdienst"
+    },
+    "faqTitle": "Häufig gestellte Fragen",
+    "finalCta": {
+      "title": "Bereit zu verdienen?",
+      "subtitle": "Schliessen Sie sich Immobilienbesitzern an, die passives Einkommen mit Hyde Media erzielen",
+      "cta": "Als Partner bewerben"
+    },
+    "valueProps": {
+      "revenue": {
+        "title": "Attraktive Umsatzbeteiligung",
+        "description": "Erzielen Sie substanzielle monatliche Einnahmen aus ungenutzten Aussenflächen mit unserem fairen Umsatzbeteiligungsmodell."
+      },
+      "hassleFree": {
+        "title": "Sorgloser Prozess",
+        "description": "Wir übernehmen alle Genehmigungen, Freigaben, Installation und Wartung. Sie kassieren einfach die Einnahmen."
+      },
+      "support": {
+        "title": "Professioneller Support",
+        "description": "Persönlicher Partnermanager und Support für alle Fragen und Anliegen."
+      }
+    },
+    "steps": {
+      "apply": {
+        "title": "Online bewerben",
+        "description": "Reichen Sie Ihre Immobiliendetails über unser einfaches Formular ein."
+      },
+      "visit": {
+        "title": "Besichtigung & Bewertung",
+        "description": "Wir evaluieren Ihre Immobilie und besprechen Partnerschaftsoptionen."
+      },
+      "agreement": {
+        "title": "Vereinbarung & Konditionen",
+        "description": "Prüfen und unterzeichnen Sie eine transparente Partnerschaftsvereinbarung."
+      },
+      "installation": {
+        "title": "Installation & Start",
+        "description": "Wir übernehmen die professionelle Installation und den Kampagnenstart."
+      },
+      "earn": {
+        "title": "Monatliche Einnahmen",
+        "description": "Erhalten Sie konsistente monatliche Zahlungen per Banküberweisung."
+      }
+    },
+    "terms": {
+      "title": "Auf Sie zugeschnittene Partnerschaftsbedingungen",
+      "description": "Jede Immobilie ist einzigartig, und so sind auch unsere Partnerschaftsbedingungen. Umsatzbeteiligung, Dauer und spezifische Vereinbarungen werden individuell besprochen. Kontaktieren Sie uns, um mehr zu erfahren.",
+      "cta": "Partnerschaftsbedingungen besprechen"
+    },
+    "idealLocations": {
+      "title": "Standorte, die wir suchen",
+      "description": "Wir suchen hochsichtbare Immobilien an erstklassigen Standorten in der Schweiz. So sieht eine ideale Partnerimmobilie aus:",
+      "traffic": {
+        "title": "Stark befahrene Strassen",
+        "description": "Immobilien an belebten Strassen und Hauptverkehrsadern mit hohem täglichen Fahrzeug- und Fussgängerverkehr.",
+        "feature1": "Hauptstrassen mit 10'000+ Fahrzeugen pro Tag",
+        "feature2": "Buslinien und ÖV-Knotenpunkte",
+        "feature3": "Autobahn-nahe Immobilien mit klarer Sichtbarkeit"
+      },
+      "corners": {
+        "title": "Eckgebäude",
+        "description": "Eckimmobilien bieten maximale Sichtbarkeit aus mehreren Blickwinkeln und Richtungen.",
+        "feature1": "Mehrdirektionale Sichtbarkeit für maximale Wirkung",
+        "feature2": "Erhöhte Aufmerksamkeit an Verkehrskreuzungen",
+        "feature3": "Premium-Positionierung in städtischen Gebieten"
+      },
+      "prime": {
+        "title": "Erstklassige Standorte",
+        "description": "Strategische Standorte in Stadtzentren, Einkaufsvierteln und stark frequentierten Gebieten.",
+        "feature1": "Basel und weitere Schweizer Stadtzentren",
+        "feature2": "Einkaufsviertel und Gewerbezonen",
+        "feature3": "In der Nähe von Sehenswürdigkeiten und Touristenattraktionen"
+      },
+      "notSure": {
+        "title": "Nicht sicher, ob Ihre Immobilie qualifiziert?",
+        "description": "Kontaktieren Sie uns für eine kostenlose Immobilienbewertung. Wir evaluieren Ihren Standort und besprechen Partnerschaftsmöglichkeiten.",
+        "cta": "Immobilienbewertung erhalten"
+      }
+    },
+    "faq": {
+      "revenue": {
+        "question": "Wie viel kann ich als Partner verdienen?",
+        "answer": "Die Einnahmen hängen von Standort, Grösse und Sichtbarkeit Ihrer Immobilie ab. Kontaktieren Sie uns für eine personalisierte Bewertung und ein individuelles Angebot."
+      },
+      "duration": {
+        "question": "Was ist die Mindestlaufzeit der Partnerschaft?",
+        "answer": "Partnerschaftsbedingungen einschliesslich Laufzeit werden individuell besprochen. Kontaktieren Sie uns für flexible Partnerschaftsoptionen."
+      },
+      "maintenance": {
+        "question": "Wer kümmert sich um Wartung und Reparaturen?",
+        "answer": "Hyde Media übernimmt alle Installation, Wartung und Entfernung. Bei Problemen mit den Werbematerialien kümmern wir uns sofort und kostenlos darum."
+      },
+      "insurance": {
+        "question": "Wie steht es um Versicherung und Haftung?",
+        "answer": "Alle Installationen sind durch Hyde Media vollversichert. Wir haben eine umfassende Haftpflichtversicherung zum Schutz Ihrer Immobilie."
+      },
+      "termination": {
+        "question": "Kann ich die Partnerschaft kündigen?",
+        "answer": "Partnerschaftsvereinbarungen enthalten klare Kündigungsbedingungen, die beide Parteien schützen. Details werden im Vereinbarungsprozess besprochen."
+      }
+    }
+  },
+  "cases": {
+    "title": "Referenzen & Marken",
+    "subtitle": "Sehen Sie unsere neuesten Kampagnen und Kunden",
+    "challenge": "Herausforderung",
+    "solution": "Lösung",
+    "results": "Ergebnisse",
+    "readMore": "Vollständige Referenz lesen"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Antworten auf die häufigsten Fragen zur Aussenwerbung mit Hyde Media",
+    "categories": {
+      "general": "Allgemeine Informationen",
+      "pricing": "Preise & Kosten",
+      "process": "Prozess & Zeitplan",
+      "technical": "Technische Details"
+    },
+    "items": {
+      "booking": {
+        "category": "general",
+        "question": "Wie buche ich einen Werbestandort?",
+        "answer": "Kontaktieren Sie uns über unser Kontaktformular, per E-Mail (ma@hydemedia.ch) oder telefonisch (+41 77 233 81 21). Wir besprechen Ihre Kampagnenziele, zeigen verfügbare Standorte und erstellen ein massgeschneidertes Angebot innerhalb von 24 Stunden."
+      },
+      "duration": {
+        "category": "general",
+        "question": "Was ist die Mindestkampagnendauer?",
+        "answer": "Fassadenkampagnen starten ab 3 Monaten, Gebäudeverkleidungen ab 1 Monat. Wir bieten flexible Optionen basierend auf Ihren Bedürfnissen und Ihrem Budget."
+      },
+      "pricing": {
+        "category": "pricing",
+        "question": "Was kostet Aussenwerbung?",
+        "answer": "Die Preise hängen von Standortsichtbarkeit, Grösse und Dauer ab. Kontaktieren Sie uns für ein kostenloses Angebot, das auf Ihre spezifischen Bedürfnisse zugeschnitten ist."
+      },
+      "priceIncludes": {
+        "category": "pricing",
+        "question": "Was ist im Preis enthalten?",
+        "answer": "Unsere All-inclusive-Preise umfassen: Designberatung, hochwertigen Druck, professionelle Installation, Wartung während der Kampagne, Genehmigungen und behördliche Freigaben, Versicherung und Abbau. Keine versteckten Gebühren."
+      },
+      "design": {
+        "category": "process",
+        "question": "Bieten Sie Designdienstleistungen an?",
+        "answer": "Ja! Wir haben erfahrene Designer, die sich auf Grossformat-Aussenwerbung spezialisiert haben. Wir helfen Ihnen, Designs zu erstellen, die aus 50+ Metern sichtbar sind, mit optimaler Lesbarkeit und Markenwirkung. Designberatung ist inbegriffen."
+      },
+      "timeline": {
+        "category": "process",
+        "question": "Wie lange dauert es von der Buchung bis zum Kampagnenstart?",
+        "answer": "Typischer Zeitplan: 1-2 Wochen für Genehmigungen und Design, 3-5 Tage für Druck, 1-2 Tage für Installation. Die meisten Kampagnen gehen innerhalb von 3-4 Wochen live. Eiloptionen verfügbar."
+      },
+      "permits": {
+        "category": "technical",
+        "question": "Brauche ich Genehmigungen für Aussenwerbung?",
+        "answer": "Ja, die meisten Formen der Aussenwerbung erfordern behördliche Genehmigungen. Keine Sorge – wir kümmern uns um alle Genehmigungsanträge, die Kommunikation mit den Behörden und stellen die vollständige Einhaltung der lokalen Vorschriften sicher."
+      },
+      "locations": {
+        "category": "general",
+        "question": "Welche Standorte sind verfügbar?",
+        "answer": "Wir haben Premium-Standorte in stark frequentierten Gebieten. Kontaktieren Sie uns für aktuelle Verfügbarkeit oder Standorte, die zu Ihrer Zielgruppe passen."
+      },
+      "difference": {
+        "category": "general",
+        "question": "Was ist der Unterschied zwischen Gebäudeverkleidungen und Fassadenwerbung?",
+        "answer": "Gebäudeverkleidungen: Grossformatige Werbung auf Gebäudeflächen (1-6 Monate), flexibel und kosteneffizient. Fassadenwerbung: Langfristige Installation (3+ Monate), permanente Gebäudeinstallationen mit maximaler Sichtbarkeit. Beide liefern hervorragende Ergebnisse."
+      },
+      "measurement": {
+        "category": "technical",
+        "question": "Wie messen Sie die Kampagnenleistung?",
+        "answer": "Wir liefern Verkehrsdaten (wöchentliche Passanten), Standortdemografien und Sichtbarkeitsanalysen. Für einige Standorte können wir Impression-Tracking von Drittanbietern arrangieren."
+      },
+      "weather": {
+        "category": "technical",
+        "question": "Wie steht es um die Wetterbeständigkeit?",
+        "answer": "Alle unsere Materialien sind wetterfest, UV-geschützt und für Schweizer Wetterbedingungen ausgelegt. Die Materialien sind auf Windlasten bis 30 m/s getestet und bleiben jahrelang lebendig."
+      },
+      "targeting": {
+        "category": "general",
+        "question": "Kann ich bestimmte Zielgruppen ansprechen?",
+        "answer": "Absolut! Wir helfen Ihnen, Standorte basierend auf Demografie, Verkehrsmustern und Ihrer Zielgruppe auszuwählen. Ob Pendler, Einkäufer oder bestimmte Quartiere – wir haben strategische Standorte."
+      },
+      "cancellation": {
+        "category": "process",
+        "question": "Was wenn ich meine Kampagne stornieren oder ändern muss?",
+        "answer": "Die Stornierungsbedingungen hängen vom Kampagnenstatus ab: Vor Produktionsbeginn – volle Rückerstattung. Während der Produktion – teilweise Rückerstattung. Nach der Installation – keine Rückerstattung, aber wir können Änderungen besprechen."
+      },
+      "installation": {
+        "category": "technical",
+        "question": "Wie wird die Installation sicher durchgeführt?",
+        "answer": "Alle Installationen folgen den Schweizer Arbeitssicherheitsvorschriften. Unsere zertifizierten Installateure verwenden professionelle Ausrüstung, Sicherheitsgurte und korrekte Verankerungssysteme. Wir sind vollversichert."
+      },
+      "brandApproval": {
+        "category": "process",
+        "question": "Genehmigen Immobilienbesitzer, welche Marken erscheinen?",
+        "answer": "Ja, Immobilienbesitzer haben volle Genehmigungsrechte über alle Kampagnen. Wir arbeiten nur mit qualitativ hochwertigen Marken."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Lassen Sie uns besprechen, wie wir Ihrer Marke oder Immobilie helfen können, ihr volles Potenzial auszuschöpfen.",
+    "info": {
+      "title": "Kontaktinformationen",
+      "description": "Bereit, Ihre Kampagne zu starten oder mit uns zu partnern? Kontaktieren Sie uns und wir antworten innerhalb von 24 Stunden.",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "locations": "Standorte",
+      "responseTime": {
+        "title": "Schnelle Antwort",
+        "description": "Wir antworten in der Regel innerhalb von 24 Stunden an Werktagen. Für dringende Anfragen rufen Sie uns bitte direkt an."
+      }
+    },
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Unternehmen",
+      "phone": "Telefon",
+      "budget": "Budget",
+      "message": "Nachricht",
+      "period": "Gewünschter Zeitraum",
+      "periodPlaceholder": "z.B. Q1 2026",
+      "location": "Standort",
+      "locationPlaceholder": "z.B. Basel Stadt",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.",
+      "campaignType": "Kampagnentyp",
+      "selectCampaignType": "Kampagnentyp auswählen",
+      "campaignOptions": {
+        "scaffolding": "Gerüstbanner",
+        "facade": "Fassadenbanner",
+        "buildingWrap": "Gebäudeverkleidung",
+        "other": "Sonstiges"
+      }
+    }
+  },
+  "footer": {
+    "about": "Premium Out-of-Home Werbeplattform, die Marken mit strategischen Standorten in der Schweiz verbindet.",
+    "solutions": "Lösungen",
+    "scaffoldingAds": "Gerüstwerbung",
+    "facadeAds": "Fassadenwerbung",
+    "digitalOOH": "Digital OOH",
+    "buildingWraps": "Gebäudeverkleidungen",
+    "locations": "Platzierungen ansehen",
+    "company": "Unternehmen",
+    "aboutUs": "Über uns",
+    "cases": "Referenzen",
+    "partnerProgram": "Partnerprogramm",
+    "contact": "Kontakt",
+    "contactInfo": "Kontaktinformationen",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen"
+  },
+  "cookies": {
+    "title": "Wir verwenden Cookies",
+    "description": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Durch die weitere Nutzung akzeptieren Sie unsere Verwendung von Cookies gemäss unserer Datenschutzrichtlinie.",
+    "accept": "Alle akzeptieren",
+    "decline": "Ablehnen",
+    "learnMore": "Mehr erfahren"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "backHome": "Zur Startseite",
+    "contact": "Kontakt",
+    "helpfulLinks": "Diese Links könnten Ihnen helfen:"
+  },
+  "scaffolding": {
+    "title": "Gebäudeverkleidungen",
+    "description": "Grossformatige Werbelösungen auf Gebäudeflächen an erstklassigen Standorten in der Schweiz. Perfekt für Produktlancierungen, saisonale Kampagnen und zeitkritische Promotionen.",
+    "status": {
+      "available": "Verfügbar",
+      "booked": "Gebucht"
+    },
+    "details": {
+      "size": "Grösse",
+      "traffic": "Verkehr",
+      "trafficDaily": "Tägliche Besucher",
+      "trafficWeekly": "Wöchentliche Besucher",
+      "duration": "Zeitraum",
+      "perfectFor": "Perfekt für: Produktlancierungen, Eventpromotionen, saisonale Kampagnen und Markenbekanntheitsinitiativen.",
+      "contactButton": "Kontaktieren Sie uns"
+    },
+    "locationDescription": "bietet Premium-Gebäudeverkleidungswerbung an einem der strategischsten Standorte. Mit <strong>{traffic}</strong> wöchentlichen Passanten gewährleistet dieses {size}-Format aussergewöhnliche Sichtbarkeit für Ihre Kampagne.",
+    "cta": {
+      "title": "Sollen wir über Ihre nächste Kampagne sprechen?",
+      "description": "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Aussenwerbungsmöglichkeiten.",
+      "button": "Kontakt aufnehmen",
+      "phone": "Anruf: +41 77 233 81 21"
+    }
+  },
+  "facade": {
+    "title": "Gebäudeverkleidungen & Fassadenbanner",
+    "description": "Langfristige Werbung mit maximaler Wirkung auf Gebäudefassaden. Schaffen Sie nachhaltige Markenpräsenz mit unseren Grossformat-Gebäudeverkleidungen.",
+    "status": {
+      "available": "Verfügbar",
+      "booked": "Gebucht"
+    },
+    "details": {
+      "size": "Grösse",
+      "traffic": "Verkehr",
+      "trafficDaily": "Tägliche Besucher",
+      "trafficWeekly": "Wöchentliche Besucher",
+      "duration": "Zeitraum",
+      "perfectFor": "Perfekt für: Produktlancierungen, Eventpromotionen, saisonale Kampagnen und Markenbekanntheitsinitiativen.",
+      "contactButton": "Kontaktieren Sie uns"
+    },
+    "locationDescription": "bietet Premium-Fassadenwerbung an einem der strategischsten Standorte. Mit <strong>{traffic}</strong> wöchentlichen Passanten gewährleistet dieses {size}-Format maximale Sichtbarkeit für Ihre Kampagne.",
+    "cta": {
+      "title": "Sollen wir über Ihre nächste Kampagne sprechen?",
+      "description": "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Fassadenwerbemöglichkeiten.",
+      "button": "Kontakt aufnehmen",
+      "phone": "Anruf: +41 77 233 81 21"
+    }
+  },
+  "blogPost": {
+    "backButton": "Blog",
+    "byAuthor": "Von",
+    "share": "Teilen:",
+    "shareLabels": {
+      "facebook": "Auf Facebook teilen",
+      "twitter": "Auf Twitter teilen",
+      "linkedin": "Auf LinkedIn teilen"
+    },
+    "cta": {
+      "title": "Bereit, Ihre OOH-Kampagne zu starten?",
+      "description": "Kontaktieren Sie Hyde Media, um erstklassige Standorte, strategische Planung und maximalen Kampagnen-ROI zu besprechen.",
+      "button": "Kontakt aufnehmen"
+    },
+    "relatedArticles": "Verwandte Artikel",
+    "viewAll": "Alle Artikel ansehen"
+  },
+  "caseStudyDetail": {
+    "backButton": "Referenzen",
+    "sections": {
+      "challenge": "Die Herausforderung",
+      "solution": "Unsere Lösung",
+      "results": "Ergebnisse"
+    },
+    "testimonialAttribution": "Marketing-Abteilung",
+    "details": {
+      "title": "Kampagnendetails",
+      "brand": "Marke",
+      "location": "Standort",
+      "format": "Format",
+      "size": "Grösse",
+      "duration": "Dauer"
+    },
+    "cta": {
+      "title": "Ähnliche Ergebnisse gewünscht?",
+      "description": "Lassen Sie uns besprechen, wie wir Ihrer Marke Wirkung verleihen können.",
+      "button": "Kontakt aufnehmen"
+    }
+  },
+  "brands": {
+    "hero": {
+      "badge": "Für Marken & Marketing-Teams",
+      "title": "Maximale Sichtbarkeit für Ihre Marke",
+      "description": "Erreichen Sie täglich tausende potenzielle Kunden mit strategisch platzierter Aussenwerbung in Basel und der ganzen Schweiz. Wirkungsvolle Kampagnen mit messbaren Ergebnissen.",
+      "cta": "Kampagne starten",
+      "secondaryCta": "Referenzen ansehen"
+    },
+    "stats": {
+      "impressions": {
+        "value": "7+",
+        "label": "Erfolgreiche Kampagnen"
+      },
+      "locations": {
+        "value": "Basel",
+        "label": "Primärmarkt"
+      },
+      "cities": {
+        "value": "2",
+        "label": "Zielmärkte"
+      },
+      "formats": {
+        "value": "2",
+        "label": "Werbeformate"
+      }
+    },
+    "benefits": {
+      "title": "Warum Aussenwerbung wählen?",
+      "subtitle": "Grossformat-Aussenwerbung liefert unübertroffene Sichtbarkeit und Markenwirkung in den meistfrequentierten Gebieten.",
+      "items": {
+        "visibility": {
+          "title": "Massive Sichtbarkeit",
+          "description": "Ihre Marke wird täglich von tausenden Menschen in stark frequentierten Stadtgebieten gesehen."
+        },
+        "impact": {
+          "title": "Unübersehbar",
+          "description": "Grossformate, die Aufmerksamkeit erregen und sofortige Markenbekanntheit aufbauen."
+        },
+        "reach": {
+          "title": "Gezielte Platzierung",
+          "description": "Strategische Standorte dort, wo Ihre Zielgruppe lebt, arbeitet und ausgeht. Datenbasierte Standortwahl für optimalen ROI."
+        },
+        "timing": {
+          "title": "24/7 Markenpräsenz",
+          "description": "Kontinuierliche Exposition während Ihrer gesamten Kampagnenzeit. Ihre Botschaft wirkt rund um die Uhr."
+        }
+      }
+    },
+    "campaignTypes": {
+      "title": "Perfekt für jede Kampagne",
+      "subtitle": "Ob Produktlancierung, Markenaufbau oder langfristige Markenpräsenz – wir haben die richtige Lösung.",
+      "types": {
+        "productLaunch": {
+          "title": "Produktlancierungen",
+          "description": "Erzeugen Sie Buzz und sofortige Bekanntheit mit wirkungsvollen Platzierungen während Ihrer Lancierungsphase."
+        },
+        "brandAwareness": {
+          "title": "Markenbekanntheit",
+          "description": "Bauen Sie nachhaltige Wiedererkennung auf mit konsistenter Präsenz an Schlüsselstandorten."
+        },
+        "eventPromotion": {
+          "title": "Eventpromotion",
+          "description": "Steigern Sie die Teilnahme mit gezielten Kampagnen in der Nähe Ihres Veranstaltungsortes und in der ganzen Stadt."
+        },
+        "longTerm": {
+          "title": "Langfristiges Branding",
+          "description": "Etablieren Sie Dominanz mit permanenten oder semi-permanenten Fassadeninstallationen an ikonischen Gebäuden."
+        }
+      }
+    },
+    "locations": {
+      "title": "Strategische Standorte in der Schweiz",
+      "subtitle": "Premium-Platzierungen in stark frequentierten Gebieten der Schweizer Städte.",
+      "items": {
+        "copenhagen": {
+          "city": "Basel",
+          "description": "Strategische Standorte in Basel mit hoher Sichtbarkeit und Premium-Exposure.",
+          "coverage": "Region Basel"
+        },
+        "aarhus": {
+          "city": "Zürich",
+          "description": "Erweiterung in die grösste Schweizer Stadt mit erstklassigen Standorten.",
+          "coverage": "Demnächst verfügbar"
+        },
+        "nationwide": {
+          "city": "Expansion",
+          "description": "Wachsendes Portfolio in den wichtigsten Schweizer Städten für umfassende Abdeckung.",
+          "coverage": "Weitere folgen"
+        }
+      }
+    },
+    "process": {
+      "title": "Einfach, schnell, professionell",
+      "description": "Von der Erstberatung bis zum Kampagnenstart in nur 7 Tagen",
+      "steps": {
+        "step1": {
+          "title": "Kostenlose Beratung",
+          "description": "Wir besprechen Ihre Ziele, Zielgruppe, Budget und Timing, um die perfekte Lösung zu finden."
+        },
+        "step2": {
+          "title": "Standortwahl",
+          "description": "Wählen Sie aus unserem Portfolio von Premium-Standorten oder lassen Sie uns die besten Optionen empfehlen."
+        },
+        "step3": {
+          "title": "Design & Produktion",
+          "description": "Wir unterstützen bei Designrichtlinien, Druck, Qualitätskontrolle und Produktion Ihrer Kampagnenmaterialien."
+        },
+        "step4": {
+          "title": "Start & Support",
+          "description": "Professionelle Installation, Kampagnendokumentation und laufende Unterstützung während Ihrer gesamten Kampagne."
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Warum mit Hyde Media arbeiten?",
+      "subtitle": "Wir sind nicht nur ein Medienbesitzer – wir sind Ihr strategischer Aussenwerbungspartner.",
+      "reasons": {
+        "reason1": {
+          "title": "Nur Premium-Standorte",
+          "description": "Wir arbeiten nur mit den meistfrequentierten, sichtbarsten Standorten."
+        },
+        "reason2": {
+          "title": "Schneller Kampagnenstart",
+          "description": "Vom Angebot zur laufenden Kampagne in 7-14 Tagen. Schnelle Genehmigungen und professionelle Installation."
+        },
+        "reason3": {
+          "title": "Full-Service-Support",
+          "description": "Designunterstützung, Produktionsmanagement, Installation und Kampagnenberichterstattung – alles inklusive."
+        },
+        "reason4": {
+          "title": "Flexible Konditionen",
+          "description": "Kampagnen von 2 Wochen bis 12+ Monate. Wählen Sie die Dauer, die zu Ihrem Marketingkalender passt."
+        },
+        "reason5": {
+          "title": "Transparente Preise",
+          "description": "Klare Preise ohne versteckte Gebühren. Wissen Sie von Anfang an genau, wofür Sie bezahlen."
+        },
+        "reason6": {
+          "title": "Bewährte Erfolgsbilanz",
+          "description": "Wachsendes Portfolio erfolgreicher Kampagnen mit hervorragenden Ergebnissen für Marken."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihre Marke zu verstärken?",
+      "description": "Erhalten Sie eine kostenlose Beratung und ein massgeschneidertes Angebot. Unverbindlich, nur kompetente Beratung.",
+      "primaryButton": "Kostenloses Angebot",
+      "secondaryButton": "Lösungen entdecken"
+    }
+  },
+  "propertyOwners": {
+    "hero": {
+      "title": "Einnahmen mit Ihrer Immobilie generieren",
+      "description": "Ob Immobilienbesitzer, Stockwerkeigentümergemeinschaft, Immobilienverwalter oder Unternehmen – wir helfen Ihnen, Ihre Fassadenflächen zu monetarisieren. Professioneller Service mit vollständiger Abwicklung von Genehmigungen und allen praktischen Angelegenheiten.",
+      "cta": "Erfahren Sie wie es funktioniert"
+    },
+    "audiences": {
+      "title": "Mit wem wir zusammenarbeiten",
+      "description": "Wir arbeiten mit einer Vielzahl von Immobilienbesitzern und Fachleuten zusammen",
+      "types": {
+        "owners": {
+          "title": "Private Immobilienbesitzer",
+          "description": "Besitzen Sie ein Gebäude mit hoher Sichtbarkeit? Generieren Sie zusätzliche Einnahmen aus ungenutztem Fassadenraum.",
+          "benefits": {
+            "benefit1": "Zusätzliche Einnahmen aus Ihrer Immobilie",
+            "benefit2": "Professionelle Installation und Wartung",
+            "benefit3": "Volle Versicherungsdeckung"
+          }
+        },
+        "associations": {
+          "title": "Stockwerkeigentümergemeinschaften",
+          "description": "Vertreten Sie eine Eigentümergemeinschaft? Wir übernehmen alles von der Vorstandsgenehmigung bis zur Bewohnerkommunikation.",
+          "benefits": {
+            "benefit1": "Vorstandsfreundliche Kommunikationsmaterialien",
+            "benefit2": "Transparente Umsatzbeteiligung",
+            "benefit3": "Bewohnerinformationsmanagement"
+          }
+        },
+        "managers": {
+          "title": "Immobilienverwalter",
+          "description": "Verwalten Sie mehrere Immobilien? Arbeiten Sie mit uns für eine Einnahmequelle über Ihr gesamtes Portfolio.",
+          "benefits": {
+            "benefit1": "Skalierbare Lösungen für mehrere Immobilien",
+            "benefit2": "Persönliches Account-Management",
+            "benefit3": "Vereinfachte Verwaltungsprozesse"
+          }
+        },
+        "enterprises": {
+          "title": "Unternehmen & Gewerbe",
+          "description": "Besitzen Sie Gewerbegebäude oder Bürokomplexe? Monetarisieren Sie Ihre Fassaden bei gleichzeitiger Wahrung professioneller Ästhetik.",
+          "benefits": {
+            "benefit1": "Markensichere Kampagnenauswahl",
+            "benefit2": "Langfristige Partnerschaftsmöglichkeiten",
+            "benefit3": "Unternehmensberichterstattung und Dokumentation"
+          }
+        },
+        "scaffolding": {
+          "title": "Bauunternehmen",
+          "description": "Verwalten Sie Bauprojekte mit Gebäudefassaden? Arbeiten Sie mit uns zusammen, um zusätzliche Einnahmen zu generieren.",
+          "benefits": {
+            "benefit1": "Einnahmen pro Bauprojekt",
+            "benefit2": "Kein zusätzlicher Aufwand erforderlich",
+            "benefit3": "Vorteile des Partnerprogramms"
+          }
+        }
+      }
+    },
+    "benefits": {
+      "title": "Warum mit Hyde Media arbeiten",
+      "items": {
+        "income": {
+          "title": "Zuverlässige Zusatzeinnahmen",
+          "description": "Generieren Sie konsistente Einnahmen aus ungenutztem Raum. Transparente Preise und pünktliche Zahlungen."
+        },
+        "professional": {
+          "title": "Vollprofessioneller Service",
+          "description": "Wir übernehmen alles von Genehmigungen und Bewohnerinformationen bis hin zu Installation, Wartung und Abbau."
+        },
+        "permits": {
+          "title": "Komplette Genehmigungsabwicklung",
+          "description": "Wir verwalten alle behördlichen Anforderungen, Gemeindegenehmigungen und Compliance-Angelegenheiten."
+        },
+        "flexible": {
+          "title": "Flexible Konditionen",
+          "description": "Kampagnendauern von Wochen bis Jahren. Sie wählen, was für Ihre Immobilie passt. Keine langfristigen Verpflichtungen erforderlich."
+        }
+      }
+    },
+    "process": {
+      "title": "So funktioniert der Prozess",
+      "description": "Einfach, transparent und professionell von Anfang bis Ende",
+      "steps": {
+        "step1": {
+          "title": "Erstkontakt",
+          "description": "Kontaktieren Sie uns mit Informationen über Ihre Immobilie. Wir bewerten die Möglichkeit und geben erste Rückmeldung."
+        },
+        "step2": {
+          "title": "Besichtigung & Bewertung",
+          "description": "Wir besuchen den Standort, um Sichtbarkeit, Zugänglichkeit und Potenzial zu evaluieren. Sie erhalten ein detailliertes Angebot mit Einnahmeschätzungen."
+        },
+        "step3": {
+          "title": "Vereinbarung & Genehmigungen",
+          "description": "Wir erstellen alle notwendigen Vereinbarungen und kümmern uns um Gemeindegenehmigungen. Für Eigentümergemeinschaften stellen wir Materialien für Versammlungen und Bewohnerinformationen bereit."
+        },
+        "step4": {
+          "title": "Kampagnenmatch & Installation",
+          "description": "Sobald wir eine passende Markenkampagne finden, koordinieren wir die professionelle Installation. Volle Versicherungsdeckung und Qualitätskontrolle."
+        },
+        "step5": {
+          "title": "Wartung & Zahlung",
+          "description": "Regelmässige Inspektionen und Wartung während der Kampagne. Sie erhalten Zahlungen gemäss dem vereinbarten Zeitplan. Abbau und Reinigung am Kampagnenende."
+        }
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "questions": {
+        "q1": {
+          "question": "Wie viel Einkommen kann ich erwarten?",
+          "answer": "Die Einnahmen hängen von Standortsichtbarkeit, Grösse, Dauer und Kampagnentyp ab. Wir erstellen detaillierte Schätzungen nach der Standortbewertung."
+        },
+        "q2": {
+          "question": "Brauche ich eine spezielle Versicherung?",
+          "answer": "Nein. Alle Kampagnen sind durch unsere umfassende Versicherung abgedeckt, die Sachschäden, Installation und Drittpartei-Haftung einschliesst."
+        },
+        "q3": {
+          "question": "Wie lange dauert eine typische Kampagne?",
+          "answer": "Die Kampagnendauer variiert. Gebäudeverkleidungen laufen in der Regel 1-6 Monate. Fassadenkampagnen können von 3 Monaten bis mehrere Jahre reichen."
+        },
+        "q4": {
+          "question": "Was ist mit Genehmigungen und behördlichen Freigaben?",
+          "answer": "Wir kümmern uns um alle Genehmigungsanträge und die behördliche Kommunikation. Wir haben umfangreiche Erfahrung mit Vorschriften und stellen die volle Einhaltung sicher."
+        },
+        "q5": {
+          "question": "Wie handhabt ihr die Bewohnerkommunikation für Eigentümergemeinschaften?",
+          "answer": "Wir stellen professionelle Informationsmaterialien für Vorstandssitzungen und Bewohnerbenachrichtigungen bereit. Klare Zeitpläne, Kampagnendetails und Umsatzbeteiligungsinformationen enthalten."
+        },
+        "q6": {
+          "question": "Kann ich bestimmte Marken oder Kampagnentypen ablehnen?",
+          "answer": "Absolut. Sie haben volle Genehmigungsrechte darüber, welche Kampagnen auf Ihrer Immobilie erscheinen. Wir gehen nur mit Kampagnen weiter, mit denen Sie vollständig einverstanden sind."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit loszulegen?",
+      "description": "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung. Wir bewerten Ihre Immobilie und erstellen detaillierte Einnahmeschätzungen.",
+      "primaryButton": "Kontakt aufnehmen"
+    }
+  },
+  "newsletter": {
+    "title": "Bleiben Sie informiert",
+    "description": "Erhalten Sie die neuesten Nachrichten, Referenzen und Einblicke in Ihren Posteingang.",
+    "placeholder": "Ihre E-Mail-Adresse",
+    "button": "Abonnieren",
+    "loading": "Wird abonniert...",
+    "subscribed": "Abonniert!",
+    "success": "Vielen Dank für Ihr Abonnement! Prüfen Sie Ihre E-Mail zur Bestätigung.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "privacy": "Wir respektieren Ihre Privatsphäre. Jederzeit abbestellbar."
+  },
+  "portfolio": {
+    "title": "Unser Portfolio",
+    "subtitle": "Entdecken Sie unsere Sammlung von Premium-Aussenwerbungsstandorten in der Schweiz"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Datenschutzrichtlinie",
+      "lastUpdated": "Letzte Aktualisierung: Januar 2026",
+      "sections": {
+        "introduction": {
+          "title": "1. Einleitung",
+          "content": "Hyde Media (\"wir\", \"uns\" oder \"unser\") respektiert Ihre Privatsphäre. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden, offenlegen und schützen, wenn Sie unsere Website besuchen oder unsere Dienste nutzen."
+        },
+        "dataCollection": {
+          "title": "2. Informationen, die wir sammeln",
+          "personalData": {
+            "title": "Personenbezogene Daten",
+            "items": [
+              "Name und Kontaktinformationen (E-Mail, Telefonnummer)",
+              "Firmenname und Geschäftsinformationen",
+              "Kommunikationspräferenzen"
+            ]
+          },
+          "usageData": {
+            "title": "Nutzungsdaten",
+            "items": [
+              "Browsertyp und -version",
+              "Besuchte Seiten und Verweildauer",
+              "IP-Adresse und Geräteinformationen"
+            ]
+          }
+        },
+        "dataUsage": {
+          "title": "3. Wie wir Ihre Informationen verwenden",
+          "items": [
+            "Zur Bereitstellung und Wartung unserer Dienste",
+            "Zur Kommunikation über Kampagnen und Möglichkeiten",
+            "Zur Verbesserung unserer Website und Dienste",
+            "Zur Erfüllung gesetzlicher Verpflichtungen"
+          ]
+        },
+        "dataSharing": {
+          "title": "4. Datenweitergabe und Offenlegung",
+          "intro": "Wir verkaufen Ihre personenbezogenen Daten nicht. Wir können Ihre Daten teilen mit:",
+          "items": [
+            "Dienstleistern, die uns beim Betrieb unseres Geschäfts unterstützen",
+            "Behörden, wenn gesetzlich vorgeschrieben"
+          ]
+        },
+        "dataSecurity": {
+          "title": "5. Datensicherheit",
+          "content": "Wir implementieren angemessene technische und organisatorische Massnahmen, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Offenlegung, Änderung oder Zerstörung zu schützen."
+        },
+        "gdprRights": {
+          "title": "6. Ihre Rechte (DSGVO & DSG)",
+          "intro": "Unter der DSGVO und dem Schweizer Datenschutzgesetz (DSG) haben Sie das Recht auf:",
+          "items": [
+            "Zugang zu Ihren personenbezogenen Daten",
+            "Berichtigung unrichtiger Daten",
+            "Löschung Ihrer Daten",
+            "Widerspruch gegen die Verarbeitung",
+            "Datenübertragbarkeit"
+          ]
+        },
+        "cookies": {
+          "title": "7. Cookies",
+          "content": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Sie können Cookies über Ihre Browsereinstellungen kontrollieren. Essenzielle Cookies sind für die Funktion der Website notwendig."
+        },
+        "contact": {
+          "title": "8. Kontakt",
+          "content": "Für datenschutzbezogene Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns:<br/>E-Mail: sebastian.staal@hydemedia.ch<br/>Telefon: +41 77 233 81 21"
+        },
+        "changes": {
+          "title": "9. Änderungen dieser Richtlinie",
+          "content": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wir benachrichtigen Sie über Änderungen, indem wir die neue Richtlinie auf dieser Seite veröffentlichen."
+        }
+      }
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "lastUpdated": "Letzte Aktualisierung: Januar 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Annahme der Bedingungen",
+          "content": "Durch den Zugriff auf oder die Nutzung der Dienste von Hyde Media erklären Sie sich mit diesen Nutzungsbedingungen einverstanden."
+        },
+        "services": {
+          "title": "2. Angebotene Dienstleistungen",
+          "content": "Hyde Media bietet Out-of-Home-Werbedienstleistungen an, darunter Fassadenwerbung und Gebäudeverkleidungen."
+        },
+        "advertiserResponsibilities": {
+          "title": "3. Pflichten des Werbetreibenden",
+          "items": [
+            "Bereitstellung genauer und rechtmässiger Werbeinhalte",
+            "Sicherstellung, dass alle kreativen Materialien den technischen Spezifikationen entsprechen",
+            "Zahlung der Rechnungen gemäss vereinbarten Zahlungsbedingungen",
+            "Einhaltung der Schweizer Werbegesetze und -vorschriften"
+          ]
+        },
+        "partnerResponsibilities": {
+          "title": "4. Pflichten des Partners",
+          "items": [
+            "Bereitstellung genauer Immobilieninformationen",
+            "Sicherstellung der rechtlichen Befugnis zum Abschluss von Partnerschaftsvereinbarungen",
+            "Gewährleistung angemessenen Zugangs zur Immobilie für die Installation"
+          ]
+        },
+        "bookingPayments": {
+          "title": "5. Buchung und Zahlung",
+          "items": [
+            "Buchungen werden bei Erhalt der unterzeichneten Vereinbarung und Zahlung bestätigt",
+            "Zahlungsbedingungen sind in der Regel 30 Tage netto, sofern nicht anders vereinbart",
+            "Verspätete Zahlungen können Zinsgebühren nach sich ziehen",
+            "Stornierungen müssen den in Ihrer Buchungsvereinbarung festgelegten Bedingungen folgen"
+          ]
+        },
+        "contentStandards": {
+          "title": "6. Inhaltsstandards",
+          "intro": "Werbeinhalte dürfen nicht:",
+          "items": [
+            "Gesetze oder Vorschriften verletzen",
+            "Diffamierend, obszön oder anstössig sein",
+            "Geistige Eigentumsrechte verletzen",
+            "Illegale Produkte oder Dienstleistungen bewerben"
+          ]
+        },
+        "installation": {
+          "title": "7. Installation und Wartung",
+          "items": [
+            "Hyde Media übernimmt alle Installation und Entfernung",
+            "Wir führen regelmässige Wartung und Überwachung durch",
+            "Wetter oder unvorhergesehene Umstände können die Anzeigezeiten beeinflussen"
+          ]
+        },
+        "liability": {
+          "title": "8. Haftung und Freistellung",
+          "content": "Hyde Media haftet nicht für indirekte, zufällige oder Folgeschäden, die aus der Nutzung unserer Dienste entstehen."
+        },
+        "intellectualProperty": {
+          "title": "9. Geistiges Eigentum",
+          "content": "Sie behalten das Eigentum an Ihren kreativen Materialien. Durch die Nutzung unserer Dienste gewähren Sie Hyde Media eine Lizenz zur Anzeige und Reproduktion Ihrer Inhalte für die Dauer der Kampagne."
+        },
+        "termination": {
+          "title": "10. Kündigung",
+          "content": "Beide Parteien können Vereinbarungen gemäss den in der Buchungs- oder Partnerschaftsvereinbarung festgelegten Bedingungen kündigen."
+        },
+        "governingLaw": {
+          "title": "11. Anwendbares Recht",
+          "content": "Diese Bedingungen unterliegen dem Schweizer Recht. Streitigkeiten werden vor Schweizer Gerichten beigelegt."
+        },
+        "changes": {
+          "title": "12. Änderungen der Bedingungen",
+          "content": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen werden sofort nach Veröffentlichung wirksam."
+        },
+        "contact": {
+          "title": "13. Kontaktinformationen",
+          "content": "Für Fragen zu diesen Bedingungen kontaktieren Sie uns:<br/>E-Mail: sebastian.staal@hydemedia.ch<br/>Telefon: +41 77 233 81 21"
+        }
+      }
+    }
+  },
+  "trustBadges": {
+    "cvr": {
+      "text": "Eingetragenes Unternehmen",
+      "subtext": "Professionell registriert"
+    },
+    "response": {
+      "text": "24-Stunden-Antwort",
+      "subtext": "Wir antworten schnell auf alle Anfragen"
+    },
+    "quality": {
+      "text": "Premium-Qualität",
+      "subtext": "Professionelles Design & Installation"
+    },
+    "allInclusive": {
+      "text": "All-inclusive",
+      "subtext": "Design, Produktion, Genehmigungen & Installation"
+    }
+  },
+  "teamSection": {
+    "title": "Unser Team kennenlernen"
+  },
+  "permitGuide": {
+    "meta": {
+      "title": "Bewilligungsleitfaden für Aussenwerbung",
+      "description": "Vollständiger Leitfaden zu Bewilligungen für Aussenwerbung und Fassadenwerbung in der Schweiz. Wir übernehmen den gesamten Prozess."
+    },
+    "hero": {
+      "title": "Bewilligungsleitfaden für Aussenwerbung",
+      "subtitle": "Alles, was Sie über Bewilligungen für Aussenwerbung und Fassadenwerbung wissen müssen",
+      "cta": "Kostenlose Beratung"
+    },
+    "process": {
+      "title": "Der Bewilligungsprozess",
+      "subtitle": "Von der Anfrage bis zur Genehmigung – wir übernehmen alles",
+      "steps": {
+        "contact": {
+          "step": "Schritt 1",
+          "title": "Erstkontakt",
+          "description": "Kontaktieren Sie uns mit Details zu Ihrem gewünschten Werbestandort"
+        },
+        "application": {
+          "step": "Schritt 2",
+          "title": "Antragstellung",
+          "description": "Wir erstellen und reichen den vollständigen Antrag mit Zeichnungen und Dokumentation ein"
+        },
+        "review": {
+          "step": "Schritt 3",
+          "title": "Bearbeitung",
+          "description": "Die Gemeinde bearbeitet den Antrag (in der Regel 2-4 Wochen)"
+        },
+        "approval": {
+          "step": "Schritt 4",
+          "title": "Genehmigung",
+          "description": "Sie erhalten die Bewilligung von der Gemeinde"
+        },
+        "installation": {
+          "step": "Schritt 5",
+          "title": "Installation",
+          "description": "Wir installieren das Werbebanner gemäss der Bewilligung"
+        }
+      }
+    },
+    "requirements": {
+      "title": "Anforderungen an den Antrag",
+      "subtitle": "Dies muss vorbereitet sein",
+      "items": {
+        "location": {
+          "title": "Standort & Adresse",
+          "description": "Genauer Standort mit Adresse. Wir helfen bei der Suche nach optimalen Platzierungen."
+        },
+        "size": {
+          "title": "Grösse & Abmessungen",
+          "description": "Genaue Masse des Werbebanners (Höhe x Breite). Wir passen die Grösse an das Gebäude an."
+        },
+        "duration": {
+          "title": "Dauer",
+          "description": "Wie lange soll das Banner hängen? Kurzfristige Kampagnen (1-3 Monate) oder längere Vereinbarungen."
+        },
+        "safety": {
+          "title": "Sicherheit & Statik",
+          "description": "Dokumentation, dass die Konstruktion sicher ist und die Bauvorschriften erfüllt."
+        },
+        "design": {
+          "title": "Design & Visualisierung",
+          "description": "Skizzen oder Visualisierungen des fertigen Designs. Wir erstellen professionelle Mockups."
+        }
+      }
+    },
+    "municipalities": {
+      "title": "Kantonale Richtlinien",
+      "subtitle": "Jeder Kanton hat eigene Regeln – hier sind die wichtigsten",
+      "processingTime": "Bearbeitungszeit",
+      "visitWebsite": "Website des Kantons besuchen",
+      "copenhagen": {
+        "description": "Basel-Stadt hat klare Richtlinien für Aussenwerbung. Fassadenwerbung und Gebäudeverkleidungen erfordern eine spezielle Bewilligung.",
+        "link": "https://www.bs.ch/"
+      },
+      "frederiksberg": {
+        "description": "Basel-Landschaft folgt kantonalen Regelungen. Erfordert detaillierte Anträge mit Visualisierungen.",
+        "link": "https://www.bl.ch/"
+      },
+      "aarhus": {
+        "description": "Der Kanton Zürich ist generell offen für Aussenwerbung. Fassadenwerbung und Gebäudeverkleidungen erfordern eine Sichtbarkeitsbewertung.",
+        "link": "https://www.zh.ch/"
+      },
+      "odense": {
+        "description": "Der Kanton Bern hat klare Richtlinien für Werbung. Fassadenwerbung wird nach Prüfung in der Regel genehmigt.",
+        "link": "https://www.be.ch/"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "questions": {
+        "q1": {
+          "question": "Wie lange dauert es, eine Bewilligung zu erhalten?",
+          "answer": "In der Regel 2-4 Wochen vom Antrag bis zur Genehmigung, abhängig vom Kanton. Wir verfolgen Ihren Fall und sorgen für schnelle Bearbeitung."
+        },
+        "q2": {
+          "question": "Was kostet eine Bewilligung?",
+          "answer": "Die kantonalen Gebühren variieren je nach Grösse und Standort. Wir berücksichtigen alle Gebühren in unseren Preisen, damit es keine Überraschungen gibt."
+        },
+        "q3": {
+          "question": "Können alle Standorte eine Bewilligung erhalten?",
+          "answer": "Nein, es gibt Einschränkungen in historischen Gebieten und Schutzzonen. Wir bewerten Ihren Standort und empfehlen bei Bedarf Alternativen."
+        },
+        "q4": {
+          "question": "Was passiert, wenn die Bewilligung abgelehnt wird?",
+          "answer": "Wir beraten über mögliche Änderungen (Grösse, Design, Platzierung) für eine Genehmigung. In seltenen Fällen finden wir einen alternativen Standort. Keine Zahlung vor Genehmigung."
+        },
+        "q5": {
+          "question": "Muss ich die Bewilligung selbst beantragen?",
+          "answer": "Nein, wir übernehmen den gesamten Prozess für Sie. Vom Antrag bis zur Nachverfolgung mit den Behörden. Sie müssen nur das Design genehmigen."
+        }
+      }
+    },
+    "cta": {
+      "title": "Lassen Sie uns die Bewilligungen für Sie übernehmen",
+      "subtitle": "Wir haben Erfahrung mit zahlreichen Bewilligungen",
+      "contact": "Kontakt aufnehmen"
+    }
+  }
+}

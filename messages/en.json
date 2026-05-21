@@ -1,0 +1,1418 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "about": "About us",
+    "contact": "Contact",
+    "pricing": "Pricing",
+    "caseStudies": "Case Studies",
+    "partners": "Partners"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "viewAll": "View All",
+    "backTo": "Back to",
+    "backToTop": "Back to top",
+    "contactUs": "Contact Us",
+    "forBrands": "For Brands",
+    "forPropertyOwners": "For Property Owners",
+    "submitInquiry": "Submit Partnership Inquiry",
+    "chat": {
+      "whatsapp": {
+        "tooltip": "Questions? Message us!",
+        "defaultMessage": "Hi! I am interested in learning more about your outdoor advertising solutions."
+      },
+      "tawk": {
+        "greeting": "Hi there! How can we help you today?"
+      }
+    }
+  },
+  "caseStudies": {
+    "hero": {
+      "title": "Case Studies",
+      "subtitle": "Real campaigns, real results. See how leading brands achieve impact with Hyde Media."
+    },
+    "readCaseStudy": "Read Case Study",
+    "cta": {
+      "title": "Ready to Create Your Success Story?",
+      "subtitle": "Let's discuss how we can deliver results for your brand",
+      "button": "Get Started"
+    }
+  },
+  "Home": {
+    "hero": {
+      "title": "Private Aviation\nRedefined",
+      "subtitle": "Experience the ultimate in personalized flight services. Your journey, your way, with uncompromising luxury and flexibility.",
+      "primaryCta": "Book a Flight",
+      "secondaryCta": "Explore Services"
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "Scaffolding & Facade Advertising",
+      "subheading": "Professional large-format outdoor marketing. From idea to installation, we deliver.",
+      "cta1": "For brands",
+      "cta2": "For property owners"
+    },
+    "valueProposition": {
+      "headline": "Built on trust, expertise, and a commitment to excellence since 2025.",
+      "features": {
+        "flexible": {
+          "title": "Proven Expertise",
+          "description": "Founded by industry veterans with deep knowledge of permits, safety, and structural requirements for large-format outdoor advertising."
+        },
+        "smart": {
+          "title": "Transparent Partnership",
+          "description": "Clear communication, honest pricing, and dedicated support throughout every campaign. No surprises, just results."
+        },
+        "customizable": {
+          "title": "Quality First",
+          "description": "We never compromise on materials, installation standards, or safety. Your brand deserves nothing less than excellence."
+        },
+        "personalization": {
+          "title": "Long-term Vision",
+          "description": "Building lasting relationships with property owners and brands across Switzerland. Your success is our foundation."
+        }
+      }
+    },
+    "specialistsAudience": {
+      "sectionTitle": "Who We Serve",
+      "sectionSubtitle": "Tailored solutions for brands and property owners",
+      "specialists": {
+        "title": "Specialists in large formats on buildings",
+        "description": "We focus exclusively on banners on scaffolding and facades. That makes us specialists in everything from structural safety and permits to creative and legible design – so your campaign both looks strong and actually works in practice.",
+        "benefits": {
+          "consulting": "Consulting on large-format design and visibility.",
+          "experience": "Experience working with contractors and property owners.",
+          "fullSolution": "Full solution: printing, installation, maintenance, and takedown."
+        }
+      },
+      "brands": {
+        "title": "For Brands",
+        "benefits": {
+          "reach": "High daily reach in high-traffic urban areas.",
+          "exposure": "Longer exposure time compared to traditional OOH formats.",
+          "creative": "Possibility for creative campaigns with strong visual impact."
+        }
+      },
+      "owners": {
+        "title": "For Property Owners",
+        "benefits": {
+          "income": "Additional income from otherwise unused facades and scaffolding.",
+          "permits": "We handle permits, production, and installation.",
+          "professional": "Professional, safe setup and takedown."
+        }
+      }
+    },
+    "companyValues": {
+      "headline": "Premium Out-of-Home advertising partner trusted by landlords across Switzerland",
+      "storyTitle": "Founded in February 2025 with a vision to revolutionize high-impact OOH campaigns.",
+      "paragraph1": "Hyde Media was created to bring a fresh, professional approach to out-of-home advertising in Switzerland. We specialize in high-impact banner campaigns featuring giant building wraps, scaffolding banners, and facade advertising located in the heart of Basel, Zurich, and key cities nationwide.",
+      "paragraph2": "We are committed to being a trusted partner for property owners. We create beautiful, professionally installed campaigns that generate significant revenue for landlords while maintaining the aesthetic integrity of their buildings.",
+      "aboutCta": "About Us",
+      "imageAlt": "Hyde Media building campaign"
+    },
+    "solutions": {
+      "sectionTitle": "Our Solutions",
+      "sectionDescription": "Choose the perfect advertising solution for your campaign",
+      "scaffolding": {
+        "title": "Scaffolding",
+        "subtitle": "Flexible, short-term",
+        "cta": "Explore Scaffolding Banners"
+      },
+      "facade": {
+        "title": "Facade & Gable",
+        "subtitle": "Premium, long-term",
+        "cta": "Explore Facade Banners"
+      }
+    },
+    "newPlacements": {
+      "badge": "New Placement",
+      "cta": "View Placement",
+      "bredgade": {
+        "title": "City Centre – 140m² Scaffolding Ad",
+        "description": "Premium location in the heart of Basel – surrounded by shopping, tourism, pedestrians and constant city life.",
+        "traffic": "29,000 daily",
+        "weeks": "Week 15-28"
+      },
+      "norrebrogade": {
+        "title": "City Centre – 160m² Scaffolding Ad",
+        "description": "Centrally located on one of Basel's most vibrant streets. 2-sided format. Basel Marathon route week 19.",
+        "traffic": "55,000 daily",
+        "weeks": "Week 14-22"
+      }
+    },
+    "campaigns": {
+      "title": "Brands We've Worked With",
+      "viewAll": "View All Cases",
+      "modal": {
+        "campaignImages": "Campaign Images",
+        "interestedText": "Interested in a similar campaign for your brand?",
+        "contactButton": "Get in Touch"
+      },
+      "cases": {
+        "lidl": {
+          "name": "Lidl",
+          "title": "Lidl - Grand Opening Campaign",
+          "description": "Full facade wrap installation for Lidl's anniversary celebration in Zurich. The eye-catching design created massive awareness in the weeks leading up to celebration day.",
+          "location": "Zurich City Center",
+          "duration": "2 weeks",
+          "type": "Full Facade Wrap"
+        },
+        "gomore": {
+          "name": "GoMore",
+          "title": "GoMore - Urban Mobility Campaign",
+          "description": "Strategic facade campaign targeting young urban professionals in Zurich. Positioned near public transport hubs and busy streets.",
+          "location": "Zurich HB & City Center",
+          "duration": "2 weeks",
+          "type": "Facade Banner"
+        },
+        "fernetBranca": {
+          "name": "Fernet-Branca",
+          "title": "Fernet-Branca - Summer Festival Campaign",
+          "description": "Bold and creative campaign targeting Basel's nightlife scene. Facade location in Zurich centre combined with premium scaffolding placements in Basel created strong brand presence among the target demographic, driving significant engagement and in-store requests across the city's bars and restaurants.",
+          "location": "Basel and Zurich centre",
+          "duration": "2 weeks",
+          "type": "Scaffolding Banner and facade"
+        },
+        "saxo": {
+          "name": "Saxo Bank",
+          "title": "Saxo Bank - Investment Platform Launch",
+          "description": "Sophisticated facade campaign positioned in Zurich's financial district. The elegant design and strategic placement targeted business professionals and investors, reinforcing Saxo Bank's position as a leading investment platform.",
+          "location": "Zurich centre",
+          "duration": "2 weeks",
+          "type": "Facade & Gable Wrap"
+        },
+        "olc": {
+          "name": "OLC",
+          "title": "OLC - Brand Awareness Campaign",
+          "description": "Facade campaign in Zurich utilizing facade installations. The coordinated approach created consistent brand visibility for OLC, significantly increasing brand recognition.",
+          "location": "Zurich",
+          "duration": "4 weeks",
+          "type": "Facade Banner"
+        }
+      }
+    },
+    "whyHyde": {
+      "title": "Why Hyde Media?",
+      "description": "Founded February 2025 – dedicated to banner campaigns of the highest quality.",
+      "benefits": {
+        "strategicPlacement": "Strategic placement",
+        "professionalInstall": "Professional installation",
+        "transparentPricing": "Transparent pricing",
+        "dedicatedSupport": "Dedicated support",
+        "denmarkCoverage": "Switzerland-wide coverage"
+      },
+      "cta": "Learn More About Us"
+    },
+    "partnerCTA": {
+      "title": "Earn Money With Your Property",
+      "description": "Do you have scaffolding or a facade wall in a high-traffic location?",
+      "primaryCTA": "Become a Partner",
+      "secondaryCTA": "Learn More"
+    },
+    "finalCTA": {
+      "title": "Ready to Get Started?",
+      "description": "Contact us today.",
+      "contactCTA": "Contact Us",
+      "solutionsCTA": "View Placements",
+      "partnerCTA": "Become a Partner"
+    },
+    "valueProps": {
+      "highImpact": {
+        "title": "High-Impact Locations",
+        "description": "Strategic placements in Basel's busiest areas with up to 250K+ daily impressions."
+      },
+      "quickSetup": {
+        "title": "Quick Campaign Launch",
+        "description": "From quote to live campaign in 72 hours. Fast approval process and installation."
+      },
+      "personalService": {
+        "title": "Dedicated Support",
+        "description": "Your personal account manager handles everything from permits to installation."
+      },
+      "transparent": {
+        "title": "Transparent Pricing",
+        "description": "No hidden fees. What you see is what you pay. Simple, fair pricing structure."
+      }
+    },
+    "usps": {
+      "title": "We believe that in a world where advertising has become numbers, a personal approach is key to ensure you get the most out of your campaign experience.",
+      "flexible": {
+        "title": "Flexible Solutions",
+        "description": "Stop depending on traditional media. Advertise on your own terms with our exclusive high-impact locations."
+      },
+      "smart": {
+        "title": "Smart Quotes",
+        "description": "Know what you are paying for. No hidden fees. No overpromises. Campaigns suitable for your needs."
+      },
+      "customizable": {
+        "title": "Fully Customizable",
+        "description": "Control all aspects of your campaign. Easily upgrade services with our add-ons."
+      },
+      "personalization": {
+        "title": "Personalization",
+        "description": "Receive full support of our Campaign Management service. We have you covered, anywhere."
+      }
+    },
+    "why": {
+      "title": "Why hydemedia",
+      "placeringer": {
+        "title": "High-Impact Locations",
+        "description": "Strategically selected streets and traffic hubs in Basel, Zurich and other key areas. We choose locations based on traffic data, visibility and audience reach."
+      },
+      "ekspertise": {
+        "title": "Creative Large-Format Expertise",
+        "description": "Focus on beautiful mockups, professional production, printing and installation. We ensure your campaign is delivered in absolute top quality with uncompromising visual quality."
+      },
+      "indtaegter": {
+        "title": "Revenue for Property Owners",
+        "description": "Help property owners monetize scaffolding and facades. We handle all practical matters, regulatory requirements and resident information, so you can focus on your business."
+      },
+      "service": {
+        "title": "Premium Service",
+        "description": "Personal consultation, quick quotes and professional campaign management. We offer transparent pricing, no hidden fees, and photo documentation at installation and removal."
+      }
+    },
+    "locations": {
+      "title": "Locations",
+      "location": "Location",
+      "traffic": "Traffic",
+      "audience": "Audience",
+      "format": {
+        "scaffolding": "Scaffolding",
+        "facade": "Facade"
+      },
+      "viewDetails": "View details"
+    },
+    "howWeWork": {
+      "title": "How we work",
+      "step": "Step",
+      "brief": {
+        "title": "Brief & objectives",
+        "description": "We start by understanding your goals and campaign requirements."
+      },
+      "placeringer": {
+        "title": "Location selection",
+        "description": "We recommend the best locations based on your target audience and budget."
+      },
+      "design": {
+        "title": "Design & print",
+        "description": "We help with design, production and printing of your banners."
+      },
+      "opsaetning": {
+        "title": "Installation & documentation",
+        "description": "Professional installation with photo documentation at setup and removal."
+      },
+      "rapportering": {
+        "title": "Reporting",
+        "description": "You receive reports on campaign performance and exposure."
+      }
+    },
+    "landlords": {
+      "title": "For property owners",
+      "description": "Hyde Media helps you rent out facades and scaffolding for banners. We handle regulatory requirements, resident information, design guidelines and all practical matters.",
+      "benefits": "Whether you have a construction site with scaffolding or a facade in a high-traffic area, we can help you generate revenue while ensuring everything is handled professionally and in compliance with local regulations.",
+      "cta": "Rent out your facade"
+    },
+    "cases": {
+      "title": "Cases & brands"
+    },
+    "blog": {
+      "title": "Latest News & Insights",
+      "description": "Stay updated with trends, tips, and industry news from Hyde Media",
+      "readMore": "Read More",
+      "viewAll": "View All Articles"
+    }
+  },
+  "about": {
+    "title": "About us",
+    "subtitle": "Creating High-Impact Banner Campaigns Since February 2025",
+    "mission": {
+      "title": "A Fresh Start in Out-of-Home Advertising",
+      "description": "Founded in February 2025, we specialize in strategically placed advertising banners. Our solutions ensure maximum visibility for brands and companies throughout Switzerland. We work closely with property owners and companies to create effective and revenue-generating banner solutions – both for short-term campaigns and long-term exposures."
+    },
+    "vision": {
+      "title": "We Focus on Quality and Reliable Service",
+      "description": "Banners are the core of our business. Since our founding in February 2025, we have had one mission – to deliver outdoor advertising solutions in absolute top quality. We build our reputation through strategic placement, innovative solutions and uncompromising quality. Our banners create maximum visibility for brands in key areas of Switzerland."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": {
+        "title": "Top Quality",
+        "description": "We deliver outdoor advertising solutions in absolute top quality with uncompromising visual quality."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "We handle all practical matters, regulatory requirements and resident information, so you can focus on your business."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We combine strategic placement with innovative solutions to create maximum visibility."
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Experienced outdoor marketing specialists dedicated to delivering professional scaffolding and facade advertising solutions",
+      "mads": {
+        "name": "Mads Rønn Olesen",
+        "role": "Director",
+        "description": "With 5 years of experience in outdoor marketing, Mads brings solid knowledge of OOH strategy and campaign planning to Hyde Media.",
+        "email": "theodor.staal@hydemedia.ch"
+      },
+      "sebastian": {
+        "name": "Sebastian Staal",
+        "role": "Partner",
+        "description": "Sebastian combines sales experience with strong IT competencies to deliver effective digital solutions and customer support.",
+        "email": "theodor.staal@hydemedia.ch"
+      },
+      "louis": {
+        "name": "Louis Lerche",
+        "role": "Sales and Relations Manager",
+        "description": "Louis drives sales operations and builds strong relationships with clients and partners through professional and customer-focused service.",
+        "email": "theodor.staal@hydemedia.ch"
+      }
+    },
+    "certifications": {
+      "title": "Certifications & Safety",
+      "subtitle": "We comply with all Swiss standards for safety, quality, and professionalism in outdoor marketing",
+      "safety": {
+        "title": "Work Environment & Safety",
+        "description": "We work with professional partners to ensure safe installation and maintenance",
+        "point1": "Collaboration with approved installers",
+        "point2": "Risk assessment before each installation",
+        "point3": "Focus on safety and quality",
+        "point4": "Ongoing checks during campaign period"
+      },
+      "permits": {
+        "title": "Permits & Authority Approvals",
+        "description": "We assist in securing necessary permits from municipality and authorities"
+      },
+      "quality": {
+        "title": "Quality Focus",
+        "description": "Professional project management and quality control on all campaigns"
+      },
+      "compliance": {
+        "title": "Legal Compliance",
+        "description": "GDPR-compliant and registered Swiss company"
+      },
+      "standards": {
+        "title": "Our Focus Areas",
+        "footer": "Documentation can be provided upon request. Contact us for more information."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Solutions",
+    "subtitle": "Choose the perfect outdoor advertising solution for your campaign. Whether you need temporary scaffolding banners or permanent facade installations.",
+    "scaffolding": {
+      "title": "Scaffolding",
+      "shortDescription": "Flexible short to mid-term campaigns on construction sites",
+      "description": "Strategically placed advertising banners on scaffolding structures across Switzerland's prime locations. Perfect for product launches, seasonal campaigns, and construction site visibility.",
+      "cta": "Explore Scaffolding Options"
+    },
+    "facade": {
+      "title": "Facade",
+      "shortDescription": "Long-term maximum-impact advertising on building facades",
+      "description": "Permanent large-format advertising on building facades. Create lasting brand presence with our facade wraps in high-traffic areas across Switzerland.",
+      "cta": "Explore Facade Options"
+    },
+    "comparison": {
+      "title": "What's the Difference?",
+      "description": "Both solutions offer high visibility and impact, but differ in duration, flexibility, and installation approach.",
+      "feature": "Feature",
+      "features": {
+        "visibility": {
+          "name": "High Visibility",
+          "scaffolding": "Excellent - Eye level placement",
+          "facade": "Maximum - Large building coverage"
+        },
+        "duration": {
+          "name": "Campaign Duration",
+          "scaffolding": "Weeks to months",
+          "facade": "Months to years"
+        },
+        "installation": {
+          "name": "Installation Time",
+          "scaffolding": "Quick setup (1-2 days)",
+          "facade": "Professional install (3-5 days)"
+        },
+        "costEffective": {
+          "name": "Cost Efficiency",
+          "scaffolding": "Lower upfront cost",
+          "facade": "Best long-term value"
+        },
+        "flexibility": {
+          "name": "Flexibility",
+          "scaffolding": "High - Easy to change",
+          "facade": "Planned - Long-term presence"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Campaign?",
+      "description": "Contact us today for a free consultation and custom quote tailored to your specific needs.",
+      "button": "Get in Touch"
+    },
+    "planning": {
+      "title": "Campaign Planning",
+      "description": "We help with strategic placement based on your target audience and budget. Personal consultation and quick quotes."
+    },
+    "design": {
+      "title": "Design & Production",
+      "description": "Focus on beautiful mockups, professional production, printing and installation. We ensure your campaign is delivered in absolute top quality."
+    }
+  },
+  "solutions": {
+    "scaffolding": {
+      "headline": "Scaffolding Banners",
+      "body": "Flexible, short to mid-term advertising solutions on scaffolding structures across Switzerland's prime locations. Perfect for product launches, seasonal campaigns, and construction site visibility."
+    },
+    "facade": {
+      "headline": "Building Facade Banners",
+      "body": "Long-term, maximum-impact advertising on building facades. Create lasting brand presence with our large-format facade wraps in high-traffic areas across Switzerland."
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Let's Talk About Your Campaign",
+      "description": "Every campaign is unique. Get a custom quote tailored to your specific needs, goals, and budget.",
+      "cta": "Request a Quote"
+    },
+    "factors": {
+      "title": "What Affects Your Investment",
+      "description": "We create custom quotes based on several key factors to ensure you get the best value",
+      "location": {
+        "title": "Location & Visibility",
+        "description": "Prime locations with high traffic and visibility command premium positioning"
+      },
+      "format": {
+        "title": "Size & Format",
+        "description": "From scaffolding banners to full building wraps - size and complexity affect pricing"
+      },
+      "duration": {
+        "title": "Campaign Duration",
+        "description": "Longer campaigns often receive better rates and increased impact"
+      },
+      "traffic": {
+        "title": "Audience Reach",
+        "description": "High-traffic locations with larger daily impressions are priced accordingly"
+      },
+      "support": {
+        "title": "Services Included",
+        "description": "Installation, permits, design support, and monitoring all factor into your investment"
+      }
+    },
+    "custom": {
+      "title": "Why We Provide Custom Quotes",
+      "description": "Unlike one-size-fits-all pricing, we evaluate your specific campaign needs, goals, target audience, and budget to create a solution that maximizes your ROI.",
+      "benefit": "This approach ensures you never overpay for features you don't need, and always get the best locations for your objectives.",
+      "cta": "Get Your Custom Quote"
+    },
+    "included": {
+      "title": "What's Always Included",
+      "description": "Every campaign includes professional, full-service support",
+      "items": {
+        "installation": {
+          "title": "Professional Installation",
+          "description": "Expert installation by certified professionals"
+        },
+        "permits": {
+          "title": "Permits & Approvals",
+          "description": "We handle all regulatory requirements and paperwork"
+        },
+        "design": {
+          "title": "Design Support",
+          "description": "Creative guidance and technical specifications"
+        },
+        "monitoring": {
+          "title": "Campaign Monitoring",
+          "description": "24/7 monitoring and maintenance throughout your campaign"
+        },
+        "documentation": {
+          "title": "Photo Documentation",
+          "description": "Professional photos at installation and removal"
+        },
+        "support": {
+          "title": "Dedicated Support",
+          "description": "Personal account manager for all your needs"
+        }
+      }
+    },
+    "final": {
+      "title": "Ready to Get Started?",
+      "description": "Contact us today for a no-obligation quote. We'll discuss your goals and create a custom solution that fits your budget.",
+      "cta": "Request Your Quote"
+    }
+  },
+  "blogListing": {
+    "title": "Blog & Latest News",
+    "description": "Industry insights, trends, and news from the world of out-of-home advertising",
+    "searchPlaceholder": "Search articles...",
+    "readMore": "Read Article",
+    "noResults": "No articles found matching your search",
+    "latestInsights": "Latest Insights",
+    "featuredPosts": "Featured Posts",
+    "featuredDescription": "Must-read articles handpicked by our team",
+    "allCategories": "All",
+    "searchResults": "Search Results",
+    "allPosts": "All Posts",
+    "article": "article",
+    "articles": "articles",
+    "noResultsDescription": "Try adjusting your search or filter to find what you're looking for",
+    "clearFilters": "Clear Filters",
+    "newsletterTitle": "Stay Updated with Our Latest Insights",
+    "newsletterDescription": "Get the latest OOH advertising trends and tips delivered straight to your inbox"
+  },
+  "partners": {
+    "hero": {
+      "badge": "Partner Program",
+      "title": "Turn Your Property Into",
+      "titleHighlight": "Passive Income",
+      "description": "Earn revenue from your building's facade or scaffolding. We handle permits, installation, maintenance, and everything in between. 100% hassle-free.",
+      "primaryCta": "Apply as Partner",
+      "secondaryCta": "Learn More"
+    },
+    "why": {
+      "title": "Why Partner With Hyde Media?",
+      "subtitle": "Join our outdoor advertising network"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Simple process from application to earning"
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "finalCta": {
+      "title": "Ready to Start Earning?",
+      "subtitle": "Join property owners across Switzerland who are earning passive income with Hyde Media",
+      "cta": "Apply as Partner"
+    },
+    "valueProps": {
+      "revenue": {
+        "title": "Competitive Revenue Share",
+        "description": "Earn substantial monthly income from unused exterior space with our fair revenue-sharing model."
+      },
+      "hassleFree": {
+        "title": "Hassle-Free Process",
+        "description": "We handle all permits, approvals, installation, and maintenance. You just collect the revenue."
+      },
+      "support": {
+        "title": "Professional Support",
+        "description": "Dedicated partner manager and 24/7 support for any questions or concerns."
+      }
+    },
+    "steps": {
+      "apply": {
+        "title": "Apply Online",
+        "description": "Submit your property details through our simple application form."
+      },
+      "visit": {
+        "title": "Site Visit & Assessment",
+        "description": "We evaluate your property and discuss partnership options."
+      },
+      "agreement": {
+        "title": "Agreement & Terms",
+        "description": "Review and sign a transparent partnership agreement."
+      },
+      "installation": {
+        "title": "Installation & Launch",
+        "description": "We handle professional installation and campaign launch."
+      },
+      "earn": {
+        "title": "Earn Monthly Revenue",
+        "description": "Receive consistent monthly payments via direct deposit."
+      }
+    },
+    "terms": {
+      "title": "Partnership Terms Tailored to You",
+      "description": "Every property is unique, and so are our partnership terms. Revenue share, duration, and specific arrangements are discussed individually to ensure a mutually beneficial relationship. Contact us to learn more about what we can offer for your property.",
+      "cta": "Discuss Partnership Terms"
+    },
+    "idealLocations": {
+      "title": "Locations We're Looking For",
+      "description": "We seek high-visibility properties in prime locations across Switzerland. Here's what makes an ideal partner property:",
+      "traffic": {
+        "title": "High-Traffic Roads",
+        "description": "Properties along busy streets and major thoroughfares with high daily vehicle and pedestrian traffic.",
+        "feature1": "Main roads with 10,000+ vehicles per day",
+        "feature2": "Bus routes and public transportation hubs",
+        "feature3": "Highway-adjacent properties with clear visibility"
+      },
+      "corners": {
+        "title": "Corner Buildings",
+        "description": "Corner properties offer maximum exposure from multiple angles and directions.",
+        "feature1": "Multi-directional visibility for maximum impact",
+        "feature2": "Increased attention at traffic intersections",
+        "feature3": "Premium positioning in urban areas"
+      },
+      "prime": {
+        "title": "Prime Locations",
+        "description": "Strategic locations in city centers, shopping districts, and high-footfall areas.",
+        "feature1": "Basel, Zurich, and major city centers",
+        "feature2": "Shopping districts and commercial zones",
+        "feature3": "Near landmarks and tourist attractions"
+      },
+      "notSure": {
+        "title": "Not Sure If Your Property Qualifies?",
+        "description": "Contact us for a free property assessment. We'll evaluate your location and discuss potential partnership opportunities.",
+        "cta": "Get Property Assessment"
+      }
+    },
+    "faq": {
+      "revenue": {
+        "question": "How much can I earn as a partner?",
+        "answer": "Revenue depends on your property's location, size, and visibility. Contact us for a personalized assessment and custom quote based on your specific property."
+      },
+      "duration": {
+        "question": "What is the minimum partnership duration?",
+        "answer": "Partnership terms including duration are discussed individually based on your property and our needs. Contact us to learn more about flexible partnership options."
+      },
+      "maintenance": {
+        "question": "Who handles maintenance and repairs?",
+        "answer": "Hyde Media handles all installation, maintenance, and removal. If any issues arise with the advertising materials, we take care of it immediately at no cost to you."
+      },
+      "insurance": {
+        "question": "What about insurance and liability?",
+        "answer": "All installations are fully insured by Hyde Media. We carry comprehensive liability coverage to protect your property and ensure peace of mind."
+      },
+      "termination": {
+        "question": "Can I terminate the partnership?",
+        "answer": "Partnership agreements include clear termination terms that protect both parties. Specific details are discussed during the agreement process."
+      }
+    }
+  },
+  "cases": {
+    "title": "Cases & Brands",
+    "subtitle": "See our latest campaigns and clients",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "results": "Results"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Get answers to the most common questions about outdoor advertising with Hyde Media",
+    "categories": {
+      "general": "General Information",
+      "pricing": "Pricing & Costs",
+      "process": "Process & Timeline",
+      "technical": "Technical Details"
+    },
+    "items": {
+      "booking": {
+        "category": "general",
+        "question": "How do I book an advertising location?",
+        "answer": "Contact us through our contact form, email (theodor.staal@hydemedia.ch), or phone (+41 77 233 81 21). We'll discuss your campaign goals, show available locations, and provide a customized quote within 24 hours."
+      },
+      "duration": {
+        "category": "general",
+        "question": "What is the minimum campaign duration?",
+        "answer": "Scaffolding campaigns typically run 1-6 months (tied to construction duration), while facade campaigns start at 3 months. We offer flexible options based on your needs and budget."
+      },
+      "pricing": {
+        "category": "pricing",
+        "question": "How much does outdoor advertising cost?",
+        "answer": "Pricing depends on location visibility, size, and duration. Scaffolding campaigns typically start from 15'000 CHF/month for smaller formats, while facade advertising ranges from 25'000-100'000 CHF/month depending on size and location. Contact us for a free quote."
+      },
+      "priceIncludes": {
+        "category": "pricing",
+        "question": "What's included in the price?",
+        "answer": "Our all-inclusive pricing covers: design consultation, high-quality printing, professional installation, maintenance throughout campaign, permits and municipality approval, insurance, and removal. No hidden fees."
+      },
+      "design": {
+        "category": "process",
+        "question": "Do you provide design services?",
+        "answer": "Yes! We have experienced designers who specialize in large-format outdoor advertising. We'll help you create designs that are visible from 50+ meters away, with optimal readability and brand impact. Design consultation is included."
+      },
+      "timeline": {
+        "category": "process",
+        "question": "How long from booking to campaign launch?",
+        "answer": "Typical timeline: 1-2 weeks for permits and design, 3-5 days for printing, 1-2 days for installation. Most campaigns go live within 3-4 weeks from booking. Rush options available."
+      },
+      "permits": {
+        "category": "technical",
+        "question": "Do I need permits for outdoor advertising?",
+        "answer": "Yes, most outdoor advertising requires municipality permits. Don't worry - we handle all permit applications, municipality communication, and ensure full compliance with local regulations. This is included in our service."
+      },
+      "locations": {
+        "category": "general",
+        "question": "What locations are available in Basel and Zurich?",
+        "answer": "We have premium locations in high-traffic areas including city centres and main arterial roads. Check our Scaffolding and Facade pages for current availability, or contact us for locations matching your target audience."
+      },
+      "difference": {
+        "category": "general",
+        "question": "What's the difference between facade and scaffolding advertising?",
+        "answer": "Scaffolding: Temporary (1-6 months), placed on construction scaffolding, quick setup, lower cost, flexible. Facade: Long-term (3+ months), permanent building installations, larger formats, maximum visibility, higher investment. Both deliver exceptional results."
+      },
+      "measurement": {
+        "category": "technical",
+        "question": "How do you measure campaign performance?",
+        "answer": "We provide traffic data (weekly passersby), location demographics, and visibility analysis. For some locations, we can arrange third-party impression tracking. You'll receive detailed reach reports."
+      },
+      "weather": {
+        "category": "technical",
+        "question": "What about weather resistance?",
+        "answer": "All our materials are weather-resistant, UV-protected, and designed for Swiss weather conditions. Materials are tested for wind loads up to 30 m/s and remain vibrant for years."
+      },
+      "targeting": {
+        "category": "general",
+        "question": "Can I target specific audiences?",
+        "answer": "Absolutely! We help you select locations based on demographics, traffic patterns, and your target audience. Whether you're targeting commuters, shoppers, or specific neighborhoods - we have strategic locations."
+      },
+      "cancellation": {
+        "category": "process",
+        "question": "What if I need to cancel or change my campaign?",
+        "answer": "Cancellation terms depend on campaign status: Before production starts - full refund. During production - partial refund. After installation - no refund, but we can discuss modifications. We're flexible and work with you."
+      },
+      "installation": {
+        "category": "technical",
+        "question": "How is installation done safely?",
+        "answer": "All installations follow Swiss work safety regulations. Our certified installers use professional equipment, safety harnesses, and proper anchoring systems. We carry full liability insurance and never compromise on safety."
+      },
+      "brandApproval": {
+        "category": "process",
+        "question": "Do property owners approve which brands appear?",
+        "answer": "Yes, property owners have full approval rights over all campaigns. We only work with quality brands and ensure campaigns align with property owner values."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's discuss how we can help your brand or property reach its full potential.",
+    "info": {
+      "title": "Contact Information",
+      "description": "Ready to launch your campaign or partner with us? Get in touch and we'll respond within 24 hours.",
+      "email": "Email",
+      "phone": "Phone",
+      "locations": "Locations",
+      "responseTime": {
+        "title": "Quick Response",
+        "description": "We typically respond within 24 hours on business days. For urgent inquiries, please call us directly."
+      }
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "budget": "Budget",
+      "message": "Message",
+      "period": "Desired period",
+      "periodPlaceholder": "e.g. Q1 2025",
+      "location": "Location",
+      "locationPlaceholder": "e.g. Basel",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! We'll get back to you within 24 hours.",
+      "error": "Something went wrong. Please try again or email us directly.",
+      "campaignType": "Campaign Type",
+      "selectCampaignType": "Select campaign type",
+      "campaignOptions": {
+        "scaffolding": "Scaffolding Banner",
+        "facade": "Facade Banner",
+        "buildingWrap": "Building Wrap",
+        "other": "Other"
+      }
+    }
+  },
+  "footer": {
+    "about": "Premium out-of-home advertising platform connecting brands with strategic locations across Switzerland.",
+    "solutions": "Solutions",
+    "scaffoldingAds": "Scaffolding Advertising",
+    "facadeAds": "Facade Advertising",
+    "digitalOOH": "Digital OOH",
+    "buildingWraps": "Building Wraps",
+    "locations": "Browse Placements",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "cases": "Case Studies",
+    "partnerProgram": "Partner Program",
+    "contact": "Contact",
+    "contactInfo": "Contact Info",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "cookies": {
+    "title": "We use cookies",
+    "description": "We use cookies to improve your experience on our website. By continuing, you accept our use of cookies in accordance with our privacy policy.",
+    "accept": "Accept all",
+    "decline": "Decline",
+    "learnMore": "Learn more"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "backHome": "Go to Homepage",
+    "contact": "Contact Us",
+    "helpfulLinks": "You might find this helpful:"
+  },
+  "scaffolding": {
+    "title": "Scaffolding Banners",
+    "description": "Flexible, short-term advertising solutions on scaffolding across Switzerland's prime locations. Perfect for product launches, seasonal campaigns, and time-sensitive promotions.",
+    "status": {
+      "available": "Available",
+      "booked": "Booked"
+    },
+    "details": {
+      "size": "Size",
+      "traffic": "Traffic",
+      "trafficDaily": "Daily traffic",
+      "trafficWeekly": "Weekly traffic",
+      "duration": "Period",
+      "perfectFor": "Perfect for: Product launches, event promotions, seasonal campaigns, and brand awareness initiatives.",
+      "contactButton": "Contact us"
+    },
+    "locationDescription": "offers premium scaffolding banner advertising in one of Basel's most strategic locations. With <strong>{traffic}</strong> passing weekly, this {size} format ensures exceptional visibility for your short-term campaign.",
+    "cta": {
+      "title": "Should we have a chat about your next campaign?",
+      "description": "Contact us today for a no-obligation consultation about scaffolding banner opportunities in Basel.",
+      "button": "Get in Touch",
+      "phone": "Call: +41 77 233 81 21"
+    }
+  },
+  "facade": {
+    "title": "Building Wraps & Facade Banners",
+    "description": "Long-term, maximum-impact advertising on iconic buildings and premium facades. Create lasting brand presence with our large-format building wraps.",
+    "status": {
+      "available": "Available",
+      "booked": "Booked"
+    },
+    "details": {
+      "size": "Size",
+      "traffic": "Traffic",
+      "trafficDaily": "Daily traffic",
+      "trafficWeekly": "Weekly traffic",
+      "duration": "Period",
+      "perfectFor": "Perfect for: Product launches, event promotions, seasonal campaigns, and brand awareness initiatives.",
+      "contactButton": "Contact us"
+    },
+    "locationDescription": "offers premium gable advertising in one of Zurich's most strategic locations. With <strong>{traffic}</strong> passing weekly, this {size} format ensures maximum visibility for your campaign.",
+    "cta": {
+      "title": "Should we have a chat about your next campaign?",
+      "description": "Contact us today for a no-obligation consultation about facade advertising opportunities in Zurich.",
+      "button": "Get in Touch",
+      "phone": "Call: +41 77 233 81 21"
+    }
+  },
+  "blogPost": {
+    "backButton": "Blog",
+    "byAuthor": "By",
+    "share": "Share:",
+    "shareLabels": {
+      "facebook": "Share on Facebook",
+      "twitter": "Share on Twitter",
+      "linkedin": "Share on LinkedIn"
+    },
+    "cta": {
+      "title": "Ready to Launch Your OOH Campaign?",
+      "description": "Contact Hyde Media to discuss prime locations, strategic planning, and maximizing your campaign ROI.",
+      "button": "Get in Touch"
+    },
+    "relatedArticles": "Related Articles",
+    "viewAll": "View All Articles"
+  },
+  "caseStudyDetail": {
+    "backButton": "Case Studies",
+    "sections": {
+      "challenge": "The Challenge",
+      "solution": "Our Solution",
+      "results": "Results"
+    },
+    "testimonialAttribution": "Marketing Department",
+    "details": {
+      "title": "Campaign Details",
+      "brand": "Brand",
+      "location": "Location",
+      "format": "Format",
+      "size": "Size",
+      "duration": "Duration"
+    },
+    "cta": {
+      "title": "Want Similar Results?",
+      "description": "Let's discuss how we can help your brand achieve impact.",
+      "button": "Get in Touch"
+    }
+  },
+  "brands": {
+    "hero": {
+      "badge": "For Brands & Marketing Teams",
+      "title": "Maximum Visibility for Your Brand",
+      "description": "Reach thousands of potential customers daily with strategically placed outdoor advertising in Basel, Zurich, and throughout Switzerland. High-impact campaigns that deliver measurable results.",
+      "cta": "Start Your Campaign",
+      "secondaryCta": "View Case Studies"
+    },
+    "stats": {
+      "impressions": {
+        "value": "250K+",
+        "label": "Daily Impressions"
+      },
+      "locations": {
+        "value": "7+",
+        "label": "Premium Locations"
+      },
+      "cities": {
+        "value": "2",
+        "label": "Major Cities"
+      },
+      "formats": {
+        "value": "2",
+        "label": "Ad Formats"
+      }
+    },
+    "benefits": {
+      "title": "Why Choose Outdoor Advertising?",
+      "subtitle": "Large-format outdoor advertising delivers unmatched visibility and brand impact in Switzerland's most trafficked areas.",
+      "items": {
+        "visibility": {
+          "title": "Massive Visibility",
+          "description": "Your brand seen by thousands daily in high-traffic urban areas. Our locations guarantee maximum exposure to your target audience."
+        },
+        "impact": {
+          "title": "Impossible to Miss",
+          "description": "Large-format displays that command attention and build instant brand awareness. Stand out in the urban landscape with premium placements."
+        },
+        "reach": {
+          "title": "Targeted Placement",
+          "description": "Strategic locations in areas where your target audience lives, works, and socializes. Data-driven site selection for optimal ROI."
+        },
+        "timing": {
+          "title": "24/7 Brand Presence",
+          "description": "Continuous exposure throughout your entire campaign period. Your message works around the clock, every day of the week."
+        }
+      }
+    },
+    "campaignTypes": {
+      "title": "Perfect for Every Campaign",
+      "subtitle": "Whether you're launching a product, building awareness, or driving long-term brand presence - we have the right solution.",
+      "types": {
+        "productLaunch": {
+          "title": "Product Launches",
+          "description": "Create buzz and instant awareness with high-impact placements during your launch period."
+        },
+        "brandAwareness": {
+          "title": "Brand Awareness",
+          "description": "Build lasting recognition with consistent presence in key locations across Switzerland."
+        },
+        "eventPromotion": {
+          "title": "Event Promotion",
+          "description": "Drive attendance with targeted campaigns near your event venue and throughout the city."
+        },
+        "longTerm": {
+          "title": "Long-Term Branding",
+          "description": "Establish dominance with permanent or semi-permanent facade installations on iconic buildings."
+        }
+      }
+    },
+    "locations": {
+      "title": "Strategic Locations Across Switzerland",
+      "subtitle": "Premium placements in high-traffic areas of Switzerland's major cities.",
+      "items": {
+        "copenhagen": {
+          "city": "Basel",
+          "description": "Strategic locations in Basel with high visibility and premium exposure.",
+          "coverage": "Basel Area"
+        },
+        "aarhus": {
+          "city": "Zurich",
+          "description": "Gable network on main access roads ensuring maximum visibility for incoming traffic.",
+          "coverage": "Access Roads Network"
+        },
+        "nationwide": {
+          "city": "Expanding",
+          "description": "Growing portfolio across Switzerland's key cities for comprehensive coverage.",
+          "coverage": "More Coming Soon"
+        }
+      }
+    },
+    "process": {
+      "title": "Simple, Fast, Professional",
+      "description": "From initial consultation to campaign launch in as little as 7 days",
+      "steps": {
+        "step1": {
+          "title": "Free Consultation",
+          "description": "We discuss your goals, target audience, budget, and timing to find the perfect solution for your campaign."
+        },
+        "step2": {
+          "title": "Location Selection",
+          "description": "Choose from our portfolio of premium locations or let us recommend the best options based on your objectives."
+        },
+        "step3": {
+          "title": "Design & Production",
+          "description": "We assist with design guidelines, printing, quality control, and all production of your campaign materials."
+        },
+        "step4": {
+          "title": "Launch & Support",
+          "description": "Professional installation, campaign documentation, and ongoing support throughout your entire campaign period."
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Why Partner with Hyde Media?",
+      "subtitle": "We're not just a media owner - we're your strategic outdoor advertising partner.",
+      "reasons": {
+        "reason1": {
+          "title": "Premium Locations Only",
+          "description": "We only work with the highest-traffic, most visible locations in Switzerland's major cities."
+        },
+        "reason2": {
+          "title": "Fast Campaign Launch",
+          "description": "From quote to live campaign in 7-14 days. Quick approvals and professional installation."
+        },
+        "reason3": {
+          "title": "Full-Service Support",
+          "description": "Design assistance, production management, installation, and campaign reporting - all included."
+        },
+        "reason4": {
+          "title": "Flexible Terms",
+          "description": "Campaigns from 2 weeks to 12+ months. Choose the duration that fits your marketing calendar."
+        },
+        "reason5": {
+          "title": "Transparent Pricing",
+          "description": "Clear, upfront pricing with no hidden fees. Know exactly what you're paying for from day one."
+        },
+        "reason6": {
+          "title": "Proven Track Record",
+          "description": "Growing portfolio of successful campaigns delivering exceptional results for brands across Switzerland."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Amplify Your Brand?",
+      "description": "Get a free consultation and custom quote tailored to your campaign goals. No obligation, just expert advice.",
+      "primaryButton": "Get a Free Quote",
+      "secondaryButton": "Explore Solutions"
+    }
+  },
+  "propertyOwners": {
+    "hero": {
+      "title": "Generate Income from Your Property",
+      "description": "Whether you're a property owner, owner association, property manager, enterprise, or scaffolding firm - we help you monetize your facades and scaffolding structures. Professional service with full handling of permits, resident information, and all practical matters.",
+      "cta": "Learn How It Works"
+    },
+    "audiences": {
+      "title": "Who We Work With",
+      "description": "We partner with a diverse range of property owners and professionals across Switzerland",
+      "types": {
+        "owners": {
+          "title": "Individual Property Owners",
+          "description": "Own a building with high visibility? Generate additional income from otherwise unused facade space during renovations or permanently.",
+          "benefits": {
+            "benefit1": "Extra revenue from your property",
+            "benefit2": "Professional installation and maintenance",
+            "benefit3": "Full insurance coverage"
+          }
+        },
+        "associations": {
+          "title": "Owner Associations",
+          "description": "Represent a building cooperative or owner association? We handle everything from board approval to resident communication.",
+          "benefits": {
+            "benefit1": "Board-friendly communication materials",
+            "benefit2": "Transparent revenue sharing",
+            "benefit3": "Resident information management"
+          }
+        },
+        "managers": {
+          "title": "Property Managers",
+          "description": "Manage multiple properties? Partner with us for a revenue stream across your entire portfolio.",
+          "benefits": {
+            "benefit1": "Scalable solutions for multiple properties",
+            "benefit2": "Dedicated account management",
+            "benefit3": "Simplified administrative processes"
+          }
+        },
+        "enterprises": {
+          "title": "Enterprise & Commercial",
+          "description": "Own commercial buildings or office complexes? Monetize your facades while maintaining professional aesthetics.",
+          "benefits": {
+            "benefit1": "Brand-safe campaign selection",
+            "benefit2": "Long-term partnership opportunities",
+            "benefit3": "Corporate reporting and documentation"
+          }
+        },
+        "scaffolding": {
+          "title": "Scaffolding Firms",
+          "description": "Erect scaffolding for construction projects? Partner with us to generate additional revenue from your scaffolding structures.",
+          "benefits": {
+            "benefit1": "Revenue per scaffolding project",
+            "benefit2": "No additional work required",
+            "benefit3": "Partnership program benefits"
+          }
+        }
+      }
+    },
+    "benefits": {
+      "title": "Why Partner With Hyde Media",
+      "items": {
+        "income": {
+          "title": "Reliable Additional Income",
+          "description": "Generate consistent revenue from otherwise unused space. Transparent pricing and timely payments throughout the campaign period."
+        },
+        "professional": {
+          "title": "Fully Professional Service",
+          "description": "We handle everything from permits and resident information to installation, maintenance, and removal. You just collect the revenue."
+        },
+        "permits": {
+          "title": "Complete Permit Handling",
+          "description": "We manage all regulatory requirements, municipality permits, and compliance matters. Full documentation and professional communication."
+        },
+        "flexible": {
+          "title": "Flexible Terms",
+          "description": "Campaign durations from weeks to years. You choose what works for your property and situation. No long-term commitments required."
+        }
+      }
+    },
+    "process": {
+      "title": "How the Process Works",
+      "description": "Simple, transparent, and professional from start to finish",
+      "steps": {
+        "step1": {
+          "title": "Initial Contact",
+          "description": "Reach out to us with information about your property or scaffolding. We'll assess the opportunity and provide initial feedback."
+        },
+        "step2": {
+          "title": "Site Inspection & Evaluation",
+          "description": "We visit the location to evaluate visibility, accessibility, and potential. You'll receive a detailed proposal with revenue estimates."
+        },
+        "step3": {
+          "title": "Agreement & Approvals",
+          "description": "We prepare all necessary agreements and handle municipality permits. For associations, we provide materials for board meetings and resident information."
+        },
+        "step4": {
+          "title": "Campaign Match & Installation",
+          "description": "Once we find a suitable brand campaign, we coordinate professional installation. Full insurance coverage and quality control throughout."
+        },
+        "step5": {
+          "title": "Maintenance & Payment",
+          "description": "Regular inspections and maintenance during the campaign. You receive payments according to our agreed schedule. Removal and cleanup at campaign end."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "q1": {
+          "question": "How much income can I expect?",
+          "answer": "Revenue depends on location visibility, size, duration, and campaign type. We provide detailed estimates after site evaluation. Typical campaigns range from several thousand to tens of thousands of CHF per month."
+        },
+        "q2": {
+          "question": "Do I need special insurance?",
+          "answer": "No. All campaigns are covered by our comprehensive insurance that includes property damage, installation, and third-party liability. You're fully protected."
+        },
+        "q3": {
+          "question": "How long does a typical campaign last?",
+          "answer": "Campaign durations vary. Scaffolding campaigns typically run 1-6 months (duration of construction). Facade campaigns can range from 3 months to several years depending on the agreement."
+        },
+        "q4": {
+          "question": "What about permits and municipality approval?",
+          "answer": "We handle all permit applications and municipality communication. We have extensive experience with regulations across Switzerland and ensure full compliance."
+        },
+        "q5": {
+          "question": "How do you handle resident communication for associations?",
+          "answer": "We provide professional information materials for board meetings and resident notifications. Clear timelines, campaign details, and revenue sharing information included."
+        },
+        "q6": {
+          "question": "Can I reject certain brands or campaign types?",
+          "answer": "Absolutely. You have full approval rights over which campaigns appear on your property. We only proceed with campaigns you're completely comfortable with."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Contact us today for a no-obligation consultation. We'll evaluate your property and provide detailed revenue estimates.",
+      "primaryButton": "Contact Us Today"
+    }
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get the latest news, case studies, and insights delivered to your inbox.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "loading": "Subscribing...",
+    "subscribed": "Subscribed!",
+    "success": "Thanks for subscribing! Check your email to confirm.",
+    "error": "Something went wrong. Please try again.",
+    "invalidEmail": "Please enter a valid email address.",
+    "privacy": "We respect your privacy. Unsubscribe anytime."
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Explore our collection of premium outdoor advertising locations across Switzerland"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: January 2026",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "Hyde Media (\"we,\" \"us,\" or \"our\") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services."
+        },
+        "dataCollection": {
+          "title": "2. Information We Collect",
+          "personalData": {
+            "title": "Personal Data",
+            "items": [
+              "Name and contact information (email, phone number)",
+              "Company name and business information",
+              "Communication preferences"
+            ]
+          },
+          "usageData": {
+            "title": "Usage Data",
+            "items": [
+              "Browser type and version",
+              "Pages visited and time spent",
+              "IP address and device information"
+            ]
+          }
+        },
+        "dataUsage": {
+          "title": "3. How We Use Your Information",
+          "items": [
+            "To provide and maintain our services",
+            "To communicate with you about campaigns and opportunities",
+            "To improve our website and services",
+            "To comply with legal obligations"
+          ]
+        },
+        "dataSharing": {
+          "title": "4. Data Sharing and Disclosure",
+          "intro": "We do not sell your personal information. We may share your data with:",
+          "items": [
+            "Service providers who assist us in operating our business",
+            "Legal authorities when required by law"
+          ]
+        },
+        "dataSecurity": {
+          "title": "5. Data Security",
+          "content": "We implement appropriate technical and organizational measures to protect your personal data from unauthorized access, disclosure, alteration, or destruction."
+        },
+        "gdprRights": {
+          "title": "6. Your GDPR Rights",
+          "intro": "Under GDPR, you have the right to:",
+          "items": [
+            "Access your personal data",
+            "Correct inaccurate data",
+            "Request deletion of your data",
+            "Object to processing",
+            "Data portability"
+          ]
+        },
+        "cookies": {
+          "title": "7. Cookies",
+          "content": "We use cookies to improve your experience. You can control cookies through your browser settings. Essential cookies are necessary for the website to function."
+        },
+        "contact": {
+          "title": "8. Contact Us",
+          "content": "For privacy-related questions or to exercise your rights, contact us at:<br/>Email: theodor.staal@hydemedia.ch<br/>Phone: +41 77 233 81 21<br/>Address: Hauptstrasse 30, 4127 Birsfelden, Switzerland"
+        },
+        "changes": {
+          "title": "9. Changes to This Policy",
+          "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the \"Last updated\" date."
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: January 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Acceptance of Terms",
+          "content": "By accessing or using Hyde Media's services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services."
+        },
+        "services": {
+          "title": "2. Services Offered",
+          "content": "Hyde Media provides out-of-home advertising services including scaffolding banners, facade advertising, and building wraps across Switzerland."
+        },
+        "advertiserResponsibilities": {
+          "title": "3. Advertiser Responsibilities",
+          "items": [
+            "Provide accurate and lawful advertising content",
+            "Ensure all creative materials meet technical specifications",
+            "Pay invoices according to agreed payment terms",
+            "Comply with Swiss advertising laws and regulations"
+          ]
+        },
+        "partnerResponsibilities": {
+          "title": "4. Partner Responsibilities",
+          "items": [
+            "Provide accurate property information",
+            "Ensure legal authority to enter partnership agreements",
+            "Maintain reasonable access to the property for installation"
+          ]
+        },
+        "bookingPayments": {
+          "title": "5. Booking and Payments",
+          "items": [
+            "Bookings are confirmed upon receipt of signed agreement and payment",
+            "Payment terms are typically 30 days net unless otherwise agreed",
+            "Late payments may incur interest charges",
+            "Cancellations must follow the terms specified in your booking agreement"
+          ]
+        },
+        "contentStandards": {
+          "title": "6. Content Standards",
+          "intro": "Advertising content must not:",
+          "items": [
+            "Violate any laws or regulations",
+            "Be defamatory, obscene, or offensive",
+            "Infringe on intellectual property rights",
+            "Promote illegal products or services"
+          ]
+        },
+        "installation": {
+          "title": "7. Installation and Maintenance",
+          "items": [
+            "Hyde Media handles all installation and removal",
+            "We perform regular maintenance and monitoring",
+            "Weather or unforeseen circumstances may affect display times"
+          ]
+        },
+        "liability": {
+          "title": "8. Liability and Indemnification",
+          "content": "Hyde Media is not liable for indirect, incidental, or consequential damages arising from use of our services. Advertisers indemnify Hyde Media against claims arising from their advertising content."
+        },
+        "intellectualProperty": {
+          "title": "9. Intellectual Property",
+          "content": "You retain ownership of your creative materials. By using our services, you grant Hyde Media a license to display and reproduce your content for the duration of the campaign."
+        },
+        "termination": {
+          "title": "10. Termination",
+          "content": "Either party may terminate agreements according to the terms specified in the booking or partnership agreement. Hyde Media reserves the right to refuse service to anyone."
+        },
+        "governingLaw": {
+          "title": "11. Governing Law",
+          "content": "These Terms are governed by the laws of Switzerland. Any disputes shall be resolved in Swiss courts."
+        },
+        "changes": {
+          "title": "12. Changes to Terms",
+          "content": "We reserve the right to modify these Terms at any time. Changes become effective immediately upon posting. Continued use of our services constitutes acceptance of updated Terms."
+        },
+        "contact": {
+          "title": "13. Contact Information",
+          "content": "For questions about these Terms, contact us at:<br/>Email: theodor.staal@hydemedia.ch<br/>Phone: +41 77 233 81 21<br/>Address: Hauptstrasse 30, 4127 Birsfelden, Switzerland"
+        }
+      }
+    }
+  },
+  "trustBadges": {
+    "cvr": {
+      "text": "",
+      "subtext": "Registered Swiss company"
+    },
+    "response": {
+      "text": "24-hour response",
+      "subtext": "We respond quickly to all inquiries"
+    },
+    "quality": {
+      "text": "Premium quality",
+      "subtext": "Professional design & installation"
+    },
+    "allInclusive": {
+      "text": "All-inclusive",
+      "subtext": "Design, production, permits & installation"
+    }
+  },
+  "teamSection": {
+    "title": "Meet Our Team"
+  }
+}

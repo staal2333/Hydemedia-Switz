@@ -1,0 +1,27 @@
+{
+  "scaffolding": [
+    {
+      "id": "scf-001",
+      "name": "Burgfelderstrasse 30",
+      "location": "Basel",
+      "address": "Burgfelderstrasse 30, 4055 Basel",
+      "size": "240 m²",
+      "dimensions": { "width": 240, "height": 1 },
+      "duration": "KW 25–34",
+      "status": "available",
+      "price": "Preis auf Anfrage",
+      "traffic": "35'000 pro Tag",
+      "image": "/images/placements/burgfelderstrasse-30.jpg",
+      "isNew": true,
+      "features": [
+        "240 m² Bannerfläche an prominenter Eck-Position",
+        "35'000 Passanten pro Tag — Tram-, Auto- und Fussgängerverkehr",
+        "Behördliche Bewilligung der Stadt bereits erteilt",
+        "Verfügbar für die Kalenderwochen 25–34",
+        "Mindestbuchung 4 Wochen",
+        "Zielgruppen: ÖV-Pendler, Fussgänger, Studierende, gehobenes Publikum"
+      ]
+    }
+  ],
+  "facade": []
+}

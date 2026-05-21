@@ -1,0 +1,55 @@
+{
+  "name": "Hyde Media - Premium Out-of-Home Advertising",
+  "short_name": "Hyde Media",
+  "description": "Premium out-of-home advertising. Strategically placed banners on scaffolding and facades.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "categories": ["business", "marketing", "advertising"],
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "description": "Get in touch with Hyde Media"
+    },
+    {
+      "name": "Services",
+      "url": "/services",
+      "description": "View our advertising solutions"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog",
+      "description": "Latest insights and news"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/opengraph-image",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "scaffolding": [
+    {
+      "id": "scf-001",
+      "name": "Burgfelderstrasse 30",
+      "location": "Basel",
+      "address": "Burgfelderstrasse 30, 4055 Basel",
+      "size": "240 m²",
+      "dimensions": { "width": 240, "height": 1 },
+      "duration": "CW 25–34",
+      "status": "available",
+      "price": "Price on request",
+      "traffic": "35'000 per day",
+      "image": "/images/placements/burgfelderstrasse-30.jpg",
+      "isNew": true,
+      "features": [
+        "240 m² of banner space in a prominent corner position",
+        "35'000 passers-by per day — tram, car and pedestrian traffic",
+        "Official city permit already granted",
+        "Available for calendar weeks 25–34",
+        "Minimum booking of 4 weeks",
+        "Target audiences: public transport commuters, pedestrians, students, upscale audience"
+      ]
+    }
+  ],
+  "facade": []
+}
