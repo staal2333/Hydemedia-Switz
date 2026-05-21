@@ -26,7 +26,7 @@ const slides: Slide[] = [
     num: '№ 001 · BASEL',
     title: ['Burgfelderstrasse', '30'],
     desc: 'Prominenter Eck-Standort an einer stark befahrenen Tramkreuzung in Basel — erreicht ÖV-Pendler, Fussgänger, Studierende und gehobenes Publikum. Bewilligung der Stadt erteilt.',
-    pills: [{ t: "35'000 / Tag", glow: true }, { t: '240 m²' }, { t: 'Gerüst' }],
+    pills: [{ t: "35'000 / Tag", glow: true }, { t: '200 m²' }, { t: 'Gerüst' }],
     isNew: true,
   },
   {
@@ -44,7 +44,7 @@ const slides: Slide[] = [
 const slidesEn: { desc: string; pills: string[] }[] = [
   {
     desc: 'Prominent corner location at a busy tram junction in Basel — reaching public-transport commuters, pedestrians, students and an upscale audience. City permit granted.',
-    pills: ["35'000 / day", '240 m²', 'Scaffolding'],
+    pills: ["35'000 / day", '200 m²', 'Scaffolding'],
   },
   {
     desc: 'Large-format gable placement at Blumenrain 25, 4051 Basel. Soon available for booking — further details to follow shortly.',
@@ -118,13 +118,13 @@ export default function Placements() {
             <div className="grid grid-cols-2 border-t border-rule mb-7">
               {(locale === 'en'
                 ? [
-                    ['240', 'm²', 'Banner area'],
+                    ['200', 'm²', 'Banner area'],
                     ['35', 'k', 'Traffic / day'],
                     ['25–34', '', 'Available CW'],
                     ['4', 'wks', 'Min. booking'],
                   ]
                 : [
-                    ['240', 'm²', 'Bannerfläche'],
+                    ['200', 'm²', 'Bannerfläche'],
                     ['35', 'k', 'Verkehr / Tag'],
                     ['25–34', '', 'Verfügbare KW'],
                     ['4', 'Wo.', 'Min. Buchung'],
