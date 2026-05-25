@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import DuskHero from '@/components/blue-hour/DuskHero';
 import GroundFlow from '@/components/blue-hour/GroundFlow';
@@ -112,15 +111,6 @@ export default function AboutPageClient({ locale }: { locale: string }) {
           </div>
           <div className="max-w-sm mx-auto">
             <div className="bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col">
-              <div className="relative aspect-[4/5] bg-fog overflow-hidden">
-                <Image
-                  src="/images/about/Theo final.png"
-                  alt="Theodor Staal"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 400px"
-                  className="object-cover"
-                />
-              </div>
               <div className="p-7 flex flex-col flex-1 text-center items-center">
                 <div className="font-ui font-semibold text-[10px] tracking-[0.24em] uppercase text-muted mb-2">
                   {locale === 'en' ? 'Country Manager & Director · Switzerland' : 'Country Manager & Director · Schweiz'}

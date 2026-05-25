@@ -2,9 +2,9 @@
   "scaffolding": [
     {
       "id": "scf-001",
-      "name": "Burgfelderstrasse 30",
+      "name": "Burgfelderstrasse 1",
       "location": "Basel",
-      "address": "Burgfelderstrasse 30, 4055 Basel",
+      "address": "Burgfelderstrasse 1, 4055 Basel",
       "size": "200 m²",
       "dimensions": { "width": 200, "height": 1 },
       "duration": "KW 25–34",

@@ -24,7 +24,7 @@ const slides: Slide[] = [
     img: '/images/placements/burgfelderstrasse-30.jpg',
     fallback: '/images/placements/burgfelderstrasse-30.jpg',
     num: '№ 001 · BASEL',
-    title: ['Burgfelderstrasse', '30'],
+    title: ['Burgfelderstrasse', '1'],
     desc: 'Prominenter Eck-Standort an einer stark befahrenen Tramkreuzung in Basel — erreicht ÖV-Pendler, Fussgänger, Studierende und gehobenes Publikum. Bewilligung der Stadt erteilt.',
     pills: [{ t: "35'000 / Tag", glow: true }, { t: '200 m²' }, { t: 'Gerüst' }],
     isNew: true,
