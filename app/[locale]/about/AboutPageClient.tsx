@@ -105,11 +105,13 @@ export default function AboutPageClient({ locale }: { locale: string }) {
             </h2>
             <p className="text-[16px] leading-[1.7] text-ink-soft m-0 max-w-2xl mx-auto">
               {locale === 'en'
-                ? "Hyde Media started in Denmark. Through Sebastian Staal's close connection to and love for Switzerland, we decided to expand — with Theodor Staal as our Country Manager and Director in Switzerland."
-                : 'Hyde Media hat in Dänemark angefangen. Durch Sebastian Staals enge Verbindung zur und seine Liebe für die Schweiz haben wir uns entschieden zu expandieren — mit Theodor Staal als unserem Country Manager und Director in der Schweiz.'}
+                ? 'Hyde Media was founded in Denmark by Sebastian Staal and Mads Rønn Olesen with one mission: bring innovation and transparency to large-format outdoor advertising. Through Sebastian’s close ties to Switzerland, Basel became our first Swiss home — with Theodor Staal leading on the ground as Country Manager and Director.'
+                : 'Hyde Media wurde in Dänemark von Sebastian Staal und Mads Rønn Olesen gegründet — mit einer Mission: Innovation und Transparenz in die Grossflächen-Aussenwerbung zu bringen. Durch Sebastians enge Verbindung zur Schweiz wurde Basel zu unserem ersten Schweizer Standort — mit Theodor Staal als Country Manager und Director vor Ort.'}
             </p>
           </div>
-          <div className="max-w-sm mx-auto">
+
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-6 max-w-5xl mx-auto">
+            {/* Theodor — Country Manager · CH */}
             <div className="bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col">
               <div className="p-7 flex flex-col flex-1 text-center items-center">
                 <div className="font-ui font-semibold text-[10px] tracking-[0.24em] uppercase text-muted mb-2">
@@ -120,9 +122,45 @@ export default function AboutPageClient({ locale }: { locale: string }) {
                 </h3>
                 <a
                   href="mailto:theodor.staal@hydemedia.ch"
-                  className="inline-flex items-center gap-2 font-ui font-semibold text-[11px] uppercase tracking-[0.18em] text-ink border-b-2 border-ink pb-1 hover:text-mid hover:border-mid transition-colors"
+                  className="inline-flex items-center gap-2 font-ui font-semibold text-[10px] uppercase tracking-[0.12em] text-ink border-b-2 border-ink pb-1 hover:text-mid hover:border-mid transition-colors break-all"
                 >
                   theodor.staal@hydemedia.ch <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Sebastian — Partner */}
+            <div className="bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col">
+              <div className="p-7 flex flex-col flex-1 text-center items-center">
+                <div className="font-ui font-semibold text-[10px] tracking-[0.24em] uppercase text-muted mb-2">
+                  {locale === 'en' ? 'Partner · Denmark' : 'Partner · Dänemark'}
+                </div>
+                <h3 className="font-display font-normal m-0 mb-4 text-ink" style={{ fontSize: 24, letterSpacing: '-0.02em', lineHeight: 1.15 }}>
+                  Sebastian Staal
+                </h3>
+                <a
+                  href="mailto:sebastian.staal@hydemedia.dk"
+                  className="inline-flex items-center gap-2 font-ui font-semibold text-[10px] uppercase tracking-[0.12em] text-ink border-b-2 border-ink pb-1 hover:text-mid hover:border-mid transition-colors break-all"
+                >
+                  sebastian.staal@hydemedia.dk <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Mads — Partner */}
+            <div className="bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col">
+              <div className="p-7 flex flex-col flex-1 text-center items-center">
+                <div className="font-ui font-semibold text-[10px] tracking-[0.24em] uppercase text-muted mb-2">
+                  {locale === 'en' ? 'Partner · Denmark' : 'Partner · Dänemark'}
+                </div>
+                <h3 className="font-display font-normal m-0 mb-4 text-ink" style={{ fontSize: 24, letterSpacing: '-0.02em', lineHeight: 1.15 }}>
+                  Mads Rønn Olesen
+                </h3>
+                <a
+                  href="mailto:ma@hydemedia.dk"
+                  className="inline-flex items-center gap-2 font-ui font-semibold text-[10px] uppercase tracking-[0.12em] text-ink border-b-2 border-ink pb-1 hover:text-mid hover:border-mid transition-colors break-all"
+                >
+                  ma@hydemedia.dk <span>↗</span>
                 </a>
               </div>
             </div>
