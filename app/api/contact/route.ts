@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     // Send email to Hyde Media
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: process.env.CONTACT_EMAIL || 'hello@hydemedia.ch',
+      to: process.env.CONTACT_EMAIL || 'theodor.staal@hydemedia.ch',
       subject,
       html: emailBody,
     });
