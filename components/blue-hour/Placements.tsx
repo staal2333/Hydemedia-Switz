@@ -21,8 +21,8 @@ interface Slide {
 const slides: Slide[] = [
   {
     href: '/services',
-    img: '/images/placements/burgfelderstrasse-30.jpg',
-    fallback: '/images/placements/burgfelderstrasse-30.jpg',
+    img: '/images/placements/burgfelderstrasse-1-evo.jpg',
+    fallback: '/images/placements/burgfelderstrasse-1-evo.jpg',
     num: '№ 001 · BASEL',
     title: ['Burgfelderstrasse', '1'],
     desc: 'Prominenter Eck-Standort an einer stark befahrenen Tramkreuzung in Basel — erreicht ÖV-Pendler, Fussgänger, Studierende und gehobenes Publikum. Bewilligung der Stadt erteilt.',

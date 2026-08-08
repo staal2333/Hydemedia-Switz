@@ -1,5 +1,22 @@
 [
   {
+    "id": 8,
+    "slug": "evo-fitness-basel-burgfelderstrasse",
+    "brand": "EVO Fitness",
+    "title": "EVO Fitness - Scaffolding Campaign Basel",
+    "location": "Burgfelderstrasse 1, Basel",
+    "size": "160m²",
+    "duration": "4 weeks",
+    "format": "Double-sided scaffolding banner",
+    "tags": ["Fitness & Wellness", "Customer Acquisition", "Basel"],
+    "challenge": "EVO Fitness wanted to raise awareness of its two Basel studios and sign up new members for the free 7-day trial. They needed a location embedded in the daily routine of Basel residents — with real dwell time, not just a passing glance.",
+    "solution": "We ran the campaign across 160 m² of scaffolding space at Burgfelderstrasse 1 — a busy tram junction in Basel. The corner position covers two street faces at once, so it registers from both directions of travel. A QR code on both banner faces led straight to the trial sign-up.",
+    "results": "With 35'000 passers-by per day, the campaign delivered roughly 980'000 impressions over its four-week run. The double-sided corner placement generated repeat exposure among tram commuters, pedestrians, students and car traffic — in the exact neighbourhood where both studios are located.",
+    "images": ["/images/cases/evo-fitness-1.jpg", "/images/cases/evo-fitness-2.jpg"],
+    "testimonial": "",
+    "type": "Double-sided scaffolding banner"
+  },
+  {
     "id": 2,
     "slug": "lidl-20-years-celebration",
     "brand": "Lidl",

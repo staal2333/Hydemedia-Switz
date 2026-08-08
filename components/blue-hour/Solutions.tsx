@@ -7,7 +7,7 @@ import { useLocale } from 'next-intl';
 const items = [
   {
     num: '01 / 02',
-    img: '/images/placements/burgfelderstrasse-30.jpg',
+    img: '/images/placements/burgfelderstrasse-1-evo.jpg',
     h: ['Gerüst', 'werbung'],
     p: 'Grossformat-Banner auf aktiven Gerüsten. Von 40 bis 380 m², zertifizierte Montage, professionelle Demontage.',
     meta: '40 — 380 m²',

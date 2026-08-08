@@ -1,5 +1,22 @@
 [
   {
+    "id": 8,
+    "slug": "evo-fitness-basel-burgfelderstrasse",
+    "brand": "EVO Fitness",
+    "title": "EVO Fitness - Gerüstkampagne Basel",
+    "location": "Burgfelderstrasse 1, Basel",
+    "size": "160m²",
+    "duration": "4 Wochen",
+    "format": "Gerüstbanner, zweiseitig",
+    "tags": ["Fitness & Wellness", "Neukundengewinnung", "Basel"],
+    "challenge": "EVO Fitness wollte die beiden Basler Studios bekannter machen und neue Mitglieder für das kostenlose 7-Tage-Probetraining gewinnen. Gesucht war ein Standort mitten im Alltag der Basler Bevölkerung — mit echter Verweildauer statt nur einem kurzen Blick im Vorbeifahren.",
+    "solution": "Wir setzten die Kampagne auf 160 m² Gerüstfläche an der Burgfelderstrasse 1 um — einer stark befahrenen Tramkreuzung in Basel. Die Eck-Position bespielt zwei Strassenseiten gleichzeitig und wird dadurch aus beiden Fahrtrichtungen wahrgenommen. Ein QR-Code auf beiden Bannerseiten führte direkt zur Anmeldung für das Probetraining.",
+    "results": "Bei 35'000 Passantinnen und Passanten pro Tag erreichte die Kampagne über die vierwöchige Laufzeit rund 980'000 Sichtkontakte. Die zweiseitige Eck-Platzierung sorgte für wiederholte Kontakte bei Tram-Pendlerinnen und -Pendlern, Fussgängern, Studierenden und dem Autoverkehr — genau in dem Quartier, in dem die beiden Studios liegen.",
+    "images": ["/images/cases/evo-fitness-1.jpg", "/images/cases/evo-fitness-2.jpg"],
+    "testimonial": "",
+    "type": "Gerüstbanner, zweiseitig"
+  },
+  {
     "id": 2,
     "slug": "lidl-20-years-celebration",
     "brand": "Lidl",
