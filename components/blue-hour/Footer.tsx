@@ -27,7 +27,7 @@ export default function BlueHourFooter() {
         >
           {locale === 'en' ? 'Put your brand' : 'Setze deine Marke'}
           <br />
-          {locale === 'en' ? 'on the ' : 'auf die '}<span className="italic text-sky">Skyline.</span>
+          {locale === 'en' ? 'on the ' : 'auf die '}<span className="italic text-sky">Skyline 2026.</span>
         </div>
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 mb-[72px]">
