@@ -8,6 +8,24 @@ import GroundFlow from '@/components/blue-hour/GroundFlow';
 const VALUES = ['quality', 'reliability', 'innovation'] as const;
 const CERT_AREAS = ['safety', 'permits', 'quality', 'compliance'] as const;
 
+const TEAM = [
+  {
+    name: 'Theodor Staal',
+    email: 'theodor.staal@hydemedia.ch',
+    role: { en: 'Country Manager & Director · Switzerland', de: 'Country Manager & Director · Schweiz' },
+  },
+  {
+    name: 'Sebastian Staal',
+    email: 'sebastian.staal@hydemedia.dk',
+    role: { en: 'Founding Partner · Denmark', de: 'Gründungspartner · Dänemark' },
+  },
+  {
+    name: 'Mads Rønn Olesen',
+    email: 'ma@hydemedia.dk',
+    role: { en: 'Founding Partner · Denmark', de: 'Gründungspartner · Dänemark' },
+  },
+];
+
 export default function AboutPageClient({ locale }: { locale: string }) {
   const t = useTranslations('about');
 
@@ -110,24 +128,25 @@ export default function AboutPageClient({ locale }: { locale: string }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 max-w-md mx-auto">
-            {/* Theodor — Country Manager · CH */}
-            <div className="bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col">
-              <div className="p-7 flex flex-col flex-1 text-center items-center">
-                <div className="font-ui font-semibold text-[10px] tracking-[0.24em] uppercase text-muted mb-2">
-                  {locale === 'en' ? 'Country Manager & Director · Switzerland' : 'Country Manager & Director · Schweiz'}
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-6 max-w-5xl mx-auto">
+            {TEAM.map((m) => (
+              <div key={m.name} className="bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col">
+                <div className="p-7 flex flex-col flex-1 text-center items-center">
+                  <div className="font-ui font-semibold text-[10px] tracking-[0.24em] uppercase text-muted mb-2">
+                    {locale === 'en' ? m.role.en : m.role.de}
+                  </div>
+                  <h3 className="font-display font-normal m-0 mb-4 text-ink" style={{ fontSize: 24, letterSpacing: '-0.02em', lineHeight: 1.15 }}>
+                    {m.name}
+                  </h3>
+                  <a
+                    href={`mailto:${m.email}`}
+                    className="mt-auto inline-flex items-center gap-2 font-ui font-semibold text-[10px] uppercase tracking-[0.12em] text-ink border-b-2 border-ink pb-1 hover:text-mid hover:border-mid transition-colors break-all"
+                  >
+                    {m.email} <span>↗</span>
+                  </a>
                 </div>
-                <h3 className="font-display font-normal m-0 mb-4 text-ink" style={{ fontSize: 24, letterSpacing: '-0.02em', lineHeight: 1.15 }}>
-                  Theodor Staal
-                </h3>
-                <a
-                  href="mailto:theodor.staal@hydemedia.ch"
-                  className="inline-flex items-center gap-2 font-ui font-semibold text-[10px] uppercase tracking-[0.12em] text-ink border-b-2 border-ink pb-1 hover:text-mid hover:border-mid transition-colors break-all"
-                >
-                  theodor.staal@hydemedia.ch <span>↗</span>
-                </a>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -34,7 +34,8 @@ export function generateMetadata({
   const alternateLocales = ['en_US', 'de_CH'].filter(l => l !== ogLocale);
 
   return {
-    title: `${title} | Hyde Media`,
+    // Absolute so parent layout templates don't add the suffix a second time.
+    title: { absolute: `${title} | Hyde Media` },
     description,
     keywords: keywords || 'outdoor advertising, banner advertising, facade advertising, scaffolding advertising',
     alternates: {

@@ -21,7 +21,7 @@ export async function generateMetadata({
   }
 
   return createMetadata(
-    `${caseStudy.brand} Case Study | ${caseStudy.title}`,
+    caseStudy.title.includes(caseStudy.brand) ? caseStudy.title : `${caseStudy.brand} | ${caseStudy.title}`,
     caseStudy.challenge.substring(0, 155),
     caseStudy.images[0]
   );

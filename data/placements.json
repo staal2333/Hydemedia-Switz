@@ -1,25 +1,26 @@
 {
   "scaffolding": [
     {
-      "id": "scf-001",
-      "name": "Burgfelderstrasse 1",
+      "id": "scf-002",
+      "name": "Riehenring 141",
       "location": "Basel",
-      "address": "Burgfelderstrasse 1, 4055 Basel",
-      "size": "200 m²",
-      "dimensions": { "width": 200, "height": 1 },
-      "duration": "KW 25–34",
+      "address": "Riehenring 141, 4058 Basel",
+      "size": "175 m²",
+      "dimensions": { "width": 175, "height": 1 },
+      "duration": "KW 41–52",
       "status": "available",
       "price": "Preis auf Anfrage",
-      "traffic": "35'000 pro Tag",
-      "image": "/images/placements/burgfelderstrasse-1-evo.jpg",
+      "traffic": "39'851 pro Tag",
+      "image": "/images/placements/riehenring-141-hyde-mockup.jpg",
       "isNew": true,
       "features": [
-        "200 m² Bannerfläche an prominenter Eck-Position",
-        "35'000 Passanten pro Tag — Tram-, Auto- und Fussgängerverkehr",
-        "Behördliche Bewilligung der Stadt bereits erteilt",
-        "Verfügbar für die Kalenderwochen 25–34",
-        "Mindestbuchung 4 Wochen",
-        "Zielgruppen: ÖV-Pendler, Fussgänger, Studierende, gehobenes Publikum"
+        "175 m² Bannerfläche an einer Ampelkreuzung mit hohem Verkehrsaufkommen",
+        "39'851 Kontakte pro Tag — eine der meistbefahrenen Routen von der Autobahn",
+        "Direkt neben der Messe Basel und nahe dem Congress Center Basel",
+        "Tramlinie vor dem Standort — konstanter Passagier- und Fussgängerverkehr",
+        "Zwischen Innenstadt und Kleinbasel, nahe Rhein und Theater Basel",
+        "Bewilligung der Stadt erteilt (keine Werbung für Alkohol, Politik oder pornografische Inhalte)",
+        "Verfügbar für die Kalenderwochen 41–52 · Mindestbuchung 4 Wochen"
       ]
     }
   ],

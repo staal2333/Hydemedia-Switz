@@ -21,34 +21,20 @@ interface Slide {
 const slides: Slide[] = [
   {
     href: '/services',
-    img: '/images/placements/burgfelderstrasse-1-evo.jpg',
-    fallback: '/images/placements/burgfelderstrasse-1-evo.jpg',
+    img: '/images/placements/riehenring-141-hyde-mockup.jpg',
+    fallback: '/images/placements/riehenring-141-hyde-mockup.jpg',
     num: '№ 001 · BASEL',
-    title: ['Burgfelderstrasse', '1'],
-    desc: 'Prominenter Eck-Standort an einer stark befahrenen Tramkreuzung in Basel — erreicht ÖV-Pendler, Fussgänger, Studierende und gehobenes Publikum. Bewilligung der Stadt erteilt.',
-    pills: [{ t: "35'000 / Tag", glow: true }, { t: '200 m²' }, { t: 'Gerüst' }],
+    title: ['Riehenring', '141'],
+    desc: 'Eck-Standort an einer Ampelkreuzung direkt bei der Messe Basel — auf einer der meistbefahrenen Routen von der Autobahn, mit Tramlinie vor der Tür. Bewilligung der Stadt erteilt.',
+    pills: [{ t: "39'851 / Tag", glow: true }, { t: '175 m²' }, { t: 'Gerüst' }],
     isNew: true,
-  },
-  {
-    href: '/contact',
-    img: '/images/placements/Blumenrain 23-25.jpg',
-    fallback: '/images/placements/Blumenrain 23-25.jpg',
-    num: '№ 002 · BASEL',
-    title: ['Blumenrain', '25'],
-    desc: 'Grossflächige Giebel-Platzierung an der Blumenrain 25, 4051 Basel. Demnächst buchbar — weitere Details folgen in Kürze.',
-    pills: [{ t: 'Giebel', glow: true }, { t: '4051 Basel' }],
-    comingSoon: true,
   },
 ];
 
 const slidesEn: { desc: string; pills: string[] }[] = [
   {
-    desc: 'Prominent corner location at a busy tram junction in Basel — reaching public-transport commuters, pedestrians, students and an upscale audience. City permit granted.',
-    pills: ["35'000 / day", '200 m²', 'Scaffolding'],
-  },
-  {
-    desc: 'Large-format gable placement at Blumenrain 25, 4051 Basel. Soon available for booking — further details to follow shortly.',
-    pills: ['Gable', '4051 Basel'],
+    desc: 'Corner location at a traffic-light junction right next to Messe Basel — on one of the busiest routes from the motorway, with a tram line passing the door. City permit granted.',
+    pills: ["39'851 / day", '175 m²', 'Scaffolding'],
   },
 ];
 
@@ -118,15 +104,15 @@ export default function Placements() {
             <div className="grid grid-cols-2 border-t border-rule mb-7">
               {(locale === 'en'
                 ? [
-                    ['200', 'm²', 'Banner area'],
-                    ['35', 'k', 'Traffic / day'],
-                    ['25–34', '', 'Available CW'],
+                    ['175', 'm²', 'Banner area'],
+                    ['40', 'k', 'Traffic / day'],
+                    ['41–52', '', 'Available CW'],
                     ['4', 'wks', 'Min. booking'],
                   ]
                 : [
-                    ['200', 'm²', 'Bannerfläche'],
-                    ['35', 'k', 'Verkehr / Tag'],
-                    ['25–34', '', 'Verfügbare KW'],
+                    ['175', 'm²', 'Bannerfläche'],
+                    ['40', 'k', 'Verkehr / Tag'],
+                    ['41–52', '', 'Verfügbare KW'],
                     ['4', 'Wo.', 'Min. Buchung'],
                   ]
               ).map(([v, u, k], i) => (
@@ -161,11 +147,13 @@ export default function Placements() {
             onMouseLeave={() => { hovered.current = false; }}
           >
             {/* Counter */}
-            <span className="absolute top-5 right-5 z-10 text-white font-ui font-semibold text-[11px] tracking-[0.22em] bg-dusk/50 backdrop-blur-md px-3 py-1.5 border border-white/20 rounded-full">
-              <b className="text-glow font-semibold">{String(cur + 1).padStart(2, '0')}</b>
-              {' / '}
-              {String(total).padStart(2, '0')}
-            </span>
+            {total > 1 && (
+              <span className="absolute top-5 right-5 z-10 text-white font-ui font-semibold text-[11px] tracking-[0.22em] bg-dusk/50 backdrop-blur-md px-3 py-1.5 border border-white/20 rounded-full">
+                <b className="text-glow font-semibold">{String(cur + 1).padStart(2, '0')}</b>
+                {' / '}
+                {String(total).padStart(2, '0')}
+              </span>
+            )}
 
             {/* Slides */}
             <div className="absolute inset-0">
@@ -228,6 +216,7 @@ export default function Placements() {
               ))}
             </div>
 
+            {total > 1 && (<>
             {/* Dots */}
             <div className="absolute left-9 bottom-9 flex gap-1.5 z-20">
               {slides.map((_, i) => (
@@ -257,6 +246,7 @@ export default function Placements() {
                 ›
               </button>
             </div>
+            </>)}
           </div>
         </div>
       </div>

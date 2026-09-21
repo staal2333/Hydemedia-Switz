@@ -11,13 +11,13 @@ const SOLUTIONS = [
     key: 'scaffolding',
     num: '01 / 02',
     href: '/scaffolding',
-    image: '/images/placements/Bredgade.jpg',
+    image: '/images/placements/burgfelderstrasse-1-evo.jpg',
   },
   {
     key: 'facade',
     num: '02 / 02',
     href: '/facade',
-    image: '/images/placements/facade-1.jpg',
+    image: '/images/placements/Blumenrain 23-25.jpg',
   },
 ] as const;
 

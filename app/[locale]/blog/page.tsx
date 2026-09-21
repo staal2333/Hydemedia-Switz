@@ -13,7 +13,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'blogListing' });
   
   return {
-    title: `${t('title')} | Hyde Media`,
+    title: t('title'),
     description: t('description'),
   };
 }

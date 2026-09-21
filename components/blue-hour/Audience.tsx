@@ -24,7 +24,7 @@ const cards = [
     letter: 'B.',
     label: 'Für Immobilieneigentümer',
     h: 'Für',
-    h2: 'Immobilieneigentümer.',
+    h2: 'Immobilien­eigentümer.', // soft hyphen: the word is wider than a phone screen at this size
     bullets: [
       'Zusätzliche Einnahmen aus sonst ungenutzten Fassaden und Gerüsten.',
       'Wir kümmern uns um Bewilligungen, Produktion und Installation.',
@@ -97,7 +97,7 @@ export default function Audience() {
                 <span>{c.letter}</span>
                 <span>{locale === 'en' ? en.label : c.label}</span>
               </div>
-              <h3 className="font-display font-normal m-0 text-ink" style={{ fontSize: 44, letterSpacing: '-0.03em', lineHeight: 1 }}>
+              <h3 className="font-display font-normal m-0 text-ink" style={{ fontSize: 'clamp(34px, 9vw, 44px)', letterSpacing: '-0.03em', lineHeight: 1 }}>
                 {locale === 'en' ? en.h : c.h} <span className="italic text-mid">{locale === 'en' ? en.h2 : c.h2}</span>
               </h3>
               <ul className="m-0 mt-1 p-0 list-none flex flex-col gap-3.5">

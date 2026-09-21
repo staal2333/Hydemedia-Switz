@@ -24,7 +24,7 @@ export function createMetadata(
   ogImage?: string
 ): Metadata {
   return {
-    title: title ? `${title} | Hyde Media` : siteConfig.title,
+    title: { absolute: title ? `${title} | Hyde Media` : siteConfig.title },
     description: description || siteConfig.description,
     keywords: siteConfig.keywords,
     openGraph: {

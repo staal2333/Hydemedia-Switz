@@ -35,18 +35,16 @@ export async function generateMetadata({
     description = 'Hyde Media specialiserer sig i high-impact bannerkampagner på stilladser og facader i København, Aarhus og hele Danmark. Strategisk placerede reklamebannere med maksimal synlighed.';
     keywords = 'outdoor reklame, bannerreklame, facadereklame, stilladsreklame, København, Aarhus, Danmark, storformat bannere, reklamebannere';
   } else {
-    title = 'Premium Out-of-Home Advertising in Denmark';
-    description = 'Hyde Media specializes in high-impact banner campaigns on scaffolding and facades in Copenhagen, Aarhus and throughout Denmark. Strategically placed advertising banners with maximum visibility.';
-    keywords = 'outdoor advertising, banner advertising, facade advertising, scaffolding advertising, Copenhagen, Aarhus, Denmark, large format banners, advertising banners';
+    title = 'Premium Out-of-Home Advertising in Switzerland';
+    description = 'Hyde Media specializes in high-impact banner campaigns on scaffolding and facades in Basel and throughout Switzerland. Strategically placed advertising banners with maximum visibility.';
+    keywords = 'outdoor advertising, banner advertising, facade advertising, scaffolding advertising, Basel, Zurich, Switzerland, large format banners, advertising banners';
   }
 
-  return generateSEOMetadata({
-    title,
-    description,
-    keywords,
-    path: '',
-    locale,
-  });
+  return {
+    ...generateSEOMetadata({ title, description, keywords, path: '', locale }),
+    // Pages that set a plain string title get the brand suffix from here.
+    title: { default: `${title} | Hyde Media`, template: '%s | Hyde Media' },
+  };
 }
 
 export default async function LocaleLayout({
@@ -72,7 +70,7 @@ export default async function LocaleLayout({
     ? 'Führender Anbieter von Grossformat-Aussenwerbung in der Schweiz. Spezialisiert auf Gerüstbanner, Fassadenbanner und Gebäudeverkleidungen in Basel und der ganzen Schweiz.'
     : isDanish
       ? 'Førende leverandør af storformat udendørs reklame i Danmark. Specialiseret i stilladsebannere, facadebannere og bygningswraps i København, Aarhus og hele Danmark.'
-      : 'Leading provider of large-format outdoor advertising. Specializing in scaffolding banners, facade banners, and building wraps.';
+      : 'Leading provider of large-format outdoor advertising in Switzerland. Specializing in scaffolding banners, facade banners, and building wraps in Basel and across Switzerland.';
 
   return (
     <NextIntlClientProvider messages={messages}>

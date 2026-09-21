@@ -1,25 +1,26 @@
 {
   "scaffolding": [
     {
-      "id": "scf-001",
-      "name": "Burgfelderstrasse 1",
+      "id": "scf-002",
+      "name": "Riehenring 141",
       "location": "Basel",
-      "address": "Burgfelderstrasse 1, 4055 Basel",
-      "size": "200 m²",
-      "dimensions": { "width": 200, "height": 1 },
-      "duration": "CW 25–34",
+      "address": "Riehenring 141, 4058 Basel",
+      "size": "175 m²",
+      "dimensions": { "width": 175, "height": 1 },
+      "duration": "CW 41–52",
       "status": "available",
       "price": "Price on request",
-      "traffic": "35'000 per day",
-      "image": "/images/placements/burgfelderstrasse-1-evo.jpg",
+      "traffic": "39'851 per day",
+      "image": "/images/placements/riehenring-141-hyde-mockup.jpg",
       "isNew": true,
       "features": [
-        "200 m² of banner space in a prominent corner position",
-        "35'000 passers-by per day — tram, car and pedestrian traffic",
-        "Official city permit already granted",
-        "Available for calendar weeks 25–34",
-        "Minimum booking of 4 weeks",
-        "Target audiences: public transport commuters, pedestrians, students, upscale audience"
+        "175 m² of banner space at a traffic-light junction with high traffic flow",
+        "39'851 contacts per day — one of the most used routes from the motorway",
+        "Right next to Messe Basel and close to Congress Center Basel",
+        "Tram line passes the location — constant passenger and pedestrian traffic",
+        "Between the city centre and Kleinbasel, near the Rhine and Theater Basel",
+        "City permit granted (no alcohol, political or pornographic advertising)",
+        "Available for calendar weeks 41–52 · minimum booking of 4 weeks"
       ]
     }
   ],

@@ -188,8 +188,8 @@ const nextConfig = {
       // Retired Danish-slug pages: redirect /de/ versions to /de/services.
       // NOTE: /de/scaffolding is a real Swiss product page — do NOT redirect it.
       {
-        source: '/de/tilladelse',
-        destination: '/de/services',
+        source: '/:locale(de|en)/tilladelse',
+        destination: '/:locale/services',
         permanent: true,
       },
       {
@@ -214,11 +214,6 @@ const nextConfig = {
       },
       {
         source: '/de/pricing',
-        destination: '/de/partners',
-        permanent: true,
-      },
-      {
-        source: '/de/brands',
         destination: '/de/partners',
         permanent: true,
       },

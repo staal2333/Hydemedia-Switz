@@ -92,7 +92,7 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                 {[
                   { Icon: Mail, label: locale === 'en' ? 'Write' : 'Schreiben', value: config.email, href: `mailto:${config.email}` },
                   { Icon: Phone, label: locale === 'en' ? 'Call' : 'Anrufen', value: config.phone, href: `tel:${config.phone.replace(/\s/g, '')}` },
-                  { Icon: MapPin, label: locale === 'en' ? 'Address' : 'Adresse', value: 'Hauptstrasse 30, 4127 Birsfelden', href: undefined as string | undefined },
+                  { Icon: MapPin, label: locale === 'en' ? 'Address' : 'Adresse', value: 'Marktgasse 8, 4051 Basel', href: undefined as string | undefined },
                 ].map((c, i) => {
                   const Inner = (
                     <>
@@ -128,7 +128,7 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                     <h2 className="font-display font-normal m-0 mb-5 text-ink" style={{ fontSize: 28, letterSpacing: '-0.025em', lineHeight: 1.1 }}>
                       {locale === 'en' ? 'What can we help you with?' : 'Was ist Ihr Anliegen?'}
                     </h2>
-                    <div className="flex gap-2 p-1 bg-fog rounded-full w-max">
+                    <div className="flex gap-1 sm:gap-2 p-1 bg-fog rounded-full w-max max-w-full">
                       {([
                         { v: 'advertiser', label: locale === 'en' ? "I'm a brand" : 'Ich bin eine Marke' },
                         { v: 'partner', label: locale === 'en' ? 'I have a facade' : 'Ich habe eine Fassade' },
@@ -137,7 +137,7 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                           key={tab.v}
                           type="button"
                           onClick={() => setFormType(tab.v)}
-                          className={`px-4 py-2 rounded-full font-ui font-semibold text-[12px] tracking-[0.06em] transition-all ${
+                          className={`px-3 sm:px-4 py-2 rounded-full whitespace-nowrap font-ui font-semibold text-[12px] tracking-[0.06em] transition-all ${
                             formType === tab.v ? 'bg-ink text-white' : 'text-ink-soft hover:text-ink'
                           }`}
                         >

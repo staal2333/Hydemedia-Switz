@@ -116,9 +116,9 @@
       "sectionTitle": "Unsere Lösungen",
       "sectionDescription": "Wählen Sie die perfekte Werbelösung für Ihre Kampagne",
       "scaffolding": {
-        "title": "Gebäudeverkleidungen",
+        "title": "Gerüstwerbung",
         "subtitle": "Grossformat, maximale Wirkung",
-        "cta": "Gebäudeverkleidungen entdecken"
+        "cta": "Gerüstwerbung entdecken"
       },
       "facade": {
         "title": "Fassade & Giebel",
@@ -879,8 +879,8 @@
     "helpfulLinks": "Diese Links könnten Ihnen helfen:"
   },
   "scaffolding": {
-    "title": "Gebäudeverkleidungen",
-    "description": "Grossformatige Werbelösungen auf Gebäudeflächen an erstklassigen Standorten in der Schweiz. Perfekt für Produktlancierungen, saisonale Kampagnen und zeitkritische Promotionen.",
+    "title": "Gerüstwerbung",
+    "description": "Flexible, kurzfristige Werbelösungen auf Gerüsten an erstklassigen Standorten in der Schweiz. Perfekt für Produktlancierungen, saisonale Kampagnen und zeitkritische Promotionen.",
     "status": {
       "available": "Verfügbar",
       "booked": "Gebucht"
@@ -1336,7 +1336,7 @@
         },
         "contact": {
           "title": "8. Kontakt",
-          "content": "Für datenschutzbezogene Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns:<br/>E-Mail: sebastian.staal@hydemedia.ch<br/>Telefon: +41 77 233 81 21"
+          "content": "Für datenschutzbezogene Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns:<br/>E-Mail: theodor.staal@hydemedia.ch<br/>Telefon: +41 77 233 81 21<br/>Adresse: Marktgasse 8, 4051 Basel, Schweiz"
         },
         "changes": {
           "title": "9. Änderungen dieser Richtlinie",
@@ -1422,7 +1422,7 @@
         },
         "contact": {
           "title": "13. Kontaktinformationen",
-          "content": "Für Fragen zu diesen Bedingungen kontaktieren Sie uns:<br/>E-Mail: sebastian.staal@hydemedia.ch<br/>Telefon: +41 77 233 81 21"
+          "content": "Für Fragen zu diesen Bedingungen kontaktieren Sie uns:<br/>E-Mail: theodor.staal@hydemedia.ch<br/>Telefon: +41 77 233 81 21<br/>Adresse: Marktgasse 8, 4051 Basel, Schweiz"
         }
       }
     }

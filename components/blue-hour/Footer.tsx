@@ -35,8 +35,8 @@ export default function BlueHourFooter() {
             <h5 className="font-ui font-semibold text-[10px] tracking-[0.28em] uppercase text-sky m-0 mb-4">
               Hyde Media
             </h5>
-            <span className="block py-1.5 text-white/80 text-[15px]">Hauptstrasse 30</span>
-            <span className="block py-1.5 text-white/80 text-[15px]">4127 Birsfelden</span>
+            <span className="block py-1.5 text-white/80 text-[15px]">Marktgasse 8</span>
+            <span className="block py-1.5 text-white/80 text-[15px]">4051 Basel</span>
             <a href="https://www.instagram.com/hyde.med" target="_blank" rel="noopener" className="block py-1.5 text-white/80 text-[15px] hover:text-glow transition-colors">
               @hyde.med
             </a>
@@ -73,7 +73,7 @@ export default function BlueHourFooter() {
 
         <div className="pt-6 border-t border-white/10 flex flex-wrap justify-between gap-4 font-mono text-[11px] tracking-[0.15em] uppercase text-white/50">
           <span>© {new Date().getFullYear()} Hyde Media · {locale === 'en' ? 'All rights reserved' : 'Alle Rechte vorbehalten'}</span>
-          <span>{locale === 'en' ? 'Designed in Birsfelden · Installed across Switzerland' : 'Gestaltet in Birsfelden · Installiert in der ganzen Schweiz'}</span>
+          <span>{locale === 'en' ? 'Designed in Basel · Installed across Switzerland' : 'Gestaltet in Basel · Installiert in der ganzen Schweiz'}</span>
         </div>
       </div>
     </footer>

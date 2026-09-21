@@ -40,12 +40,12 @@ export async function generateMetadata({
   
   if (!post) {
     return {
-      title: 'Blog Post Not Found | Hyde Media',
+      title: 'Blog Post Not Found',
     };
   }
 
   return {
-    title: `${post.title} | Hyde Media Blog`,
+    title: `${post.title} | Blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,

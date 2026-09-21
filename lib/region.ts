@@ -16,7 +16,7 @@ export function getRegionConfig(_locale?: string) {
     currency: 'CHF',
     phone: '+41 77 233 81 21',
     email: 'theodor.staal@hydemedia.ch',
-    address: 'Hauptstrasse 30, 4127 Birsfelden',
+    address: 'Marktgasse 8, 4051 Basel',
     country: 'Schweiz',
     countryCode: 'CH',
     geoRegion: 'CH-BS',
