@@ -16,25 +16,42 @@ interface Slide {
   pills: { t: string; glow?: boolean }[];
   isNew?: boolean;
   comingSoon?: boolean;
+  booked?: boolean;
 }
 
 const slides: Slide[] = [
   {
-    href: '/services',
-    img: '/images/placements/riehenring-141-hyde-mockup.jpg',
-    fallback: '/images/placements/riehenring-141-hyde-mockup.jpg',
+    href: '/scaffolding#scf-003',
+    img: '/images/placements/riehenring-70-hyde-mockup-2.jpg',
+    fallback: '/images/placements/riehenring-70-hyde-mockup-2.jpg',
+    num: '№ 002 · BASEL',
+    title: ['Riehenring', '70'],
+    desc: 'Grossfläche an einer Ampelkreuzung mit Tramlinie — auf dem Weg zur Messe Basel und zum Congress Center. Verfügbar in den Kalenderwochen 44–47.',
+    pills: [{ t: "39'851 / Tag", glow: true }, { t: '125 m²' }, { t: 'KW 44–47' }],
+    isNew: true,
+  },
+  {
+    href: '/cases/grand-casino-basel-riehenring',
+    img: '/images/cases/grand-casino-basel-2.jpg',
+    fallback: '/images/cases/grand-casino-basel-2.jpg',
     num: '№ 001 · BASEL',
     title: ['Riehenring', '141'],
-    desc: 'Eck-Standort an einer Ampelkreuzung direkt bei der Messe Basel — auf einer der meistbefahrenen Routen von der Autobahn, mit Tramlinie vor der Tür. Bewilligung der Stadt erteilt.',
+    sublabel: 'gebucht von Grand Casino Basel',
+    desc: 'Eck-Standort an einer Ampelkreuzung direkt bei der Messe Basel — auf einer der meistbefahrenen Routen von der Autobahn, mit Tramlinie vor der Tür.',
     pills: [{ t: "39'851 / Tag", glow: true }, { t: '175 m²' }, { t: 'Gerüst' }],
-    isNew: true,
+    booked: true,
   },
 ];
 
-const slidesEn: { desc: string; pills: string[] }[] = [
+const slidesEn: { desc: string; pills: string[]; sublabel?: string }[] = [
   {
-    desc: 'Corner location at a traffic-light junction right next to Messe Basel — on one of the busiest routes from the motorway, with a tram line passing the door. City permit granted.',
+    desc: 'Large-format space at a traffic-light junction with a tram line — on the way to Messe Basel and the Congress Center. Available in calendar weeks 44–47.',
+    pills: ["39'851 / day", '125 m²', 'CW 44–47'],
+  },
+  {
+    desc: 'Corner location at a traffic-light junction right next to Messe Basel — on one of the busiest routes from the motorway, with a tram line passing the door.',
     pills: ["39'851 / day", '175 m²', 'Scaffolding'],
+    sublabel: 'booked by Grand Casino Basel',
   },
 ];
 
@@ -104,15 +121,15 @@ export default function Placements() {
             <div className="grid grid-cols-2 border-t border-rule mb-7">
               {(locale === 'en'
                 ? [
-                    ['175', 'm²', 'Banner area'],
+                    ['125', 'm²', 'Banner area'],
                     ['40', 'k', 'Traffic / day'],
-                    ['41–52', '', 'Available CW'],
+                    ['44–47', '', 'Available CW'],
                     ['4', 'wks', 'Min. booking'],
                   ]
                 : [
-                    ['175', 'm²', 'Bannerfläche'],
+                    ['125', 'm²', 'Bannerfläche'],
                     ['40', 'k', 'Verkehr / Tag'],
-                    ['41–52', '', 'Verfügbare KW'],
+                    ['44–47', '', 'Verfügbare KW'],
                     ['4', 'Wo.', 'Min. Buchung'],
                   ]
               ).map(([v, u, k], i) => (
@@ -177,6 +194,12 @@ export default function Placements() {
                     className="absolute inset-0"
                     style={{ background: 'linear-gradient(to top, rgba(31,58,95,0.9) 0%, rgba(31,58,95,0.25) 45%, transparent 70%)' }}
                   />
+                  {s.booked && (
+                    <span className="absolute top-5 left-5 z-10 inline-flex items-center gap-1.5 bg-white/90 text-dusk font-ui font-bold text-[10px] tracking-[0.24em] uppercase px-3 py-1.5 rounded-full shadow-lg">
+                      <span className="h-1.5 w-1.5 rounded-full bg-dusk" />
+                      {locale === 'en' ? 'Booked' : 'Gebucht'}
+                    </span>
+                  )}
                   {(s.isNew || s.comingSoon) && (
                     <span
                       className="absolute top-5 left-5 z-10 inline-flex items-center gap-1.5 bg-glow text-dusk font-ui font-bold text-[10px] tracking-[0.24em] uppercase px-3 py-1.5 rounded-full shadow-lg"
@@ -193,7 +216,7 @@ export default function Placements() {
                     </h4>
                     {s.sublabel && (
                       <div className="font-display italic text-glow/95 mb-2.5" style={{ fontSize: 'clamp(15px, 1.4vw, 19px)', lineHeight: 1.2 }}>
-                        — {s.sublabel}
+                        — {locale === 'en' && slidesEn[i]?.sublabel ? slidesEn[i].sublabel : s.sublabel}
                       </div>
                     )}
                     <p className="text-[13.5px] leading-[1.5] opacity-85 max-w-[42ch] m-0 text-white">{locale === 'en' && slidesEn[i] ? slidesEn[i].desc : s.desc}</p>

@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl';
 interface Brand { name: string; logo?: string; }
 
 const BRANDS: Brand[] = [
+  { name: 'Grand Casino Basel', logo: '/images/campaigns/grand-casino-basel.png' },
   { name: 'EVO Fitness',      logo: '/images/campaigns/evo-fitness.png' },
   { name: 'GoMore',          logo: '/images/campaigns/gomore.png' },
   { name: 'Lidl',             logo: '/images/campaigns/lidl.png' },

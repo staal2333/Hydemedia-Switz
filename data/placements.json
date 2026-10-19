@@ -1,6 +1,27 @@
 {
   "scaffolding": [
     {
+      "id": "scf-003",
+      "name": "Riehenring 70",
+      "location": "Basel",
+      "address": "Riehenring 70, 4058 Basel",
+      "size": "125 m²",
+      "dimensions": { "width": 125, "height": 1 },
+      "duration": "KW 44–47",
+      "status": "available",
+      "price": "Preis auf Anfrage",
+      "traffic": "39'851 pro Tag",
+      "image": "/images/placements/riehenring-70-hyde-mockup.jpg",
+      "isNew": true,
+      "features": [
+        "125 m² Bannerfläche an einer Ampelkreuzung mit Tramlinie",
+        "39'851 Kontakte pro Tag am Riehenring — eine der meistbefahrenen Routen von der Autobahn",
+        "Auf dem Weg zur Messe Basel, zum Congress Center Basel und zum Musical Theater Basel",
+        "Weithin sichtbar über die Kreuzung — für Autoverkehr, Tram-Passagiere, Velofahrende und Fussgänger",
+        "Verfügbar für die Kalenderwochen 44–47 · 4 Wochen"
+      ]
+    },
+    {
       "id": "scf-002",
       "name": "Riehenring 141",
       "location": "Basel",
@@ -8,11 +29,11 @@
       "size": "175 m²",
       "dimensions": { "width": 175, "height": 1 },
       "duration": "KW 41–52",
-      "status": "available",
+      "status": "booked",
       "price": "Preis auf Anfrage",
       "traffic": "39'851 pro Tag",
-      "image": "/images/placements/riehenring-141-hyde-mockup.jpg",
-      "isNew": true,
+      "image": "/images/cases/grand-casino-basel-1.jpg",
+      "isNew": false,
       "features": [
         "175 m² Bannerfläche an einer Ampelkreuzung mit hohem Verkehrsaufkommen",
         "39'851 Kontakte pro Tag — eine der meistbefahrenen Routen von der Autobahn",
@@ -20,7 +41,7 @@
         "Tramlinie vor dem Standort — konstanter Passagier- und Fussgängerverkehr",
         "Zwischen Innenstadt und Kleinbasel, nahe Rhein und Theater Basel",
         "Bewilligung der Stadt erteilt (keine Werbung für Alkohol, Politik oder pornografische Inhalte)",
-        "Verfügbar für die Kalenderwochen 41–52 · Mindestbuchung 4 Wochen"
+        "Aktuell gebucht — Referenz: Grand Casino Basel"
       ]
     }
   ],

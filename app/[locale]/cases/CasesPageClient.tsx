@@ -27,8 +27,8 @@ export default function CasesPageClient() {
             </h1>
             <p className="font-body text-white/85 max-w-2xl mx-auto m-0" style={{ fontSize: 'clamp(16px, 1.4vw, 19px)', lineHeight: 1.6 }}>
               {locale === 'en'
-                ? 'Real campaigns, real results. See how brands create impact with Hyde Media — from EVO Fitness and Lidl to Saxo Bank, Fernet-Branca and GoMore.'
-                : 'Echte Kampagnen, echte Resultate. Sehen Sie, wie Marken mit Hyde Media Wirkung erzielen — von EVO Fitness über Lidl und Saxo Bank bis Fernet-Branca und GoMore.'}
+                ? 'Real campaigns, real results. See how brands create impact with Hyde Media — from Grand Casino Basel and EVO Fitness to Lidl, Saxo Bank, Fernet-Branca and GoMore.'
+                : 'Echte Kampagnen, echte Resultate. Sehen Sie, wie Marken mit Hyde Media Wirkung erzielen — von Grand Casino Basel und EVO Fitness über Lidl, Saxo Bank bis Fernet-Branca und GoMore.'}
             </p>
           </div>
         </div>

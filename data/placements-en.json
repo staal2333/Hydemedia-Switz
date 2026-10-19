@@ -1,6 +1,27 @@
 {
   "scaffolding": [
     {
+      "id": "scf-003",
+      "name": "Riehenring 70",
+      "location": "Basel",
+      "address": "Riehenring 70, 4058 Basel",
+      "size": "125 m²",
+      "dimensions": { "width": 125, "height": 1 },
+      "duration": "CW 44–47",
+      "status": "available",
+      "price": "Price on request",
+      "traffic": "39'851 per day",
+      "image": "/images/placements/riehenring-70-hyde-mockup.jpg",
+      "isNew": true,
+      "features": [
+        "125 m² of banner space at a traffic-light junction with a tram line",
+        "39'851 contacts per day on Riehenring — one of the most used routes from the motorway",
+        "On the way to Messe Basel, Congress Center Basel and Musical Theater Basel",
+        "Visible right across the junction — to car traffic, tram passengers, cyclists and pedestrians",
+        "Available for calendar weeks 44–47 · 4 weeks"
+      ]
+    },
+    {
       "id": "scf-002",
       "name": "Riehenring 141",
       "location": "Basel",
@@ -8,11 +29,11 @@
       "size": "175 m²",
       "dimensions": { "width": 175, "height": 1 },
       "duration": "CW 41–52",
-      "status": "available",
+      "status": "booked",
       "price": "Price on request",
       "traffic": "39'851 per day",
-      "image": "/images/placements/riehenring-141-hyde-mockup.jpg",
-      "isNew": true,
+      "image": "/images/cases/grand-casino-basel-1.jpg",
+      "isNew": false,
       "features": [
         "175 m² of banner space at a traffic-light junction with high traffic flow",
         "39'851 contacts per day — one of the most used routes from the motorway",
@@ -20,7 +41,7 @@
         "Tram line passes the location — constant passenger and pedestrian traffic",
         "Between the city centre and Kleinbasel, near the Rhine and Theater Basel",
         "City permit granted (no alcohol, political or pornographic advertising)",
-        "Available for calendar weeks 41–52 · minimum booking of 4 weeks"
+        "Currently booked — reference: Grand Casino Basel"
       ]
     }
   ],

@@ -1,5 +1,22 @@
 [
   {
+    "id": 9,
+    "slug": "grand-casino-basel-riehenring",
+    "brand": "Grand Casino Basel",
+    "title": "Grand Casino Basel - Gerüstkampagne Riehenring",
+    "location": "Riehenring 141, Basel",
+    "size": "175m²",
+    "duration": "4 Wochen",
+    "format": "Gerüstbanner, zweiseitig",
+    "tags": ["Unterhaltung & Freizeit", "Markenpräsenz", "Basel"],
+    "challenge": "Das Grand Casino Basel wollte seine Marke und sein Angebot — Spielautomaten, Tischspiele, Poker, Restaurant, Bar, Events, Club und Hotel — dort sichtbar machen, wo Baslerinnen und Basler sowie Messe- und Kongressbesucher täglich unterwegs sind. Gesucht war ein grossflächiger Auftritt auf der Route zwischen Innenstadt, Messe Basel und Autobahn.",
+    "solution": "Wir setzten die Kampagne «Sparkling Life» auf 175 m² Gerüstfläche am Riehenring 141 um — einer Eck-Liegenschaft an einer Ampelkreuzung direkt bei der Messe Basel. Zwei grossformatige Banner bespielen beide Strassenseiten und sind damit aus allen Fahrtrichtungen sichtbar, ebenso für Tram-Passagiere und Fussgänger an der Haltestelle vor dem Haus.",
+    "results": "Mit 39'851 Kontakten pro Tag erreichte die Kampagne Autofahrerinnen und Autofahrer auf einer der meistbefahrenen Routen von der Autobahn, Tram-Pendler sowie Besucherinnen und Besucher der Messe und des Congress Center Basel. Die zweiseitige Eck-Platzierung und die Wartezeit an der Ampel sorgten für wiederholte und lange Sichtkontakte — inklusive des Hinweises auf die 600 kostenlosen, überwachten Parkplätze des Casinos.",
+    "images": ["/images/cases/grand-casino-basel-1.jpg", "/images/cases/grand-casino-basel-2.jpg"],
+    "testimonial": "",
+    "type": "Gerüstbanner, zweiseitig"
+  },
+  {
     "id": 8,
     "slug": "evo-fitness-basel-burgfelderstrasse",
     "brand": "EVO Fitness",
@@ -80,7 +97,7 @@
     "challenge": "Anspruchsvolle Fassadenkampagne, platziert im Zürcher Finanzquartier. Das elegante Design und die strategische Platzierung sollten Geschäftsleute und Investorinnen und Investoren erreichen und die Position der Saxo Bank als führende Investmentplattform stärken.",
     "solution": "Wir sicherten uns eine prominente Fassadenplatzierung im Zürcher Geschäftsviertel und gestalteten eine anspruchsvolle, professionelle Installation, die bei der Zielgruppe von Investorinnen, Investoren und Finanzfachleuten Anklang fand.",
     "results": "Erzielte über 400'000 wöchentliche Sichtkontakte in der primären Zielgruppe der Geschäftsleute. Das Brand-Tracking zeigte einen Anstieg der gestützten Bekanntheit um 41% und eine Zunahme der 'Top-of-Mind'-Erwägung für Investmentdienstleistungen um 23%.",
-    "images": ["/images/cases/saxo-1.JPG", "/images/cases/saxo-2.JPG"],
+    "images": ["/images/cases/saxo-1.jpg", "/images/cases/saxo-2.jpg"],
     "testimonial": "Eine anspruchsvolle Umsetzung, die perfekt zu unserer Markenpositionierung passte. Hervorragende Resultate.",
     "type": "Fassaden- & Giebelverhüllung"
   },
