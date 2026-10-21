@@ -55,13 +55,15 @@ export default function ScaffoldingPageClient() {
               >
                 {/* Image */}
                 <div className={`relative aspect-[4/3] rounded-[20px] overflow-hidden bg-fog border border-rule ${reverse ? 'lg:order-2' : ''}`}>
-                  <Image
-                    src={p.image}
-                    alt={p.name}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 55vw"
-                    className="object-cover"
-                  />
+                  {p.image && (
+                    <Image
+                      src={p.image}
+                      alt={p.name}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 55vw"
+                      className="object-cover"
+                    />
+                  )}
                   {/* Live badge */}
                   <div className="absolute top-5 left-5 inline-flex items-center gap-2 bg-white/88 backdrop-blur-md px-3.5 py-2 rounded-full font-ui font-semibold text-[10px] tracking-[0.22em] uppercase text-dusk">
                     <span className="h-1.5 w-1.5 rounded-full bg-mid" style={{ animation: 'pl-blink 1.5s ease-in-out infinite' }} />

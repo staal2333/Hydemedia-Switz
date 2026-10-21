@@ -8,17 +8,17 @@
       "size": "125 m²",
       "dimensions": { "width": 125, "height": 1 },
       "duration": "KW 44–47",
-      "status": "available",
+      "status": "booked",
       "price": "Preis auf Anfrage",
       "traffic": "39'851 pro Tag",
-      "image": "/images/placements/riehenring-70-hyde-mockup.jpg",
-      "isNew": true,
+      "image": "",
+      "isNew": false,
       "features": [
         "125 m² Bannerfläche an einer Ampelkreuzung mit Tramlinie",
         "39'851 Kontakte pro Tag am Riehenring — eine der meistbefahrenen Routen von der Autobahn",
         "Auf dem Weg zur Messe Basel, zum Congress Center Basel und zum Musical Theater Basel",
         "Weithin sichtbar über die Kreuzung — für Autoverkehr, Tram-Passagiere, Velofahrende und Fussgänger",
-        "Verfügbar für die Kalenderwochen 44–47 · 4 Wochen"
+        "Gebucht für die Kalenderwochen 44–47"
       ]
     },
     {

@@ -167,7 +167,7 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
                     onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '0 0 0 0 transparent'; }}
                   >
                     <div className="relative aspect-[16/10] bg-fog overflow-hidden">
-                      <Image src={p.image} alt={`${config.serviceName} ${p.name} – ${config.city}`} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.04]" />
+                      {p.image && <Image src={p.image} alt={`${config.serviceName} ${p.name} – ${config.city}`} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.04]" />}
                       <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full font-ui font-semibold text-[9px] tracking-[0.2em] uppercase text-dusk">
                         <span className="h-1.5 w-1.5 rounded-full bg-mid" /> Live · № {String(i + 1).padStart(2, '0')}
                       </span>

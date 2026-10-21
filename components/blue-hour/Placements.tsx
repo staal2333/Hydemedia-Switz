@@ -22,13 +22,13 @@ interface Slide {
 const slides: Slide[] = [
   {
     href: '/scaffolding#scf-003',
-    img: '/images/placements/riehenring-70-hyde-mockup-2.jpg',
-    fallback: '/images/placements/riehenring-70-hyde-mockup-2.jpg',
+    img: '',
+    fallback: '',
     num: '№ 002 · BASEL',
     title: ['Riehenring', '70'],
-    desc: 'Grossfläche an einer Ampelkreuzung mit Tramlinie — auf dem Weg zur Messe Basel und zum Congress Center. Verfügbar in den Kalenderwochen 44–47.',
+    desc: 'Grossfläche an einer Ampelkreuzung mit Tramlinie — auf dem Weg zur Messe Basel und zum Congress Center. Gebucht für die Kalenderwochen 44–47.',
     pills: [{ t: "39'851 / Tag", glow: true }, { t: '125 m²' }, { t: 'KW 44–47' }],
-    isNew: true,
+    booked: true,
   },
   {
     href: '/cases/grand-casino-basel-riehenring',
@@ -45,7 +45,7 @@ const slides: Slide[] = [
 
 const slidesEn: { desc: string; pills: string[]; sublabel?: string }[] = [
   {
-    desc: 'Large-format space at a traffic-light junction with a tram line — on the way to Messe Basel and the Congress Center. Available in calendar weeks 44–47.',
+    desc: 'Large-format space at a traffic-light junction with a tram line — on the way to Messe Basel and the Congress Center. Booked for calendar weeks 44–47.',
     pills: ["39'851 / day", '125 m²', 'CW 44–47'],
   },
   {
@@ -123,13 +123,13 @@ export default function Placements() {
                 ? [
                     ['125', 'm²', 'Banner area'],
                     ['40', 'k', 'Traffic / day'],
-                    ['44–47', '', 'Available CW'],
+                    ['44–47', '', 'Calendar weeks'],
                     ['4', 'wks', 'Min. booking'],
                   ]
                 : [
                     ['125', 'm²', 'Bannerfläche'],
                     ['40', 'k', 'Verkehr / Tag'],
-                    ['44–47', '', 'Verfügbare KW'],
+                    ['44–47', '', 'Kalenderwochen'],
                     ['4', 'Wo.', 'Min. Buchung'],
                   ]
               ).map(([v, u, k], i) => (
@@ -184,12 +184,14 @@ export default function Placements() {
                     aria-label={locale === 'en' ? `View location ${s.title.join(' ')}` : `Standort ${s.title.join(' ')} ansehen`}
                     className="absolute inset-0 z-[15]"
                   />
-                  <Image
-                    src={s.fallback}
-                    alt={s.title.join(' ')}
-                    fill
-                    className={`object-cover transition-transform duration-[8000ms] ease-out ${i === cur ? 'scale-[1.06]' : 'scale-100'}`}
-                  />
+                  {s.fallback && (
+                    <Image
+                      src={s.fallback}
+                      alt={s.title.join(' ')}
+                      fill
+                      className={`object-cover transition-transform duration-[8000ms] ease-out ${i === cur ? 'scale-[1.06]' : 'scale-100'}`}
+                    />
+                  )}
                   <div
                     className="absolute inset-0"
                     style={{ background: 'linear-gradient(to top, rgba(31,58,95,0.9) 0%, rgba(31,58,95,0.25) 45%, transparent 70%)' }}

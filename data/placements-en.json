@@ -8,17 +8,17 @@
       "size": "125 m²",
       "dimensions": { "width": 125, "height": 1 },
       "duration": "CW 44–47",
-      "status": "available",
+      "status": "booked",
       "price": "Price on request",
       "traffic": "39'851 per day",
-      "image": "/images/placements/riehenring-70-hyde-mockup.jpg",
-      "isNew": true,
+      "image": "",
+      "isNew": false,
       "features": [
         "125 m² of banner space at a traffic-light junction with a tram line",
         "39'851 contacts per day on Riehenring — one of the most used routes from the motorway",
         "On the way to Messe Basel, Congress Center Basel and Musical Theater Basel",
         "Visible right across the junction — to car traffic, tram passengers, cyclists and pedestrians",
-        "Available for calendar weeks 44–47 · 4 weeks"
+        "Booked for calendar weeks 44–47"
       ]
     },
     {
