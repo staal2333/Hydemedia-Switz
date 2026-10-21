@@ -1,30 +1,39 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { detailBreadcrumb } from '@/lib/breadcrumbs';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { createMetadata } from '@/lib/metadata';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 import CaseStudyDetailClient from './CaseStudyDetailClient';
-import casesDe from '@/public/data/cases.json';
-import casesEn from '@/public/data/cases-en.json';
+import casesData from '@/public/data/cases.json';
+import { localizeCase, type CaseStudy } from '@/lib/placements';
 
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
-  params: { slug, locale },
+  params: { locale, slug },
 }: {
-  params: { slug: string; locale: string };
+  params: { locale: string; slug: string };
 }): Promise<Metadata> {
-  const casesData = locale === 'en' ? casesEn : casesDe;
   const caseStudy = casesData.find((c) => c.slug === slug);
   
   if (!caseStudy) {
-    return createMetadata('Case Study Not Found');
+    // notFound() here, not a noindex title: metadata resolves before the page
+    // streams, so this is the only point that can still send a real 404.
+    // Returning metadata let the loading boundary flush a 200 first (a soft 404).
+    notFound();
   }
 
-  return createMetadata(
-    caseStudy.title.includes(caseStudy.brand) ? caseStudy.title : `${caseStudy.brand} | ${caseStudy.title}`,
-    caseStudy.challenge.substring(0, 155),
-    caseStudy.images[0]
-  );
+  // Case pages carry the strongest proof on the site, so they get the full
+  // treatment: canonical, hreflang, and their own photo as the share image.
+  const c = localizeCase(caseStudy as unknown as CaseStudy, locale);
+  return generateSEOMetadata({
+    title: `${c.brand} – ${c.format}`,
+    description: c.challenge.substring(0, 155),
+    keywords: [c.brand, c.format, c.location, locale === 'en' ? 'outdoor advertising' : 'Aussenwerbung', locale === 'en' ? 'case study' : 'Referenz'].join(', '),
+    path: `/cases/${slug}`,
+    locale,
+    image: caseStudy.images[0],
+  });
 }
 
 export default function CaseStudyDetailPage({
@@ -34,12 +43,22 @@ export default function CaseStudyDetailPage({
 }) {
   unstable_setRequestLocale(locale);
 
-  const casesData = locale === 'en' ? casesEn : casesDe;
   const caseStudy = casesData.find((c) => c.slug === slug);
 
   if (!caseStudy) {
     notFound();
   }
 
-  return <CaseStudyDetailClient caseStudy={caseStudy} />;
+  const c = localizeCase(caseStudy as unknown as CaseStudy, locale);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(detailBreadcrumb('https://www.hydemedia.ch', locale, 'cases', `${c.brand} – ${c.format}`, `/cases/${slug}`)),
+        }}
+      />
+      <CaseStudyDetailClient caseStudy={caseStudy} />
+    </>
+  );
 }

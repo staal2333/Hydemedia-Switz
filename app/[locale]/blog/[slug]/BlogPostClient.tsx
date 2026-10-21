@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import ReactMarkdown from 'react-markdown';
+import LivePlacements from '@/components/blue-hour/LivePlacements';
+import NewsletterSignup from '@/components/NewsletterSignup';
+import NewsletterSlideIn from '@/components/NewsletterSlideIn';
 import DuskHero from '@/components/blue-hour/DuskHero';
 import GroundFlow from '@/components/blue-hour/GroundFlow';
 
@@ -28,9 +31,25 @@ interface Props {
   slug: string;
 }
 
+const COPY = {
+  de: {
+    allPosts: '← Alle Artikel',
+    ctaLead: 'Bereit, Ihre Marke',
+    ctaAccent: 'sichtbar zu machen?',
+    quote: 'Angebot anfordern',
+  },
+  en: {
+    allPosts: '← All articles',
+    ctaLead: 'Ready to make your brand',
+    ctaAccent: 'visible?',
+    quote: 'Request a quote',
+  },
+};
+
 export default function BlogPostClient({ post }: Props) {
   const locale = useLocale();
   const t = useTranslations('blogPost');
+  const copy = COPY[locale === 'en' ? 'en' : 'de'];
 
   return (
     <div className="relative">
@@ -84,8 +103,10 @@ export default function BlogPostClient({ post }: Props) {
               </div>
             )}
 
-            <div className="max-w-3xl mx-auto prose prose-slate prose-headings:font-display prose-headings:font-normal prose-headings:tracking-tight prose-h1:text-[clamp(28px,3.5vw,44px)] prose-h2:text-[clamp(24px,3vw,36px)] prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-[20px] prose-h3:mt-8 prose-h3:mb-3 prose-p:text-ink-soft prose-p:leading-relaxed prose-p:text-[16px] prose-li:text-ink-soft prose-strong:text-ink prose-a:text-mid prose-a:no-underline hover:prose-a:underline">
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+            <div className="max-w-3xl mx-auto article-body">
+              {/* The page header already carries the title as the H1, so a leading "# Title"
+                  in the Markdown is dropped and any other H1 is demoted to H2. */}
+              <ReactMarkdown components={{ h1: 'h2' }}>{post.content.replace(/^\s*# [^\n]*\n+/, '')}</ReactMarkdown>
             </div>
 
             {post.tags && post.tags.length > 0 && (
@@ -110,13 +131,24 @@ export default function BlogPostClient({ post }: Props) {
                 href={`/${locale}/blog`}
                 className="inline-flex items-center gap-2 font-ui font-semibold text-[11px] uppercase tracking-[0.18em] text-ink border-b-2 border-ink pb-1 hover:text-mid hover:border-mid transition-colors"
               >
-                {locale === 'en' ? '← All articles' : '← Alle Artikel'}
+                {copy.allPosts}
               </Link>
             </div>
           </div>
         </article>
 
-        <section className="relative overflow-hidden py-28 text-white">
+        <section className="pb-4 print:hidden">
+          <div className="shell">
+            <div className="max-w-5xl mx-auto bg-white border border-rule rounded-[24px] p-7 md:p-10">
+              <NewsletterSignup source="blog" />
+            </div>
+          </div>
+        </section>
+        <NewsletterSlideIn source="blog-slide-in" />
+
+        <LivePlacements />
+
+        <section data-quote-cta="" className="relative overflow-hidden py-28 text-white">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-25"
@@ -127,13 +159,13 @@ export default function BlogPostClient({ post }: Props) {
           />
           <div className="shell relative z-10 grid lg:grid-cols-[1.2fr_1fr] grid-cols-1 gap-12 items-center">
             <h2 className="font-display font-normal m-0 text-white" style={{ fontSize: 'clamp(36px, 5vw, 72px)', lineHeight: 0.96, letterSpacing: '-0.035em' }}>
-              {locale === 'en' ? 'Ready to make your brand ' : 'Bereit, Ihre Marke '}<span className="italic text-glow">{locale === 'en' ? 'visible?' : 'sichtbar zu machen?'}</span>
+              {copy.ctaLead} <span className="italic text-glow">{copy.ctaAccent}</span>
             </h2>
             <Link
               href={`/${locale}/contact`}
               className="flex justify-between items-center px-6 py-5 bg-white/[0.14] backdrop-blur-xl border border-white/30 rounded-2xl hover:bg-white/25 hover:border-white hover:-translate-y-0.5 transition-all"
             >
-              <span className="font-display italic font-normal text-[22px]" style={{ letterSpacing: '-0.02em' }}>{locale === 'en' ? 'Request a quote' : 'Angebot anfordern'}</span>
+              <span className="font-display italic font-normal text-[22px]" style={{ letterSpacing: '-0.02em' }}>{copy.quote}</span>
               <span className="text-glow text-[20px]">↗</span>
             </Link>
           </div>

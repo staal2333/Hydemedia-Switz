@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: https://www.hydemedia.ch/sitemap.xml

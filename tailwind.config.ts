@@ -62,8 +62,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['"Funnel Display"', 'system-ui', 'sans-serif'],
-        ui:      ['"Funnel Display"', 'system-ui', 'sans-serif'], // labels, buttons, menu — same family as display
+        display: ['"Funnel Display Variable"', '"Funnel Display"', 'system-ui', 'sans-serif'],
+        ui:      ['"Funnel Display Variable"', '"Funnel Display"', 'system-ui', 'sans-serif'], // labels, buttons, menu — same family as display
         body:    ['var(--font-body)', 'Inter', 'system-ui', 'sans-serif'],
         sans:    ['var(--font-body)', 'Inter', 'system-ui', 'sans-serif'],
         mono:    ['var(--font-jetbrains)', 'JetBrains Mono', 'monospace'],

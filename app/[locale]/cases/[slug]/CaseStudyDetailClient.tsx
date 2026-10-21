@@ -6,6 +6,62 @@ import { useLocale } from 'next-intl';
 import { useState } from 'react';
 import DuskHero from '@/components/blue-hour/DuskHero';
 import GroundFlow from '@/components/blue-hour/GroundFlow';
+import {
+  getPlacementsForCase,
+  localizeCase,
+  localizePlacement,
+  placementPath,
+  type CaseStudy as LibCaseStudy,
+} from '@/lib/placements';
+
+const COPY = {
+  de: {
+    back: 'Zurück zu allen Referenzen',
+    image: (n: number) => `Bild ${n}`,
+    statLocation: 'Standort',
+    statSize: 'Grösse',
+    statDuration: 'Dauer',
+    statFormat: 'Format',
+    challenge: 'Herausforderung',
+    solution: 'Lösung',
+    results: 'Resultate',
+    placementEyebrow: 'Standort',
+    placementTitle: 'Hier lief die Kampagne.',
+    placementBookable: 'Standort ansehen',
+    placementRetired: 'Ehemaliger Standort',
+    related: 'Verwandte Seiten',
+    pillarFacade: 'Fassadenwerbung',
+    pillarScaffolding: 'Gerüstwerbung',
+    moreCases: 'Weitere Referenzen',
+    allServices: 'Alle Lösungen',
+    ctaLead: 'Bereit für',
+    ctaAccent: 'Ihre eigene Story?',
+    quote: 'Angebot anfordern',
+  },
+  en: {
+    back: 'Back to all references',
+    image: (n: number) => `Image ${n}`,
+    statLocation: 'Location',
+    statSize: 'Size',
+    statDuration: 'Duration',
+    statFormat: 'Format',
+    challenge: 'Challenge',
+    solution: 'Solution',
+    results: 'Results',
+    placementEyebrow: 'Location',
+    placementTitle: 'Where this campaign ran.',
+    placementBookable: 'See the placement',
+    placementRetired: 'Retired placement',
+    related: 'Related pages',
+    pillarFacade: 'Facade advertising',
+    pillarScaffolding: 'Scaffolding advertising',
+    moreCases: 'More cases',
+    allServices: 'All services',
+    ctaLead: 'Ready for',
+    ctaAccent: 'your own story?',
+    quote: 'Request a proposal',
+  },
+};
 
 interface CaseStudy {
   id: number;
@@ -23,14 +79,35 @@ interface CaseStudy {
   images: string[];
   tags: string[];
   type: string;
+  /** Placement ids this campaign ran on — see data/placements.json. */
+  placementIds?: string[];
+}
+
+// Map a campaign's city to its city landing page, where one exists.
+function cityLandingPage(location: string, format: string, locale: string): string | null {
+  const isFacade = /fassade|facade/i.test(format);
+  if (!isFacade && /basel/i.test(location)) return `/${locale}/geruestwerbung-basel`;
+  return null;
 }
 
 export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseStudy }) {
   const locale = useLocale();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const c = caseStudy;
+  // Parse/route from the German source; display from the localized copy.
+  const source = caseStudy;
+  const c = localizeCase(caseStudy as unknown as LibCaseStudy, locale);
   const heroImage = c.images?.[selectedImageIndex] ?? c.images?.[0];
+
+  // SEO: internal link-net — connect this case to its pillar service page + nearest city landing page.
+  const isFacade = /fassade|facade/i.test(source.format);
+  const pillarHref = isFacade ? `/${locale}/facade` : `/${locale}/scaffolding`;
+  const t = COPY[locale === 'en' ? 'en' : 'de'];
+  const pillarLabel = isFacade ? t.pillarFacade : t.pillarScaffolding;
+  const cityHref = cityLandingPage(source.location, source.format, locale);
+
+  // The physical placement(s) this campaign ran on — proof the spot delivers.
+  const ranOn = getPlacementsForCase({ placementIds: source.placementIds ?? [] }).map((p) => localizePlacement(p, locale));
 
   return (
     <div className="relative">
@@ -42,7 +119,7 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseSt
               href={`/${locale}/cases`}
               className="inline-flex items-center gap-2 font-ui font-semibold text-[11px] uppercase tracking-[0.18em] text-white/70 hover:text-white transition-colors mb-8"
             >
-              <span>←</span> {locale === 'en' ? 'Back to all references' : 'Zurück zu allen Referenzen'}
+              <span>←</span> {t.back}
             </Link>
             <div className="text-center">
               <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/65 inline-block mb-6">
@@ -91,7 +168,7 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseSt
                     i === selectedImageIndex ? 'border-mid scale-105' : 'border-rule hover:border-mid/50'
                   }`}
                 >
-                  <Image src={img} alt={`Image ${i + 1}`} fill sizes="80px" className="object-cover" />
+                  <Image src={img} alt={t.image(i + 1)} fill sizes="80px" className="object-cover" />
                 </button>
               ))}
             </div>
@@ -100,10 +177,10 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseSt
           {/* Stats grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-rule rounded-[20px] overflow-hidden border border-rule max-w-5xl mx-auto">
             {[
-              { v: c.location, k: locale === 'en' ? 'Location' : 'Standort' },
-              { v: c.size, k: locale === 'en' ? 'Size' : 'Grösse' },
-              { v: c.duration, k: locale === 'en' ? 'Duration' : 'Dauer' },
-              { v: c.format, k: 'Format' },
+              { v: c.location, k: t.statLocation },
+              { v: c.size, k: t.statSize },
+              { v: c.duration, k: t.statDuration },
+              { v: c.format, k: t.statFormat },
             ].map((s, i) => (
               <div key={i} className="bg-white p-5 text-center">
                 <div className="font-display font-normal text-ink mb-1.5" style={{ fontSize: 'clamp(15px, 1.4vw, 20px)', letterSpacing: '-0.01em', lineHeight: 1.2 }}>
@@ -123,9 +200,9 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseSt
         <div className="shell">
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 max-w-6xl mx-auto">
             {[
-              { num: 'i.', title: locale === 'en' ? 'Challenge' : 'Herausforderung', body: c.challenge },
-              { num: 'ii.', title: locale === 'en' ? 'Solution' : 'Lösung', body: c.solution },
-              { num: 'iii.', title: locale === 'en' ? 'Results' : 'Resultate', body: c.results },
+              { num: 'i.', title: t.challenge, body: c.challenge },
+              { num: 'ii.', title: t.solution, body: c.solution },
+              { num: 'iii.', title: t.results, body: c.results },
             ].map((s) => (
               <div key={s.num}>
                 <div className="font-display italic font-normal text-mid mb-4 inline-flex items-center gap-3" style={{ fontSize: 32, lineHeight: 1 }}>
@@ -166,6 +243,66 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseSt
         </section>
       )}
 
+      {/* ── PLACEMENT — the physical spot this campaign ran on ── */}
+      {ranOn.length > 0 && (
+        <section className="pb-16">
+          <div className="shell">
+            <div className="max-w-4xl mx-auto">
+              <span className="sec-no inline-block mb-4 text-mid">§ {t.placementEyebrow}</span>
+              <h3
+                className="font-display font-normal m-0 mb-7 text-ink"
+                style={{ fontSize: 'clamp(26px, 3vw, 38px)', letterSpacing: '-0.025em', lineHeight: 1.05 }}
+              >
+                {t.placementTitle}
+              </h3>
+              <div className={`grid gap-5 ${ranOn.length > 1 ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
+                {ranOn.map((p) => {
+                  const href = `/${locale}${placementPath(p)}`;
+                  const retired = p.status === 'past';
+                  return (
+                    <Link
+                      key={p.id}
+                      href={href}
+                      className="group bg-white border border-rule rounded-[20px] overflow-hidden flex sm:flex-row flex-col hover:-translate-y-1 hover:border-mid transition-all"
+                    >
+                      <div className="relative sm:w-[42%] w-full aspect-[4/3] sm:aspect-auto bg-fog shrink-0 overflow-hidden">
+                        {p.image && (
+                          <Image
+                            src={p.image}
+                            alt={p.name}
+                            fill
+                            sizes="(max-width: 640px) 100vw, 220px"
+                            className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.04]"
+                          />
+                        )}
+                      </div>
+                      <div className="p-6 flex flex-col gap-2 flex-1">
+                        <div className="font-ui font-semibold text-[10px] tracking-[0.24em] uppercase text-muted">
+                          {p.location}
+                        </div>
+                        <h4
+                          className="font-display font-normal m-0 text-ink"
+                          style={{ fontSize: 21, letterSpacing: '-0.02em', lineHeight: 1.12 }}
+                        >
+                          {p.name}
+                        </h4>
+                        <p className="text-[13.5px] leading-[1.5] text-ink-soft m-0">
+                          {p.size} · {p.traffic}
+                        </p>
+                        <div className="mt-auto pt-4 font-ui font-semibold text-[11px] tracking-[0.2em] uppercase text-muted group-hover:text-ink transition-colors">
+                          {retired ? t.placementRetired : t.placementBookable}
+                          <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">↗</span>
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── TAGS ── */}
       {c.tags && c.tags.length > 0 && (
         <section className="pb-12">
@@ -184,6 +321,33 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseSt
         </section>
       )}
 
+      {/* ── RELATED LINKS — SEO internal link-net ── */}
+      <section className="pb-16">
+        <div className="shell">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="font-ui font-semibold text-[11px] tracking-[0.18em] uppercase text-muted mb-4 text-center">
+              {t.related}
+            </h3>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link href={pillarHref} className="font-ui font-semibold text-[12px] tracking-[0.14em] uppercase text-ink border border-rule rounded-full px-4 py-2 bg-white hover:bg-slate-50 transition-colors">
+                {pillarLabel} →
+              </Link>
+              {cityHref && (
+                <Link href={cityHref} className="font-ui font-semibold text-[12px] tracking-[0.14em] uppercase text-ink border border-rule rounded-full px-4 py-2 bg-white hover:bg-slate-50 transition-colors">
+                  {pillarLabel} {source.location.split(',')[0]} →
+                </Link>
+              )}
+              <Link href={`/${locale}/cases`} className="font-ui font-semibold text-[12px] tracking-[0.14em] uppercase text-ink border border-rule rounded-full px-4 py-2 bg-white hover:bg-slate-50 transition-colors">
+                {t.moreCases} →
+              </Link>
+              <Link href={`/${locale}/services`} className="font-ui font-semibold text-[12px] tracking-[0.14em] uppercase text-ink border border-rule rounded-full px-4 py-2 bg-white hover:bg-slate-50 transition-colors">
+                {t.allServices} →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FINAL CTA ── */}
       <section className="relative overflow-hidden py-28 text-white">
         <div
@@ -199,13 +363,13 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseSt
             className="font-display font-normal m-0 text-white"
             style={{ fontSize: 'clamp(36px, 5vw, 72px)', lineHeight: 0.96, letterSpacing: '-0.035em' }}
           >
-            {locale === 'en' ? 'Ready for' : 'Bereit für'} <span className="italic text-glow">{locale === 'en' ? 'your own story?' : 'Ihre eigene Story?'}</span>
+            {t.ctaLead} <span className="italic text-glow">{t.ctaAccent}</span>
           </h2>
           <Link
             href={`/${locale}/contact`}
             className="flex justify-between items-center px-6 py-5 bg-white/[0.14] backdrop-blur-xl border border-white/30 rounded-2xl hover:bg-white/25 hover:border-white hover:-translate-y-0.5 transition-all"
           >
-            <span className="font-display italic font-normal text-[22px]" style={{ letterSpacing: '-0.02em' }}>{locale === 'en' ? 'Request a proposal' : 'Angebot anfordern'}</span>
+            <span className="font-display italic font-normal text-[22px]" style={{ letterSpacing: '-0.02em' }}>{t.quote}</span>
             <span className="text-glow text-[20px]">↗</span>
           </Link>
         </div>

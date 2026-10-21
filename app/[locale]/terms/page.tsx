@@ -11,18 +11,13 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
   let title: string, description: string, keywords: string;
   if (isGerman) {
     title = 'Nutzungsbedingungen | AGB für Aussenwerbung';
     description = 'Lesen Sie die Allgemeinen Geschäftsbedingungen von Hyde Media für die Nutzung unserer OOH-Werbeplattform und Dienstleistungen.';
     keywords = 'Nutzungsbedingungen, AGB, Aussenwerbung, rechtlich';
-  } else if (isDanish) {
-    title = 'Servicevilkår | Betingelser for Outdoor Reklame';
-    description = 'Læs Hyde Medias vilkår og betingelser for brug af vores OOH reklameudbud og services.';
-    keywords = 'servicevilkår, betingelser, outdoor reklame, juridisk';
   } else {
     title = 'Terms of Service | Outdoor Advertising Terms';
     description = 'Read Hyde Media\'s terms and conditions for using our OOH advertising platform and services.';

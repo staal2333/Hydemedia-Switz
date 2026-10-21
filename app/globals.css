@@ -27,11 +27,11 @@
     --rule-2:   #ffffff30;
     --white:    #ffffff;
 
-    /* Type stacks — Funnel Display (loaded via <link>) for headlines + UI labels,
+    /* Type stacks — Funnel Display (self-hosted) for headlines + UI labels,
        Inter (next/font) for body, JetBrains Mono (next/font) for technical labels. */
-    --f-display: "Funnel Display", system-ui, sans-serif;
-    --f-italic:  "Funnel Display", system-ui, sans-serif;
-    --f-ui:      "Funnel Display", system-ui, sans-serif;
+    --f-display: "Funnel Display Variable", "Funnel Display", system-ui, sans-serif;
+    --f-italic:  "Funnel Display Variable", "Funnel Display", system-ui, sans-serif;
+    --f-ui:      "Funnel Display Variable", "Funnel Display", system-ui, sans-serif;
     --f-body:    var(--font-body), "Inter", system-ui, sans-serif;
     --f-mono:    var(--font-jetbrains), "JetBrains Mono", monospace;
 
@@ -263,4 +263,49 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(31, 58, 95, 0.2) transparent;
+}
+
+/* Article body — blog posts are Markdown rendered to plain HTML, so the
+   typography lives here rather than in per-element classes. */
+.article-body { color: var(--ink-soft); font-size: 17px; line-height: 1.75; }
+.article-body > * + * { margin-top: 1.15em; }
+.article-body h2 {
+  font-family: var(--f-display); font-weight: 400; color: var(--ink);
+  font-size: clamp(26px, 3vw, 36px); line-height: 1.1; letter-spacing: -0.025em;
+  margin-top: 2.2em; margin-bottom: 0.2em;
+}
+.article-body h3 {
+  font-family: var(--f-display); font-weight: 400; color: var(--ink);
+  font-size: 22px; line-height: 1.25; letter-spacing: -0.015em;
+  margin-top: 1.8em; margin-bottom: 0.1em;
+}
+.article-body strong { color: var(--ink); font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body a { color: var(--mid); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.article-body a:hover { color: var(--ink); }
+.article-body ul, .article-body ol { padding-left: 1.4em; }
+.article-body ul { list-style: none; }
+.article-body ul > li { position: relative; }
+.article-body ul > li::before {
+  content: '→'; position: absolute; left: -1.4em; color: var(--mid);
+  font-family: var(--f-display); font-style: italic;
+}
+.article-body ol { list-style: decimal; }
+.article-body ol > li::marker { color: var(--mid); font-family: var(--f-display); }
+.article-body li + li { margin-top: 0.55em; }
+.article-body blockquote {
+  border-left: 3px solid var(--glow); padding: 0.2em 0 0.2em 1.2em;
+  font-family: var(--f-display); font-style: italic; font-size: 21px; line-height: 1.5; color: var(--ink);
+}
+.article-body hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5em 0; }
+.article-body h2:first-child, .article-body h3:first-child { margin-top: 0; }
+.article-body table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.article-body th, .article-body td { border-bottom: 1px solid var(--rule); padding: 0.6em 0.8em 0.6em 0; text-align: left; vertical-align: top; }
+.article-body th { color: var(--ink); font-weight: 600; }
+
+/* Newsletter corner card — rises in once, and not at all for reduced motion. */
+@keyframes hyde-slide-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.hyde-slide-in { animation: hyde-slide-in 0.5s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .hyde-slide-in { animation: none; }
 }

@@ -14,8 +14,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
   let title: string, description: string, keywords: string;
 
@@ -23,10 +22,6 @@ export async function generateMetadata({
     title = 'Über uns | Wirkungsvolle Bannerkampagnen seit 2025';
     description = 'Wir spezialisieren uns auf strategisch platzierte Werbebanner. Unsere Lösungen gewährleisten maximale Sichtbarkeit für Marken in der Schweiz.';
     keywords = 'über hydemedia, Aussenwerbung Schweiz, Grossformat Banner, Werbebanner Basel, OOH Werbung Schweiz';
-  } else if (isDanish) {
-    title = 'Om os | High-Impact Bannerkampagner siden 2025';
-    description = 'Vi er stolte af at drive vores virksomhed under 2W ApS, hvor vi specialiserer os i strategisk placerede reklamebannere. Vores løsninger sikrer maksimal synlighed for brands i hele Danmark.';
-    keywords = 'om hydemedia, 2W ApS, bannerreklame Danmark, outdoor reklame, storformat bannere, reklamebannere København';
   } else {
     title = 'About us | High-Impact Banner Campaigns since 2025';
     description = 'We specialize in strategically placed advertising banners. Our solutions ensure maximum visibility for brands.';
@@ -50,13 +45,10 @@ export default async function AboutPage({
   // Enable static rendering
   setRequestLocale(locale);
   
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
   const orgDesc = isGerman
     ? 'Hyde Media spezialisiert sich auf wirkungsvolle Bannerkampagnen auf Gerüsten und Fassaden in der Schweiz.'
-    : isDanish
-    ? 'Hyde Media specialiserer sig i high-impact bannerkampagner på stilladser og facader i Danmark.'
     : 'Hyde Media specializes in high-impact banner campaigns on scaffolding and facades.';
 
   return (

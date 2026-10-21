@@ -8,13 +8,37 @@
     "size": "175m²",
     "duration": "4 Wochen",
     "format": "Gerüstbanner, zweiseitig",
-    "tags": ["Unterhaltung & Freizeit", "Markenpräsenz", "Basel"],
+    "tags": [
+      "Unterhaltung & Freizeit",
+      "Markenpräsenz",
+      "Basel"
+    ],
     "challenge": "Das Grand Casino Basel wollte seine Marke und sein Angebot — Spielautomaten, Tischspiele, Poker, Restaurant, Bar, Events, Club und Hotel — dort sichtbar machen, wo Baslerinnen und Basler sowie Messe- und Kongressbesucher täglich unterwegs sind. Gesucht war ein grossflächiger Auftritt auf der Route zwischen Innenstadt, Messe Basel und Autobahn.",
     "solution": "Wir setzten die Kampagne «Sparkling Life» auf 175 m² Gerüstfläche am Riehenring 141 um — einer Eck-Liegenschaft an einer Ampelkreuzung direkt bei der Messe Basel. Zwei grossformatige Banner bespielen beide Strassenseiten und sind damit aus allen Fahrtrichtungen sichtbar, ebenso für Tram-Passagiere und Fussgänger an der Haltestelle vor dem Haus.",
     "results": "Mit 39'851 Kontakten pro Tag erreichte die Kampagne Autofahrerinnen und Autofahrer auf einer der meistbefahrenen Routen von der Autobahn, Tram-Pendler sowie Besucherinnen und Besucher der Messe und des Congress Center Basel. Die zweiseitige Eck-Platzierung und die Wartezeit an der Ampel sorgten für wiederholte und lange Sichtkontakte — inklusive des Hinweises auf die 600 kostenlosen, überwachten Parkplätze des Casinos.",
-    "images": ["/images/cases/grand-casino-basel-1.jpg", "/images/cases/grand-casino-basel-2.jpg"],
+    "images": [
+      "/images/cases/grand-casino-basel-1.jpg",
+      "/images/cases/grand-casino-basel-2.jpg"
+    ],
     "testimonial": "",
-    "type": "Gerüstbanner, zweiseitig"
+    "type": "Gerüstbanner, zweiseitig",
+    "placementIds": [
+      "scf-002"
+    ],
+    "en": {
+      "title": "Grand Casino Basel - Scaffolding Campaign Riehenring",
+      "duration": "4 weeks",
+      "format": "Double-sided scaffolding banner",
+      "tags": [
+        "Entertainment & Leisure",
+        "Brand Presence",
+        "Basel"
+      ],
+      "challenge": "Grand Casino Basel wanted to put its brand and offering — slot machines, table games, poker, restaurant, bar, events, club and hotel — in front of Basel residents and trade fair and congress visitors in their daily routine. They needed a large-format presence on the route between the city centre, Messe Basel and the motorway.",
+      "solution": "We ran the «Sparkling Life» campaign across 175 m² of scaffolding space at Riehenring 141 — a corner building at a traffic-light junction right next to Messe Basel. Two large-format banners cover both street faces, making the campaign visible from every direction of travel as well as to tram passengers and pedestrians at the stop in front of the building.",
+      "results": "With 39'851 contacts per day, the campaign reached drivers on one of the busiest routes from the motorway, tram commuters, and visitors to Messe Basel and the Congress Center Basel. The double-sided corner placement and the wait at the traffic lights delivered repeat, long-dwell exposure — including the casino's message about its 600 free, monitored parking spaces.",
+      "type": "Double-sided scaffolding banner"
+    }
   },
   {
     "id": 8,
@@ -25,13 +49,35 @@
     "size": "160m²",
     "duration": "4 Wochen",
     "format": "Gerüstbanner, zweiseitig",
-    "tags": ["Fitness & Wellness", "Neukundengewinnung", "Basel"],
+    "tags": [
+      "Fitness & Wellness",
+      "Neukundengewinnung",
+      "Basel"
+    ],
     "challenge": "EVO Fitness wollte die beiden Basler Studios bekannter machen und neue Mitglieder für das kostenlose 7-Tage-Probetraining gewinnen. Gesucht war ein Standort mitten im Alltag der Basler Bevölkerung — mit echter Verweildauer statt nur einem kurzen Blick im Vorbeifahren.",
     "solution": "Wir setzten die Kampagne auf 160 m² Gerüstfläche an der Burgfelderstrasse 1 um — einer stark befahrenen Tramkreuzung in Basel. Die Eck-Position bespielt zwei Strassenseiten gleichzeitig und wird dadurch aus beiden Fahrtrichtungen wahrgenommen. Ein QR-Code auf beiden Bannerseiten führte direkt zur Anmeldung für das Probetraining.",
     "results": "Bei 35'000 Passantinnen und Passanten pro Tag erreichte die Kampagne über die vierwöchige Laufzeit rund 980'000 Sichtkontakte. Die zweiseitige Eck-Platzierung sorgte für wiederholte Kontakte bei Tram-Pendlerinnen und -Pendlern, Fussgängern, Studierenden und dem Autoverkehr — genau in dem Quartier, in dem die beiden Studios liegen.",
-    "images": ["/images/cases/evo-fitness-1.jpg", "/images/cases/evo-fitness-2.jpg"],
+    "images": [
+      "/images/cases/evo-fitness-1.jpg",
+      "/images/cases/evo-fitness-2.jpg"
+    ],
     "testimonial": "",
-    "type": "Gerüstbanner, zweiseitig"
+    "type": "Gerüstbanner, zweiseitig",
+    "placementIds": [],
+    "en": {
+      "title": "EVO Fitness - Scaffolding Campaign Basel",
+      "duration": "4 weeks",
+      "format": "Double-sided scaffolding banner",
+      "tags": [
+        "Fitness & Wellness",
+        "Customer Acquisition",
+        "Basel"
+      ],
+      "challenge": "EVO Fitness wanted to raise awareness of its two Basel studios and sign up new members for the free 7-day trial. They needed a location embedded in the daily routine of Basel residents — with real dwell time, not just a passing glance.",
+      "solution": "We ran the campaign across 160 m² of scaffolding space at Burgfelderstrasse 1 — a busy tram junction in Basel. The corner position covers two street faces at once, so it registers from both directions of travel. A QR code on both banner faces led straight to the trial sign-up.",
+      "results": "With 35'000 passers-by per day, the campaign delivered roughly 980'000 impressions over its four-week run. The double-sided corner placement generated repeat exposure among tram commuters, pedestrians, students and car traffic — in the exact neighbourhood where both studios are located.",
+      "type": "Double-sided scaffolding banner"
+    }
   },
   {
     "id": 2,
@@ -42,13 +88,36 @@
     "size": "50m²",
     "duration": "2 Wochen",
     "format": "Komplette Fassadenverhüllung",
-    "tags": ["Detailhandel", "Event-Promotion", "Stadtzentrum"],
+    "tags": [
+      "Detailhandel",
+      "Event-Promotion",
+      "Stadtzentrum"
+    ],
     "challenge": "Komplette Fassadenverhüllung zum 20-Jahr-Jubiläum von Lidl in der Schweiz in Zürich. Das auffällige Design sollte in den Wochen vor der Feier für maximale Aufmerksamkeit sorgen.",
     "solution": "Wir gestalteten und installierten eine lebendige Fassadenverhüllung im Herzen von Zürich mit kräftigen Farben und festlicher Botschaft, die sowohl Shopperinnen und Shopper als auch Pendlerinnen und Pendler in den Bann zog.",
     "results": "Erzeugte enorme lokale Aufmerksamkeit mit über 400'000 wöchentlichen Sichtkontakten. Die Frequenz im Markt stieg während der Kampagnenperiode um 38%, und der Anlass zum Jubiläum übertraf die Teilnehmerziele um 60%.",
-    "images": ["/images/cases/lidl-1.jpg"],
+    "images": [
+      "/images/cases/lidl-1.jpg"
+    ],
     "testimonial": "Die Fassadenverhüllung erzielte eine fantastische visuelle Wirkung. Unser Jubiläum wurde dank der Umsetzung von Hyde Media ein voller Erfolg.",
-    "type": "Komplette Fassadenverhüllung"
+    "type": "Komplette Fassadenverhüllung",
+    "placementIds": [],
+    "en": {
+      "title": "Lidl - 20th Anniversary Campaign",
+      "location": "Zurich City Center",
+      "duration": "2 weeks",
+      "format": "Full facade wrap",
+      "tags": [
+        "Retail",
+        "Event Promotion",
+        "City Center"
+      ],
+      "challenge": "A full facade wrap to mark Lidl's 20th anniversary in Switzerland, located in Zurich. The eye-catching design needed to generate maximum attention in the weeks leading up to the celebration.",
+      "solution": "We designed and installed a vibrant facade wrap in the heart of Zurich, using bold colors and a festive message that captivated shoppers and commuters alike.",
+      "results": "Generated enormous local attention with over 400'000 weekly impressions. Store footfall rose 38% during the campaign period, and the anniversary event exceeded attendance targets by 60%.",
+      "testimonial": "The facade wrap delivered a fantastic visual impact. Thanks to Hyde Media's execution, our anniversary was a complete success.",
+      "type": "Full facade wrap"
+    }
   },
   {
     "id": 3,
@@ -59,13 +128,37 @@
     "size": "36m²",
     "duration": "2 Wochen",
     "format": "Fassadenbanner",
-    "tags": ["Tech & Mobilität", "Urban", "Junge Berufstätige"],
+    "tags": [
+      "Tech & Mobilität",
+      "Urban",
+      "Junge Berufstätige"
+    ],
     "challenge": "Strategische Fassadenkampagne, ausgerichtet auf junge, urbane Berufstätige in Zürich. Platziert in der Nähe von Verkehrsknotenpunkten des öffentlichen Verkehrs und belebten Strassen, um Pendlerinnen und Pendler zu erreichen, die alternative Mobilitätslösungen in Betracht ziehen.",
     "solution": "Wir platzierten die Botschaft von GoMore am Zürich HB sowie an stark frequentierten Standorten im Stadtzentrum und trafen damit genau den Moment, in dem Pendlerinnen und Pendler aktiv über ihre Mobilitätsentscheidungen nachdachten.",
     "results": "Die Kampagne erzielte über 400'000 wöchentliche Sichtkontakte und führte zu einer Steigerung der App-Downloads um 34% in der Region Zürich. Brand-Recall-Studien zeigten eine Zunahme der Bekanntheit um 52% in der Zielgruppe.",
-    "images": ["/images/cases/gomore-1.jpg", "/images/cases/gomore-2.jpg"],
+    "images": [
+      "/images/cases/gomore-1.jpg",
+      "/images/cases/gomore-2.jpg"
+    ],
     "testimonial": "Die strategische Platzierung von Hyde Media brachte echte Resultate. Wir verzeichneten einen sofortigen Anstieg der Nutzergewinnung in Zürich.",
-    "type": "Fassadenbanner"
+    "type": "Fassadenbanner",
+    "placementIds": [],
+    "en": {
+      "title": "GoMore - Urban Mobility Campaign",
+      "location": "Zurich HB & City Center",
+      "duration": "2 weeks",
+      "format": "Facade banner",
+      "tags": [
+        "Tech & Mobility",
+        "Urban",
+        "Young Professionals"
+      ],
+      "challenge": "A strategic facade campaign targeting young, urban professionals in Zurich. Placed near public transport hubs and busy streets to reach commuters considering alternative mobility solutions.",
+      "solution": "We placed GoMore's message at Zurich HB and at high-traffic locations in the city center, capturing exactly the moment when commuters were actively rethinking their mobility choices.",
+      "results": "The campaign achieved over 400'000 weekly impressions and drove a 34% increase in app downloads across the Zurich region. Brand recall studies showed a 52% rise in awareness within the target audience.",
+      "testimonial": "Hyde Media's strategic placement delivered real results. We saw an immediate uplift in user acquisition in Zurich.",
+      "type": "Facade banner"
+    }
   },
   {
     "id": 5,
@@ -76,13 +169,37 @@
     "size": "170m² + 53m²",
     "duration": "2 Wochen",
     "format": "Gerüstbanner und Fassade",
-    "tags": ["Getränke", "Lifestyle", "Unterhaltung"],
+    "tags": [
+      "Getränke",
+      "Lifestyle",
+      "Unterhaltung"
+    ],
     "challenge": "Mutige und kreative Kampagne, ausgerichtet auf das Basler Nachtleben. Eine Fassadenplatzierung im Zürcher Zentrum, kombiniert mit einer Premium-Gerüstplatzierung in Basel, sollte eine starke Markenpräsenz in der Zielgruppe schaffen.",
     "solution": "Wir setzten eine Strategie über zwei Städte um – mit wirkungsstarken Gerüstbannern im Basler Ausgehviertel und einer prominenten Fassadenverhüllung im Zürcher Zentrum, koordiniert für maximale Wirkung der Lifestyle-Marke.",
     "results": "Schuf eine starke Markenpräsenz mit über 670'000 kombinierten wöchentlichen Sichtkontakten in beiden Städten. Die Kampagne erzeugte deutliches Engagement und Anfragen in den Bars und Restaurants der Stadt, mit einem Anstieg der Vertriebsanfragen um 28%.",
-    "images": ["/images/cases/fernet-1.jpg", "/images/cases/fernet-2.jpg"],
+    "images": [
+      "/images/cases/fernet-1.jpg",
+      "/images/cases/fernet-2.jpg"
+    ],
     "testimonial": "Hyde Media hat den mutigen Geist unserer Marke perfekt eingefangen. Der Ansatz über zwei Städte funktionierte hervorragend.",
-    "type": "Gerüstbanner und Fassade"
+    "type": "Gerüstbanner und Fassade",
+    "placementIds": [],
+    "en": {
+      "title": "Fernet-Branca - Summer Campaign",
+      "location": "Basel and Zurich City Center",
+      "duration": "2 weeks",
+      "format": "Scaffolding banner and facade",
+      "tags": [
+        "Beverages",
+        "Lifestyle",
+        "Entertainment"
+      ],
+      "challenge": "A bold and creative campaign targeting Basel's nightlife scene. A facade placement in Zurich's city center, combined with a premium scaffolding placement in Basel, was designed to build a strong brand presence within the target audience.",
+      "solution": "We executed a two-city strategy — with high-impact scaffolding banners in Basel's entertainment district and a prominent facade wrap in Zurich's city center, coordinated for maximum impact for the lifestyle brand.",
+      "results": "Built a strong brand presence with over 670'000 combined weekly impressions across both cities. The campaign generated notable engagement and inquiries in the city's bars and restaurants, with a 28% increase in distribution requests.",
+      "testimonial": "Hyde Media perfectly captured the bold spirit of our brand. The two-city approach worked brilliantly.",
+      "type": "Scaffolding banner and facade"
+    }
   },
   {
     "id": 6,
@@ -93,13 +210,37 @@
     "size": "50m²",
     "duration": "2 Wochen",
     "format": "Fassaden- & Giebelverhüllung",
-    "tags": ["Finanzen", "B2B", "Premium"],
+    "tags": [
+      "Finanzen",
+      "B2B",
+      "Premium"
+    ],
     "challenge": "Anspruchsvolle Fassadenkampagne, platziert im Zürcher Finanzquartier. Das elegante Design und die strategische Platzierung sollten Geschäftsleute und Investorinnen und Investoren erreichen und die Position der Saxo Bank als führende Investmentplattform stärken.",
     "solution": "Wir sicherten uns eine prominente Fassadenplatzierung im Zürcher Geschäftsviertel und gestalteten eine anspruchsvolle, professionelle Installation, die bei der Zielgruppe von Investorinnen, Investoren und Finanzfachleuten Anklang fand.",
     "results": "Erzielte über 400'000 wöchentliche Sichtkontakte in der primären Zielgruppe der Geschäftsleute. Das Brand-Tracking zeigte einen Anstieg der gestützten Bekanntheit um 41% und eine Zunahme der 'Top-of-Mind'-Erwägung für Investmentdienstleistungen um 23%.",
-    "images": ["/images/cases/saxo-1.jpg", "/images/cases/saxo-2.jpg"],
+    "images": [
+      "/images/cases/saxo-1.jpg",
+      "/images/cases/saxo-2.jpg"
+    ],
     "testimonial": "Eine anspruchsvolle Umsetzung, die perfekt zu unserer Markenpositionierung passte. Hervorragende Resultate.",
-    "type": "Fassaden- & Giebelverhüllung"
+    "type": "Fassaden- & Giebelverhüllung",
+    "placementIds": [],
+    "en": {
+      "title": "Saxo Bank - Investment Platform Launch",
+      "location": "Zurich City Center",
+      "duration": "2 weeks",
+      "format": "Facade & gable wrap",
+      "tags": [
+        "Finance",
+        "B2B",
+        "Premium"
+      ],
+      "challenge": "A sophisticated facade campaign placed in Zurich's financial district. The elegant design and strategic placement were designed to reach business professionals and investors, strengthening Saxo Bank's position as a leading investment platform.",
+      "solution": "We secured a prominent facade placement in Zurich's business district and created a sophisticated, professional installation that resonated with the target audience of investors and finance professionals.",
+      "results": "Achieved over 400'000 weekly impressions among the primary audience of business professionals. Brand tracking showed a 41% increase in aided awareness and a 23% rise in top-of-mind consideration for investment services.",
+      "testimonial": "A sophisticated execution that fit our brand positioning perfectly. Outstanding results.",
+      "type": "Facade & gable wrap"
+    }
   },
   {
     "id": 7,
@@ -110,12 +251,35 @@
     "size": "21m²",
     "duration": "4 Wochen",
     "format": "Fassadenbanner",
-    "tags": ["Markenaufbau", "Langfristig", "Sichtbarkeit"],
+    "tags": [
+      "Markenaufbau",
+      "Langfristig",
+      "Sichtbarkeit"
+    ],
     "challenge": "Fassadenkampagne in Zürich mit Fassadeninstallationen. Der koordinierte Ansatz sollte für OLC eine konsistente Markensichtbarkeit schaffen und die Markenbekanntheit auf dem Schweizer Markt deutlich steigern.",
     "solution": "Wir setzten eine einmonatige Fassadenkampagne an einem gut sichtbaren Standort in Zürich um, die für eine dauerhafte Markenpräsenz und wiederholte Sichtkontakte mit dem lokalen Publikum sorgte.",
     "results": "Steigerte die Markenbekanntheit deutlich mit über 1'000'000 gesamten Sichtkontakten über die vierwöchige Periode. Brand-Awareness-Studien zeigten einen Anstieg der ungestützten Markenbekanntheit um 37% in der Region Zürich.",
-    "images": ["/images/cases/olc-1.png"],
+    "images": [
+      "/images/cases/olc-1.png"
+    ],
     "testimonial": "Die konsistente Sichtbarkeit über vier Wochen machte einen echten Unterschied. Fantastischer Standort, fantastische Umsetzung.",
-    "type": "Fassadenbanner"
+    "type": "Fassadenbanner",
+    "placementIds": [],
+    "en": {
+      "title": "OLC - Brand Awareness Campaign",
+      "location": "Zurich",
+      "duration": "4 weeks",
+      "format": "Facade banner",
+      "tags": [
+        "Brand Building",
+        "Long-Term",
+        "Visibility"
+      ],
+      "challenge": "A facade campaign in Zurich featuring facade installations. The coordinated approach was designed to create consistent brand visibility for OLC and significantly boost brand awareness in the Swiss market.",
+      "solution": "We executed a one-month facade campaign at a highly visible location in Zurich, delivering a lasting brand presence and repeated impressions with the local audience.",
+      "results": "Significantly increased brand awareness with over 1'000'000 total impressions over the four-week period. Brand awareness studies showed a 37% rise in unaided brand recall across the Zurich region.",
+      "testimonial": "The consistent visibility over four weeks made a real difference. Fantastic location, fantastic execution.",
+      "type": "Facade banner"
+    }
   }
 ]

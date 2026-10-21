@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
 import ContactPageClient from './ContactPageClient';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
@@ -16,7 +15,7 @@ export async function generateMetadata({
   let title: string, description: string, keywords: string;
   if (isGerman) {
     title = 'Kontakt | Aussenwerbung Schweiz';
-    description = 'Kontaktieren Sie Hyde Media. Wir helfen Marken und Immobilieneigentümern mit Grossformat-Aussenwerbung in Basel und der Schweiz. Tel: +41 77 233 81 21 oder E-Mail: theodor.staal@hydemedia.ch';
+    description = 'Kontaktieren Sie Hyde Media. Wir helfen Marken und Liegenschaftseigentümern mit Grossformat-Aussenwerbung in Basel und der Schweiz. Tel: +41 77 233 81 21 oder E-Mail: theodor.staal@hydemedia.ch';
     keywords = 'Kontakt Hyde Media, Aussenwerbung Schweiz, Bannerwerbung Basel, Fassadenwerbung, Gerüstbanner';
   } else {
     title = 'Contact | Outdoor Advertising Switzerland';
@@ -27,14 +26,22 @@ export async function generateMetadata({
   return generateSEOMetadata({ title, description, keywords, path: '/contact', locale });
 }
 
+/** A query value from a link on the site; anything unexpected is dropped. */
+function param(v: string | string[] | undefined): string | undefined {
+  const value = Array.isArray(v) ? v[0] : v;
+  return value && value.length <= 120 ? value : undefined;
+}
+
 export default async function ContactPage({
   params: { locale },
+  searchParams,
 }: {
   params: { locale: string };
+  searchParams: Record<string, string | string[] | undefined>;
 }) {
   const isGerman = locale === 'de';
 
-  const sdTitle = 'Kontakt Hyde Media';
+  const sdTitle = isGerman ? 'Kontakt Hyde Media' : 'Contact Hyde Media';
   const sdDesc = isGerman
     ? 'Kontaktieren Sie uns für Grossformat-Aussenwerbung. E-Mail: theodor.staal@hydemedia.ch, Tel: +41 77 233 81 21'
     : 'Contact us for large-format outdoor advertising. Email: theodor.staal@hydemedia.ch, Phone: +41 77 233 81 21';
@@ -47,7 +54,7 @@ export default async function ContactPage({
         description={sdDesc}
         url={`/${locale}/contact`}
       />
-      <ContactPageClient locale={locale} />
+      <ContactPageClient locale={locale} location={param(searchParams.location)} inquiry={param(searchParams.inquiry)} />
     </>
   );
 }

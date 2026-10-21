@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Grand Casino Basel",
+    "logo": "/images/campaigns/grand-casino-basel.png",
+    "caseSlug": "grand-casino-basel-riehenring"
+  },
+  {
+    "name": "EVO Fitness",
+    "logo": "/images/campaigns/evo-fitness.png",
+    "caseSlug": "evo-fitness-basel-burgfelderstrasse"
+  },
+  {
+    "name": "GoMore",
+    "logo": "/images/campaigns/gomore.png",
+    "caseSlug": "gomore-urban-mobility"
+  },
+  {
+    "name": "Lidl",
+    "logo": "/images/campaigns/lidl.png",
+    "caseSlug": "lidl-20-years-celebration"
+  },
+  {
+    "name": "Saxo Bank",
+    "logo": "/images/campaigns/saxo.png",
+    "caseSlug": "saxo-bank-investment-platform"
+  },
+  {
+    "name": "Fernet-Branca",
+    "logo": "/images/campaigns/fernet-branca.png",
+    "caseSlug": "fernet-branca-summer-festival"
+  },
+  {
+    "name": "TV2",
+    "logo": "/images/campaigns/tv2.png",
+    "caseSlug": null
+  },
+  {
+    "name": "Vios",
+    "logo": "/images/campaigns/vios.png",
+    "caseSlug": null
+  },
+  {
+    "name": "OLC",
+    "logo": "/images/campaigns/olc.png",
+    "caseSlug": "olc-brand-awareness"
+  },
+  {
+    "name": "Jyllands-Posten",
+    "logo": "/images/campaigns/jyllands-posten.png",
+    "caseSlug": null
+  },
+  {
+    "name": "Information",
+    "logo": "/images/campaigns/information.png",
+    "caseSlug": null
+  },
+  {
+    "name": "Culture Works",
+    "logo": "/images/campaigns/CW updated.png",
+    "caseSlug": null
+  },
+  {
+    "name": "Sum-Up",
+    "logo": "/images/campaigns/sum-up.svg",
+    "caseSlug": null
+  },
+  {
+    "name": "Normal",
+    "logo": "/images/campaigns/normal.png",
+    "caseSlug": null
+  },
+  {
+    "name": "Venstre",
+    "logo": "/images/campaigns/venstre.webp",
+    "caseSlug": null
+  },
+  {
+    "name": "Tise",
+    "logo": "/images/campaigns/tise.png",
+    "caseSlug": null
+  },
+  {
+    "name": "Kragen Media",
+    "logo": "/images/campaigns/Kragen media.png",
+    "caseSlug": null
+  },
+  {
+    "name": "Orchestra",
+    "logo": "/images/campaigns/orchestra.png",
+    "caseSlug": null
+  }
+]

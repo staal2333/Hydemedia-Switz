@@ -6,9 +6,11 @@ import { locales } from '@/i18n';
 import { getRegionConfig } from '@/lib/region';
 import BlueHourHeader from '@/components/blue-hour/Header';
 import BlueHourFooter from '@/components/blue-hour/Footer';
+import MobileCTA from '@/components/blue-hour/MobileCTA';
 import StructuredData from '@/components/StructuredData';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import ConsentProvider from '@/components/consent/ConsentProvider';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -19,21 +21,16 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isDanish = locale === 'da';
-  const isGerman = locale === 'de';
+  const isGerman = locale !== 'en';
 
   let title: string;
   let description: string;
   let keywords: string;
 
   if (isGerman) {
-    title = 'Premium Aussenwerbung in der Schweiz';
-    description = 'Hyde Media spezialisiert sich auf wirkungsvolle Bannerkampagnen auf Gerüsten und Fassaden in Basel und der ganzen Schweiz. Strategisch platzierte Werbebanner mit maximaler Sichtbarkeit.';
+    title = 'Gerüstwerbung und Fassadenwerbung in der Schweiz';
+    description = 'Hyde Media: Gerüstwerbung und Fassadenwerbung im Grossformat in Basel und der ganzen Schweiz. Strategisch platzierte Werbebanner mit maximaler Sichtbarkeit.';
     keywords = 'Aussenwerbung, Gerüstwerbung, Fassadenwerbung, Basel, Zürich, Schweiz, Grossformat Banner, Werbebanner, OOH Werbung';
-  } else if (isDanish) {
-    title = 'Premium Out-of-Home Reklame i Danmark';
-    description = 'Hyde Media specialiserer sig i high-impact bannerkampagner på stilladser og facader i København, Aarhus og hele Danmark. Strategisk placerede reklamebannere med maksimal synlighed.';
-    keywords = 'outdoor reklame, bannerreklame, facadereklame, stilladsreklame, København, Aarhus, Danmark, storformat bannere, reklamebannere';
   } else {
     title = 'Premium Out-of-Home Advertising in Switzerland';
     description = 'Hyde Media specializes in high-impact banner campaigns on scaffolding and facades in Basel and throughout Switzerland. Strategically placed advertising banners with maximum visibility.';
@@ -63,27 +60,28 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const regionConfig = getRegionConfig(locale);
   const siteUrl = regionConfig.siteUrl;
-  const isDanish = locale === 'da';
-  const isGerman = locale === 'de';
+  const isGerman = locale !== 'en';
 
   const localDesc = isGerman
-    ? 'Führender Anbieter von Grossformat-Aussenwerbung in der Schweiz. Spezialisiert auf Gerüstbanner, Fassadenbanner und Gebäudeverkleidungen in Basel und der ganzen Schweiz.'
-    : isDanish
-      ? 'Førende leverandør af storformat udendørs reklame i Danmark. Specialiseret i stilladsebannere, facadebannere og bygningswraps i København, Aarhus og hele Danmark.'
-      : 'Leading provider of large-format outdoor advertising in Switzerland. Specializing in scaffolding banners, facade banners, and building wraps in Basel and across Switzerland.';
+    ? 'Anbieter von Grossformat-Aussenwerbung in der Schweiz. Spezialisiert auf Gerüstbanner und Fassadenbanner in Basel und der ganzen Schweiz.'
+    : 'Leading provider of large-format outdoor advertising in Switzerland. Specializing in scaffolding banners, facade banners, and building wraps in Basel and across Switzerland.';
 
   return (
     <NextIntlClientProvider messages={messages}>
       <StructuredData type="LocalBusiness" title="Hyde Media" description={localDesc} url={`${siteUrl}/${locale}`} />
       <StructuredData type="Organization" title="Hyde Media" description={localDesc} url={`${siteUrl}/${locale}`} />
       <StructuredData type="WebSite" title="Hyde Media" description={localDesc} url={`${siteUrl}/${locale}`} />
-      <div className="flex min-h-screen flex-col">
-        <GoogleAnalytics />
-        <BreadcrumbSchema />
-        <BlueHourHeader />
-        <main className="flex-1">{children}</main>
-        <BlueHourFooter />
-      </div>
+      {/* Consent wraps everything that may load optional tracking. */}
+      <ConsentProvider locale={locale}>
+        <div className="flex min-h-screen flex-col">
+          <GoogleAnalytics />
+          <BreadcrumbSchema />
+          <BlueHourHeader />
+          <main className="flex-1">{children}</main>
+          <BlueHourFooter />
+          <MobileCTA />
+        </div>
+      </ConsentProvider>
     </NextIntlClientProvider>
   );
 }

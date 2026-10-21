@@ -1,236 +1,194 @@
 'use client';
 
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { Mail, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { useState, type FormEvent } from 'react';
+import Link from 'next/link';
+import { useLocale } from 'next-intl';
+import { markSubscribed } from '@/lib/newsletter';
+import { track } from '@/lib/track';
 
-interface NewsletterSignupProps {
-  variant?: 'default' | 'minimal' | 'card';
-  showIcon?: boolean;
+const COPY = {
+  de: {
+    eyebrow: 'Newsletter',
+    title: 'Neue Standorte vor allen anderen',
+    body: 'Eine kurze E-Mail, sobald eine neue Fläche frei wird. Abmeldung mit einem Klick.',
+    label: 'Ihre E-Mail',
+    placeholder: 'name@firma.ch',
+    send: 'Anmelden',
+    sending: 'Wird angemeldet…',
+    legalA: 'Sie erhalten eine E-Mail, mit der Sie die Anmeldung bestätigen. Wie wir Ihre E-Mail-Adresse bearbeiten, lesen Sie in unserer ',
+    legalLink: 'Datenschutzerklärung',
+    doneTitle: 'Fast geschafft',
+    thanks: 'Danke',
+    network: 'Die Anmeldung ist fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.',
+  },
+  en: {
+    eyebrow: 'Newsletter',
+    title: 'Hear about new placements first',
+    body: 'A short email when a new site becomes available. Unsubscribe in one click.',
+    label: 'Your email',
+    placeholder: 'name@company.com',
+    send: 'Sign up',
+    sending: 'Signing up…',
+    legalA: 'You will get an email to confirm your signup. Read how we handle your email in our ',
+    legalLink: 'privacy policy',
+    doneTitle: 'Almost done',
+    thanks: 'Thank you',
+    network: 'Signup failed. Check your connection and try again.',
+  },
+} as const;
+
+export type NewsletterVariant = 'card' | 'footer' | 'compact';
+
+interface Props {
+  /** Where the form sits; becomes a Mailchimp tag, e.g. "blog" or "placement:riehenring-141". */
+  source: string;
+  variant?: NewsletterVariant;
+  /** Override the default headline and body for a specific context. */
+  title?: string;
+  body?: string;
+  /** Called after a successful signup, e.g. so the slide-in can close itself. */
+  onDone?: () => void;
 }
 
-export default function NewsletterSignup({ 
-  variant = 'default',
-  showIcon = true 
-}: NewsletterSignupProps) {
-  const t = useTranslations('newsletter');
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+/**
+ * Newsletter signup with double opt-in. Submitting creates a pending contact in
+ * Mailchimp, which then sends the confirmation email; nothing is sent to the
+ * visitor until they click it. The form states that plainly, so the consent
+ * is informed.
+ */
+export default function NewsletterSignup({ source, variant = 'card', title, body, onDone }: Props) {
+  const locale = useLocale();
+  const lang = locale === 'en' ? 'en' : 'de';
+  const t = COPY[lang];
+  const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  // "pending" means a confirmation mail is on its way; anything else is final.
+  const [awaitingConfirm, setAwaitingConfirm] = useState(true);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const dark = variant === 'footer';
+  const compact = variant === 'compact';
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    
-    if (!email || !email.includes('@')) {
-      setStatus('error');
-      setMessage(t('invalidEmail'));
-      return;
-    }
-
-    setStatus('loading');
-
+    const fd = new FormData(e.currentTarget);
+    setStatus('sending');
     try {
-      const response = await fetch('/api/newsletter', {
+      const res = await fetch(`/api/newsletter?lang=${lang}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email: String(fd.get('email') ?? ''),
+          website: String(fd.get('website') ?? ''),
+          source,
+          locale: lang,
+        }),
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setStatus('success');
-        setMessage(t('success'));
-        setEmail('');
-        
-        // Reset after 5 seconds
-        setTimeout(() => {
-          setStatus('idle');
-          setMessage('');
-        }, 5000);
-      } else {
-        setStatus('error');
-        setMessage(data.error || t('error'));
-      }
-    } catch (error) {
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data?.error || t.network);
+      setMessage(data.message);
+      setAwaitingConfirm(data.status === 'pending');
+      setStatus('done');
+      markSubscribed();
+      track('sign_up', { method: 'newsletter', source });
+      onDone?.();
+    } catch (err) {
+      setMessage(err instanceof Error ? err.message : t.network);
       setStatus('error');
-      setMessage(t('error'));
     }
+  }
+
+  const heading = title ?? t.title;
+  const lede = body ?? t.body;
+
+  const text = {
+    eyebrow: dark ? 'text-sky' : 'text-mid',
+    title: dark ? 'text-white' : 'text-ink',
+    body: dark ? 'text-white/75' : 'text-ink-soft',
+    legal: dark ? 'text-white/55' : 'text-muted',
   };
 
-  // Minimal variant (inline form)
-  if (variant === 'minimal') {
+  if (status === 'done') {
     return (
-      <div className="w-full max-w-md">
-        <form onSubmit={handleSubmit} className="flex gap-2">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder={t('placeholder')}
-            disabled={status === 'loading' || status === 'success'}
-            className="flex-1 px-4 py-3 rounded-full border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-          />
-          <button
-            type="submit"
-            disabled={status === 'loading' || status === 'success'}
-            className="px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
-          >
-            {status === 'loading' && <Loader2 className="w-4 h-4 animate-spin" />}
-            {status === 'success' && <CheckCircle2 className="w-4 h-4" />}
-            {status !== 'loading' && status !== 'success' && t('button')}
-          </button>
-        </form>
-        {message && (
-          <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className={`mt-2 text-sm ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}
-          >
-            {message}
-          </motion.p>
-        )}
-      </div>
-    );
-  }
-
-  // Card variant
-  if (variant === 'card') {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="relative group"
-      >
-        <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-sky-600 rounded-3xl opacity-20 blur-xl" />
-        <div className="relative bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-blue-100">
-          <div className="text-center mb-6">
-            {showIcon && (
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-600 mb-4">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
-            )}
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
-              {t('title')}
-            </h3>
-            <p className="text-slate-600">
-              {t('description')}
-            </p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="relative">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={t('placeholder')}
-                disabled={status === 'loading' || status === 'success'}
-                className="w-full px-6 py-4 rounded-full border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none disabled:opacity-50 disabled:cursor-not-allowed text-lg"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={status === 'loading' || status === 'success'}
-              className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-sky-600 text-white rounded-full font-semibold hover:from-blue-700 hover:to-sky-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-lg"
-            >
-              {status === 'loading' && <Loader2 className="w-5 h-5 animate-spin" />}
-              {status === 'success' && <CheckCircle2 className="w-5 h-5" />}
-              {status === 'loading' ? t('loading') : status === 'success' ? t('subscribed') : t('button')}
-            </button>
-
-            {message && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className={`flex items-center gap-2 p-4 rounded-xl ${
-                  status === 'success' 
-                    ? 'bg-green-50 text-green-700' 
-                    : 'bg-red-50 text-red-700'
-                }`}
-              >
-                {status === 'success' ? (
-                  <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                ) : (
-                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                )}
-                <p className="text-sm">{message}</p>
-              </motion.div>
-            )}
-          </form>
-
-          <p className="text-xs text-slate-500 text-center mt-4">
-            {t('privacy')}
-          </p>
-        </div>
-      </motion.div>
-    );
-  }
-
-  // Default variant
-  return (
-    <div className="w-full max-w-xl mx-auto">
-      <div className="text-center mb-6">
-        {showIcon && (
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100 mb-4">
-            <Mail className="w-6 h-6 text-blue-600" />
-          </div>
-        )}
-        <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-          {t('title')}
-        </h3>
-        <p className="text-slate-600">
-          {t('description')}
+      <div role="status" className={compact ? '' : 'py-2'}>
+        <div className={`font-ui font-semibold text-[10px] tracking-[0.24em] uppercase mb-2 ${text.eyebrow}`}>{awaitingConfirm ? t.doneTitle : t.thanks}</div>
+        <p className={`font-display m-0 ${text.title}`} style={{ fontSize: compact ? 20 : 26, lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          {message}
         </p>
       </div>
+    );
+  }
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3">
+  const form = (
+    <form onSubmit={onSubmit} className="w-full" data-newsletter-form="">
+      {/* Honeypot — hidden from people, catches naive bots. */}
+      <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 opacity-0" />
+      <div className={`flex gap-2 ${compact ? 'flex-col' : 'flex-col sm:flex-row'}`}>
+        <label className="flex-1">
+          <span className="sr-only">{t.label}</span>
           <input
+            name="email"
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder={t('placeholder')}
-            disabled={status === 'loading' || status === 'success'}
-            className="flex-1 px-6 py-3 rounded-full border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-          />
-          <button
-            type="submit"
-            disabled={status === 'loading' || status === 'success'}
-            className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-lg flex items-center justify-center gap-2"
-          >
-            {status === 'loading' && <Loader2 className="w-4 h-4 animate-spin" />}
-            {status === 'success' && <CheckCircle2 className="w-4 h-4" />}
-            {status === 'loading' ? t('loading') : status === 'success' ? t('subscribed') : t('button')}
-          </button>
-        </div>
-
-        {message && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className={`flex items-center gap-2 p-3 rounded-xl ${
-              status === 'success' 
-                ? 'bg-green-50 text-green-700' 
-                : 'bg-red-50 text-red-700'
+            required
+            autoComplete="email"
+            placeholder={t.placeholder}
+            className={`w-full px-4 py-3.5 rounded-full text-[15px] focus:outline-none transition-colors ${
+              dark
+                ? 'bg-white/10 border border-white/25 text-white placeholder:text-white/45 focus:border-white/70'
+                : 'bg-fog border border-rule text-ink placeholder:text-muted/70 focus:border-mid focus:bg-white'
             }`}
-          >
-            {status === 'success' ? (
-              <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-            ) : (
-              <AlertCircle className="w-5 h-5 flex-shrink-0" />
-            )}
-            <p className="text-sm">{message}</p>
-          </motion.div>
-        )}
-      </form>
-
-      <p className="text-xs text-slate-500 text-center mt-4">
-        {t('privacy')}
+          />
+        </label>
+        <button
+          type="submit"
+          disabled={status === 'sending'}
+          className={`shrink-0 px-6 py-3.5 rounded-full font-ui font-semibold text-[12px] uppercase tracking-[0.08em] transition-all disabled:opacity-60 ${
+            dark ? 'bg-cream text-dusk hover:bg-glow' : 'bg-ink text-white hover:bg-dusk'
+          }`}
+        >
+          {status === 'sending' ? t.sending : t.send}
+        </button>
+      </div>
+      {status === 'error' && (
+        <p role="alert" className={`text-[13px] mt-2 m-0 ${dark ? 'text-glow' : 'text-red-700'}`}>
+          {message}
+        </p>
+      )}
+      <p className={`text-[12px] leading-[1.55] mt-3 m-0 ${text.legal}`}>
+        {t.legalA}
+        <Link href={`/${lang}/privacy`} className="underline underline-offset-2 hover:opacity-80">
+          {t.legalLink}
+        </Link>
+        .
       </p>
+    </form>
+  );
+
+  const intro = (
+    <div>
+      <div className={`font-ui font-semibold text-[10px] tracking-[0.24em] uppercase mb-2 ${text.eyebrow}`}>{t.eyebrow}</div>
+      <h2
+        className={`font-display font-normal m-0 ${text.title}`}
+        style={{ fontSize: compact ? 22 : 'clamp(24px, 2.6vw, 34px)', lineHeight: 1.1, letterSpacing: '-0.025em' }}
+      >
+        {heading}
+      </h2>
+      <p className={`text-[15px] leading-[1.6] m-0 mt-2.5 ${text.body}`}>{lede}</p>
+    </div>
+  );
+
+  if (compact) {
+    return (
+      <div className="flex flex-col gap-4">
+        {intro}
+        {form}
+      </div>
+    );
+  }
+
+  return (
+    <div className={`grid gap-6 items-center ${dark ? 'lg:grid-cols-[1fr_1.1fr]' : 'md:grid-cols-[1fr_1.15fr]'}`}>
+      {intro}
+      {form}
     </div>
   );
 }

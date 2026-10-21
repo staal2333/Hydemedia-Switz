@@ -180,11 +180,6 @@ const nextConfig = {
         destination: '/de/services',
         permanent: true,
       },
-      {
-        source: '/de/geruestwerbung-basel',
-        destination: '/de/services',
-        permanent: true,
-      },
       // Retired Danish-slug pages: redirect /de/ versions to /de/services.
       // NOTE: /de/scaffolding is a real Swiss product page — do NOT redirect it.
       {
@@ -212,9 +207,30 @@ const nextConfig = {
         destination: '/de/services',
         permanent: true,
       },
+      // No public price list: prices are quoted per campaign.
+      { source: '/:locale(de|en)/pricing', destination: '/:locale/property-owners', permanent: true },
+      // /partners duplicated /property-owners and competed with it in search.
+      { source: '/:locale(de|en)/partners', destination: '/:locale/property-owners', permanent: true },
+      // English posts now share the German slugs, so the language switch lands on the same article.
+      { source: '/en/blog/effective-ooh-advertising-strategies-2026', destination: '/en/blog/effektive-ooh-werbestrategien-2026', permanent: true },
+      { source: '/en/blog/scaffolding-vs-facade-which-is-right', destination: '/en/blog/geruest-vs-fassade-richtige-wahl', permanent: true },
+      { source: '/en/blog/measuring-ooh-campaign-success', destination: '/en/blog/ooh-kampagnenerfolg-messen', permanent: true },
+      { source: '/en/blog/creative-best-practices-ooh', destination: '/en/blog/kreative-best-practices-aussenwerbung', permanent: true },
+      { source: '/en/blog/zurich-high-traffic-locations-guide', destination: '/en/blog/zuerich-standorte-aussenwerbung', permanent: true },
+      { source: '/en/blog/basel-vs-zurich-advertising', destination: '/en/blog/basel-vs-zuerich-aussenwerbung', permanent: true },
+      // Danish-locale remnants from before the Swiss site had its own repo.
+      { source: '/da', destination: '/de', permanent: true },
+      { source: '/da/:path*', destination: '/de/:path*', permanent: true },
+      // One address per page. The i18n middleware sends "/" and paths without a
+      // locale on with a 307, which Google treats as temporary and so keeps
+      // "/", "/about" and "/contact" indexed beside "/de/...". These run before
+      // the middleware and make the move permanent. Files (anything with a dot),
+      // framework paths and the generated share image are left alone. Last in
+      // the list, so the specific redirects above win.
+      { source: '/', destination: '/de', permanent: true },
       {
-        source: '/de/pricing',
-        destination: '/de/partners',
+        source: '/:path((?!de$|de/|en$|en/|da$|da/|api/|_next/|_vercel/|images/|docs/|draco/|video/|data/|opengraph-image)[^.]*)',
+        destination: '/de/:path',
         permanent: true,
       },
     ];

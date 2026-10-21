@@ -134,12 +134,6 @@
         "description": "Premium-Standort im Herzen von Basel – umgeben von Shopping, Tourismus, Fussgängern und konstantem Stadtleben.",
         "traffic": "29.000 täglich",
         "weeks": "Woche 15-28"
-      },
-      "norrebrogade": {
-        "title": "Nørrebrogade 195 – 160m² Gerüstwerbung",
-        "description": "Zentral an einer der belebtesten Strassen Nørrebros. 2-seitiges Format. CPH Marathon Route Woche 19.",
-        "traffic": "55.000 täglich",
-        "weeks": "Woche 14-22"
       }
     },
     "campaigns": {
@@ -578,8 +572,8 @@
     }
   },
   "blogListing": {
-    "title": "Blog & Neuigkeiten",
-    "description": "Brancheneinblicke, Trends und Neuigkeiten aus der Welt der Aussenwerbung",
+    "title": "Wissen & Ratgeber zur Aussenwerbung",
+    "description": "Ratgeber zu Gerüstwerbung, Fassadenwerbung und Aussenwerbung in der Schweiz: Standorte, Planung, Bewilligungen, Druckdaten und Reichweite.",
     "searchPlaceholder": "Artikel suchen...",
     "readMore": "Artikel lesen",
     "noResults": "Keine Artikel zu Ihrer Suche gefunden",
@@ -734,7 +728,7 @@
       "booking": {
         "category": "general",
         "question": "Wie buche ich einen Werbestandort?",
-        "answer": "Kontaktieren Sie uns über unser Kontaktformular, per E-Mail (ma@hydemedia.ch) oder telefonisch (+41 77 233 81 21). Wir besprechen Ihre Kampagnenziele, zeigen verfügbare Standorte und erstellen ein massgeschneidertes Angebot innerhalb von 24 Stunden."
+        "answer": "Kontaktieren Sie uns über unser Kontaktformular, per E-Mail (theodor.staal@hydemedia.ch) oder telefonisch (+41 77 233 81 21). Wir besprechen Ihre Kampagnenziele, zeigen verfügbare Standorte und erstellen ein massgeschneidertes Angebot innerhalb von 24 Stunden."
       },
       "duration": {
         "category": "general",
@@ -883,13 +877,14 @@
     "description": "Flexible, kurzfristige Werbelösungen auf Gerüsten an erstklassigen Standorten in der Schweiz. Perfekt für Produktlancierungen, saisonale Kampagnen und zeitkritische Promotionen.",
     "status": {
       "available": "Verfügbar",
-      "booked": "Gebucht"
+      "booked": "Gebucht",
+      "past": "Ehemalig"
     },
     "details": {
       "size": "Grösse",
       "traffic": "Verkehr",
-      "trafficDaily": "Tägliche Besucher",
-      "trafficWeekly": "Wöchentliche Besucher",
+      "trafficDaily": "Kontakte pro Tag",
+      "trafficWeekly": "Kontakte pro Woche",
       "duration": "Zeitraum",
       "perfectFor": "Perfekt für: Produktlancierungen, Eventpromotionen, saisonale Kampagnen und Markenbekanntheitsinitiativen.",
       "contactButton": "Kontaktieren Sie uns"
@@ -900,6 +895,11 @@
       "description": "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Aussenwerbungsmöglichkeiten.",
       "button": "Kontakt aufnehmen",
       "phone": "Anruf: +41 77 233 81 21"
+    },
+    "archive": {
+      "eyebrow": "Archiv",
+      "title": "Standorte, die wir hatten.",
+      "description": "Standorte, die nicht mehr im Portfolio sind. Sie bleiben hier als Nachweis der umgesetzten Kampagnen."
     }
   },
   "facade": {
@@ -907,13 +907,14 @@
     "description": "Langfristige Werbung mit maximaler Wirkung auf Gebäudefassaden. Schaffen Sie nachhaltige Markenpräsenz mit unseren Grossformat-Gebäudeverkleidungen.",
     "status": {
       "available": "Verfügbar",
-      "booked": "Gebucht"
+      "booked": "Gebucht",
+      "past": "Ehemalig"
     },
     "details": {
       "size": "Grösse",
       "traffic": "Verkehr",
-      "trafficDaily": "Tägliche Besucher",
-      "trafficWeekly": "Wöchentliche Besucher",
+      "trafficDaily": "Kontakte pro Tag",
+      "trafficWeekly": "Kontakte pro Woche",
       "duration": "Zeitraum",
       "perfectFor": "Perfekt für: Produktlancierungen, Eventpromotionen, saisonale Kampagnen und Markenbekanntheitsinitiativen.",
       "contactButton": "Kontaktieren Sie uns"
@@ -924,6 +925,11 @@
       "description": "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Fassadenwerbemöglichkeiten.",
       "button": "Kontakt aufnehmen",
       "phone": "Anruf: +41 77 233 81 21"
+    },
+    "archive": {
+      "eyebrow": "Archiv",
+      "title": "Standorte, die wir hatten.",
+      "description": "Standorte, die nicht mehr im Portfolio sind. Sie bleiben hier als Nachweis der umgesetzten Kampagnen."
     }
   },
   "blogPost": {

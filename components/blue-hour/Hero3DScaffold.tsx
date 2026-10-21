@@ -3,6 +3,13 @@
 import { Suspense, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, PerspectiveCamera } from '@react-three/drei';
+
+/**
+ * The model is Draco-compressed. Without a path, drei fetches the decoder from
+ * www.gstatic.com, which sends every visitor's IP address to Google before any
+ * consent. The decoder is copied from three into /public/draco instead.
+ */
+const DRACO_PATH = '/draco/';
 import * as THREE from 'three';
 import { useEasterEggs } from './easter-eggs/EasterEggsProvider';
 
@@ -25,7 +32,7 @@ function BuildingModel({
   spinTrigger: number;
   cursorX: number;
 }) {
-  const { scene } = useGLTF('/dangle.glb') as any;
+  const { scene } = useGLTF('/dangle.glb', DRACO_PATH) as any;
   const groupRef = useRef<THREE.Group>(null);
   const t = useRef(0);
   const rotY = useRef(baseRotY);
@@ -66,7 +73,7 @@ function BuildingModel({
   );
 }
 
-useGLTF.preload('/dangle.glb');
+useGLTF.preload('/dangle.glb', DRACO_PATH);
 
 interface Props { variant?: Variant; }
 

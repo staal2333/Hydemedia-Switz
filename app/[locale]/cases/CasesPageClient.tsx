@@ -3,14 +3,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
-import casesDe from '@/public/data/cases.json';
-import casesEn from '@/public/data/cases-en.json';
+import casesRaw from '@/public/data/cases.json';
+import { localizeCase, type CaseStudy } from '@/lib/placements';
 import DuskHero from '@/components/blue-hour/DuskHero';
 import GroundFlow from '@/components/blue-hour/GroundFlow';
 
 export default function CasesPageClient() {
   const locale = useLocale();
-  const casesData = locale === 'en' ? casesEn : casesDe;
+  const casesData = casesRaw.map((raw) => localizeCase(raw as unknown as CaseStudy, locale));
 
   return (
     <div className="relative">

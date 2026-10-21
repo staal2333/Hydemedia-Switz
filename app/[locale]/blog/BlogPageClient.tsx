@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+
 import DuskHero from '@/components/blue-hour/DuskHero';
 import GroundFlow from '@/components/blue-hour/GroundFlow';
 
@@ -22,21 +22,9 @@ interface BlogPost {
   featured: boolean;
 }
 
-export default function BlogPageClient() {
+export default function BlogPageClient({ posts }: { posts: BlogPost[] }) {
   const t = useTranslations('blogListing');
   const locale = useLocale();
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch(`/data/blog-${locale}.json`)
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(data);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, [locale]);
 
   const featured = posts.filter((p) => p.featured);
   const rest = posts.filter((p) => !p.featured);
@@ -46,7 +34,7 @@ export default function BlogPageClient() {
       <DuskHero>
         <div className="shell">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/65 inline-block mb-6">{locale === 'en' ? '§ Blog' : '§ Blog'}</span>
+            <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/65 inline-block mb-6">§ Blog</span>
             <h1
               className="font-display font-normal text-white m-0 mb-6"
               style={{ fontSize: 'clamp(40px, 6vw, 96px)', letterSpacing: '-0.03em', lineHeight: 1, textShadow: '0 2px 24px rgba(14,30,51,0.2)' }}
@@ -63,13 +51,7 @@ export default function BlogPageClient() {
       <GroundFlow>
         <section className="py-20">
           <div className="shell">
-            {loading && (
-              <div className="text-center py-20">
-                <div className="font-ui font-semibold text-[10px] tracking-[0.28em] uppercase text-mid">{locale === 'en' ? 'Loading…' : 'Lädt…'}</div>
-              </div>
-            )}
-
-            {!loading && featured.length > 0 && (
+            {featured.length > 0 && (
               <>
                 <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
                   <h2 className="font-display font-normal m-0 text-ink" style={{ fontSize: 'clamp(28px, 3.4vw, 44px)', letterSpacing: '-0.025em', lineHeight: 1.05 }}>
@@ -85,7 +67,7 @@ export default function BlogPageClient() {
               </>
             )}
 
-            {!loading && rest.length > 0 && (
+            {rest.length > 0 && (
               <>
                 <div className="mb-8">
                   <h2 className="font-display font-normal m-0 text-ink" style={{ fontSize: 'clamp(28px, 3.4vw, 44px)', letterSpacing: '-0.025em', lineHeight: 1.05 }}>
@@ -100,7 +82,7 @@ export default function BlogPageClient() {
               </>
             )}
 
-            {!loading && posts.length === 0 && (
+            {posts.length === 0 && (
               <div className="text-center py-20 text-ink-soft">{t('noResults')}</div>
             )}
           </div>

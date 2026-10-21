@@ -11,22 +11,17 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
   let title: string, description: string, keywords: string;
   if (isGerman) {
-    title = 'Datenschutzrichtlinie | DSGVO-Konformität';
-    description = 'Erfahren Sie, wie Hyde Media Ihre persönlichen Daten erfasst, verwendet und schützt. DSGVO-konforme Datenschutzrichtlinie.';
-    keywords = 'Datenschutzrichtlinie, DSGVO, Datenschutz, personenbezogene Daten';
-  } else if (isDanish) {
-    title = 'Privatlivspolitik | GDPR Compliance';
-    description = 'Læs hvordan Hyde Media indsamler, bruger og beskytter dine personlige oplysninger. GDPR-compliant privatlivspolitik.';
-    keywords = 'privatlivspolitik, GDPR, databeskyttelse, persondata';
+    title = 'Datenschutzerklärung';
+    description = 'Erfahren Sie, wie Hyde Media Ihre Personendaten bearbeitet und schützt, gemäss dem Schweizer Datenschutzgesetz (DSG) und, wo anwendbar, der DSGVO.';
+    keywords = 'Datenschutzerklärung, Datenschutz, DSG, DSGVO, Personendaten';
   } else {
-    title = 'Privacy Policy | GDPR Compliance';
-    description = 'Learn how Hyde Media collects, uses, and protects your personal information. GDPR compliant privacy policy.';
-    keywords = 'privacy policy, GDPR, data protection, personal data';
+    title = 'Privacy Policy';
+    description = 'Learn how Hyde Media processes and protects your personal data under the Swiss Federal Act on Data Protection (FADP) and, where applicable, the GDPR.';
+    keywords = 'privacy policy, data protection, FADP, GDPR, personal data';
   }
 
   return generateSEOMetadata({ title, description, keywords, path: '/privacy', locale });
@@ -44,7 +39,7 @@ export default async function PrivacyPage({
       <DuskHero>
         <div className="shell">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/65 inline-block mb-6">§ Privatlivspolitik</span>
+            <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/65 inline-block mb-6">§ {locale === 'en' ? 'Privacy' : 'Datenschutz'}</span>
             <h1
               className="font-display font-normal text-white m-0 mb-4"
               style={{ fontSize: 'clamp(36px, 5vw, 80px)', letterSpacing: '-0.03em', lineHeight: 1, textShadow: '0 2px 24px rgba(14,30,51,0.2)' }}

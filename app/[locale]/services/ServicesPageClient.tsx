@@ -23,7 +23,7 @@ const SOLUTIONS = [
 
 const COMPARISON_FEATURES = ['visibility', 'duration', 'installation', 'costEffective', 'flexibility'] as const;
 
-export default function ServicesPageClient({ locale }: { locale: string }) {
+export default function ServicesPageClient({ locale, children }: { locale: string; children?: import('react').ReactNode }) {
   const t = useTranslations('services');
 
   return (
@@ -32,7 +32,7 @@ export default function ServicesPageClient({ locale }: { locale: string }) {
       <DuskHero>
         <div className="shell">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/65 inline-block mb-6">§ Outdoor marketing</span>
+            <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/65 inline-block mb-6">§ {locale === 'en' ? 'Outdoor advertising' : 'Aussenwerbung'}</span>
             <h1
               className="font-display font-normal text-white m-0 mb-6"
               style={{ fontSize: 'clamp(40px, 6vw, 96px)', letterSpacing: '-0.03em', lineHeight: 1, textShadow: '0 2px 24px rgba(14,30,51,0.2)' }}
@@ -102,13 +102,13 @@ export default function ServicesPageClient({ locale }: { locale: string }) {
       <section className="py-24">
         <div className="shell">
           <div className="max-w-4xl mx-auto mb-12">
-            <span className="sec-no inline-block mb-4 text-mid">§ Sammenligning</span>
+            <span className="sec-no inline-block mb-4 text-mid">§ {locale === 'en' ? 'Comparison' : 'Vergleich'}</span>
             <h2
               className="font-display font-normal text-ink m-0 mb-4"
               style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', letterSpacing: '-0.03em', lineHeight: 1.05 }}
             >
               {t('comparison.title')}{' '}
-              <span className="italic text-mid">— hvad er forskellen?</span>
+              <span className="italic text-mid">{locale === 'en' ? '— what is the difference?' : '— was ist der Unterschied?'}</span>
             </h2>
             <p className="font-body text-ink-soft max-w-2xl m-0" style={{ fontSize: 17, lineHeight: 1.6 }}>
               {t('comparison.description')}
@@ -133,6 +133,8 @@ export default function ServicesPageClient({ locale }: { locale: string }) {
           </div>
         </div>
       </section>
+
+      {children}
 
       {/* ── FINAL CTA ── */}
       <section className="relative overflow-hidden py-32 text-white">

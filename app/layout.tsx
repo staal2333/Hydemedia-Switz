@@ -1,11 +1,14 @@
 import { Inter, JetBrains_Mono } from 'next/font/google';
+import { getLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+// Self-hosted via fontsource: loading from fonts.googleapis.com sent every
+// visitor's IP address to Google before any consent was given.
+import '@fontsource-variable/funnel-display';
 import './globals.css';
 
-// Hyde Media — Funnel Display (loaded via <link> in head — too new for next/font in Next 14.2)
-//                + Inter (next/font) + JetBrains Mono (next/font)
+// Hyde Media — Funnel Display (self-hosted, fontsource) + Inter and JetBrains Mono (next/font, self-hosted at build)
 
 const inter = Inter({
   subsets: ['latin'],
@@ -101,14 +104,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: 'https://www.hydemedia.ch',
-    languages: {
-      'de-CH': 'https://www.hydemedia.ch/de',
-      'en-US': 'https://www.hydemedia.ch/en',
-      'x-default': 'https://www.hydemedia.ch/de',
-    },
-  },
   verification: {
     // Add your verification codes here when available
     // google: 'your-google-verification-code',
@@ -120,23 +115,27 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+/**
+ * The <html lang> must follow the page's language: English pages declared
+ * "de", which tells Google they are German and nudges it to treat them as
+ * duplicates of the German pages. Routes outside [locale] fall back to German.
+ */
+async function documentLang(): Promise<'de-CH' | 'en'> {
+  try {
+    return (await getLocale()) === 'en' ? 'en' : 'de-CH';
+  } catch {
+    return 'de-CH';
+  }
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className="scroll-smooth">
+    <html lang={await documentLang()} className={`scroll-smooth ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
-        {/* Performance optimizations */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         
         {/* Theme and mobile optimization */}
         <meta name="theme-color" content="#0EA5E9" media="(prefers-color-scheme: light)" />
@@ -148,9 +147,7 @@ export default function RootLayout({
         
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       </head>
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         {children}
         <Analytics />
         <SpeedInsights />

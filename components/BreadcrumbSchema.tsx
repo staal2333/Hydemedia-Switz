@@ -3,52 +3,31 @@
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { getSiteUrl } from '@/lib/region';
+import { SECTION_NAMES } from '@/lib/breadcrumbs';
 
+/**
+ * Breadcrumbs for top-level pages. Detail pages (placements, articles, cases)
+ * render their own, because only the page knows its real title.
+ */
 export default function BreadcrumbSchema() {
   const pathname = usePathname();
   const locale = useLocale();
   const siteUrl = getSiteUrl(locale);
+  const lang = locale === 'en' ? 'en' : 'de';
 
-  if (pathname === `/${locale}` || pathname === '/') {
-    return null;
-  }
-
-  const segments = pathname.split('/').filter(Boolean).filter(s => s !== locale);
-  
-  const homeName = locale === 'da' ? 'Hjem' : locale === 'de' ? 'Startseite' : 'Home';
+  const segments = pathname.split('/').filter(Boolean).filter((s) => s !== locale);
+  if (segments.length !== 1) return null;
+  const name = SECTION_NAMES[segments[0]]?.[lang];
+  if (!name) return null;
 
   const breadcrumbList = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: homeName,
-        item: `${siteUrl}/${locale}`
-      },
-      ...segments.map((segment, index) => {
-        const name = segment
-          .split('-')
-          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(' ');
-        
-        const url = `${siteUrl}/${locale}/${segments.slice(0, index + 1).join('/')}`;
-        
-        return {
-          '@type': 'ListItem',
-          position: index + 2,
-          name,
-          item: url
-        };
-      })
-    ]
+      { '@type': 'ListItem', position: 1, name: lang === 'de' ? 'Startseite' : 'Home', item: `${siteUrl}/${locale}` },
+      { '@type': 'ListItem', position: 2, name, item: `${siteUrl}/${locale}/${segments[0]}` },
+    ],
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
-    />
-  );
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }} />;
 }

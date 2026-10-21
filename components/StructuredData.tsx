@@ -17,34 +17,37 @@ interface StructuredDataProps {
 export default function StructuredData(props: StructuredDataProps) {
   const locale = useLocale();
   const config = getRegionConfig(locale);
-  const isSwiss = config.region === 'ch';
   const siteUrl = config.siteUrl;
   
   if (props.type === 'LocalBusiness') {
     const localBusiness = {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": `${siteUrl}/#organization`,
       "name": "Hyde Media",
       "alternateName": "HydeMedia",
-      "legalName": "Hyde Media",
       "url": siteUrl,
       "logo": `${siteUrl}/logo.png`,
       "image": props.image || `${siteUrl}/og-image.jpg`,
       "description": props.description,
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": isSwiss ? "Basel" : "København",
+        "streetAddress": config.streetAddress,
+        "postalCode": config.postalCode,
+        "addressLocality": config.addressLocality,
+        "addressRegion": config.addressRegion,
         "addressCountry": config.countryCode
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": isSwiss ? 47.5596 : 55.6761,
-        "longitude": isSwiss ? 7.5886 : 12.5683
+        "latitude": config.geoLatitude,
+        "longitude": config.geoLongitude
       },
       "telephone": config.phone,
       "email": config.email,
       "priceRange": "$$",
+      "currenciesAccepted": config.currency,
+      "paymentAccepted": "Invoice, Bank Transfer",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -56,39 +59,32 @@ export default function StructuredData(props: StructuredDataProps) {
       "sameAs": [
         "https://www.instagram.com/hyde.med"
       ],
-      "areaServed": {
-        "@type": "Country",
-        "name": isSwiss ? "Switzerland" : "Denmark"
-      },
+      "areaServed": [
+        { "@type": "Country", "name": "Switzerland" },
+        ...(config.areasServed || []).map((city: string) => ({
+          "@type": "City",
+          "name": city
+        }))
+      ],
+      "knowsAbout": locale === 'en'
+        ? ["Outdoor advertising", "Out-of-home (OOH)", "Scaffolding advertising", "Facade advertising", "Large-format banners", "Advertising permits in Switzerland"]
+        : ["Aussenwerbung", "Out-of-Home (OOH)", "Gerüstwerbung", "Fassadenwerbung", "Grossformat-Werbebanner", "Reklamebewilligungen in der Schweiz"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": locale === 'da' ? "Udendørs Reklame Tjenester" : locale === 'de' ? "Aussenwerbung Dienstleistungen" : "Outdoor Advertising Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": locale === 'da' ? "Stilladsebannere" : locale === 'de' ? "Gerüstbanner" : "Scaffolding Banners",
-              "description": locale === 'da'
-                ? "Fleksible, kortvarige annonceringsløsninger på stilladser"
-                : locale === 'de'
-                ? "Flexible, kurzfristige Werbelösungen auf Gerüsten"
-                : "Flexible, short-term advertising solutions on scaffolding"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": locale === 'da' ? "Facadebannere" : locale === 'de' ? "Fassadenbanner" : "Facade Banners",
-              "description": locale === 'da'
-                ? "Langvarig annoncering med maksimal effekt på bygninger"
-                : locale === 'de'
-                ? "Langfristige Werbung mit maximaler Wirkung auf Gebäudefassaden"
-                : "Long-term, maximum-impact advertising on buildings"
-            }
-          }
-        ]
+        "name": locale === 'en' ? "Outdoor advertising" : "Aussenwerbung",
+        "itemListElement": (locale === 'en'
+          ? [
+              ["Scaffolding advertising", "Large-format banners on scaffolding around buildings under renovation, from 4 weeks", "/scaffolding"],
+              ["Facade advertising", "Long-term banners on facades and fire walls", "/facade"],
+            ]
+          : [
+              ["Gerüstwerbung", "Grossformat-Banner an Gerüsten von Gebäuden in Sanierung, ab 4 Wochen", "/scaffolding"],
+              ["Fassadenwerbung", "Langfristige Banner an Fassaden und Brandmauern", "/facade"],
+            ]
+        ).map(([name, description, path]) => ({
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", name, description, "url": `${siteUrl}/${locale}${path}` },
+        })),
       }
     };
 
@@ -116,7 +112,6 @@ export default function StructuredData(props: StructuredDataProps) {
       ...baseData,
       '@type': 'Organization',
       name: 'Hyde Media',
-      legalName: 'Hyde Media',
       url: siteUrl,
       logo: `${siteUrl}/logo.png`,
       contactPoint: {
@@ -130,6 +125,9 @@ export default function StructuredData(props: StructuredDataProps) {
       ],
       address: {
         '@type': 'PostalAddress',
+        streetAddress: config.streetAddress,
+        postalCode: config.postalCode,
+        addressLocality: config.addressLocality,
         addressCountry: config.countryCode,
       },
     };
@@ -139,14 +137,7 @@ export default function StructuredData(props: StructuredDataProps) {
     structuredData = {
       ...baseData,
       '@type': 'WebSite',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${siteUrl}/{search_term_string}`,
-        },
-        'query-input': 'required name=search_term_string',
-      },
+      inLanguage: locale === 'en' ? 'en' : 'de-CH',
     };
   }
 
@@ -157,7 +148,7 @@ export default function StructuredData(props: StructuredDataProps) {
       serviceType: 'Outdoor Advertising',
       areaServed: {
         '@type': 'Country',
-        name: isSwiss ? 'Switzerland' : 'Denmark',
+        name: 'Switzerland',
       },
       provider: {
         '@type': 'Organization',

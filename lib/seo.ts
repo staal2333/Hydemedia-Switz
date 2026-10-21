@@ -26,16 +26,21 @@ export function generateMetadata({
 }: SEOProps): Metadata {
   const config = getRegionConfig(locale);
   const siteUrl = config.siteUrl;
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  // The homepage is /de, not /de/ — the slash form redirects, and a canonical
+  // must never point at a redirect.
+  const cleanPath = !path || path === '/' ? '' : path.startsWith('/') ? path : `/${path}`;
   const url = `${siteUrl}/${locale}${cleanPath}`;
   const ogImage = `${siteUrl}${image}`;
 
   const ogLocale = locale === 'de' ? 'de_CH' : 'en_US';
   const alternateLocales = ['en_US', 'de_CH'].filter(l => l !== ogLocale);
+  // Search results cut titles at about 60 characters. The brand suffix is
+  // dropped when it would push the words that describe the page out of view.
+  const fullTitle = `${title} | Hyde Media`.length <= 60 ? `${title} | Hyde Media` : title;
 
   return {
     // Absolute so parent layout templates don't add the suffix a second time.
-    title: { absolute: `${title} | Hyde Media` },
+    title: { absolute: fullTitle },
     description,
     keywords: keywords || 'outdoor advertising, banner advertising, facade advertising, scaffolding advertising',
     alternates: {
@@ -47,7 +52,7 @@ export function generateMetadata({
       },
     },
     openGraph: {
-      title: `${title} | Hyde Media`,
+      title: fullTitle,
       description,
       url,
       siteName: 'Hyde Media',
@@ -67,7 +72,7 @@ export function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} | Hyde Media`,
+      title: fullTitle,
       description,
       images: [ogImage],
     },

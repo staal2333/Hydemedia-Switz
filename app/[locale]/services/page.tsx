@@ -1,42 +1,30 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import ServiceGuide from '@/components/ServiceGuide';
 import ServicesPageClient from './ServicesPageClient';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
+// The pillar page for "Aussenwerbung": what the formats are and how to choose.
 export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
-  let title: string, description: string, keywords: string;
+  const title = isGerman
+    ? 'Aussenwerbung in der Schweiz: Gerüst und Fassade'
+    : 'Outdoor Advertising in Switzerland: Scaffolding, Facades';
+  const description = isGerman
+    ? 'Aussenwerbung im Grossformat: Gerüstwerbung und Fassadenwerbung in Basel und der Schweiz. Standorte mit Verkehrszahlen, Druck, Montage und Bewilligung aus einer Hand.'
+    : 'Large-format outdoor advertising: scaffolding and facade advertising in Basel and Switzerland. Sites with traffic figures, with print, installation and permits handled for you.';
+  const keywords = isGerman
+    ? 'Aussenwerbung, Aussenwerbung Schweiz, Out-of-Home, OOH Schweiz, Gerüstwerbung, Fassadenwerbung, Grossformat Werbung, Aussenwerbung Basel, Werbebanner'
+    : 'outdoor advertising, outdoor advertising Switzerland, OOH, scaffolding advertising, facade advertising, large format advertising, Basel';
 
-  if (isGerman) {
-    title = 'Gerüstwerbung & Fassadenwerbung | Aussenwerbung Schweiz';
-    description = 'Komplette Aussenwerbung in der Schweiz. Gerüstwerbung, Fassadenwerbung und Grossformat OOH-Lösungen. Professioneller Service mit Design, Produktion und Installation. Angebot anfordern!';
-    keywords = 'Gerüstwerbung, Fassadenwerbung, Aussenwerbung, OOH Schweiz, Grossformat Werbung, Aussenwerbung Basel, Fassadenbanner, Gerüstbanner';
-  } else if (isDanish) {
-    title = 'Stilladsreklame & Facadereklame Services | Outdoor Marketing';
-    description = 'Komplet outdoor marketing i Danmark. Stilladsreklame, facadereklame og OOH-løsninger i storformat. Fra København til Aarhus – professionel service med design, produktion og installation. Få tilbud nu!';
-    keywords = 'stilladsreklame, facadereklame, outdoor marketing, OOH danmark, storformat reklame, outdoor marketing københavn, facade reklame, stillads reklame, bannerreklame services';
-  } else {
-    title = 'Scaffolding & Facade Advertising Services | Outdoor Marketing';
-    description = 'Complete outdoor marketing solutions. Scaffolding advertising, facade advertising and large-format OOH solutions. Professional service with design, production and installation. Get a quote now!';
-    keywords = 'scaffolding advertising, facade advertising, outdoor marketing, OOH, large format advertising, facade ads, scaffolding ads, banner advertising services';
-  }
-
-  return generateSEOMetadata({
-    title,
-    description,
-    keywords,
-    path: '/services',
-    locale,
-  });
+  return generateSEOMetadata({ title, description, keywords, path: '/services', locale });
 }
 
 export default async function ServicesPage({
@@ -44,30 +32,21 @@ export default async function ServicesPage({
 }: {
   params: { locale: string };
 }) {
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
   const sdTitle = isGerman
-    ? 'Aussenwerbung - Gerüstwerbung & Fassadenwerbung'
-    : isDanish
-    ? 'Outdoor Marketing Services - Stilladsreklame & Facadereklame'
-    : 'Outdoor Marketing Services - Scaffolding & Facade Advertising';
-
+    ? 'Aussenwerbung: Gerüstwerbung und Fassadenwerbung'
+    : 'Outdoor Advertising: Scaffolding and Facade Advertising';
   const sdDesc = isGerman
-    ? 'Komplette Aussenwerbung mit Gerüstwerbung und Fassadenwerbung in Grossformat. OOH-Lösungen in der Schweiz.'
-    : isDanish
-    ? 'Komplet outdoor marketing med stilladsreklame og facadereklame i storformat. OOH-løsninger i hele Danmark.'
-    : 'Complete outdoor marketing with scaffolding and facade advertising in large format. OOH solutions.';
+    ? 'Aussenwerbung im Grossformat mit Gerüstwerbung und Fassadenwerbung in Basel und der Schweiz, inklusive Druck, Montage und Bewilligung.'
+    : 'Large-format outdoor advertising with scaffolding and facade banners in Basel and Switzerland, including print, installation and permits.';
 
   return (
     <>
-      <StructuredData
-        type="Service"
-        title={sdTitle}
-        description={sdDesc}
-        url={`/${locale}/services`}
-      />
-      <ServicesPageClient locale={locale} />
+      <StructuredData type="Service" title={sdTitle} description={sdDesc} url={`/${locale}/services`} />
+      <ServicesPageClient locale={locale}>
+        <ServiceGuide kind="overview" locale={locale} />
+      </ServicesPageClient>
     </>
   );
 }

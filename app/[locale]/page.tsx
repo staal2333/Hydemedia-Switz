@@ -4,6 +4,8 @@ import HomePageClient from './HomePageClient';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 import { locales } from '@/i18n';
+import blogDe from '@/public/data/blog-de.json';
+import blogEn from '@/public/data/blog-en.json';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
@@ -14,23 +16,19 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
-  
+  const isGerman = locale !== 'en';
+
   let title: string, description: string, keywords: string;
 
+  // The homepage sells to brands, so its title carries the terms they search for.
   if (isGerman) {
-    title = 'Fassadenwerbung Schweiz | Fassade vermieten Basel & Zürich';
-    description = 'Monetarisieren Sie Ihre Gebäudefassade in Basel oder Zürich. Hyde Media sucht Fassaden für professionelle Aussenwerbung. Attraktive Einnahmen, null Aufwand.';
-    keywords = 'Fassade vermieten, Fassadenwerbung Schweiz, Aussenwerbung Basel, Gebäude monetarisieren, Fassadenfläche vermieten Basel, Aussenwerbung Standort, OOH Schweiz, Fassadenbanner, Aussenwerbung Zürich';
-  } else if (isDanish) {
-    title = 'Stilladsreklame & Facadereklame | Outdoor Marketing Danmark';
-    description = 'Danmarks førende udbyder af outdoor marketing. Stilladsreklame og facadereklame i København, Aarhus og hele Danmark. Professionel OOH i storformat – fra design til installation. Få tilbud i dag!';
-    keywords = 'stilladsreklame, facadereklame, outdoor marketing danmark, outdoor marketing københavn, OOH, storformat reklame, stillads reklame københavn, facade reklame aarhus, bannerreklame, outdoor reklame danmark';
+    title = 'Gerüstwerbung & Fassadenwerbung in Basel und der Schweiz';
+    description = 'Aussenwerbung im Grossformat: Gerüstbanner und Fassadenbanner an verkehrsreichen Standorten in Basel und der Schweiz. Bewilligung, Druck und Montage aus einer Hand.';
+    keywords = 'Gerüstwerbung, Fassadenwerbung, Aussenwerbung Schweiz, Aussenwerbung Basel, Gerüstbanner, Fassadenbanner, Grossformat Werbung, OOH Schweiz, Werbebanner';
   } else {
-    title = 'Scaffolding & Facade Advertising | Outdoor Marketing';
-    description = 'Professional outdoor marketing with scaffolding and facade advertising. Large-format OOH – from design to installation. Get a quote today!';
-    keywords = 'scaffolding advertising, facade advertising, outdoor marketing, OOH, large format advertising, banner advertising, outdoor advertising';
+    title = 'Scaffolding & Facade Advertising in Switzerland';
+    description = 'Large-format outdoor advertising: scaffolding and facade banners at busy sites in Basel and Switzerland. Permit, print and installation handled for you.';
+    keywords = 'scaffolding advertising, facade advertising, outdoor advertising Switzerland, outdoor advertising Basel, OOH, large format advertising, banner advertising';
   }
 
   return generateSEOMetadata({
@@ -50,20 +48,15 @@ export default async function HomePage({
   // Enable static rendering
   setRequestLocale(locale);
   
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
   const serviceTitle = isGerman
-    ? 'Fassadenwerbung - Fassade vermieten in der Schweiz'
-    : isDanish
-    ? 'Outdoor Marketing - Stilladsreklame & Facadereklame'
-    : 'Outdoor Marketing - Scaffolding & Facade Advertising';
-  
+    ? 'Aussenwerbung: Gerüstwerbung und Fassadenwerbung'
+    : 'Outdoor Advertising: Scaffolding and Facade Advertising';
+
   const serviceDesc = isGerman
-    ? 'Vermieten Sie Ihre Fassade für professionelle Aussenwerbung in Basel und Zürich. Attraktive Einnahmen für Immobilienbesitzer.'
-    : isDanish
-    ? 'Professionel outdoor marketing med stilladsreklame og facadereklame i København, Aarhus og hele Danmark. OOH-løsninger i storformat.'
-    : 'Professional outdoor marketing with scaffolding and facade advertising. Large-format OOH solutions.';
+    ? 'Gerüstwerbung und Fassadenwerbung im Grossformat in Basel und der Schweiz, inklusive Bewilligung, Druck und Montage.'
+    : 'Large-format scaffolding and facade advertising in Basel and Switzerland, including permit, print and installation.';
 
   return (
     <>
@@ -73,7 +66,11 @@ export default async function HomePage({
         description={serviceDesc}
         url={`/${locale}`}
       />
-      <HomePageClient />
+      <HomePageClient
+        journal={(locale === 'en' ? blogEn : blogDe)
+          .slice(0, 3)
+          .map(({ content, ...card }) => card)}
+      />
     </>
   );
 }

@@ -16,8 +16,9 @@ import TeamCTA from '@/components/blue-hour/TeamCTA';
 import FinalCTA from '@/components/blue-hour/FinalCTA';
 import { CityHorizon, GroundDatum } from '@/components/blue-hour/CityNiches';
 import OutdoorMarquee from '@/components/blue-hour/OutdoorMarquee';
+import JournalStrip, { type JournalPost } from '@/components/blue-hour/JournalStrip';
 
-export default function HomePageClient() {
+export default function HomePageClient({ journal }: { journal: JournalPost[] }) {
   return (
     <EasterEggsProvider>
       <TopStage>
@@ -34,6 +35,7 @@ export default function HomePageClient() {
         <CityHorizon />
         <Solutions />
         <Audience />
+        <JournalStrip posts={journal} />
         <TeamCTA />
         <Streetlights />
         <GroundDatum />

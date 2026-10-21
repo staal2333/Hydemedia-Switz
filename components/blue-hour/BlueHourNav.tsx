@@ -38,8 +38,10 @@ export default function BlueHourNav() {
 
   const links = [
     { href: `/${locale}/services`, label: locale === 'en' ? 'Solutions' : 'Lösungen' },
-    { href: `/${locale}/about`, label: locale === 'en' ? 'About' : 'Über uns' },
+    { href: `/${locale}/standorte`, label: locale === 'en' ? 'Locations' : 'Standorte' },
     { href: `/${locale}/cases`, label: locale === 'en' ? 'Cases' : 'Referenzen' },
+    { href: `/${locale}/blog`, label: locale === 'en' ? 'Insights' : 'Wissen' },
+    { href: `/${locale}/about`, label: locale === 'en' ? 'About' : 'Über uns' },
   ];
 
   const isLocaleActive = (l: string) => locale === l;

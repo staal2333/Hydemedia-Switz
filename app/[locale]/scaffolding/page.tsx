@@ -1,19 +1,32 @@
 import { Metadata } from 'next';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import ServiceGuide from '@/components/ServiceGuide';
 import ScaffoldingPageClient from './ScaffoldingPageClient';
+import StructuredData from '@/components/StructuredData';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params: { locale } }: { params: { locale: string } }): Metadata {
-  return locale === 'en'
-    ? {
-        title: 'Scaffolding Banners | Premium Short-Term OOH',
-        description: 'Explore our portfolio of scaffolding banner placements across Basel, Zurich, and Switzerland. Flexible, high-impact, short-term advertising solutions.',
-      }
-    : {
-        title: 'Gerüstwerbung | Premium-Aussenwerbung auf Zeit',
-        description: 'Entdecken Sie unsere Gerüstwerbeflächen in Basel, Zürich und der ganzen Schweiz. Flexible, wirkungsvolle Aussenwerbung auf Zeit.',
-      };
+// The commercial pillar for "Gerüstwerbung", so title and description are
+// written per locale and match what buyers search for.
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const isGerman = locale !== 'en';
+  return generateSEOMetadata({
+    title: isGerman ? 'Gerüstwerbung in Basel: Gerüstbanner im Grossformat' : 'Scaffolding Advertising in Basel and Switzerland',
+    description: isGerman
+      ? 'Gerüstwerbung im Grossformat an verkehrsreichen Kreuzungen in Basel. Standorte mit Grösse und Verkehrszahlen. Wir übernehmen Bewilligung, Druck und Montage.'
+      : 'Large-format scaffolding banners at busy junctions in Basel. See sites with size and traffic figures. We handle the permit, print and installation.',
+    keywords: isGerman
+      ? 'Gerüstwerbung, Gerüstbanner, Gerüstwerbung Basel, Baugerüst Werbung, Grossformat Werbung, Aussenwerbung Basel, Werbebanner Gerüst'
+      : 'scaffolding advertising, scaffold banners, scaffolding advertising Basel, large format outdoor advertising, Switzerland',
+    path: '/scaffolding',
+    locale,
+    image: '/images/cases/grand-casino-basel-1.jpg',
+  });
 }
 
 export default function ScaffoldingPage({
@@ -23,5 +36,18 @@ export default function ScaffoldingPage({
 }) {
   unstable_setRequestLocale(locale);
 
-  return <ScaffoldingPageClient />;
+  const isGerman = locale !== 'en';
+  const sdTitle = isGerman ? 'Gerüstwerbung - Hyde Media' : 'Scaffolding Advertising - Hyde Media';
+  const sdDesc = isGerman
+    ? 'Gerüstbanner im Grossformat in Basel und der Schweiz. Kontakt: theodor.staal@hydemedia.ch, +41 77 233 81 21'
+    : 'Large-format scaffolding banners in Basel and Switzerland. Contact: theodor.staal@hydemedia.ch, +41 77 233 81 21';
+
+  return (
+    <>
+      <StructuredData type="Service" title={sdTitle} description={sdDesc} url={`/${locale}/scaffolding`} />
+      <ScaffoldingPageClient>
+        <ServiceGuide kind="scaffolding" locale={locale} />
+      </ScaffoldingPageClient>
+    </>
+  );
 }

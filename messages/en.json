@@ -134,12 +134,6 @@
         "description": "Premium location in the heart of Basel – surrounded by shopping, tourism, pedestrians and constant city life.",
         "traffic": "29,000 daily",
         "weeks": "Week 15-28"
-      },
-      "norrebrogade": {
-        "title": "City Centre – 160m² Scaffolding Ad",
-        "description": "Centrally located on one of Basel's most vibrant streets. 2-sided format. Basel Marathon route week 19.",
-        "traffic": "55,000 daily",
-        "weeks": "Week 14-22"
       }
     },
     "campaigns": {
@@ -546,8 +540,8 @@
     }
   },
   "blogListing": {
-    "title": "Blog & Latest News",
-    "description": "Industry insights, trends, and news from the world of out-of-home advertising",
+    "title": "Insights on Outdoor Advertising",
+    "description": "Guides to scaffolding, facade and outdoor advertising in Switzerland: sites, planning, permits, print files and reach.",
     "searchPlaceholder": "Search articles...",
     "readMore": "Read Article",
     "noResults": "No articles found matching your search",
@@ -850,13 +844,14 @@
     "description": "Flexible, short-term advertising solutions on scaffolding across Switzerland's prime locations. Perfect for product launches, seasonal campaigns, and time-sensitive promotions.",
     "status": {
       "available": "Available",
-      "booked": "Booked"
+      "booked": "Booked",
+      "past": "Past"
     },
     "details": {
       "size": "Size",
       "traffic": "Traffic",
-      "trafficDaily": "Daily traffic",
-      "trafficWeekly": "Weekly traffic",
+      "trafficDaily": "Daily contacts",
+      "trafficWeekly": "Weekly contacts",
       "duration": "Period",
       "perfectFor": "Perfect for: Product launches, event promotions, seasonal campaigns, and brand awareness initiatives.",
       "contactButton": "Contact us"
@@ -867,6 +862,11 @@
       "description": "Contact us today for a no-obligation consultation about scaffolding banner opportunities in Basel.",
       "button": "Get in Touch",
       "phone": "Call: +41 77 233 81 21"
+    },
+    "archive": {
+      "eyebrow": "Archive",
+      "title": "Sites we have had.",
+      "description": "Sites that are no longer in the portfolio. They stay here as proof of the campaigns we ran."
     }
   },
   "facade": {
@@ -874,13 +874,14 @@
     "description": "Long-term, maximum-impact advertising on iconic buildings and premium facades. Create lasting brand presence with our large-format building wraps.",
     "status": {
       "available": "Available",
-      "booked": "Booked"
+      "booked": "Booked",
+      "past": "Past"
     },
     "details": {
       "size": "Size",
       "traffic": "Traffic",
-      "trafficDaily": "Daily traffic",
-      "trafficWeekly": "Weekly traffic",
+      "trafficDaily": "Daily contacts",
+      "trafficWeekly": "Weekly contacts",
       "duration": "Period",
       "perfectFor": "Perfect for: Product launches, event promotions, seasonal campaigns, and brand awareness initiatives.",
       "contactButton": "Contact us"
@@ -891,6 +892,11 @@
       "description": "Contact us today for a no-obligation consultation about facade advertising opportunities in Zurich.",
       "button": "Get in Touch",
       "phone": "Call: +41 77 233 81 21"
+    },
+    "archive": {
+      "eyebrow": "Archive",
+      "title": "Sites we have had.",
+      "description": "Sites that are no longer in the portfolio. They stay here as proof of the campaigns we ran."
     }
   },
   "blogPost": {

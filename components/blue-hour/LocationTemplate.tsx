@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
-import placements from '@/data/placements.json';
+import { getCurrentPlacements, localizePlacement, placementPath } from '@/lib/placements';
 import casesData from '@/public/data/cases.json';
 import DuskHero from './DuskHero';
 import GroundFlow from './GroundFlow';
@@ -42,9 +42,11 @@ export interface LocationConfig {
 export default function LocationTemplate({ config }: { config: LocationConfig }) {
   const locale = useLocale();
 
-  const localPlacements = placements[config.serviceKind].filter((p) =>
-    config.placementFilter(p.location, p.address),
-  );
+  // Only current placements — the section sells them as "live", so retired
+  // spots must never appear here.
+  const localPlacements = getCurrentPlacements(config.serviceKind)
+    .filter((p) => config.placementFilter(p.location, p.address))
+    .map((p) => localizePlacement(p, locale));
   const localCases = casesData.filter((c) => config.caseFilter(c.location));
 
   // FAQ structured data for Google rich results
@@ -62,7 +64,7 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: config.serviceName,
-    provider: { '@type': 'Organization', name: 'Hyde Media', url: 'https://www.hydemedia.dk' },
+    provider: { '@type': 'Organization', name: 'Hyde Media', url: 'https://www.hydemedia.ch' },
     areaServed: { '@type': 'City', name: config.city },
     name: `${config.serviceName} i ${config.city}`,
     description: config.heroDescription,
@@ -161,7 +163,7 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
                 {localPlacements.map((p, i) => (
                   <Link
                     key={p.id}
-                    href={`/${locale}/${config.serviceKind === 'scaffolding' ? 'scaffolding' : 'facade'}#${p.id}`}
+                    href={`/${locale}${placementPath(p)}`}
                     className="group bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col hover:-translate-y-1.5 hover:border-mid transition-all"
                     onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 40px 80px -20px rgba(31,58,95,0.25)'; }}
                     onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '0 0 0 0 transparent'; }}
@@ -192,7 +194,7 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
             <div className="max-w-3xl mb-12">
               <span className="sec-no inline-block mb-4 text-mid">{locale === 'en' ? '§ Why' : '§ Warum'}</span>
               <h2 className="font-display font-normal text-ink m-0" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', letterSpacing: '-0.03em', lineHeight: 1.05 }}>
-                {locale === 'en' ? `Why ${config.serviceName.toLowerCase()} in ` : `Warum ${config.serviceName.toLowerCase()} in `}<span className="italic text-mid">{config.city}?</span>
+                {locale === 'en' ? `Why ${config.serviceName.toLowerCase()} in ` : `Warum ${config.serviceName} in `}<span className="italic text-mid">{config.city}?</span>
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -287,7 +289,7 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
               </Link>
               <span className="self-center text-ink-soft">·</span>
               <Link href={`/${locale}/${config.serviceKind === 'scaffolding' ? 'scaffolding' : 'facade'}`} className="font-display italic text-ink underline decoration-mid underline-offset-4 hover:text-mid transition-colors" style={{ fontSize: 17 }}>
-                {locale === 'en' ? `${config.serviceName.toLowerCase()} overview` : `${config.serviceName.toLowerCase()} Übersicht`}
+                {locale === 'en' ? `${config.serviceName.toLowerCase()} overview` : `${config.serviceName}: Übersicht`}
               </Link>
               <span className="self-center text-ink-soft">·</span>
               <Link href={`/${locale}/cases`} className="font-display italic text-ink underline decoration-mid underline-offset-4 hover:text-mid transition-colors" style={{ fontSize: 17 }}>
@@ -295,7 +297,7 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
               </Link>
               <span className="self-center text-ink-soft">·</span>
               <Link href={`/${locale}/contact`} className="font-display italic text-ink underline decoration-mid underline-offset-4 hover:text-mid transition-colors" style={{ fontSize: 17 }}>
-                {locale === 'en' ? 'contact' : 'kontakt'}
+                {locale === 'en' ? 'contact' : 'Kontakt'}
               </Link>
             </div>
           </div>
@@ -317,7 +319,7 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
                 className="font-display font-normal m-0 text-white"
                 style={{ fontSize: 'clamp(40px, 5.5vw, 80px)', lineHeight: 0.96, letterSpacing: '-0.035em' }}
               >
-                {locale === 'en' ? 'Ready to put your brand ' : 'Bereit, deine Marke '}<span className="italic text-glow">{locale === 'en' ? `on the map in ${config.city}?` : `in ${config.city} auf die Karte zu bringen?`}</span>
+                {locale === 'en' ? 'Ready to put your brand ' : 'Bereit, Ihre Marke '}<span className="italic text-glow">{locale === 'en' ? `on the map in ${config.city}?` : `in ${config.city} auf die Karte zu bringen?`}</span>
               </h2>
               <p className="font-body text-white/80 mt-6 max-w-xl m-0" style={{ fontSize: 17, lineHeight: 1.6 }}>
                 {locale === 'en' ? 'Reply within 24 hours. A tailored quote based on your campaign and target audience.' : 'Antwort innerhalb von 24 Stunden. Massgeschneiderte Offerte basierend auf deiner Kampagne und Zielgruppe.'}

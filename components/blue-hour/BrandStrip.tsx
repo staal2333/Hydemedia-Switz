@@ -1,49 +1,71 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLocale } from 'next-intl';
+import references from '@/data/references.json';
 
-interface Brand { name: string; logo?: string; }
+interface Brand {
+  name: string;
+  /** Null until a logo asset exists — the tile falls back to a wordmark. */
+  logo?: string | null;
+  /** Slug in cases.json when this brand has a published case study. */
+  caseSlug?: string | null;
+}
 
-const BRANDS: Brand[] = [
-  { name: 'Grand Casino Basel', logo: '/images/campaigns/grand-casino-basel.png' },
-  { name: 'EVO Fitness',      logo: '/images/campaigns/evo-fitness.png' },
-  { name: 'GoMore',          logo: '/images/campaigns/gomore.png' },
-  { name: 'Lidl',             logo: '/images/campaigns/lidl.png' },
-  { name: 'Saxo Bank',        logo: '/images/campaigns/saxo.png' },
-  { name: 'Fernet-Branca',    logo: '/images/campaigns/fernet-branca.png' },
-  { name: 'TV2',              logo: '/images/campaigns/tv2.png' },
-  { name: 'Vios',             logo: '/images/campaigns/vios.png' },
-  { name: 'OLC',              logo: '/images/campaigns/olc.png' },
-  { name: 'Jyllands-Posten',  logo: '/images/campaigns/jyllands-posten.png' },
-  { name: 'Information',      logo: '/images/campaigns/information.png' },
-  { name: 'Culture Works',    logo: '/images/campaigns/CW updated.png' },
-  { name: 'Sum-Up',           logo: '/images/campaigns/sum-up.svg' },
-  { name: 'Normal',           logo: '/images/campaigns/normal.png' },
-  { name: 'Venstre',          logo: '/images/campaigns/venstre.webp' },
-  { name: 'Tise',             logo: '/images/campaigns/tise.png' },
-  { name: 'Kragen Media',     logo: '/images/campaigns/Kragen media.png' },
-  { name: 'Orchestra',        logo: '/images/campaigns/orchestra.png' },
-];
+const BRANDS: Brand[] = references;
+
+const COPY = {
+  de: { section: 'Marken, die uns vertrauen', seeCase: (b: string) => `Referenz ansehen: ${b}` },
+  en: { section: 'Brands that trust us', seeCase: (b: string) => `See case: ${b}` },
+} as const;
+
+function Logo({ brand, onDusk }: { brand: Brand; onDusk: boolean }) {
+  if (!brand.logo) {
+    return (
+      <span
+        className={`font-display italic whitespace-nowrap ${onDusk ? 'text-white/85' : 'text-ink'}`}
+        style={{ fontSize: 24, opacity: 0.85 }}
+      >
+        {brand.name}
+      </span>
+    );
+  }
+  return (
+    <div className="relative" style={{ width: 130, height: 56 }}>
+      <Image
+        src={brand.logo}
+        alt={brand.name}
+        fill
+        sizes="130px"
+        className="object-contain opacity-90 transition-opacity group-hover/tile:opacity-100"
+      />
+    </div>
+  );
+}
 
 function Tile({ brand, onDusk = false }: { brand: Brand; onDusk?: boolean }) {
+  const locale = useLocale();
+  const shell = 'group/tile shrink-0 flex items-center justify-center mx-6 md:mx-10';
+  const style = { width: 160, height: 70 };
+
+  // Brands with a published case become a doorway into it; the rest stay static.
+  if (brand.caseSlug) {
+    return (
+      <Link
+        href={`/${locale}/cases/${brand.caseSlug}`}
+        aria-label={COPY[locale === 'en' ? 'en' : 'de'].seeCase(brand.name)}
+        className={`${shell} rounded-2xl transition-transform hover:-translate-y-0.5`}
+        style={style}
+      >
+        <Logo brand={brand} onDusk={onDusk} />
+      </Link>
+    );
+  }
+
   return (
-    <div className="shrink-0 flex items-center justify-center mx-6 md:mx-10" style={{ width: 160, height: 70 }}>
-      {brand.logo ? (
-        <div className="relative" style={{ width: 130, height: 56 }}>
-          <Image
-            src={brand.logo}
-            alt={brand.name}
-            fill
-            sizes="130px"
-            className="object-contain opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-      ) : (
-        <span className={`font-display italic whitespace-nowrap ${onDusk ? 'text-white/85' : 'text-ink'}`} style={{ fontSize: 24, opacity: 0.85 }}>
-          {brand.name}
-        </span>
-      )}
+    <div className={shell} style={style}>
+      <Logo brand={brand} onDusk={onDusk} />
     </div>
   );
 }
@@ -57,9 +79,13 @@ interface Props {
  * Brand carousel — two rows scrolling opposite directions.
  * Drops in either as a section between hero and §01 (default), or layered
  * inside the hero stage on the dusk gradient (`onDusk`).
+ *
+ * The brand list lives in data/references.json so the strip, the cases index
+ * and any future reference wall stay in sync from one source.
  */
 export default function BrandStrip({ onDusk = false }: Props) {
   const locale = useLocale();
+  const t = COPY[locale === 'en' ? 'en' : 'de'];
   const half = Math.ceil(BRANDS.length / 2);
   const rowA = BRANDS.slice(0, half);
   const rowB = BRANDS.slice(half);
@@ -70,7 +96,7 @@ export default function BrandStrip({ onDusk = false }: Props) {
 
   return (
     <section
-      aria-label={locale === 'en' ? 'Brands that trust us' : 'Marken, die uns vertrauen'}
+      aria-label={t.section}
       className={`relative overflow-hidden ${onDusk ? 'py-3' : 'py-8'}`}
       style={{ background: containerBg }}
     >

@@ -11,18 +11,13 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
   let title: string, description: string, keywords: string;
   if (isGerman) {
     title = 'Für Marken - Grossformat-Aussenwerbung Schweiz';
     description = 'Maximale Sichtbarkeit für Ihre Marke mit strategisch platzierten Bannern in Basel und der Schweiz. Premium-Standorte. Kostenloses Angebot anfordern.';
     keywords = 'Aussenwerbung Marken, Bannerwerbung Basel, Fassadenwerbung Schweiz, Grossformat Werbung, Produktlancierung Kampagne, Markenbekanntheit Schweiz';
-  } else if (isDanish) {
-    title = 'For Brands - Outdoor Reklame i Storformat Danmark';
-    description = 'Maksimal synlighed for dit brand med strategisk placerede bannere på Frederiksberg og gavlnetværk på Aarhus indfaldsveje. 7+ premium placeringer. Få gratis tilbud i dag.';
-    keywords = 'outdoor reklame brands, banner reklame frederiksberg, facade reklame aarhus, gavl reklame, storformat reklame, produktlancering kampagne, brand awareness danmark';
   } else {
     title = 'For Brands - Large-Format Outdoor Advertising';
     description = 'Maximum visibility for your brand with strategically placed banners at premium locations. Get a free quote today.';
@@ -37,17 +32,12 @@ export default async function BrandsPage({
 }: {
   params: { locale: string };
 }) {
-  const isGerman = locale === 'de';
-  const isDanish = locale === 'da';
+  const isGerman = locale !== 'en';
 
   const sdTitle = isGerman
     ? 'Aussenwerbung für Marken - Hyde Media'
-    : isDanish
-    ? 'Outdoor Reklame for Brands - Hyde Media'
     : 'Outdoor Advertising for Brands - Hyde Media';
   const sdDesc = isGerman
-    ? 'Professionelle Grossformat-Aussenwerbung. Premium-Standorte in Basel und der Schweiz. Kontakt: theodor.staal@hydemedia.ch, +41 77 233 81 21'
-    : isDanish
     ? 'Professionelle Grossformat-Aussenwerbung. Premium-Standorte in Basel und der Schweiz. Kontakt: theodor.staal@hydemedia.ch, +41 77 233 81 21'
     : 'Professional large-format outdoor advertising. Premium locations in Basel and Switzerland. Contact: theodor.staal@hydemedia.ch, +41 77 233 81 21';
 
