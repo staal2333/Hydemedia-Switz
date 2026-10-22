@@ -54,7 +54,7 @@ export const COMPANY: {
 } = {
   legalName: null,
   tradingName: 'Hyde Media',
-  uid: null,
+  uid: 'CHE-357.381.787',
   street: 'Marktgasse 8',
   postal: '4051 Basel',
   country: 'Schweiz',

@@ -59,7 +59,7 @@ export const privacy: LegalDocs = {
             'DSGVO: vorvertragliche Massnahmen, Art. 6 Abs. 1 lit. b, und berechtigtes Interesse an der Beantwortung von Anfragen, Art. 6 Abs. 1 lit. f.',
             'Aufbewahrung: so lange, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist. Soweit Unterlagen zu den Geschäftsbüchern oder Buchungsbelegen gehören, etwa Offerten, Aufträge und Rechnungen, bewahren wir sie während der gesetzlichen Frist von 10 Jahren auf (Art. 958f OR).',
           ] },
-          { p: '**Newsletter.** Wenn Sie sich für unseren Newsletter anmelden, bearbeiten wir Ihre E-Mail-Adresse, die Stelle auf der Website, an der Sie sich angemeldet haben, Ihre Sprache und Ihre IP-Adresse zum Zeitpunkt der Anmeldung. Der Versand erfolgt über Mailchimp (Intuit Inc., USA) im Double-Opt-in-Verfahren: Sie erhalten den Newsletter erst, nachdem Sie die Anmeldung über den Link in der Bestätigungs-E-Mail bestätigt haben. Ist Mailchimp nicht eingerichtet, wird Ihre Anmeldung per E-Mail an Hyde Media übermittelt. Sie können sich jederzeit über den Link in jedem Newsletter oder mit einer Nachricht an uns abmelden.' },
+          { p: '**Newsletter.** Wenn Sie sich für unseren Newsletter anmelden, bearbeiten wir Ihre E-Mail-Adresse, die Stelle auf der Website, an der Sie sich angemeldet haben, Ihre Sprache und Ihre IP-Adresse zum Zeitpunkt der Anmeldung. Ihre Anmeldung wird per E-Mail an Hyde Media übermittelt; wir nehmen Ihre Adresse anschliessend manuell in unseren Verteiler auf und bewahren die Anmeldung als Nachweis Ihrer Einwilligung auf. Sie können sich jederzeit über den Link in jedem Newsletter oder mit einer Nachricht an uns abmelden.' },
           { ul: [
             'Rechtsgrundlage: Ihre Einwilligung; DSGVO: Art. 6 Abs. 1 lit. a.',
             'Aufbewahrung: bis zu Ihrer Abmeldung.',
@@ -86,7 +86,6 @@ export const privacy: LegalDocs = {
           { ul: [
             '**Vercel Inc.** (USA) – Hosting der Website und cookiefreie Statistik (Vercel Web Analytics, Speed Insights). Die Serverfunktionen der Website, etwa für das Kontaktformular und die Newsletter-Anmeldung, laufen in Frankfurt (EU).',
             '**Google Ireland Limited / Google LLC** – Google Analytics, nur mit Ihrer Einwilligung.',
-            '**Intuit Inc. (Mailchimp)** (USA) – Versand des Newsletters und Verwaltung der Anmeldungen.',
           ] },
           { p: 'Darüber hinaus können Daten an Berater wie Treuhänder oder Anwälte weitergegeben werden, soweit dies erforderlich ist, sowie an Behörden, soweit wir gesetzlich dazu verpflichtet sind.' },
         ],
@@ -95,7 +94,7 @@ export const privacy: LegalDocs = {
         id: 'ausland',
         heading: '6. Bekanntgabe ins Ausland',
         blocks: [
-          { p: 'Vercel, Google und Intuit (Mailchimp) können Personendaten in den USA bearbeiten. Soweit der jeweilige Anbieter unter dem Swiss-U.S. Data Privacy Framework bzw. dem EU-U.S. Data Privacy Framework zertifiziert ist, stützt sich die Bekanntgabe auf die Feststellung eines angemessenen Datenschutzes durch den Bundesrat bzw. die EU-Kommission. Andernfalls stützt sie sich auf Standardvertragsklauseln.' },
+          { p: 'Vercel und Google können Personendaten in den USA bearbeiten. Soweit der jeweilige Anbieter unter dem Swiss-U.S. Data Privacy Framework bzw. dem EU-U.S. Data Privacy Framework zertifiziert ist, stützt sich die Bekanntgabe auf die Feststellung eines angemessenen Datenschutzes durch den Bundesrat bzw. die EU-Kommission. Andernfalls stützt sie sich auf Standardvertragsklauseln.' },
           { p: 'Die Serverfunktionen in Frankfurt befinden sich in der EU, die nach Schweizer Recht einen angemessenen Datenschutz gewährleistet.' },
         ],
       },
@@ -201,7 +200,7 @@ export const privacy: LegalDocs = {
             'GDPR: steps prior to entering into a contract, Article 6(1)(b), and our legitimate interest in answering enquiries, Article 6(1)(f).',
             'Retention: as long as needed to handle your enquiry. Where documents form part of our business records or accounting vouchers, such as quotes, orders and invoices, we keep them for the statutory 10 years (Art. 958f of the Swiss Code of Obligations, OR).',
           ] },
-          { p: '**Newsletter.** If you sign up for our newsletter, we process your email address, where on the website you signed up, your language and your IP address at the time of signup. The newsletter is sent through Mailchimp (Intuit Inc., USA) with double opt-in: you only receive it after confirming your signup through the link in the confirmation email. If Mailchimp is not set up, your signup is sent to Hyde Media by email. You can unsubscribe at any time through the link in every newsletter or by writing to us.' },
+          { p: '**Newsletter.** If you sign up for our newsletter, we process your email address, where on the website you signed up, your language and your IP address at the time of signup. Your signup is sent to Hyde Media by email; we then add your address to our mailing list by hand and keep the signup as a record of your consent. You can unsubscribe at any time through the link in every newsletter or by writing to us.' },
           { ul: [
             'Legal basis: your consent; GDPR: Article 6(1)(a).',
             'Retention: until you unsubscribe.',
@@ -228,7 +227,6 @@ export const privacy: LegalDocs = {
           { ul: [
             '**Vercel Inc.** (USA) — website hosting and cookieless statistics (Vercel Web Analytics, Speed Insights). The website’s server functions, for example for the contact form and newsletter signup, run in Frankfurt (EU).',
             '**Google Ireland Limited / Google LLC** — Google Analytics, only with your consent.',
-            '**Intuit Inc. (Mailchimp)** (USA) — sending the newsletter and managing signups.',
           ] },
           { p: 'Data may also be disclosed to advisers such as our fiduciary or lawyers where necessary, and to public authorities where we are legally required to.' },
         ],
@@ -237,7 +235,7 @@ export const privacy: LegalDocs = {
         id: 'transfers',
         heading: '6. Transfers abroad',
         blocks: [
-          { p: 'Vercel, Google and Intuit (Mailchimp) may process personal data in the United States. To the extent the provider is certified under the Swiss-U.S. Data Privacy Framework or the EU-U.S. Data Privacy Framework, the transfer relies on the finding of adequate data protection by the Swiss Federal Council or the European Commission respectively. Otherwise it relies on standard contractual clauses.' },
+          { p: 'Vercel and Google may process personal data in the United States. To the extent the provider is certified under the Swiss-U.S. Data Privacy Framework or the EU-U.S. Data Privacy Framework, the transfer relies on the finding of adequate data protection by the Swiss Federal Council or the European Commission respectively. Otherwise it relies on standard contractual clauses.' },
           { p: 'The server functions in Frankfurt are located in the EU, which provides adequate data protection under Swiss law.' },
         ],
       },

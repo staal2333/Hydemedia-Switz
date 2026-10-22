@@ -13,14 +13,19 @@ const C = COMPANY;
  * statutory rate (Art. 104 OR) and is therefore written into the text.
  */
 const P = {
-  offerDays: 14,
-  objectionHours: 48,
+  // Swiss offers are customarily valid for 30 days.
+  offerDays: 30,
+  objectionWorkingDays: 5,
   paymentDaysNet: 30,
-  moveWeeksBefore: 6,
-  cancel: { over8: 25, from4to8: 50, under4: 100 },
+  moveWeeksBefore: 8,
+  // Cancellation fee as a share of the media price, by weeks before start.
+  // A contractual penalty under Art. 160 ff. OR, which a court may reduce if
+  // excessive (Art. 163 Abs. 3 OR), so the steps are kept moderate.
+  cancel: { earlyWeeks: 12, lateWeeks: 6, early: 20, middle: 50, late: 100 },
   materialBusinessDays: 10,
-  complaintDays: 8,
-  absoluteComplaintMonths: 1,
+  // Notice of defects "sofort" in the sense of Art. 201 OR.
+  complaintWorkingDays: 5,
+  absoluteComplaintMonths: 3,
   outageDaysBeforeCompensation: 3,
   forceMajeureDays: 30,
 };
@@ -53,7 +58,7 @@ export const terms: LegalDocs = {
           { clauses: [
             { n: '2.1', text: `Offerten sind während ${P.offerDays} Tagen ab Ausstellung gültig, sofern in der Offerte nichts anderes steht. Standorte werden erst mit Vertragsschluss reserviert.` },
             { n: '2.2', text: 'Der Vertrag kommt zustande, wenn Hyde Media die schriftliche Annahme der Offerte durch den Auftraggeber erhält oder wenn Hyde Media eine erhaltene Bestellung mit einer Auftragsbestätigung bestätigt.' },
-            { n: '2.3', text: `Der Auftraggeber prüft die Auftragsbestätigung und meldet allfällige Einwände spätestens ${P.objectionHours} Stunden nach Erhalt. Danach ist die Auftragsbestätigung verbindlich.` },
+            { n: '2.3', text: `Der Auftraggeber prüft die Auftragsbestätigung und meldet allfällige Einwände spätestens ${P.objectionWorkingDays} Arbeitstage nach Erhalt. Danach ist die Auftragsbestätigung verbindlich.` },
           ] },
         ],
       },
@@ -88,7 +93,7 @@ export const terms: LegalDocs = {
           { clauses: [
             { n: '5.1', text: 'Ein bestätigter Auftrag ist für den Auftraggeber verbindlich.' },
             { n: '5.2', text: `Der Auftraggeber kann einmalig beantragen, die Kampagne in einen anderen Zeitraum zu verschieben, spätestens ${P.moveWeeksBefore} Wochen vor dem vereinbarten Kampagnenstart. Die Verschiebung setzt voraus, dass der Standort im gewünschten Zeitraum frei ist. Bereits angefallene oder verbindlich ausgelöste Kosten werden verrechnet.` },
-            { n: '5.3', text: `Annulliert der Auftraggeber einen bestätigten Auftrag, werden die bereits angefallenen oder verbindlich ausgelösten Kosten für Produktion und Bewilligungen sowie folgender Anteil des Mediapreises verrechnet: mehr als 8 Wochen vor Kampagnenstart ${P.cancel.over8} %, 4 bis 8 Wochen vorher ${P.cancel.from4to8} %, weniger als 4 Wochen vorher ${P.cancel.under4} %.` },
+            { n: '5.3', text: `Annulliert der Auftraggeber einen bestätigten Auftrag, werden die bereits angefallenen oder verbindlich ausgelösten Kosten für Produktion und Bewilligungen sowie folgender Anteil des Mediapreises verrechnet: mehr als ${P.cancel.earlyWeeks} Wochen vor Kampagnenstart ${P.cancel.early} %, ${P.cancel.lateWeeks} bis ${P.cancel.earlyWeeks} Wochen vorher ${P.cancel.middle} %, weniger als ${P.cancel.lateWeeks} Wochen vorher ${P.cancel.late} %.` },
             { n: '5.4', text: 'Annullierungen und Verschiebungen sind schriftlich mitzuteilen und werden mit dem Eingang der Mitteilung bei Hyde Media wirksam.' },
           ] },
         ],
@@ -144,8 +149,8 @@ export const terms: LegalDocs = {
         heading: '10. Mängelrüge',
         blocks: [
           { clauses: [
-            { n: '10.1', text: `Der Auftraggeber rügt Mängel schriftlich innert ${P.complaintDays} Tagen, nachdem er sie entdeckt hat oder hätte entdecken müssen.` },
-            { n: '10.2', text: `Ansprüche aus Mängeln sind in jedem Fall spätestens ${P.absoluteComplaintMonths} Monat nach Ende der Kampagne geltend zu machen.` },
+            { n: '10.1', text: `Der Auftraggeber rügt Mängel sofort, spätestens innert ${P.complaintWorkingDays} Arbeitstagen, schriftlich, nachdem er sie entdeckt hat oder hätte entdecken müssen (Art. 201 OR).` },
+            { n: '10.2', text: `Ansprüche aus Mängeln sind in jedem Fall spätestens ${P.absoluteComplaintMonths} Monate nach Ende der Kampagne geltend zu machen.` },
             { n: '10.3', text: 'Eine Mängelrüge berechtigt nicht dazu, Zahlungen für Teile des Auftrags zurückzubehalten, die von der Rüge nicht betroffen sind.' },
             { n: '10.4', text: 'Bei einer berechtigten Mängelrüge kann Hyde Media wählen, ob sie den Mangel behebt, die Kampagne verlängert, eine gleichwertige Leistung erbringt oder den Preis anteilmässig reduziert.' },
           ] },
@@ -261,7 +266,7 @@ export const terms: LegalDocs = {
           { clauses: [
             { n: '2.1', text: `Quotes are valid for ${P.offerDays} days from issue unless stated otherwise. Placements are only reserved once an agreement is formed.` },
             { n: '2.2', text: 'An agreement is formed when Hyde Media receives the Advertiser’s written acceptance, or when Hyde Media sends an order confirmation for an order received.' },
-            { n: '2.3', text: `The Advertiser must check the order confirmation and raise any objections within ${P.objectionHours} hours of receipt. After that, the order confirmation is binding.` },
+            { n: '2.3', text: `The Advertiser must check the order confirmation and raise any objections within ${P.objectionWorkingDays} working days of receipt. After that, the order confirmation is binding.` },
           ] },
         ],
       },
@@ -296,7 +301,7 @@ export const terms: LegalDocs = {
           { clauses: [
             { n: '5.1', text: 'A confirmed order is binding on the Advertiser.' },
             { n: '5.2', text: `The Advertiser may request to move the campaign to another period once, no later than ${P.moveWeeksBefore} weeks before the agreed start. Moving requires the placement to be available in the requested period. Costs already incurred or committed are invoiced.` },
-            { n: '5.3', text: `If the Advertiser cancels a confirmed order, costs already incurred or committed for production and permits are invoiced, together with the following share of the media price: more than 8 weeks before start: ${P.cancel.over8}%; 4–8 weeks before: ${P.cancel.from4to8}%; less than 4 weeks before: ${P.cancel.under4}%.` },
+            { n: '5.3', text: `If the Advertiser cancels a confirmed order, costs already incurred or committed for production and permits are invoiced, together with the following share of the media price: more than ${P.cancel.earlyWeeks} weeks before start: ${P.cancel.early}%; ${P.cancel.lateWeeks}–${P.cancel.earlyWeeks} weeks before: ${P.cancel.middle}%; less than ${P.cancel.lateWeeks} weeks before: ${P.cancel.late}%.` },
             { n: '5.4', text: 'Cancellation and moving must be made in writing and take effect when Hyde Media receives the notice.' },
           ] },
         ],
@@ -352,8 +357,8 @@ export const terms: LegalDocs = {
         heading: '10. Complaints',
         blocks: [
           { clauses: [
-            { n: '10.1', text: `The Advertiser must notify defects in writing within ${P.complaintDays} days of discovering, or when it ought to have discovered, the defect.` },
-            { n: '10.2', text: `Claims for defects must in any event be made no later than ${P.absoluteComplaintMonths} month after the campaign ends.` },
+            { n: '10.1', text: `The Advertiser must notify defects in writing immediately, and at the latest within ${P.complaintWorkingDays} working days, after discovering, or when it ought to have discovered, the defect (Art. 201 CO).` },
+            { n: '10.2', text: `Claims for defects must in any event be made no later than ${P.absoluteComplaintMonths} months after the campaign ends.` },
             { n: '10.3', text: 'A complaint does not entitle the Advertiser to withhold payment for parts of the order not covered by it.' },
             { n: '10.4', text: 'For a justified complaint, Hyde Media may choose to remedy the defect, extend the campaign, deliver an equivalent service or give a proportionate price reduction.' },
           ] },

@@ -15,9 +15,8 @@ const COPY = {
     placeholder: 'name@firma.ch',
     send: 'Anmelden',
     sending: 'Wird angemeldet…',
-    legalA: 'Sie erhalten eine E-Mail, mit der Sie die Anmeldung bestätigen. Wie wir Ihre E-Mail-Adresse bearbeiten, lesen Sie in unserer ',
+    legalA: 'Mit der Anmeldung willigen Sie ein, dass wir Ihnen E-Mails zu neuen Standorten senden. Wie wir Ihre E-Mail-Adresse bearbeiten, lesen Sie in unserer ',
     legalLink: 'Datenschutzerklärung',
-    doneTitle: 'Fast geschafft',
     thanks: 'Danke',
     network: 'Die Anmeldung ist fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.',
   },
@@ -29,9 +28,8 @@ const COPY = {
     placeholder: 'name@company.com',
     send: 'Sign up',
     sending: 'Signing up…',
-    legalA: 'You will get an email to confirm your signup. Read how we handle your email in our ',
+    legalA: 'By signing up you agree that we may email you about new placements. Read how we handle your email in our ',
     legalLink: 'privacy policy',
-    doneTitle: 'Almost done',
     thanks: 'Thank you',
     network: 'Signup failed. Check your connection and try again.',
   },
@@ -40,7 +38,7 @@ const COPY = {
 export type NewsletterVariant = 'card' | 'footer' | 'compact';
 
 interface Props {
-  /** Where the form sits; becomes a Mailchimp tag, e.g. "blog" or "placement:riehenring-141". */
+  /** Where the form sits; included in the signup mail to the team, e.g. "blog" or "placement:riehenring-141". */
   source: string;
   variant?: NewsletterVariant;
   /** Override the default headline and body for a specific context. */
@@ -51,9 +49,8 @@ interface Props {
 }
 
 /**
- * Newsletter signup with double opt-in. Submitting creates a pending contact in
- * Mailchimp, which then sends the confirmation email; nothing is sent to the
- * visitor until they click it. The form states that plainly, so the consent
+ * Newsletter signup. Submitting mails the address to the team, who add it to
+ * the list by hand. The form states what the visitor agrees to, so the consent
  * is informed.
  */
 export default function NewsletterSignup({ source, variant = 'card', title, body, onDone }: Props) {
@@ -62,8 +59,6 @@ export default function NewsletterSignup({ source, variant = 'card', title, body
   const t = COPY[lang];
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
   const [message, setMessage] = useState('');
-  // "pending" means a confirmation mail is on its way; anything else is final.
-  const [awaitingConfirm, setAwaitingConfirm] = useState(true);
 
   const dark = variant === 'footer';
   const compact = variant === 'compact';
@@ -86,7 +81,6 @@ export default function NewsletterSignup({ source, variant = 'card', title, body
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data?.error || t.network);
       setMessage(data.message);
-      setAwaitingConfirm(data.status === 'pending');
       setStatus('done');
       markSubscribed();
       track('sign_up', { method: 'newsletter', source });
@@ -110,7 +104,7 @@ export default function NewsletterSignup({ source, variant = 'card', title, body
   if (status === 'done') {
     return (
       <div role="status" className={compact ? '' : 'py-2'}>
-        <div className={`font-ui font-semibold text-[10px] tracking-[0.24em] uppercase mb-2 ${text.eyebrow}`}>{awaitingConfirm ? t.doneTitle : t.thanks}</div>
+        <div className={`font-ui font-semibold text-[10px] tracking-[0.24em] uppercase mb-2 ${text.eyebrow}`}>{t.thanks}</div>
         <p className={`font-display m-0 ${text.title}`} style={{ fontSize: compact ? 20 : 26, lineHeight: 1.2, letterSpacing: '-0.02em' }}>
           {message}
         </p>
