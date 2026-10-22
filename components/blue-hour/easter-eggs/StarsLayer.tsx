@@ -1,6 +1,13 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useLocale } from 'next-intl';
+import { useEggsOptional } from './EasterEggsProvider';
+
+const COPY = {
+  de: { star: 'Auf Stern klicken' },
+  en: { star: 'Click the star' },
+} as const;
 
 interface Star {
   id: number;
@@ -38,8 +45,14 @@ interface ConstellationPoint { id: number; x: number; y: number }
  * connecting them with thin glowing lines. Click anywhere else to clear.
  */
 export default function StarsLayer() {
+  const locale = useLocale();
+  const t = COPY[locale === 'en' ? 'en' : 'de'];
   const [falling, setFalling] = useState<FallingStar[]>([]);
   const [picked, setPicked] = useState<ConstellationPoint[]>([]);
+  const { markFound } = useEggsOptional();
+
+  // Three stars make a constellation: that counts as a secret found.
+  useEffect(() => { if (picked.length === 3) markFound('stars'); }, [picked, markFound]);
 
   const onStarClick = useCallback((s: Star, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -71,7 +84,7 @@ export default function StarsLayer() {
         <button
           key={s.id}
           onClick={(e) => onStarClick(s, e)}
-          aria-label="Auf Stern klicken"
+          aria-label={t.star}
           className="absolute rounded-full pointer-events-auto cursor-pointer hover:scale-150 transition-transform"
           style={{
             left: `${s.x}%`,

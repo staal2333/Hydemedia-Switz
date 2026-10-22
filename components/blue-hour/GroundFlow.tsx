@@ -64,6 +64,9 @@ export default function GroundFlow({ children }: { children: ReactNode }) {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-[35%] opacity-[0.18] mix-blend-multiply"
         style={{
+          // Fade the speckle in, or its top edge shows as a line across the page.
+          WebkitMaskImage: 'linear-gradient(180deg, transparent 0%, #000 40%)',
+          maskImage: 'linear-gradient(180deg, transparent 0%, #000 40%)',
           backgroundImage:
             "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='turbulence' baseFrequency='1.6' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E\")",
         }}

@@ -37,9 +37,11 @@ function Streetlight({ side, top }: LightProps) {
     <div
       id={`streetlight-${side}-${top}`}
       aria-hidden
-      className="absolute pointer-events-none"
+      // Only in the page gutters, never over content: shown once the gutter
+      // beside the 1344px content column is wide enough for a lamp.
+      className="absolute pointer-events-none hidden min-[1520px]:block"
       style={{
-        [side]: '4%',
+        [side]: 'max(8px, calc((100vw - 1344px) / 4 - 30px))',
         top,
         height: 220,
         width: 60,

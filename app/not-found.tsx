@@ -1,67 +1,88 @@
 import Link from 'next/link';
-import { Home } from 'lucide-react';
+import { TowedBanner } from '@/components/blue-hour/OutdoorMarquee';
 
+const STARS = [
+  [8, 12, 1.5], [17, 26, 1], [24, 9, 2], [36, 18, 1], [47, 7, 1.5], [58, 22, 1],
+  [66, 11, 2], [74, 27, 1], [83, 8, 1.5], [91, 19, 1], [12, 38, 1], [79, 40, 1],
+] as const;
+
+/**
+ * 404: lost in the city at blue hour. The banner plane flies past with the
+ * news, and the way home is right below.
+ */
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-      {/* Sky gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-sky-100 via-blue-50 to-sky-100" />
-      <div className="absolute top-20 right-1/4 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-sky-100/40 rounded-full blur-3xl" />
+    <div
+      className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center px-6 text-white"
+      style={{ background: 'linear-gradient(180deg, #162a47 0%, #1f3a5f 18%, #2f578c 40%, #4a7bb5 62%, #7da8d1 82%, #a4c1de 100%)' }}
+    >
+      {/* Stars and moon */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        {STARS.map(([x, y, s], i) => (
+          <span
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              left: `${x}%`,
+              top: `${y}%`,
+              width: s * 2,
+              height: s * 2,
+              background: '#ffecc8',
+              boxShadow: `0 0 ${s * 4}px #ffecc8`,
+              animation: `star-twinkle ${4 + (i % 3)}s ease-in-out ${i * 0.4}s infinite`,
+            }}
+          />
+        ))}
+        <span
+          className="absolute rounded-full"
+          style={{ top: '9%', left: '7%', width: 32, height: 32, boxShadow: 'inset -7px 3px 0 0 #ffecc8', transform: 'rotate(-18deg)', filter: 'drop-shadow(0 0 10px rgba(255,236,200,0.55))' }}
+        />
+      </div>
 
-      <div className="max-w-2xl text-center relative z-10">
-        {/* Large 404 */}
-        <h1 className="text-9xl md:text-[12rem] font-bold text-slate-900 mb-4 leading-none">
-          404
-        </h1>
-
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-          Seite nicht gefunden
-        </h2>
-
-        <p className="text-lg text-slate-600 mb-12 leading-relaxed">
-          Die gesuchte Seite existiert nicht oder wurde verschoben.
-        </p>
-
-        {/* Action buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-slate-900 text-white font-semibold hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-lg"
-          >
-            <Home className="h-5 w-5" />
-            Zur Startseite
-          </Link>
-
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-slate-900 text-slate-900 font-semibold hover:bg-slate-900 hover:text-white hover:-translate-y-0.5 transition-all"
-          >
-            Kontakt
-          </Link>
-        </div>
-
-        {/* Helpful links */}
-        <div className="mt-12 pt-8 border-t border-slate-200">
-          <p className="text-sm text-slate-500 mb-4">Vielleicht finden Sie es hier:</p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link href="/services" className="text-slate-600 hover:text-slate-900 transition-colors">
-              Lösungen
-            </Link>
-            <span className="text-slate-300">•</span>
-            <Link href="/partners" className="text-slate-600 hover:text-slate-900 transition-colors">
-              Partner
-            </Link>
-            <span className="text-slate-300">•</span>
-            <Link href="/cases" className="text-slate-600 hover:text-slate-900 transition-colors">
-              Referenzen
-            </Link>
-            <span className="text-slate-300">•</span>
-            <Link href="/about" className="text-slate-600 hover:text-slate-900 transition-colors">
-              Über uns
-            </Link>
+      {/* The plane brings the news */}
+      <div aria-hidden className="plane-lane pointer-events-none absolute inset-x-0 top-[18%] h-[90px] overflow-hidden">
+        <div className="plane-cross absolute left-0 top-6" style={{ animation: 'plane-cross 26s linear infinite' }}>
+          <div style={{ animation: 'plane-bob 7s ease-in-out infinite' }}>
+            <TowedBanner text="404 · SEITE NICHT GEFUNDEN" />
           </div>
         </div>
+      </div>
+
+      <div className="relative z-10 max-w-2xl text-center mt-24">
+        <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/70 inline-block mb-6">§ 404</span>
+        <h1
+          className="font-display font-normal text-white m-0 mb-5"
+          style={{ fontSize: 'clamp(44px, 7vw, 96px)', lineHeight: 0.98, letterSpacing: '-0.03em', textShadow: '0 2px 24px rgba(14,30,51,0.25)' }}
+        >
+          Verlaufen <span className="italic text-cream whitespace-nowrap">in der Stadt.</span>
+        </h1>
+        <p className="font-body text-white/90 m-0 mb-2" style={{ fontSize: 'clamp(16px, 1.4vw, 19px)', lineHeight: 1.6 }}>
+          Diese Seite gibt es nicht, oder sie ist umgezogen.
+        </p>
+        <p className="font-body text-white/65 text-[14px] m-0 mb-10">This page does not exist or has moved.</p>
+
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <Link
+            href="/de"
+            className="inline-flex justify-center items-center gap-3 px-7 py-4 rounded-full bg-cream text-dusk font-ui font-semibold text-[12px] uppercase tracking-[0.1em] hover:bg-glow transition-colors"
+          >
+            Zur Startseite →
+          </Link>
+          <Link
+            href="/de/standorte"
+            className="inline-flex justify-center items-center gap-3 px-7 py-4 rounded-full border border-white/40 text-white font-ui font-semibold text-[12px] uppercase tracking-[0.1em] hover:bg-white/10 transition-colors"
+          >
+            Standorte ansehen
+          </Link>
+        </div>
+
+        <nav aria-label="Abkürzungen" className="mt-12 flex flex-wrap justify-center gap-x-5 gap-y-2 font-ui text-[13px] text-white/80">
+          <Link href="/de/scaffolding" className="hover:text-white">Gerüstwerbung</Link>
+          <Link href="/de/facade" className="hover:text-white">Fassadenwerbung</Link>
+          <Link href="/de/blog" className="hover:text-white">Wissen</Link>
+          <Link href="/de/contact" className="hover:text-white">Kontakt</Link>
+          <Link href="/en" className="hover:text-white">English</Link>
+        </nav>
       </div>
     </div>
   );

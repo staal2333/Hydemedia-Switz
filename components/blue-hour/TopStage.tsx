@@ -1,14 +1,12 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
+import { useLocale } from 'next-intl';
 import StarsLayer from './easter-eggs/StarsLayer';
-import { useEasterEggs } from './easter-eggs/EasterEggsProvider';
+import SkyLife from './easter-eggs/SkyLife';
+import { Aurora, DanishBalloon, DanishMoment, Fireworks, HorizonMist, MoonPhase, Snowfall } from './easter-eggs/SkyExtras';
+import { DUSK_GRADIENTS, useEasterEggs } from './easter-eggs/EasterEggsProvider';
 
-const DUSK_GRADIENTS = {
-  'blue-hour': 'linear-gradient(180deg, #162a47 0%, #1f3a5f 14%, #2f578c 30%, #4a7bb5 48%, #7da8d1 66%, #a4c1de 84%, #c6d8e8 100%)',
-  'daylight':  'linear-gradient(180deg, #6aa6d6 0%, #92c1e2 35%, #cfe1ef 65%, #c6d8e8 100%)',
-  'midnight':  'linear-gradient(180deg, #050c1a 0%, #0b1d35 25%, #1f3a5f 55%, #3b6699 85%, #c6d8e8 100%)',
-};
 
 /**
  * Blue Hour top stage — twilight gradient with stars, moon, clouds, wind,
@@ -16,7 +14,11 @@ const DUSK_GRADIENTS = {
  * on duskMode (Konami code cycles it).
  */
 export default function TopStage({ children }: { children: ReactNode }) {
-  const { duskMode, cursor } = useEasterEggs();
+  const { duskMode, cursor, cycleDusk, danishAt, fireworksAt, markFound } = useEasterEggs();
+  const locale = useLocale();
+  // Snow in December. Decided after mount so server and client agree.
+  const [december, setDecember] = useState(false);
+  useEffect(() => setDecember(new Date().getMonth() === 11), []);
 
   // Cursor parallax — clouds drift slightly toward cursor
   const cx = (cursor.x - 0.5) * 20;
@@ -24,7 +26,7 @@ export default function TopStage({ children }: { children: ReactNode }) {
 
   return (
     <div
-      className="relative overflow-hidden text-white pb-24 transition-[background] duration-700"
+      className="relative isolate overflow-hidden text-white pb-24 transition-[background] duration-700"
       style={{ background: DUSK_GRADIENTS[duskMode] }}
     >
       {/* Warm/cool radial glow accents */}
@@ -49,20 +51,21 @@ export default function TopStage({ children }: { children: ReactNode }) {
       {/* Clickable stars + falling-star + constellation */}
       <StarsLayer />
 
-      {/* Crescent moon */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute"
-        style={{
-          top: '8%',
-          left: '6%',
-          width: 32,
-          height: 32,
-          borderRadius: '50%',
-          background: 'radial-gradient(circle at 35% 35%, rgba(255,236,200,0.85) 0%, rgba(255,236,200,0.4) 50%, transparent 70%)',
-          boxShadow: '0 0 24px rgba(255,236,200,0.4)',
-        }}
-      />
+      {/* The moon as it is tonight. Click it to turn the clock: blue hour → day → midnight. */}
+      <MoonPhase locale={locale} onClick={() => { cycleDusk(); markFound('moon'); }} daylight={duskMode === 'daylight'} />
+
+      {/* Mist and city glow on the horizon and, after midnight, northern lights — behind everything */}
+      <HorizonMist duskMode={duskMode} />
+      <Aurora visible={duskMode === 'midnight'} />
+
+      {/* A balloon from our Danish office; type "hygge" for a closer look */}
+      <DanishBalloon locale={locale} />
+      <DanishMoment at={danishAt} locale={locale} />
+      <Snowfall active={december} />
+      <Fireworks at={fireworksAt} />
+
+      {/* Gulls, a meteor now and then */}
+      <SkyLife />
 
       {/* Wind streaks */}
       <div
@@ -95,6 +98,14 @@ export default function TopStage({ children }: { children: ReactNode }) {
       />
 
       {children}
+
+      {/* Seamless hand-off: the glow and grain above tint the last pixels, so
+          fade back to the exact colour GroundFlow starts with. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24"
+        style={{ background: 'linear-gradient(180deg, rgba(198,216,232,0) 0%, #c6d8e8 100%)' }}
+      />
     </div>
   );
 }
