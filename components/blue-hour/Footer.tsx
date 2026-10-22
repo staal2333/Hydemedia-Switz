@@ -144,7 +144,10 @@ export default function BlueHourFooter() {
 
           <div>
             <h5 className={headCls}>{t.contact}</h5>
-            <a href={`mailto:${COMPANY.email}`} className={`${linkCls} break-all`}>{COMPANY.email}</a>
+            {/* Breaks after the @ in a narrow column, never inside the domain. */}
+            <a href={`mailto:${COMPANY.email}`} className={linkCls}>
+              {COMPANY.email.split('@')[0]}@<wbr />{COMPANY.email.split('@')[1]}
+            </a>
             <a href={`tel:${COMPANY.phone.replace(/\s/g, '')}`} className={linkCls}>{COMPANY.phone}</a>
             <Link href={`/${locale}/contact`} className={linkCls}>{t.contactForm}</Link>
           </div>

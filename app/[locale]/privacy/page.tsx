@@ -1,10 +1,8 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
+import LegalDocument from '@/components/legal/LegalDocument';
+import { privacy } from '@/content/legal/privacy';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
-import DuskHero from '@/components/blue-hour/DuskHero';
-import GroundFlow from '@/components/blue-hour/GroundFlow';
-
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params: { locale },
@@ -12,108 +10,22 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const isGerman = locale !== 'en';
-
-  let title: string, description: string, keywords: string;
-  if (isGerman) {
-    title = 'Datenschutzerklärung';
-    description = 'Erfahren Sie, wie Hyde Media Ihre Personendaten bearbeitet und schützt, gemäss dem Schweizer Datenschutzgesetz (DSG) und, wo anwendbar, der DSGVO.';
-    keywords = 'Datenschutzerklärung, Datenschutz, DSG, DSGVO, Personendaten';
-  } else {
-    title = 'Privacy Policy';
-    description = 'Learn how Hyde Media processes and protects your personal data under the Swiss Federal Act on Data Protection (FADP) and, where applicable, the GDPR.';
-    keywords = 'privacy policy, data protection, FADP, GDPR, personal data';
-  }
-
-  return generateSEOMetadata({ title, description, keywords, path: '/privacy', locale });
+  return generateSEOMetadata({
+    title: isGerman ? 'Datenschutzerklärung' : 'Privacy policy',
+    description: isGerman
+      ? 'Wie Hyde Media Personendaten bearbeitet: Zwecke, Empfänger, Aufbewahrung und Ihre Rechte nach dem Schweizer Datenschutzgesetz (DSG) und der DSGVO.'
+      : 'How Hyde Media processes personal data: purposes, recipients, retention and your rights under the Swiss FADP and the GDPR.',
+    keywords: isGerman ? 'Datenschutzerklärung, DSG, DSGVO, Personendaten, Hyde Media' : 'privacy policy, FADP, GDPR, personal data, Hyde Media',
+    path: '/privacy',
+    locale,
+  });
 }
 
-export default async function PrivacyPage({
+export default function PrivacyPage({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
-  const t = await getTranslations({ locale, namespace: 'legal.privacy' });
-
-  return (
-    <div className="relative">
-      <DuskHero>
-        <div className="shell">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="font-ui font-medium text-[11px] tracking-[0.3em] uppercase text-white/65 inline-block mb-6">§ {locale === 'en' ? 'Privacy' : 'Datenschutz'}</span>
-            <h1
-              className="font-display font-normal text-white m-0 mb-4"
-              style={{ fontSize: 'clamp(36px, 5vw, 80px)', letterSpacing: '-0.03em', lineHeight: 1, textShadow: '0 2px 24px rgba(14,30,51,0.2)' }}
-            >
-              {t('title')}
-            </h1>
-            <p className="font-mono text-[12px] tracking-[0.18em] uppercase text-white/55 m-0">
-              {t('lastUpdated')}
-            </p>
-          </div>
-        </div>
-      </DuskHero>
-
-      <GroundFlow>
-        <article className="py-20">
-          <div className="shell">
-            <div className="max-w-3xl mx-auto prose prose-slate prose-headings:font-display prose-headings:font-normal prose-headings:tracking-tight prose-h2:text-[clamp(24px,3vw,36px)] prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-[20px] prose-h3:mt-6 prose-h3:mb-2 prose-p:text-ink-soft prose-p:leading-relaxed prose-li:text-ink-soft">
-              <h2>{t('sections.introduction.title')}</h2>
-              <p>{t('sections.introduction.content')}</p>
-
-              <h2>{t('sections.dataCollection.title')}</h2>
-              <h3>{t('sections.dataCollection.personalData.title')}</h3>
-              <ul>
-                <li>{t('sections.dataCollection.personalData.items.0')}</li>
-                <li>{t('sections.dataCollection.personalData.items.1')}</li>
-                <li>{t('sections.dataCollection.personalData.items.2')}</li>
-              </ul>
-              <h3>{t('sections.dataCollection.usageData.title')}</h3>
-              <ul>
-                <li>{t('sections.dataCollection.usageData.items.0')}</li>
-                <li>{t('sections.dataCollection.usageData.items.1')}</li>
-                <li>{t('sections.dataCollection.usageData.items.2')}</li>
-              </ul>
-
-              <h2>{t('sections.dataUsage.title')}</h2>
-              <ul>
-                <li>{t('sections.dataUsage.items.0')}</li>
-                <li>{t('sections.dataUsage.items.1')}</li>
-                <li>{t('sections.dataUsage.items.2')}</li>
-                <li>{t('sections.dataUsage.items.3')}</li>
-              </ul>
-
-              <h2>{t('sections.dataSharing.title')}</h2>
-              <p>{t('sections.dataSharing.intro')}</p>
-              <ul>
-                <li>{t('sections.dataSharing.items.0')}</li>
-                <li>{t('sections.dataSharing.items.1')}</li>
-              </ul>
-
-              <h2>{t('sections.dataSecurity.title')}</h2>
-              <p>{t('sections.dataSecurity.content')}</p>
-
-              <h2>{t('sections.gdprRights.title')}</h2>
-              <p>{t('sections.gdprRights.intro')}</p>
-              <ul>
-                <li>{t('sections.gdprRights.items.0')}</li>
-                <li>{t('sections.gdprRights.items.1')}</li>
-                <li>{t('sections.gdprRights.items.2')}</li>
-                <li>{t('sections.gdprRights.items.3')}</li>
-                <li>{t('sections.gdprRights.items.4')}</li>
-              </ul>
-
-              <h2>{t('sections.cookies.title')}</h2>
-              <p>{t('sections.cookies.content')}</p>
-
-              <h2>{t('sections.contact.title')}</h2>
-              <p dangerouslySetInnerHTML={{ __html: t.raw('sections.contact.content') }} />
-
-              <h2>{t('sections.changes.title')}</h2>
-              <p>{t('sections.changes.content')}</p>
-            </div>
-          </div>
-        </article>
-      </GroundFlow>
-    </div>
-  );
+  unstable_setRequestLocale(locale);
+  return <LegalDocument doc={privacy[locale === 'en' ? 'en' : 'de']} />;
 }
