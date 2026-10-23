@@ -2,91 +2,96 @@
   {
     "name": "Grand Casino Basel",
     "logo": "/images/campaigns/grand-casino-basel.png",
-    "caseSlug": "grand-casino-basel-riehenring"
+    "caseSlug": "grand-casino-basel-riehenring",
+    "ratio": 1.648,
+    "scale": 1.35
   },
   {
     "name": "EVO Fitness",
     "logo": "/images/campaigns/evo-fitness.png",
-    "caseSlug": "evo-fitness-basel-burgfelderstrasse"
+    "caseSlug": "evo-fitness-basel-burgfelderstrasse",
+    "ratio": 3.754
   },
   {
     "name": "GoMore",
     "logo": "/images/campaigns/gomore.png",
-    "caseSlug": "gomore-urban-mobility"
+    "caseSlug": "gomore-urban-mobility",
+    "ratio": 0.934
   },
   {
     "name": "Lidl",
     "logo": "/images/campaigns/lidl.png",
-    "caseSlug": "lidl-20-years-celebration"
+    "caseSlug": "lidl-20-years-celebration",
+    "ratio": 1.0,
+    "scale": 0.85
   },
   {
     "name": "Saxo Bank",
     "logo": "/images/campaigns/saxo.png",
-    "caseSlug": "saxo-bank-investment-platform"
+    "caseSlug": "saxo-bank-investment-platform",
+    "ratio": 2.264
   },
   {
     "name": "Fernet-Branca",
     "logo": "/images/campaigns/fernet-branca.png",
-    "caseSlug": "fernet-branca-summer-festival"
+    "caseSlug": "fernet-branca-summer-festival",
+    "ratio": 0.994,
+    "scale": 1.3
   },
   {
     "name": "TV2",
     "logo": "/images/campaigns/tv2.png",
-    "caseSlug": null
-  },
-  {
-    "name": "Vios",
-    "logo": "/images/campaigns/vios.png",
-    "caseSlug": null
-  },
-  {
-    "name": "OLC",
-    "logo": "/images/campaigns/olc.png",
-    "caseSlug": "olc-brand-awareness"
+    "caseSlug": null,
+    "ratio": 2.239
   },
   {
     "name": "Jyllands-Posten",
     "logo": "/images/campaigns/jyllands-posten.png",
-    "caseSlug": null
+    "caseSlug": null,
+    "ratio": 8.421
   },
   {
     "name": "Information",
     "logo": "/images/campaigns/information.png",
-    "caseSlug": null
+    "caseSlug": null,
+    "ratio": 5.825
   },
   {
     "name": "Culture Works",
     "logo": "/images/campaigns/CW updated.png",
-    "caseSlug": null
+    "caseSlug": null,
+    "ratio": 2.465
   },
   {
     "name": "Sum-Up",
     "logo": "/images/campaigns/sum-up.svg",
-    "caseSlug": null
+    "caseSlug": null,
+    "ratio": 3.311
   },
   {
     "name": "Normal",
     "logo": "/images/campaigns/normal.png",
-    "caseSlug": null
-  },
-  {
-    "name": "Venstre",
-    "logo": "/images/campaigns/venstre.webp",
-    "caseSlug": null
+    "caseSlug": null,
+    "ratio": 2.412
   },
   {
     "name": "Tise",
     "logo": "/images/campaigns/tise.png",
-    "caseSlug": null
+    "caseSlug": null,
+    "ratio": 1.0,
+    "scale": 0.85
   },
   {
     "name": "Kragen Media",
     "logo": "/images/campaigns/Kragen media.png",
-    "caseSlug": null
+    "caseSlug": null,
+    "ratio": 1.669
   },
   {
     "name": "Orchestra",
     "logo": "/images/campaigns/orchestra.png",
-    "caseSlug": null
+    "caseSlug": null,
+    "ratio": 0.883,
+    "scale": 0.85
   }
 ]

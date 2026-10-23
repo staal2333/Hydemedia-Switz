@@ -11,6 +11,27 @@ interface Brand {
   logo?: string | null;
   /** Slug in cases.json when this brand has a published case study. */
   caseSlug?: string | null;
+  /** Width / height of the logo artwork, trimmed of empty margins. */
+  ratio?: number;
+  /** Optical correction for artwork that reads heavier or lighter than its area. */
+  scale?: number;
+}
+
+/**
+ * Every logo gets the same visual area rather than the same box, so a long
+ * wordmark and a square badge read as equally large. Height and width caps
+ * stop the extremes from growing past the tile.
+ */
+const LOGO_AREA = 2900;
+const MAX_H = 54;
+const MAX_W = 160;
+
+function logoSize(ratio = 2.3, scale = 1) {
+  let w = Math.sqrt(LOGO_AREA * ratio) * scale;
+  let h = w / ratio;
+  if (h > MAX_H * scale) { h = MAX_H * scale; w = h * ratio; }
+  if (w > MAX_W) { w = MAX_W; h = w / ratio; }
+  return { width: Math.round(w), height: Math.round(h) };
 }
 
 const BRANDS: Brand[] = references;
@@ -31,13 +52,14 @@ function Logo({ brand, onDusk }: { brand: Brand; onDusk: boolean }) {
       </span>
     );
   }
+  const size = logoSize(brand.ratio, brand.scale);
   return (
-    <div className="relative" style={{ width: 130, height: 56 }}>
+    <div className="relative" style={size}>
       <Image
         src={brand.logo}
         alt={brand.name}
         fill
-        sizes="130px"
+        sizes={`${size.width}px`}
         className="object-contain opacity-90 transition-opacity group-hover/tile:opacity-100"
       />
     </div>
@@ -47,7 +69,7 @@ function Logo({ brand, onDusk }: { brand: Brand; onDusk: boolean }) {
 function Tile({ brand, onDusk = false }: { brand: Brand; onDusk?: boolean }) {
   const locale = useLocale();
   const shell = 'group/tile shrink-0 flex items-center justify-center mx-6 md:mx-10';
-  const style = { width: 160, height: 70 };
+  const style = { width: MAX_W, height: 76 };
 
   // Brands with a published case become a doorway into it; the rest stay static.
   if (brand.caseSlug) {
@@ -87,8 +109,10 @@ export default function BrandStrip({ onDusk = false }: Props) {
   const locale = useLocale();
   const t = COPY[locale === 'en' ? 'en' : 'de'];
   const half = Math.ceil(BRANDS.length / 2);
-  const rowA = BRANDS.slice(0, half);
-  const rowB = BRANDS.slice(half);
+  // Each row is doubled once more so that half of the looping track (what the
+  // marquee keyframes slide by) is wider than even a large screen.
+  const rowA = [...BRANDS.slice(0, half), ...BRANDS.slice(0, half)];
+  const rowB = [...BRANDS.slice(half), ...BRANDS.slice(half)];
 
   // Edge fades use a wider, fully-transparent sweep so they melt into the
   // dusk gradient without creating a visible band.
@@ -102,14 +126,14 @@ export default function BrandStrip({ onDusk = false }: Props) {
     >
       {/* Row A — left */}
       <div className="relative w-full overflow-hidden group" style={{ maskImage: 'linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%)' }}>
-        <div className="flex w-max" style={{ animation: 'marquee-left 110s linear infinite' }}>
+        <div className="flex w-max" style={{ animation: 'marquee-left 220s linear infinite' }}>
           {[...rowA, ...rowA].map((b, i) => <Tile key={`a-${i}`} brand={b} onDusk={onDusk} />)}
         </div>
       </div>
 
       {/* Row B — right */}
       <div className="relative w-full overflow-hidden group" style={{ maskImage: 'linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%)' }}>
-        <div className="flex w-max" style={{ animation: 'marquee-right 130s linear infinite' }}>
+        <div className="flex w-max" style={{ animation: 'marquee-right 260s linear infinite' }}>
           {[...rowB, ...rowB].map((b, i) => <Tile key={`b-${i}`} brand={b} onDusk={onDusk} />)}
         </div>
       </div>
