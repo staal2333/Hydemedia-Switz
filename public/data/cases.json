@@ -241,45 +241,5 @@
       "testimonial": "A sophisticated execution that fit our brand positioning perfectly. Outstanding results.",
       "type": "Facade & gable wrap"
     }
-  },
-  {
-    "id": 7,
-    "slug": "olc-brand-awareness",
-    "brand": "OLC",
-    "title": "OLC - Brand-Awareness-Kampagne",
-    "location": "Zürich",
-    "size": "21m²",
-    "duration": "4 Wochen",
-    "format": "Fassadenbanner",
-    "tags": [
-      "Markenaufbau",
-      "Langfristig",
-      "Sichtbarkeit"
-    ],
-    "challenge": "Fassadenkampagne in Zürich mit Fassadeninstallationen. Der koordinierte Ansatz sollte für OLC eine konsistente Markensichtbarkeit schaffen und die Markenbekanntheit auf dem Schweizer Markt deutlich steigern.",
-    "solution": "Wir setzten eine einmonatige Fassadenkampagne an einem gut sichtbaren Standort in Zürich um, die für eine dauerhafte Markenpräsenz und wiederholte Sichtkontakte mit dem lokalen Publikum sorgte.",
-    "results": "Über die vierwöchige Laufzeit sorgte der gut sichtbare Standort in Zürich für eine konstante Markenpräsenz und wiederholte Sichtkontakte beim lokalen Publikum.",
-    "images": [
-      "/images/cases/olc-1.png"
-    ],
-    "testimonial": "Die konsistente Sichtbarkeit über vier Wochen machte einen echten Unterschied. Fantastischer Standort, fantastische Umsetzung.",
-    "type": "Fassadenbanner",
-    "placementIds": [],
-    "en": {
-      "title": "OLC - Brand Awareness Campaign",
-      "location": "Zurich",
-      "duration": "4 weeks",
-      "format": "Facade banner",
-      "tags": [
-        "Brand Building",
-        "Long-Term",
-        "Visibility"
-      ],
-      "challenge": "A facade campaign in Zurich featuring facade installations. The coordinated approach was designed to create consistent brand visibility for OLC and significantly boost brand awareness in the Swiss market.",
-      "solution": "We executed a one-month facade campaign at a highly visible location in Zurich, delivering a lasting brand presence and repeated impressions with the local audience.",
-      "results": "Over the four-week run, the highly visible Zurich location gave OLC a constant brand presence and repeated exposure to the local audience.",
-      "testimonial": "The consistent visibility over four weeks made a real difference. Fantastic location, fantastic execution.",
-      "type": "Facade banner"
-    }
   }
 ]

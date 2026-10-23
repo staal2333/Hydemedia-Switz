@@ -39,6 +39,12 @@ const nextConfig = {
   // Permanent redirects (301)
   async redirects() {
     return [
+      // Withdrawn case studies go back to the cases index.
+      {
+        source: '/:locale(en|de)/cases/olc-brand-awareness',
+        destination: '/:locale/cases',
+        permanent: true,
+      },
       // Consolidated cases route — case-studies & portfolio retired in favor of /cases
       {
         source: '/case-studies',
