@@ -64,6 +64,7 @@ const COPY = {
       p.digital
         ? `Digitaler Screen auf Augenhöhe an der ${p.address}. ${p.traffic}. Share of Voice: ${p.digital.shareOfVoice}.`
         : `${p.size} ${kindLabel} an der Adresse ${p.address}. ${p.traffic}. Zeitraum: ${p.duration}.`,
+    metaTail: ' Druck, Montage und Bewilligung inklusive – jetzt Offerte anfragen.',
     sov: 'Share of Voice',
     onAir: 'Sendezeit',
     formats: 'Formate',
@@ -102,6 +103,7 @@ const COPY = {
       p.digital
         ? `Eye-level digital screen at ${p.address}. ${p.traffic}. Share of voice: ${p.digital.shareOfVoice.toLowerCase()}.`
         : `${p.size} of ${kindLabel.toLowerCase()} at ${p.address}. ${p.traffic}. Period: ${p.duration}.`,
+    metaTail: ' Print, installation and permit included. Request a quote today.',
     sov: 'Share of voice',
     onAir: 'On air',
     formats: 'Formats',
@@ -112,6 +114,12 @@ type Copy = (typeof COPY)['de'] | (typeof COPY)['en'];
 
 function copyFor(locale: string): Copy {
   return COPY[locale === 'en' ? 'en' : 'de'];
+}
+
+/** Cut at a word boundary so a search result never shows half a word. */
+function fitDescription(text: string, max = 160): string {
+  if (text.length <= max) return text;
+  return text.slice(0, text.lastIndexOf(' ', max - 1)).replace(/[\s,–-]+$/, '') + '…';
 }
 
 /** "Kleinbasel, Basel" → "Basel"; "Basel" stays as it is. */
@@ -144,7 +152,7 @@ export async function generateMetadata({
   const meta = generateSEOMetadata({
     // Keep the city when the full title still fits a search result.
     title: withCity.length <= 47 ? withCity : base,
-    description: t.lede(p, t.kind[found.kind]).slice(0, 158),
+    description: fitDescription(t.lede(p, t.kind[found.kind]) + t.metaTail),
     keywords: [t.kind[found.kind], p.name, p.location, 'outdoor', 'OOH'].join(', '),
     path: placementPath(p),
     locale,
@@ -197,7 +205,7 @@ export default function PlacementPage({
       url,
       ...(p.image ? { image: `${SITE}${p.image}` } : {}),
       description: t.lede(p, kindLabel),
-      provider: { '@id': `${SITE}/#organization`, '@type': 'Organization', name: 'Hyde Media' },
+      provider: { '@id': `${SITE}/#organization` },
       areaServed: {
         '@type': 'Place',
         name: p.name,

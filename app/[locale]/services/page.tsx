@@ -18,8 +18,8 @@ export async function generateMetadata({
     ? 'Aussenwerbung in der Schweiz: Gerüst und Fassade'
     : 'Outdoor Advertising in Switzerland: Scaffolding, Facades';
   const description = isGerman
-    ? 'Aussenwerbung im Grossformat: Gerüstwerbung und Fassadenwerbung in Basel und der Schweiz. Standorte mit Verkehrszahlen, Druck, Montage und Bewilligung aus einer Hand.'
-    : 'Large-format outdoor advertising: scaffolding and facade advertising in Basel and Switzerland. Sites with traffic figures, with print, installation and permits handled for you.';
+    ? 'Aussenwerbung im Grossformat: Gerüstwerbung und Fassadenwerbung in Basel und der Schweiz. Standorte mit Verkehrszahlen, Druck, Montage und Bewilligung inklusive.'
+    : 'Scaffolding and facade advertising in Basel and Switzerland. Large-format sites with traffic figures; print, installation and permits included.';
   const keywords = isGerman
     ? 'Aussenwerbung, Aussenwerbung Schweiz, Out-of-Home, OOH Schweiz, Gerüstwerbung, Fassadenwerbung, Grossformat Werbung, Aussenwerbung Basel, Werbebanner'
     : 'outdoor advertising, outdoor advertising Switzerland, OOH, scaffolding advertising, facade advertising, large format advertising, Basel';

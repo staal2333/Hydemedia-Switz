@@ -46,7 +46,7 @@ export default function OohMixPage({ params: { locale } }: { params: { locale: s
       description: c.lede,
       url,
       inLanguage: locale === 'en' ? 'en' : 'de-CH',
-      author: { '@type': 'Organization', name: 'Hyde Media', url: SITE },
+      author: { '@id': `${SITE}/#organization` },
       publisher: { '@id': `${SITE}/#organization` },
     },
     {

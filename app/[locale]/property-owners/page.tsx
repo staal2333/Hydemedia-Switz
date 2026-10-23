@@ -15,11 +15,11 @@ export async function generateMetadata({
   let title: string, description: string, keywords: string;
   if (isGerman) {
     title = 'Für Immobilienbesitzer - Fassade & Gerüst vermieten';
-    description = 'Generieren Sie zusätzliches Einkommen mit Ihren Fassaden und Gerüsten. Hyde Media unterstützt Immobilienbesitzer, Eigentümergemeinschaften und Hausverwaltungen. Wir kümmern uns um Bewilligungen und alle praktischen Details.';
+    description = 'Zusatzeinnahmen mit Fassade oder Baugerüst: Hyde Media vermarktet Werbeflächen für Eigentümer und Verwaltungen in Basel – inklusive Bewilligung, Montage und Abbau.';
     keywords = 'Fassade vermieten, Fassadenvermietung, Gerüstvermietung, Immobilienbesitzer Einkommen, Eigentümergemeinschaft, Hausverwaltung, Fassadenwerbung Einkommen';
   } else {
     title = 'For Property Owners - Rent Out Facade & Scaffolding';
-    description = 'Generate additional income from your facades and scaffolding. We handle permits, resident information and all practical matters. Professional service.';
+    description = 'Earn extra income from your facade or scaffolding. Hyde Media markets the space for owners and property managers in Basel and handles permit, installation and removal.';
     keywords = 'rent out facade, facade rental, scaffolding rental, property owner income, owner association, property manager, building wraps';
   }
 

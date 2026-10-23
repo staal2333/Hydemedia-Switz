@@ -11,7 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const isGerman = locale !== 'en';
   return generateSEOMetadata({
-    title: isGerman ? 'Datenschutzerklärung' : 'Privacy policy',
+    title: isGerman ? 'Datenschutzerklärung' : 'Privacy policy for hydemedia.ch',
     description: isGerman
       ? 'Wie Hyde Media Personendaten bearbeitet: Zwecke, Empfänger, Aufbewahrung und Ihre Rechte nach dem Schweizer Datenschutzgesetz (DSG) und der DSGVO.'
       : 'How Hyde Media processes personal data: purposes, recipients, retention and your rights under the Swiss FADP and the GDPR.',

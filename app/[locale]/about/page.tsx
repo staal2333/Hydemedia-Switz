@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import AboutPageClient from './AboutPageClient';
-import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 import { locales } from '@/i18n';
 
@@ -50,11 +49,18 @@ export default async function AboutPage({
 
   return (
     <>
-      <StructuredData
-        type="Organization"
-        title="Hyde Media"
-        description={orgDesc}
-        url={`/${locale}/about`}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'AboutPage',
+            url: `https://www.hydemedia.ch/${locale}/about`,
+            description: orgDesc,
+            inLanguage: locale === 'en' ? 'en' : 'de-CH',
+            about: { '@id': 'https://www.hydemedia.ch/#organization' },
+          }),
+        }}
       />
       <AboutPageClient locale={locale} />
     </>

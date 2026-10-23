@@ -14,12 +14,12 @@ export async function generateMetadata({
 
   let title: string, description: string, keywords: string;
   if (isGerman) {
-    title = 'Referenzen & Marken | Unsere Kampagnen';
-    description = 'Entdecken Sie unsere neuesten Kampagnen und Kunden. Sehen Sie, wie wir wirkungsvolle Bannerkampagnen mit maximaler Sichtbarkeit umsetzen.';
+    title = 'Referenzen: Gerüst- und Fassadenkampagnen';
+    description = 'Referenzen von Hyde Media: Gerüst- und Fassadenkampagnen für Grand Casino Basel, EVO Fitness und weitere Marken – mit Standort, Format und Laufzeit.';
     keywords = 'Bannerkampagnen Referenzen, Werbekampagnen Schweiz, Kundenreferenzen, Aussenwerbung Beispiele, erfolgreiche Kampagnen';
   } else {
-    title = 'Cases & Brands | Our Latest Campaigns';
-    description = 'See our latest campaigns and clients. See how we create high-impact banner campaigns with maximum visibility.';
+    title = 'Cases: Scaffolding and Facade Campaigns';
+    description = 'Hyde Media cases: scaffolding and facade campaigns for Grand Casino Basel, EVO Fitness and other brands, with location, format and campaign length.';
     keywords = 'banner campaign cases, advertising campaigns, client cases, outdoor advertising examples, successful campaigns';
   }
 

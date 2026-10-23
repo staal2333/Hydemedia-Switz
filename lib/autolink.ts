@@ -17,6 +17,7 @@ function rulesFor(locale: 'de' | 'en'): Rule[] {
       ? [
           // The city page before the general one, so "Gerüstwerbung in Basel" lands there.
           { pattern: /\b(Gerüstwerbung in Basel)/i, path: '/de/geruestwerbung-basel' },
+          { pattern: /\b(Megaposter[a-z]*|Werbeblache[n]?)/i, path: '/de/megaposter' },
           // Inflected and compound forms too: "Gerüstwerbungen", "Gerüstbannern".
           { pattern: /\b(Gerüstwerbung[a-z]*|Gerüstbanner[a-z]*)/i, path: '/de/scaffolding' },
           { pattern: /\b(Fassadenwerbung[a-z]*|Fassadenbanner[a-z]*)/i, path: '/de/facade' },
@@ -24,6 +25,7 @@ function rulesFor(locale: 'de' | 'en'): Rule[] {
         ]
       : [
           { pattern: /\b(scaffolding advertising in Basel)\b/i, path: '/en/geruestwerbung-basel' },
+          { pattern: /\b(megaposters?)\b/i, path: '/en/megaposter' },
           { pattern: /\b(scaffolding (?:advertising|banners?))\b/i, path: '/en/scaffolding' },
           { pattern: /\b(facade (?:advertising|banners?))\b/i, path: '/en/facade' },
           { pattern: /\b(outdoor advertising)\b/i, path: '/en/services' },

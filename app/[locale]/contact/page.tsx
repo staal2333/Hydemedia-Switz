@@ -14,11 +14,11 @@ export async function generateMetadata({
   let title: string, description: string, keywords: string;
   if (isGerman) {
     title = 'Kontakt | Aussenwerbung Schweiz';
-    description = 'Kontaktieren Sie Hyde Media. Wir helfen Marken und Liegenschaftseigentümern mit Grossformat-Aussenwerbung in Basel und der Schweiz. Tel: +41 77 233 81 21 oder E-Mail: theodor.staal@hydemedia.ch';
+    description = 'Offerte für Gerüst- oder Fassadenwerbung in Basel anfragen: Antwort innert 24 Stunden an Werktagen. Tel. +41 77 233 81 21, theodor.staal@hydemedia.ch.';
     keywords = 'Kontakt Hyde Media, Aussenwerbung Schweiz, Bannerwerbung Basel, Fassadenwerbung, Gerüstbanner';
   } else {
     title = 'Contact | Outdoor Advertising Switzerland';
-    description = 'Get in touch with Hyde Media. We help brands and property owners with large-format outdoor advertising in Basel and Switzerland. Call +41 77 233 81 21 or email theodor.staal@hydemedia.ch';
+    description = 'Request a quote for scaffolding or facade advertising in Basel. We reply within 24 hours on weekdays. Call +41 77 233 81 21 or email theodor.staal@hydemedia.ch.';
     keywords = 'contact hydemedia, outdoor advertising Switzerland, banner advertising Basel, facade advertising, scaffolding banner';
   }
 

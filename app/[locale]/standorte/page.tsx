@@ -20,6 +20,7 @@ const COPY = {
     more: 'Siehe auch',
     links: [
       ['/de/geruestwerbung-basel', 'Gerüstwerbung in Basel'],
+      ['/de/megaposter', 'Megaposter in Basel'],
       ['/de/scaffolding', 'Gerüstwerbung'],
       ['/de/facade', 'Fassadenwerbung'],
       ['/de/kampagnenrechner', 'Kampagnenrechner'],
@@ -35,6 +36,7 @@ const COPY = {
     more: 'See also',
     links: [
       ['/en/geruestwerbung-basel', 'Scaffolding advertising in Basel'],
+      ['/en/megaposter', 'Megaposters in Basel'],
       ['/en/scaffolding', 'Scaffolding advertising'],
       ['/en/facade', 'Facade advertising'],
       ['/en/kampagnenrechner', 'Campaign calculator'],

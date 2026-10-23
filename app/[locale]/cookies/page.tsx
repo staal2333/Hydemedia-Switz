@@ -11,7 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const isGerman = locale !== 'en';
   return generateSEOMetadata({
-    title: isGerman ? 'Cookie-Richtlinie' : 'Cookie policy',
+    title: isGerman ? 'Cookie-Richtlinie' : 'Cookie policy for hydemedia.ch',
     description: isGerman
       ? 'Welche Cookies und lokalen Speicher hydemedia.ch verwendet, wofür, wie lange, und wie Sie Ihre Einwilligung ändern oder widerrufen.'
       : 'Which cookies and local storage hydemedia.ch uses, why, for how long, and how to change or withdraw your consent.',

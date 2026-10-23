@@ -37,6 +37,34 @@ export interface LocationConfig {
   placementFilter: (location: string, address: string) => boolean;
   /** Filter for cases.json */
   caseFilter: (location: string) => boolean;
+  /** Optional explainer after "Why", for pages that target a term rather than a city. */
+  guide?: {
+    eyebrow: string;
+    title: string;
+    accent: string;
+    /** Paragraphs; `[text](/path)` becomes a link. */
+    paragraphs: string[];
+    table?: { caption: string; head: string[]; rows: string[][] };
+  };
+}
+
+/** Renders `[text](/path)` as links inside otherwise plain copy. */
+function Linked({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        return m ? (
+          <Link key={i} href={m[2]} className="text-mid underline underline-offset-4 decoration-mid/40 hover:decoration-mid">
+            {m[1]}
+          </Link>
+        ) : (
+          <span key={i}>{part}</span>
+        );
+      })}
+    </>
+  );
 }
 
 export default function LocationTemplate({ config }: { config: LocationConfig }) {
@@ -64,9 +92,9 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: config.serviceName,
-    provider: { '@type': 'Organization', name: 'Hyde Media', url: 'https://www.hydemedia.ch' },
+    provider: { '@id': 'https://www.hydemedia.ch/#organization' },
     areaServed: { '@type': 'City', name: config.city },
-    name: `${config.serviceName} i ${config.city}`,
+    name: `${config.serviceName} in ${config.city}`,
     description: config.heroDescription,
   };
 
@@ -212,6 +240,52 @@ export default function LocationTemplate({ config }: { config: LocationConfig })
             </div>
           </div>
         </section>
+
+        {/* ── GUIDE — explains the term the page is built around ── */}
+        {config.guide && (
+          <section className="py-20">
+            <div className="shell">
+              <div className="max-w-3xl mx-auto">
+                <span className="sec-no inline-block mb-4 text-mid">§ {config.guide.eyebrow}</span>
+                <h2 className="font-display font-normal m-0 mb-8 text-ink" style={{ fontSize: 'clamp(28px, 3.4vw, 44px)', letterSpacing: '-0.025em', lineHeight: 1.05 }}>
+                  {config.guide.title} <span className="italic text-mid">{config.guide.accent}</span>
+                </h2>
+                {config.guide.paragraphs.map((p, i) => (
+                  <p key={i} className="text-[16px] leading-[1.75] text-ink-soft m-0 mb-5">
+                    <Linked text={p} />
+                  </p>
+                ))}
+                {config.guide.table && (
+                  <div className="mt-8 overflow-x-auto rounded-[16px] border border-rule bg-white">
+                    <table className="w-full text-left text-[14px] border-collapse">
+                      <caption className="caption-bottom text-[12.5px] text-muted px-5 py-3 text-left">{config.guide.table.caption}</caption>
+                      <thead>
+                        <tr>
+                          {config.guide.table.head.map((h) => (
+                            <th key={h} scope="col" className="font-ui font-semibold text-[10px] tracking-[0.2em] uppercase text-muted px-5 py-3 border-b border-rule">{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {config.guide.table.rows.map((row, i) => (
+                          <tr key={i} className={i === config.guide!.table!.rows.length - 1 ? 'bg-fog/60' : ''}>
+                            {row.map((cell, j) =>
+                              j === 0 ? (
+                                <th key={j} scope="row" className="font-normal text-ink px-5 py-3 border-b border-rule">{cell}</th>
+                              ) : (
+                                <td key={j} className="text-ink-soft px-5 py-3 border-b border-rule">{cell}</td>
+                              ),
+                            )}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ── LOCAL CASES ── */}
         {localCases.length > 0 && (

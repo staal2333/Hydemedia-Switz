@@ -66,6 +66,7 @@ export function GET() {
     `- [Scaffolding advertising](${SITE}/de/scaffolding): large banners on scaffolding around buildings under renovation, from 4 weeks`,
     `- [Facade advertising](${SITE}/de/facade): long-term banners on facades`,
     `- [Scaffolding advertising in Basel](${SITE}/de/geruestwerbung-basel): sites on Riehenring by Messe Basel`,
+    `- [Megaposters in Basel](${SITE}/de/megaposter): what a megaposter / Werbeblache is, sizes compared with Swiss poster formats (F4, F12, F24), permits`,
     `- [Locations](${SITE}/de/standorte): every site with size, traffic and period`,
     `- [For property owners](${SITE}/de/property-owners): earn income from a facade or scaffolding`,
     `- [Campaign calculator](${SITE}/de/kampagnenrechner): estimated contacts for a chosen set of sites and weeks`,

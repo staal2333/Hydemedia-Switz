@@ -2,6 +2,7 @@
 
 import { useLocale } from 'next-intl';
 import { getRegionConfig } from '@/lib/region';
+import { COMPANY } from '@/content/legal/types';
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';
@@ -26,8 +27,13 @@ export default function StructuredData(props: StructuredDataProps) {
       "@id": `${siteUrl}/#organization`,
       "name": "Hyde Media",
       "alternateName": "HydeMedia",
+      ...(COMPANY.legalName && { "legalName": COMPANY.legalName }),
+      ...(COMPANY.uid && {
+        "taxID": COMPANY.uid,
+        "identifier": { "@type": "PropertyValue", "propertyID": "CHE-UID", "value": COMPANY.uid },
+      }),
       "url": siteUrl,
-      "logo": `${siteUrl}/logo.png`,
+      "logo": { "@type": "ImageObject", "url": `${siteUrl}/logo.png` },
       "image": props.image || `${siteUrl}/og-image.jpg`,
       "description": props.description,
       "address": {
@@ -45,6 +51,14 @@ export default function StructuredData(props: StructuredDataProps) {
       },
       "telephone": config.phone,
       "email": config.email,
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": config.email,
+        "telephone": config.phone,
+        "areaServed": "CH",
+        "availableLanguage": ["German", "English"]
+      },
       "priceRange": "$$",
       "currenciesAccepted": config.currency,
       "paymentAccepted": "Invoice, Bank Transfer",
@@ -107,37 +121,21 @@ export default function StructuredData(props: StructuredDataProps) {
 
   let structuredData: any = baseData;
 
-  if (props.type === 'Organization') {
-    structuredData = {
-      ...baseData,
-      '@type': 'Organization',
-      name: 'Hyde Media',
-      url: siteUrl,
-      logo: `${siteUrl}/logo.png`,
-      contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'Customer Service',
-        email: config.email,
-        telephone: config.phone,
-      },
-      sameAs: [
-        'https://www.instagram.com/hyde.med',
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: config.streetAddress,
-        postalCode: config.postalCode,
-        addressLocality: config.addressLocality,
-        addressCountry: config.countryCode,
-      },
-    };
-  }
+  // The company is described once, by the LocalBusiness node; everything
+  // else refers to it by @id so search engines see a single entity.
+  const org = { '@id': `${siteUrl}/#organization` };
+
+  if (props.type === 'Organization') return null;
 
   if (props.type === 'WebSite') {
     structuredData = {
       ...baseData,
       '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: 'Hyde Media',
       inLanguage: locale === 'en' ? 'en' : 'de-CH',
+      publisher: org,
     };
   }
 
@@ -150,10 +148,7 @@ export default function StructuredData(props: StructuredDataProps) {
         '@type': 'Country',
         name: 'Switzerland',
       },
-      provider: {
-        '@type': 'Organization',
-        name: 'Hyde Media',
-      },
+      provider: org,
     };
   }
 
@@ -170,14 +165,7 @@ export default function StructuredData(props: StructuredDataProps) {
           name: props.author,
         },
       }),
-      publisher: {
-        '@type': 'Organization',
-        name: 'Hyde Media',
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/logo.png`,
-        },
-      },
+      publisher: org,
     };
   }
 

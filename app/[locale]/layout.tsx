@@ -76,7 +76,6 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <StructuredData type="LocalBusiness" title="Hyde Media" description={localDesc} url={`${siteUrl}/${locale}`} />
-      <StructuredData type="Organization" title="Hyde Media" description={localDesc} url={`${siteUrl}/${locale}`} />
       <StructuredData type="WebSite" title="Hyde Media" description={localDesc} url={`${siteUrl}/${locale}`} />
       {/* Consent wraps everything that may load optional tracking. */}
       <ConsentProvider locale={locale}>

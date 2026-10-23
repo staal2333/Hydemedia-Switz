@@ -21,6 +21,7 @@ export const SECTION_NAMES: Record<string, { de: string; en: string }> = {
   cookies: { de: 'Cookie-Richtlinie', en: 'Cookie policy' },
   standorte: { de: 'Standorte', en: 'Locations' },
   'geruestwerbung-basel': { de: 'Gerüstwerbung in Basel', en: 'Scaffolding advertising in Basel' },
+  megaposter: { de: 'Megaposter', en: 'Megaposter' },
   kampagnenrechner: { de: 'Kampagnenrechner', en: 'Campaign calculator' },
   glossar: { de: 'OOH-Glossar', en: 'OOH glossary' },
   'ooh-im-medienmix': { de: 'OOH im Medienmix', en: 'OOH in the media mix' },

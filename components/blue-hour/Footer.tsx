@@ -22,6 +22,7 @@ const COPY = {
     locations: 'Standorte',
     allLocations: 'Alle Standorte',
     basel: 'Gerüstwerbung Basel',
+    megaposter: 'Megaposter Basel',
     company: 'Unternehmen',
     about: 'Über uns',
     cases: 'Referenzen',
@@ -53,6 +54,7 @@ const COPY = {
     locations: 'Locations',
     allLocations: 'All locations',
     basel: 'Scaffolding ads in Basel',
+    megaposter: 'Megaposters in Basel',
     company: 'Company',
     about: 'About',
     cases: 'References',
@@ -128,6 +130,7 @@ export default function BlueHourFooter() {
             <h5 className={headCls}>{t.locations}</h5>
             <Link href={`/${locale}/standorte`} className={linkCls}>{t.allLocations}</Link>
             <Link href={`/${locale}/geruestwerbung-basel`} className={linkCls}>{t.basel}</Link>
+            <Link href={`/${locale}/megaposter`} className={linkCls}>{t.megaposter}</Link>
           </div>
 
           <div>
