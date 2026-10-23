@@ -140,10 +140,10 @@ NEXT_PUBLIC_SITE_URL=https://hydemedia.dk
 # Email (SMTP)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=hello@hydemedia.dk
+SMTP_USER=theodor.staal@hydemedia.ch
 SMTP_PASS=your-app-password
-SMTP_FROM="Hyde Media <hello@hydemedia.dk>"
-CONTACT_EMAIL=hello@hydemedia.dk
+SMTP_FROM="Hyde Media <theodor.staal@hydemedia.ch>"
+CONTACT_EMAIL=theodor.staal@hydemedia.ch
 ```
 
 See `.env.example` for all available options.
@@ -306,7 +306,7 @@ Includes:
 
 This is a private project for Hyde Media.
 
-For questions or support, contact: **hello@hydemedia.dk**
+For questions or support, contact: **theodor.staal@hydemedia.ch**
 
 ---
 
@@ -329,7 +329,7 @@ For questions or support, contact: **hello@hydemedia.dk**
 - `WHAT_WE_NEED_MORE.md` - Feature roadmap
 
 ### **Issues**
-- Email: hello@hydemedia.dk
+- Email: theodor.staal@hydemedia.ch
 - Phone: +45 52 76 11 85
 
 ### **Resources**
