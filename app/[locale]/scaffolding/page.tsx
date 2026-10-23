@@ -5,7 +5,6 @@ import ScaffoldingPageClient from './ScaffoldingPageClient';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
 
 // The commercial pillar for "Gerüstwerbung", so title and description are
 // written per locale and match what buyers search for.

@@ -45,3 +45,4 @@ build-check.log
 
 # private contracts — must NOT be published on the public site
 public/contracts/
+.claude/worktrees/

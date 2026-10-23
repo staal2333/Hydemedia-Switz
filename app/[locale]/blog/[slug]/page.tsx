@@ -9,7 +9,6 @@ import StructuredData from '@/components/StructuredData';
 import fs from 'fs';
 import path from 'path';
 
-export const dynamic = 'force-dynamic';
 
 interface BlogPost {
   id: number;

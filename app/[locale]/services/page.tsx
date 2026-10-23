@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import ServiceGuide from '@/components/ServiceGuide';
 import ServicesPageClient from './ServicesPageClient';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
 
 // The pillar page for "Aussenwerbung": what the formats are and how to choose.
 export async function generateMetadata({
@@ -32,6 +32,7 @@ export default async function ServicesPage({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const isGerman = locale !== 'en';
 
   const sdTitle = isGerman

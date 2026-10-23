@@ -6,7 +6,6 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 import blogDe from '@/public/data/blog-de.json';
 import blogEn from '@/public/data/blog-en.json';
 
-export const dynamic = 'force-dynamic';
 
 const postsFor = (locale: string) => (locale === 'en' ? blogEn : blogDe);
 

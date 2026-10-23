@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -13,8 +14,14 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import ConsentProvider from '@/components/consent/ConsentProvider';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
+// Pages are rendered at build time and served from the CDN; an hour of ISR
+// keeps date-dependent bits (placement availability, "current" campaigns) fresh.
+export const dynamicParams = false;
+export const revalidate = 3600;
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params: { locale },
@@ -74,7 +81,10 @@ export default async function LocaleLayout({
       {/* Consent wraps everything that may load optional tracking. */}
       <ConsentProvider locale={locale}>
         <div className="flex min-h-screen flex-col">
-          <GoogleAnalytics />
+          {/* useSearchParams needs a Suspense boundary, or the whole page renders client-side. */}
+          <Suspense fallback={null}>
+            <GoogleAnalytics />
+          </Suspense>
           <BreadcrumbSchema />
           <BlueHourHeader />
           <main className="flex-1">{children}</main>

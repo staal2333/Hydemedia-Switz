@@ -5,7 +5,6 @@ import FacadePageClient from './FacadePageClient';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params: { locale },

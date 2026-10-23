@@ -5,9 +5,6 @@ import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 import { locales } from '@/i18n';
 
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
-export const revalidate = 0;
 
 export async function generateMetadata({
   params: { locale },

@@ -1,10 +1,9 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import PropertyOwnersPageClient from './PropertyOwnersPageClient';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params: { locale },
@@ -32,6 +31,7 @@ export default async function PropertyOwnersPage({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const isGerman = locale !== 'en';
 
   const sdTitle = isGerman

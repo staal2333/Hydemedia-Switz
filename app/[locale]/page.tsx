@@ -7,9 +7,6 @@ import { locales } from '@/i18n';
 import blogDe from '@/public/data/blog-de.json';
 import blogEn from '@/public/data/blog-en.json';
 
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
-export const revalidate = 0;
 
 export async function generateMetadata({
   params: { locale },

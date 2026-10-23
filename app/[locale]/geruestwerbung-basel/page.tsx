@@ -3,7 +3,6 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 import GeruestBaselClient from './GeruestBaselClient';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params: { locale },

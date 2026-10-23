@@ -7,7 +7,10 @@ import CaseStudyDetailClient from './CaseStudyDetailClient';
 import casesData from '@/public/data/cases.json';
 import { localizeCase, type CaseStudy } from '@/lib/placements';
 
-export const dynamic = 'force-dynamic';
+
+export function generateStaticParams() {
+  return (casesData as CaseStudy[]).flatMap((c) => ['de', 'en'].map((locale) => ({ locale, slug: c.slug })));
+}
 
 export async function generateMetadata({
   params: { locale, slug },

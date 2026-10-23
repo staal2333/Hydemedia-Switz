@@ -3,7 +3,6 @@ import ContactPageClient from './ContactPageClient';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params: { locale },
@@ -31,6 +30,9 @@ function param(v: string | string[] | undefined): string | undefined {
   const value = Array.isArray(v) ? v[0] : v;
   return value && value.length <= 120 ? value : undefined;
 }
+
+// Reads ?location= and ?inquiry= to prefill the form, so it renders per request.
+export const dynamic = 'force-dynamic';
 
 export default async function ContactPage({
   params: { locale },
