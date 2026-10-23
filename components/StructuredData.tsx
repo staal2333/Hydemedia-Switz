@@ -110,13 +110,15 @@ export default function StructuredData(props: StructuredDataProps) {
     );
   }
 
+  // Structured data needs absolute URLs; pages pass paths like "/de/blog/x".
+  const abs = (u: string) => (u.startsWith('/') ? `${siteUrl}${u}` : u);
   const baseData = {
     '@context': 'https://schema.org',
     '@type': props.type,
     name: props.title,
     description: props.description,
-    url: props.url,
-    ...(props.image && { image: props.image }),
+    url: abs(props.url),
+    ...(props.image && { image: abs(props.image) }),
   };
 
   let structuredData: any = baseData;
@@ -157,8 +159,10 @@ export default function StructuredData(props: StructuredDataProps) {
       ...baseData,
       '@type': 'Article',
       headline: props.title,
+      mainEntityOfPage: abs(props.url),
+      inLanguage: locale === 'en' ? 'en' : 'de-CH',
       ...(props.datePublished && { datePublished: props.datePublished }),
-      ...(props.dateModified && { dateModified: props.dateModified }),
+      ...((props.dateModified || props.datePublished) && { dateModified: props.dateModified || props.datePublished }),
       ...(props.author && {
         author: {
           '@type': 'Person',

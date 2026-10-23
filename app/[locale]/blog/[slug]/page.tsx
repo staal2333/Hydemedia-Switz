@@ -77,6 +77,15 @@ export default function BlogPostPage({
     notFound();
   }
 
+  // Three related articles: most shared tags first, then the newest. Every
+  // post then links to others, so no article depends on the index alone.
+  const related = posts
+    .filter((p) => p.slug !== slug)
+    .map((p) => ({ p, shared: (p.tags || []).filter((t) => (post.tags || []).includes(t)).length }))
+    .sort((a, b) => b.shared - a.shared || b.p.date.localeCompare(a.p.date))
+    .slice(0, 3)
+    .map(({ p }) => ({ slug: p.slug, title: p.title, excerpt: p.excerpt, image: p.image, readTime: p.readTime }));
+
   return (
     <>
       <StructuredData
@@ -94,7 +103,7 @@ export default function BlogPostPage({
           __html: JSON.stringify(detailBreadcrumb('https://www.hydemedia.ch', locale, 'blog', post.title, `/blog/${slug}`)),
         }}
       />
-      <BlogPostClient post={{ ...post, content: autolink(post.content, locale, `/${locale}/blog/${slug}`) }} slug={slug} />
+      <BlogPostClient post={{ ...post, content: autolink(post.content, locale, `/${locale}/blog/${slug}`) }} slug={slug} related={related} />
     </>
   );
 }

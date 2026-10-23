@@ -26,9 +26,12 @@ interface BlogPost {
   featured: boolean;
 }
 
+export interface RelatedPost { slug: string; title: string; excerpt: string; image: string; readTime: string }
+
 interface Props {
   post: BlogPost;
   slug: string;
+  related?: RelatedPost[];
 }
 
 const COPY = {
@@ -37,16 +40,18 @@ const COPY = {
     ctaLead: 'Bereit, Ihre Marke',
     ctaAccent: 'sichtbar zu machen?',
     quote: 'Angebot anfordern',
+    related: 'Weiterlesen',
   },
   en: {
     allPosts: '← All articles',
     ctaLead: 'Ready to make your brand',
     ctaAccent: 'visible?',
     quote: 'Request a quote',
+    related: 'Keep reading',
   },
 };
 
-export default function BlogPostClient({ post }: Props) {
+export default function BlogPostClient({ post, related = [] }: Props) {
   const locale = useLocale();
   const t = useTranslations('blogPost');
   const copy = COPY[locale === 'en' ? 'en' : 'de'];
@@ -136,6 +141,34 @@ export default function BlogPostClient({ post }: Props) {
             </div>
           </div>
         </article>
+
+        {related.length > 0 && (
+          <section className="pb-16 print:hidden" aria-labelledby="related-heading">
+            <div className="shell">
+              <div className="max-w-5xl mx-auto">
+                <h2 id="related-heading" className="font-display font-normal m-0 mb-8 text-ink" style={{ fontSize: 'clamp(26px, 3vw, 38px)', letterSpacing: '-0.025em', lineHeight: 1.1 }}>
+                  {copy.related}
+                </h2>
+                <div className="grid sm:grid-cols-3 gap-5">
+                  {related.map((r) => (
+                    <Link key={r.slug} href={`/${locale}/blog/${r.slug}`} className="group bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col hover:-translate-y-1 hover:border-mid transition-all">
+                      {r.image && (
+                        <div className="relative aspect-[16/10] bg-fog overflow-hidden">
+                          <Image src={r.image} alt="" fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.04]" />
+                        </div>
+                      )}
+                      <div className="p-5 flex flex-col gap-2 flex-1">
+                        <h3 className="font-display font-normal m-0 text-ink" style={{ fontSize: 19, letterSpacing: '-0.02em', lineHeight: 1.2 }}>{r.title}</h3>
+                        <p className="text-[13.5px] leading-[1.55] text-ink-soft m-0 line-clamp-3">{r.excerpt}</p>
+                        <span className="font-ui font-semibold text-[10px] tracking-[0.2em] uppercase text-muted mt-auto pt-2">{r.readTime}</span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="pb-4 print:hidden">
           <div className="shell">
