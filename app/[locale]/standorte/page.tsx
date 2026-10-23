@@ -25,6 +25,23 @@ const COPY = {
       ['/de/facade', 'Fassadenwerbung'],
       ['/de/kampagnenrechner', 'Kampagnenrechner'],
     ],
+    chooseEyebrow: 'Auswahl',
+    chooseTitle: ['Wie Sie den richtigen ', 'Standort wählen.'],
+    choose: [
+      ['Verkehr und Wartezeit', 'Vergleichen Sie die Kontakte pro Tag, aber achten Sie auch darauf, wie lange Menschen den Standort sehen. An Ampeln, Tramhaltestellen und Kreuzungen bleibt der Blick länger auf dem Banner als an einer Strasse, auf der der Verkehr fliesst.'],
+      ['Publikum', 'Ein Standort bei der Messe Basel erreicht andere Menschen als einer im Wohnquartier. Überlegen Sie, wer an der Fläche vorbeikommt: Pendler, Messebesucher, Anwohnerinnen oder Touristen.'],
+      ['Zeitraum', 'Gerüstflächen gibt es nur, solange saniert wird. Prüfen Sie, ob der verfügbare Zeitraum zu Ihrer Kampagne passt; die Mindestbuchung beträgt 4 Wochen.'],
+      ['Inhalt und Bewilligung', 'Die Reklamebewilligung kann Inhalte ausschliessen. Am Riehenring 141 ist zum Beispiel Werbung für Alkohol, Politik und pornografische Inhalte nicht erlaubt. Fragen Sie uns, bevor Sie das Sujet gestalten.'],
+    ],
+    stepsEyebrow: 'Ablauf',
+    stepsTitle: ['Von der Anfrage ', 'zum Banner.'],
+    steps: [
+      ['Anfrage', 'Sie wählen einen Standort und schicken uns eine Anfrage. An Werktagen erhalten Sie innert 24 Stunden eine Offerte, die 30 Tage gültig ist.'],
+      ['Buchung', 'Mit Ihrer Bestätigung reservieren wir den Standort. Die Offerte enthält Bewilligung, Druck, Montage und Demontage.'],
+      ['Bewilligung und Druckdaten', 'Wir reichen das Bewilligungsgesuch ein. Sie liefern die Druckdaten spätestens 10 Arbeitstage vor Kampagnenstart.'],
+      ['Montage und Laufzeit', 'Wir drucken und montieren das Banner und nehmen es nach der Kampagnenperiode wieder ab.'],
+    ],
+    stepsNote: ['Alle Bedingungen finden Sie in unseren ', 'AGB', '.'],
   },
   en: {
     title: 'Locations: scaffolding and facade advertising in Basel',
@@ -41,6 +58,23 @@ const COPY = {
       ['/en/facade', 'Facade advertising'],
       ['/en/kampagnenrechner', 'Campaign calculator'],
     ],
+    chooseEyebrow: 'Choosing',
+    chooseTitle: ['How to choose the right ', 'location.'],
+    choose: [
+      ['Traffic and dwell time', 'Compare the daily contacts, but also how long people see the site. At traffic lights, tram stops and junctions, eyes rest on the banner longer than on a road where traffic keeps moving.'],
+      ['Audience', 'A site by Messe Basel reaches different people than one in a residential area. Think about who passes the site: commuters, trade fair visitors, residents or tourists.'],
+      ['Period', 'Scaffolding sites only exist while a renovation is under way. Check that the available period fits your campaign; the minimum booking is 4 weeks.'],
+      ['Content and permit', 'The advertising permit can exclude content. At Riehenring 141, for example, alcohol, political and pornographic advertising is not allowed. Ask us before you design the artwork.'],
+    ],
+    stepsEyebrow: 'Process',
+    stepsTitle: ['From enquiry ', 'to banner.'],
+    steps: [
+      ['Enquiry', 'Choose a site and send us an enquiry. On weekdays you receive a quote within 24 hours, valid for 30 days.'],
+      ['Booking', 'Once you confirm, we reserve the site. The quote includes the permit, print, installation and removal.'],
+      ['Permit and artwork', 'We submit the permit application. You deliver the print files no later than 10 working days before the campaign starts.'],
+      ['Installation and run', 'We print and install the banner and take it down again when the campaign period ends.'],
+    ],
+    stepsNote: ['All conditions are in our ', 'terms', '.'],
   },
 } as const;
 
@@ -105,6 +139,51 @@ export default function LocationsPage({ params: { locale } }: { params: { locale
             </nav>
           </div>
         </section>
+
+        <section className="py-16">
+          <div className="shell">
+            <div className="max-w-5xl mx-auto">
+              <span className="sec-no inline-block mb-4 text-mid">§ {c.chooseEyebrow}</span>
+              <h2 className="font-display font-normal m-0 mb-10 text-ink" style={{ fontSize: 'clamp(28px, 3.4vw, 44px)', letterSpacing: '-0.025em', lineHeight: 1.05 }}>
+                {c.chooseTitle[0]}<span className="italic text-mid">{c.chooseTitle[1]}</span>
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-5">
+                {c.choose.map(([title, body]) => (
+                  <div key={title} className="bg-white border border-rule rounded-[20px] p-7">
+                    <h3 className="font-display font-normal m-0 mb-2.5 text-ink" style={{ fontSize: 20, letterSpacing: '-0.02em', lineHeight: 1.2 }}>{title}</h3>
+                    <p className="text-[15px] leading-[1.65] text-ink-soft m-0">{body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="pt-16 pb-28">
+          <div className="shell">
+            <div className="max-w-5xl mx-auto">
+              <span className="sec-no inline-block mb-4 text-mid">§ {c.stepsEyebrow}</span>
+              <h2 className="font-display font-normal m-0 mb-10 text-ink" style={{ fontSize: 'clamp(28px, 3.4vw, 44px)', letterSpacing: '-0.025em', lineHeight: 1.05 }}>
+                {c.stepsTitle[0]}<span className="italic text-mid">{c.stepsTitle[1]}</span>
+              </h2>
+              <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 list-none p-0 m-0">
+                {c.steps.map(([title, body], i) => (
+                  <li key={title} className="border-t border-ink/20 pt-5">
+                    <div className="font-display italic text-mid mb-2" style={{ fontSize: 28, lineHeight: 1 }}>0{i + 1}.</div>
+                    <h3 className="font-display font-normal m-0 mb-2 text-ink" style={{ fontSize: 19, letterSpacing: '-0.02em', lineHeight: 1.2 }}>{title}</h3>
+                    <p className="text-[14.5px] leading-[1.6] text-ink-soft m-0">{body}</p>
+                  </li>
+                ))}
+              </ol>
+              <p className="text-[14px] text-muted mt-8 mb-0">
+                {c.stepsNote[0]}
+                <Link href={`/${locale}/terms`} className="text-mid underline underline-offset-4">{c.stepsNote[1]}</Link>
+                {c.stepsNote[2]}
+              </p>
+            </div>
+          </div>
+        </section>
+
       </GroundFlow>
     </div>
   );

@@ -90,7 +90,9 @@ function cityLandingPage(location: string, format: string, locale: string): stri
   return null;
 }
 
-export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseStudy }) {
+export interface OtherCase { slug: string; brand: string; location: string; format: string; image: string | null }
+
+export default function CaseStudyDetailClient({ caseStudy, others = [] }: { caseStudy: CaseStudy; others?: OtherCase[] }) {
   const locale = useLocale();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -316,6 +318,35 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: CaseSt
                   {tag}
                 </span>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── OTHER CASES ── */}
+      {others.length > 0 && (
+        <section className="pb-16">
+          <div className="shell">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="font-display font-normal m-0 mb-8 text-ink text-center" style={{ fontSize: 'clamp(26px, 3vw, 38px)', letterSpacing: '-0.025em', lineHeight: 1.1 }}>
+                {t.moreCases}
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-5">
+                {others.map((o) => (
+                  <Link key={o.slug} href={`/${locale}/cases/${o.slug}`} className="group bg-white border border-rule rounded-[20px] overflow-hidden flex flex-col hover:-translate-y-1 hover:border-mid transition-all">
+                    {o.image && (
+                      <div className="relative aspect-[16/10] bg-fog overflow-hidden">
+                        <Image src={o.image} alt={`${o.brand} – ${o.location}`} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.04]" />
+                      </div>
+                    )}
+                    <div className="p-5 flex flex-col gap-1.5">
+                      <div className="font-ui font-semibold text-[10px] tracking-[0.22em] uppercase text-muted">{o.location}</div>
+                      <h3 className="font-display font-normal m-0 text-ink" style={{ fontSize: 20, letterSpacing: '-0.02em', lineHeight: 1.15 }}>{o.brand}</h3>
+                      <p className="text-[13.5px] text-ink-soft m-0">{o.format}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

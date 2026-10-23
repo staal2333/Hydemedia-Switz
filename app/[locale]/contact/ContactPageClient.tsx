@@ -103,10 +103,13 @@ export default function ContactPageClient({
   locale,
   location,
   inquiry,
+  children,
 }: {
   locale: string;
   location?: string;
   inquiry?: string;
+  /** Server-rendered content shown below the form, inside the light ground. */
+  children?: React.ReactNode;
 }) {
   const t = useTranslations('contact');
   const config = getRegionConfig(locale);
@@ -314,7 +317,7 @@ export default function ContactPageClient({
           </div>
         </div>
       </section>
-
+      {children}
       </GroundFlow>
     </div>
   );

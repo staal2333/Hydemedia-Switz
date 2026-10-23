@@ -29,6 +29,15 @@ export async function generateMetadata({
   // Case pages carry the strongest proof on the site, so they get the full
   // treatment: canonical, hreflang, and their own photo as the share image.
   const c = localizeCase(caseStudy as unknown as CaseStudy, locale);
+  // Three other cases, Basel ones first, so every case links onwards.
+  const others = (casesData as unknown as CaseStudy[])
+    .filter((o) => o.slug !== slug)
+    .sort((a, b) => Number(/basel/i.test(b.location)) - Number(/basel/i.test(a.location)))
+    .slice(0, 3)
+    .map((o) => {
+      const l = localizeCase(o, locale);
+      return { slug: o.slug, brand: o.brand, location: l.location, format: l.format, image: o.images?.[0] ?? null };
+    });
   return generateSEOMetadata({
     title: `${c.brand} – ${c.format}`,
     description: c.challenge.substring(0, 155),
@@ -53,6 +62,15 @@ export default function CaseStudyDetailPage({
   }
 
   const c = localizeCase(caseStudy as unknown as CaseStudy, locale);
+  // Three other cases, Basel ones first, so every case links onwards.
+  const others = (casesData as unknown as CaseStudy[])
+    .filter((o) => o.slug !== slug)
+    .sort((a, b) => Number(/basel/i.test(b.location)) - Number(/basel/i.test(a.location)))
+    .slice(0, 3)
+    .map((o) => {
+      const l = localizeCase(o, locale);
+      return { slug: o.slug, brand: o.brand, location: l.location, format: l.format, image: o.images?.[0] ?? null };
+    });
   return (
     <>
       <script
@@ -61,7 +79,7 @@ export default function CaseStudyDetailPage({
           __html: JSON.stringify(detailBreadcrumb('https://www.hydemedia.ch', locale, 'cases', `${c.brand} – ${c.format}`, `/cases/${slug}`)),
         }}
       />
-      <CaseStudyDetailClient caseStudy={caseStudy} />
+      <CaseStudyDetailClient caseStudy={caseStudy} others={others} />
     </>
   );
 }
